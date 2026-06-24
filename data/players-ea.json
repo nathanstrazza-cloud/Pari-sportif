@@ -1,0 +1,102 @@
+{
+  "topScorers": [
+    {
+      "name": "Kylian Mbappé",
+      "team": "France",
+      "goals": 4,
+      "rating": 8.35
+    },
+    {
+      "name": "Lionel Messi",
+      "team": "Argentine",
+      "goals": 3,
+      "rating": 8.52
+    },
+    {
+      "name": "Vinícius Júnior",
+      "team": "Brésil",
+      "goals": 3,
+      "rating": 8.2
+    },
+    {
+      "name": "Youssef En-Nesyri",
+      "team": "Maroc",
+      "goals": 2,
+      "rating": 7.55
+    }
+  ],
+  "topAssists": [
+    {
+      "name": "Antoine Griezmann",
+      "team": "France",
+      "assists": 3,
+      "rating": 7.9
+    },
+    {
+      "name": "Jamal Musiala",
+      "team": "Allemagne",
+      "assists": 3,
+      "rating": 8.05
+    },
+    {
+      "name": "Hakim Ziyech",
+      "team": "Maroc",
+      "assists": 2,
+      "rating": 7.7
+    },
+    {
+      "name": "Cody Gakpo",
+      "team": "Pays-Bas",
+      "assists": 2,
+      "rating": 7.62
+    }
+  ],
+  "topPlayers": [
+    {
+      "name": "Lionel Messi",
+      "team": "Argentine",
+      "rating": 8.52
+    },
+    {
+      "name": "Kylian Mbappé",
+      "team": "France",
+      "rating": 8.35
+    },
+    {
+      "name": "Achraf Hakimi",
+      "team": "Maroc",
+      "rating": 8.18
+    },
+    {
+      "name": "Jamal Musiala",
+      "team": "Allemagne",
+      "rating": 8.05
+    }
+  ],
+  "youngPlayers": [
+    {
+      "name": "Endrick",
+      "team": "Brésil",
+      "age": 19,
+      "rating": 7.84
+    },
+    {
+      "name": "Lamine Yamal",
+      "team": "Espagne",
+      "age": 18,
+      "rating": 7.8
+    },
+    {
+      "name": "Warren Zaïre-Emery",
+      "team": "France",
+      "age": 20,
+      "rating": 7.42
+    },
+    {
+      "name": "Kobbie Mainoo",
+      "team": "Angleterre",
+      "age": 21,
+      "rating": 7.3
+    }
+  ]
+}

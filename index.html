@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#005CFF" />
+    <meta
+      name="description"
+      content="Pari Sportif, PWA mobile-first pour suivre la Coupe du Monde FIFA 2026."
+    />
+    <title>Pari Sportif</title>
+    <link rel="manifest" href="manifest.json" />
+    <link rel="icon" href="logo.jpg" type="image/jpeg" />
+    <link rel="stylesheet" href="styles.css?v=3" />
+  </head>
+  <body>
+    <div class="loading-screen" id="loadingScreen" aria-live="polite">
+      <img src="logo.jpg" alt="" class="loading-logo" />
+      <div>
+        <p class="eyebrow">Coupe du Monde FIFA 2026</p>
+        <h1>Pari Sportif</h1>
+      </div>
+      <span class="loader" aria-hidden="true"></span>
+    </div>
+
+    <main class="app-shell" id="app" aria-busy="true">
+      <header class="topbar">
+        <div class="brand">
+          <img src="logo.jpg" alt="" class="brand-logo" />
+          <div>
+            <p class="eyebrow">Coupe du Monde FIFA 2026</p>
+            <h1>Pari Sportif</h1>
+          </div>
+        </div>
+        <div class="header-actions">
+          <button class="install-button" id="installButton" type="button" hidden>
+            Installer
+          </button>
+          <span class="refresh-pill" id="refreshPill">Synchronisation locale</span>
+        </div>
+      </header>
+
+      <p class="warning">
+        Paris sportifs réservés aux 18+. Analyse informative, pas une incitation à parier.
+      </p>
+
+      <section
+        class="tab-panel is-active"
+        id="panel-matches"
+        role="tabpanel"
+        aria-labelledby="tab-matches"
+      >
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Live et calendrier</p>
+            <h2>Matchs</h2>
+          </div>
+          <span class="count-pill" id="matchesCount">0</span>
+        </div>
+        <div id="matchDetail" class="match-detail" aria-live="polite"></div>
+        <div id="matchesList" class="match-list" aria-label="Liste des matchs"></div>
+      </section>
+
+      <section
+        class="tab-panel"
+        id="panel-standings"
+        role="tabpanel"
+        aria-labelledby="tab-standings"
+      >
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Groupes et performances</p>
+            <h2>Classements</h2>
+          </div>
+        </div>
+        <div class="legend">
+          <span><i class="dot qualified"></i>Qualifié</span>
+          <span><i class="dot best-third"></i>Meilleur 3e</span>
+          <span><i class="dot eliminated"></i>Éliminé</span>
+        </div>
+        <div id="groupsGrid" class="groups-grid"></div>
+        <div id="playersBoards" class="players-boards"></div>
+      </section>
+
+      <section
+        class="tab-panel"
+        id="panel-bracket"
+        role="tabpanel"
+        aria-labelledby="tab-bracket"
+      >
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Phase à élimination directe</p>
+            <h2>Tableau final</h2>
+          </div>
+          <div class="stage-arrows" aria-label="Navigation du tableau">
+            <button class="icon-button" id="prevStage" type="button" aria-label="Tour précédent">
+              ‹
+            </button>
+            <button class="icon-button" id="nextStage" type="button" aria-label="Tour suivant">
+              ›
+            </button>
+          </div>
+        </div>
+        <div class="stage-tabs" id="stageTabs" role="tablist" aria-label="Tours du tableau final"></div>
+        <div class="bracket-stage" id="bracketStage" aria-live="polite"></div>
+      </section>
+    </main>
+
+    <nav class="bottom-tabs" aria-label="Navigation principale">
+      <button class="tab-button is-active" id="tab-matches" type="button" data-tab="matches">
+        <img src="Accueil.PNG" alt="" />
+        <span>Matchs</span>
+      </button>
+      <button class="tab-button" id="tab-standings" type="button" data-tab="standings">
+        <img src="Classements.PNG" alt="" />
+        <span>Classements</span>
+      </button>
+      <button class="tab-button" id="tab-bracket" type="button" data-tab="bracket">
+        <img src="Tableau.PNG" alt="" />
+        <span>Tableau final</span>
+      </button>
+    </nav>
+
+    <noscript>Activez JavaScript pour utiliser Pari Sportif.</noscript>
+    <script src="app.js?v=3" defer></script>
+  </body>
+</html>

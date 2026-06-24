@@ -1,0 +1,19 @@
+{
+  "name": "Pari Sportif",
+  "short_name": "Pari Sportif",
+  "description": "PWA mobile-first pour suivre la Coupe du Monde FIFA 2026.",
+  "start_url": ".",
+  "scope": ".",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#030712",
+  "theme_color": "#005CFF",
+  "icons": [
+    {
+      "src": "logo.jpg",
+      "sizes": "912x1136",
+      "type": "image/jpeg",
+      "purpose": "any"
+    }
+  ]
+}

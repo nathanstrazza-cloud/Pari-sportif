@@ -1,0 +1,45 @@
+{
+  "lastUpdated": "2026-06-24T18:00:00+02:00",
+  "markets": {
+    "m003": [
+      {
+        "bookmaker": "Parions Sport",
+        "home": 3.05,
+        "draw": 3.25,
+        "away": 2.18
+      },
+      {
+        "bookmaker": "Betclic",
+        "home": 3.1,
+        "draw": 3.3,
+        "away": 2.15
+      },
+      {
+        "bookmaker": "Winamax",
+        "home": 3.2,
+        "draw": 3.35,
+        "away": 2.12
+      }
+    ],
+    "m004": [
+      {
+        "bookmaker": "Parions Sport",
+        "home": 3.35,
+        "draw": 3.15,
+        "away": 2.08
+      },
+      {
+        "bookmaker": "Betclic",
+        "home": 3.4,
+        "draw": 3.2,
+        "away": 2.06
+      },
+      {
+        "bookmaker": "Winamax",
+        "home": 3.5,
+        "draw": 3.18,
+        "away": 2.02
+      }
+    ]
+  }
+}

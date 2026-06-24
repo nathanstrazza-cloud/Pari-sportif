@@ -1,0 +1,644 @@
+{
+  "lastUpdated": "2026-06-24T18:00:00+02:00",
+  "matches": [
+    {
+      "id": "m001",
+      "stage": "Groupe D",
+      "date": "2026-06-24T21:00:00+02:00",
+      "venue": "MetLife Stadium",
+      "home": "France",
+      "away": "Brésil",
+      "homeCoach": "Didier Deschamps",
+      "awayCoach": "Dorival Junior",
+      "status": "live",
+      "minute": 64,
+      "score": {
+        "home": 1,
+        "away": 1
+      },
+      "scorers": ["Kylian Mbappé 18'", "Vinícius Júnior 51'"],
+      "highlights": [
+        {
+          "minute": "18'",
+          "text": "Mbappé conclut une transition rapide après une récupération haute."
+        },
+        {
+          "minute": "38'",
+          "text": "Maignan détourne une frappe croisée de Rodrygo."
+        },
+        {
+          "minute": "51'",
+          "text": "Vinícius égalise sur une accélération côté gauche."
+        },
+        {
+          "minute": "62'",
+          "text": "La France pousse avec deux corners consécutifs."
+        }
+      ],
+      "lineups": {
+        "home": {
+          "team": "France",
+          "formation": "4-3-3",
+          "players": ["Maignan", "Koundé", "Saliba", "Upamecano", "T. Hernandez", "Tchouaméni", "Camavinga", "Griezmann", "Dembélé", "Mbappé", "Barcola"]
+        },
+        "away": {
+          "team": "Brésil",
+          "formation": "4-2-3-1",
+          "players": ["Alisson", "Danilo", "Marquinhos", "Gabriel", "Wendell", "Bruno Guimarães", "João Gomes", "Rodrygo", "Paquetá", "Vinícius", "Endrick"]
+        }
+      },
+      "stats": {
+        "possession": {
+          "home": 52,
+          "away": 48
+        },
+        "shots": {
+          "home": 10,
+          "away": 8
+        },
+        "shotsOnTarget": {
+          "home": 4,
+          "away": 3
+        },
+        "corners": {
+          "home": 5,
+          "away": 2
+        },
+        "fouls": {
+          "home": 9,
+          "away": 11
+        }
+      },
+      "playerRatings": {
+        "home": [
+          {
+            "name": "Kylian Mbappé",
+            "role": "ATT",
+            "rating": 8.1
+          },
+          {
+            "name": "Eduardo Camavinga",
+            "role": "MIL",
+            "rating": 7.4
+          },
+          {
+            "name": "Mike Maignan",
+            "role": "GB",
+            "rating": 7.2
+          }
+        ],
+        "away": [
+          {
+            "name": "Vinícius Júnior",
+            "role": "ATT",
+            "rating": 8.0
+          },
+          {
+            "name": "Bruno Guimarães",
+            "role": "MIL",
+            "rating": 7.0
+          },
+          {
+            "name": "Alisson",
+            "role": "GB",
+            "rating": 6.8
+          }
+        ]
+      },
+      "expertDiscussion": [
+        {
+          "expert": "Expert Sécurité",
+          "text": "Le nul devient l’option la plus rationnelle tant que les deux blocs restent compacts."
+        },
+        {
+          "expert": "Expert Surprise",
+          "text": "Le Brésil a l’élan. Un but tardif sur transition n’est pas à écarter."
+        },
+        {
+          "expert": "Expert Forme",
+          "text": "La France garde de meilleurs tirs, mais l’intensité brésilienne change le scénario."
+        },
+        {
+          "expert": "Expert Sécurité",
+          "text": "Je privilégie moins de 3,5 buts plutôt qu’un vainqueur sec."
+        },
+        {
+          "expert": "Expert Surprise",
+          "text": "Si Endrick trouve un duel isolé, le match peut basculer très vite."
+        }
+      ]
+    },
+    {
+      "id": "m002",
+      "stage": "Groupe A",
+      "date": "2026-06-23T22:00:00+02:00",
+      "venue": "BMO Field",
+      "home": "Canada",
+      "away": "Maroc",
+      "homeCoach": "Jesse Marsch",
+      "awayCoach": "Walid Regragui",
+      "status": "finished",
+      "score": {
+        "home": 0,
+        "away": 2
+      },
+      "scorers": ["Achraf Hakimi 33'", "Youssef En-Nesyri 78'"],
+      "highlights": [
+        {
+          "minute": "12'",
+          "text": "Davies accélère mais sa frappe termine au-dessus."
+        },
+        {
+          "minute": "33'",
+          "text": "Hakimi ouvre le score sur coup franc direct."
+        },
+        {
+          "minute": "78'",
+          "text": "En-Nesyri double la mise de la tête."
+        }
+      ],
+      "lineups": {
+        "home": {
+          "team": "Canada",
+          "formation": "4-2-3-1",
+          "players": ["Crépeau", "Laryea", "Bombito", "Miller", "Davies", "Eustáquio", "Kone", "Buchanan", "David", "Millar", "Larin"]
+        },
+        "away": {
+          "team": "Maroc",
+          "formation": "4-3-3",
+          "players": ["Bono", "Hakimi", "Aguerd", "Saïss", "Mazraoui", "Amrabat", "Ounahi", "Harit", "Ziyech", "En-Nesyri", "Adli"]
+        }
+      },
+      "stats": {
+        "possession": {
+          "home": 46,
+          "away": 54
+        },
+        "shots": {
+          "home": 7,
+          "away": 13
+        },
+        "shotsOnTarget": {
+          "home": 2,
+          "away": 6
+        },
+        "corners": {
+          "home": 3,
+          "away": 5
+        },
+        "fouls": {
+          "home": 14,
+          "away": 10
+        }
+      },
+      "playerRatings": {
+        "home": [
+          {
+            "name": "Alphonso Davies",
+            "role": "DEF",
+            "rating": 6.9
+          },
+          {
+            "name": "Jonathan David",
+            "role": "ATT",
+            "rating": 6.4
+          }
+        ],
+        "away": [
+          {
+            "name": "Achraf Hakimi",
+            "role": "DEF",
+            "rating": 8.5
+          },
+          {
+            "name": "Sofyan Amrabat",
+            "role": "MIL",
+            "rating": 7.6
+          }
+        ]
+      },
+      "expertDiscussion": [
+        {
+          "expert": "Expert Sécurité",
+          "text": "Le Maroc a validé le plan le plus fiable : bloc stable et efficacité sur phases arrêtées."
+        },
+        {
+          "expert": "Expert Surprise",
+          "text": "Le Canada a manqué de variété, mais ses courses peuvent surprendre au prochain match."
+        },
+        {
+          "expert": "Expert Forme",
+          "text": "La dynamique marocaine est solide, surtout grâce à la maîtrise du milieu."
+        },
+        {
+          "expert": "Expert Sécurité",
+          "text": "Pour la suite, je surveille les marchés prudents liés aux doubles chances."
+        }
+      ]
+    },
+    {
+      "id": "m003",
+      "stage": "Groupe E",
+      "date": "2026-06-25T18:00:00+02:00",
+      "venue": "SoFi Stadium",
+      "home": "Japon",
+      "away": "Allemagne",
+      "status": "upcoming",
+      "score": {
+        "home": null,
+        "away": null
+      },
+      "probableLineups": {
+        "home": {
+          "team": "Japon",
+          "formation": "3-4-2-1",
+          "players": ["Suzuki", "Tomiyasu", "Itakura", "Machida", "Sugawara", "Endo", "Morita", "Ito", "Kubo", "Mitoma", "Ueda"]
+        },
+        "away": {
+          "team": "Allemagne",
+          "formation": "4-2-3-1",
+          "players": ["ter Stegen", "Kimmich", "Tah", "Rüdiger", "Raum", "Andrich", "Pavlović", "Sané", "Wirtz", "Musiala", "Füllkrug"]
+        }
+      },
+      "winProbability": {
+        "home": 27,
+        "draw": 29,
+        "away": 44
+      },
+      "expertDiscussion": [
+        {
+          "expert": "Expert Sécurité",
+          "text": "L’Allemagne a plus de garanties, mais le nul couvre mieux le risque japonais."
+        },
+        {
+          "expert": "Expert Surprise",
+          "text": "Le Japon adore ces affiches. Une victoire courte est un vrai scénario d’outsider."
+        },
+        {
+          "expert": "Expert Forme",
+          "text": "La forme des créateurs allemands pèse, mais les transitions japonaises créent du hasard."
+        },
+        {
+          "expert": "Expert Sécurité",
+          "text": "Je préfère Allemagne ou nul avec un total de buts maîtrisé."
+        }
+      ]
+    },
+    {
+      "id": "m004",
+      "stage": "Groupe B",
+      "date": "2026-06-25T03:00:00+02:00",
+      "venue": "Estadio Azteca",
+      "home": "Mexique",
+      "away": "Pays-Bas",
+      "status": "upcoming",
+      "score": {
+        "home": null,
+        "away": null
+      },
+      "probableLineups": {
+        "home": {
+          "team": "Mexique",
+          "formation": "4-3-3",
+          "players": ["Ochoa", "Sánchez", "Montes", "Vásquez", "Gallardo", "Álvarez", "Chávez", "Pineda", "Lozano", "Giménez", "Antuna"]
+        },
+        "away": {
+          "team": "Pays-Bas",
+          "formation": "3-4-2-1",
+          "players": ["Verbruggen", "de Ligt", "van Dijk", "Aké", "Dumfries", "de Jong", "Reijnders", "Blind", "Gakpo", "Simons", "Depay"]
+        }
+      },
+      "winProbability": {
+        "home": 24,
+        "draw": 31,
+        "away": 45
+      },
+      "expertDiscussion": [
+        {
+          "expert": "Expert Sécurité",
+          "text": "Les Pays-Bas ont l’avantage structurel, surtout sur coups de pied arrêtés."
+        },
+        {
+          "expert": "Expert Surprise",
+          "text": "L’altitude et le public peuvent transformer le Mexique en piège parfait."
+        },
+        {
+          "expert": "Expert Forme",
+          "text": "Le rythme néerlandais est meilleur, mais le contexte ajoute beaucoup d’incertitude."
+        },
+        {
+          "expert": "Expert Sécurité",
+          "text": "Double chance Pays-Bas ou nul reste l’angle le plus propre."
+        }
+      ]
+    },
+    {
+      "id": "m005",
+      "stage": "Groupe C",
+      "date": "2026-06-22T20:00:00+02:00",
+      "venue": "Hard Rock Stadium",
+      "home": "Argentine",
+      "away": "Sénégal",
+      "status": "finished",
+      "score": {
+        "home": 3,
+        "away": 1
+      },
+      "scorers": ["Lautaro Martínez 14'", "Ismaïla Sarr 29'", "Lionel Messi 57'", "Julián Álvarez 83'"],
+      "highlights": [
+        {
+          "minute": "14'",
+          "text": "Lautaro marque après un centre tendu de Molina."
+        },
+        {
+          "minute": "29'",
+          "text": "Sarr égalise d’une frappe basse."
+        },
+        {
+          "minute": "57'",
+          "text": "Messi redonne l’avantage sur penalty."
+        },
+        {
+          "minute": "83'",
+          "text": "Álvarez ferme le match en contre."
+        }
+      ],
+      "lineups": {
+        "home": {
+          "team": "Argentine",
+          "formation": "4-3-3",
+          "players": ["Martínez", "Molina", "Romero", "Otamendi", "Tagliafico", "De Paul", "Mac Allister", "Enzo", "Messi", "Lautaro", "Álvarez"]
+        },
+        "away": {
+          "team": "Sénégal",
+          "formation": "4-2-3-1",
+          "players": ["Mendy", "Sabaly", "Koulibaly", "Niakhaté", "Jakobs", "Gueye", "Camara", "Sarr", "Mané", "Diatta", "Jackson"]
+        }
+      },
+      "stats": {
+        "possession": {
+          "home": 58,
+          "away": 42
+        },
+        "shots": {
+          "home": 15,
+          "away": 9
+        },
+        "shotsOnTarget": {
+          "home": 7,
+          "away": 3
+        },
+        "corners": {
+          "home": 6,
+          "away": 4
+        },
+        "fouls": {
+          "home": 8,
+          "away": 13
+        }
+      },
+      "playerRatings": {
+        "home": [
+          {
+            "name": "Lionel Messi",
+            "role": "ATT",
+            "rating": 8.7
+          },
+          {
+            "name": "Lautaro Martínez",
+            "role": "ATT",
+            "rating": 8.0
+          }
+        ],
+        "away": [
+          {
+            "name": "Ismaïla Sarr",
+            "role": "ATT",
+            "rating": 7.3
+          },
+          {
+            "name": "Kalidou Koulibaly",
+            "role": "DEF",
+            "rating": 6.8
+          }
+        ]
+      },
+      "expertDiscussion": [
+        {
+          "expert": "Expert Sécurité",
+          "text": "L’Argentine a fini par imposer son expérience dans les temps faibles."
+        },
+        {
+          "expert": "Expert Surprise",
+          "text": "Le Sénégal a eu une fenêtre réelle après l’égalisation, mais elle a été trop courte."
+        },
+        {
+          "expert": "Expert Forme",
+          "text": "Les notes confirment un avantage offensif argentin net après la pause."
+        },
+        {
+          "expert": "Expert Sécurité",
+          "text": "La prochaine cote argentine sera probablement trop basse pour une prise de risque sèche."
+        }
+      ]
+    }
+  ],
+  "knockout": {
+    "round32": [
+      {
+        "slot": "16e 1",
+        "date": "2026-06-28T18:00:00+02:00",
+        "home": "France",
+        "away": "Mexique"
+      },
+      {
+        "slot": "16e 2",
+        "date": "2026-06-28T21:00:00+02:00",
+        "home": "Argentine",
+        "away": "États-Unis"
+      },
+      {
+        "slot": "16e 3",
+        "date": "2026-06-29T00:00:00+02:00",
+        "home": "Brésil",
+        "away": "Maroc"
+      },
+      {
+        "slot": "16e 4",
+        "date": "2026-06-29T03:00:00+02:00",
+        "home": "Espagne",
+        "away": "Japon"
+      },
+      {
+        "slot": "16e 5",
+        "date": "2026-06-29T18:00:00+02:00",
+        "home": "Allemagne",
+        "away": "Sénégal"
+      },
+      {
+        "slot": "16e 6",
+        "date": "2026-06-29T21:00:00+02:00",
+        "home": "Angleterre",
+        "away": "Corée du Sud"
+      },
+      {
+        "slot": "16e 7",
+        "date": "2026-06-30T00:00:00+02:00",
+        "home": "Portugal",
+        "away": "Canada"
+      },
+      {
+        "slot": "16e 8",
+        "date": "2026-06-30T03:00:00+02:00",
+        "home": "Pays-Bas",
+        "away": "Uruguay"
+      },
+      {
+        "slot": "16e 9",
+        "date": "2026-06-30T18:00:00+02:00",
+        "home": "Belgique",
+        "away": "Colombie"
+      },
+      {
+        "slot": "16e 10",
+        "date": "2026-06-30T21:00:00+02:00",
+        "home": "Croatie",
+        "away": "Ghana"
+      },
+      {
+        "slot": "16e 11",
+        "date": "2026-07-01T00:00:00+02:00",
+        "home": "Italie",
+        "away": "Australie"
+      },
+      {
+        "slot": "16e 12",
+        "date": "2026-07-01T03:00:00+02:00",
+        "home": "Suisse",
+        "away": "Danemark"
+      },
+      {
+        "slot": "16e 13",
+        "date": "2026-07-01T18:00:00+02:00",
+        "home": "Norvège",
+        "away": "Tunisie"
+      },
+      {
+        "slot": "16e 14",
+        "date": "2026-07-01T21:00:00+02:00",
+        "home": "Autriche",
+        "away": "Nigeria"
+      },
+      {
+        "slot": "16e 15",
+        "date": "2026-07-02T00:00:00+02:00",
+        "home": "Côte d’Ivoire",
+        "away": "Serbie"
+      },
+      {
+        "slot": "16e 16",
+        "date": "2026-07-02T03:00:00+02:00",
+        "home": "Équateur",
+        "away": "Chili"
+      }
+    ],
+    "round16": [
+      {
+        "slot": "8e 1",
+        "date": "2026-07-04T18:00:00+02:00",
+        "home": "Vainqueur 16e 1",
+        "away": "Vainqueur 16e 2"
+      },
+      {
+        "slot": "8e 2",
+        "date": "2026-07-04T21:00:00+02:00",
+        "home": "Vainqueur 16e 3",
+        "away": "Vainqueur 16e 4"
+      },
+      {
+        "slot": "8e 3",
+        "date": "2026-07-05T00:00:00+02:00",
+        "home": "Vainqueur 16e 5",
+        "away": "Vainqueur 16e 6"
+      },
+      {
+        "slot": "8e 4",
+        "date": "2026-07-05T03:00:00+02:00",
+        "home": "Vainqueur 16e 7",
+        "away": "Vainqueur 16e 8"
+      },
+      {
+        "slot": "8e 5",
+        "date": "2026-07-05T18:00:00+02:00",
+        "home": "Vainqueur 16e 9",
+        "away": "Vainqueur 16e 10"
+      },
+      {
+        "slot": "8e 6",
+        "date": "2026-07-05T21:00:00+02:00",
+        "home": "Vainqueur 16e 11",
+        "away": "Vainqueur 16e 12"
+      },
+      {
+        "slot": "8e 7",
+        "date": "2026-07-06T00:00:00+02:00",
+        "home": "Vainqueur 16e 13",
+        "away": "Vainqueur 16e 14"
+      },
+      {
+        "slot": "8e 8",
+        "date": "2026-07-06T03:00:00+02:00",
+        "home": "Vainqueur 16e 15",
+        "away": "Vainqueur 16e 16"
+      }
+    ],
+    "quarterfinals": [
+      {
+        "slot": "Quart 1",
+        "date": "2026-07-09T21:00:00+02:00",
+        "home": "Vainqueur 8e 1",
+        "away": "Vainqueur 8e 2"
+      },
+      {
+        "slot": "Quart 2",
+        "date": "2026-07-10T00:00:00+02:00",
+        "home": "Vainqueur 8e 3",
+        "away": "Vainqueur 8e 4"
+      },
+      {
+        "slot": "Quart 3",
+        "date": "2026-07-10T21:00:00+02:00",
+        "home": "Vainqueur 8e 5",
+        "away": "Vainqueur 8e 6"
+      },
+      {
+        "slot": "Quart 4",
+        "date": "2026-07-11T00:00:00+02:00",
+        "home": "Vainqueur 8e 7",
+        "away": "Vainqueur 8e 8"
+      }
+    ],
+    "semifinals": [
+      {
+        "slot": "Demi 1",
+        "date": "2026-07-14T21:00:00+02:00",
+        "home": "Vainqueur Quart 1",
+        "away": "Vainqueur Quart 2"
+      },
+      {
+        "slot": "Demi 2",
+        "date": "2026-07-15T21:00:00+02:00",
+        "home": "Vainqueur Quart 3",
+        "away": "Vainqueur Quart 4"
+      }
+    ],
+    "final": [
+      {
+        "slot": "Finale",
+        "date": "2026-07-19T21:00:00+02:00",
+        "home": "Vainqueur Demi 1",
+        "away": "Vainqueur Demi 2"
+      }
+    ]
+  }
+}
