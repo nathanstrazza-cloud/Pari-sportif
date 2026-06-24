@@ -1,4 +1,4 @@
-const CACHE_NAME = "pari-sportif-v3";
+const CACHE_NAME = "pari-sportif-v5";
 const APP_SHELL = [
   "./",
   "index.html",
