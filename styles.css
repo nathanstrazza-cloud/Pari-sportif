@@ -306,6 +306,25 @@ h3 {
   font-size: 0.74rem;
 }
 
+.team-scorers {
+  display: grid;
+  gap: 0.22rem;
+  margin-top: 0.5rem;
+  color: #DBEAFE;
+  font-size: 0.76rem;
+  font-weight: 750;
+  line-height: 1.25;
+}
+
+.team.away .team-scorers {
+  justify-items: end;
+}
+
+.team-scorer {
+  max-width: 100%;
+  overflow-wrap: anywhere;
+}
+
 .score {
   min-width: 4.7rem;
   text-align: center;
@@ -350,8 +369,6 @@ h3 {
   color: var(--gold-light);
 }
 
-.chips,
-.highlights,
 .expert-chat,
 .lineups,
 .probability-list,
@@ -362,21 +379,6 @@ h3 {
   gap: 0.55rem;
 }
 
-.chip {
-  display: inline-flex;
-  align-items: center;
-  width: fit-content;
-  max-width: 100%;
-  padding: 0.38rem 0.55rem;
-  border: 1px solid rgba(0, 163, 255, 0.32);
-  border-radius: 999px;
-  background: rgba(0, 92, 255, 0.12);
-  color: #DBEAFE;
-  font-size: 0.8rem;
-  font-weight: 750;
-}
-
-.highlight,
 .expert-message {
   display: grid;
   gap: 0.2rem;
@@ -387,7 +389,6 @@ h3 {
   line-height: 1.38;
 }
 
-.highlight strong,
 .expert-message strong {
   color: var(--text);
 }

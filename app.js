@@ -213,11 +213,13 @@ function renderMatchDetail(match) {
           <div class="team">
             <span class="team-name">${escapeHtml(match.home ?? "Équipe à confirmer")}</span>
             ${renderTeamSub(match.homeCoach)}
+            ${renderTeamScorers(match, "home")}
           </div>
           <div class="score">${scoreText(match)}</div>
           <div class="team away">
             <span class="team-name">${escapeHtml(match.away ?? "Équipe à confirmer")}</span>
             ${renderTeamSub(match.awayCoach)}
+            ${renderTeamScorers(match, "away")}
           </div>
         </div>
       </div>
@@ -232,8 +234,6 @@ function renderMatchDetail(match) {
 
 function renderPlayedDetail(match) {
   return [
-    renderScorers(match.scorers),
-    renderHighlights(match.highlights),
     renderLineups(match.lineups, "Compositions"),
     renderStats(match.stats),
     renderRatings(match.playerRatings),
@@ -253,31 +253,65 @@ function renderUpcomingDetail(match) {
   `;
 }
 
-function renderScorers(scorers) {
-  if (!Array.isArray(scorers) || !scorers.length) return "";
+function renderTeamScorers(match, side) {
+  const team = match?.[side];
+  const scorers = getTeamScorers(match, side);
+  if (!team || !scorers.length) return "";
+
   return `
-    <section class="detail-section">
-      <h3>Buteurs</h3>
-      <div class="chips">
-        ${scorers.map((scorer) => `<span class="chip">${escapeHtml(scorer)}</span>`).join("")}
-      </div>
-    </section>
+    <div class="team-scorers" aria-label="Buteurs ${escapeHtml(team)}">
+      ${scorers.map((scorer) => `<span class="team-scorer">${escapeHtml(formatTeamScorer(scorer, team))}</span>`).join("")}
+    </div>
   `;
 }
 
-function renderHighlights(highlights) {
-  if (!Array.isArray(highlights) || !highlights.length) return "";
-  return `
-    <section class="detail-section">
-      <h3>Temps forts</h3>
-      <div class="highlights">
-        ${highlights.map((item) => {
-          const minute = item.minute ? `<strong>${escapeHtml(item.minute)}</strong>` : "";
-          return `<p class="highlight">${minute}${escapeHtml(item.text ?? "")}</p>`;
-        }).join("")}
-      </div>
-    </section>
-  `;
+function getTeamScorers(match, side) {
+  const team = match?.[side];
+  const teamKey = normalizeTeamName(team);
+  if (!teamKey || !Array.isArray(match?.scorers)) return [];
+
+  return match.scorers.filter((scorer) => normalizeTeamName(getScoringTeam(match, scorer)) === teamKey);
+}
+
+function getScoringTeam(match, scorer) {
+  const scorerTeam = extractScorerTeam(scorer);
+  if (!isOwnGoal(scorer)) return scorerTeam;
+
+  const scorerTeamKey = normalizeTeamName(scorerTeam);
+  if (scorerTeamKey === normalizeTeamName(match?.home)) return match?.away ?? scorerTeam;
+  if (scorerTeamKey === normalizeTeamName(match?.away)) return match?.home ?? scorerTeam;
+  return scorerTeam;
+}
+
+function isOwnGoal(scorer) {
+  return String(scorer ?? "").toLocaleLowerCase("fr-FR").includes("contre son camp");
+}
+
+function extractScorerTeam(scorer) {
+  const matches = String(scorer ?? "").match(/\(([^()]*)\)/g);
+  if (!matches?.length) return "";
+  return matches[matches.length - 1].slice(1, -1);
+}
+
+function formatTeamScorer(scorer, team) {
+  const teamPattern = new RegExp(`\\s*\\(${escapeRegExp(team)}\\)`, "u");
+  return String(scorer ?? "")
+    .replace(teamPattern, "")
+    .replace(/^\s*(\d+(?:'\+\d+)?')\s+But de\s+/i, "$1 ")
+    .replace(/\s*!\s*$/, "")
+    .trim();
+}
+
+function normalizeTeamName(team) {
+  return String(team ?? "")
+    .normalize("NFKC")
+    .replace(/\s+/g, " ")
+    .trim()
+    .toLocaleLowerCase("fr-FR");
+}
+
+function escapeRegExp(value) {
+  return String(value ?? "").replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
 }
 
 function renderLineups(lineups, title) {
