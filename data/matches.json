@@ -1,13 +1,13 @@
 {
-  "lastUpdated": "2026-06-24T13:24:00Z",
+  "lastUpdated": "2026-06-24T17:03:29.375905Z",
   "matches": [
     {
       "id": "400021443",
       "stage": "groupes",
       "group": "Groupe A",
-      "date": "2026-06-11T19:00:00Z",
-      "venue": "Stade de Mexico",
-      "city": "Mexico",
+      "date": "2026-06-11T19:00:00+00:00",
+      "venue": "Estadio Azteca",
+      "city": "Mexico City",
       "home": "Mexique",
       "away": "Afrique du Sud",
       "homeCoach": null,
@@ -107,14 +107,17 @@
         "draw": null,
         "away": null
       },
-      "expertDiscussion": []
+      "expertDiscussion": [],
+      "externalIds": {
+        "apiFootball": "1489369"
+      }
     },
     {
       "id": "400021441",
       "stage": "groupes",
       "group": "Groupe A",
-      "date": "2026-06-12T02:00:00Z",
-      "venue": "Stade de Guadalajara",
+      "date": "2026-06-12T02:00:00+00:00",
+      "venue": "Estadio Akron",
       "city": "Guadalajara",
       "home": "République de Corée",
       "away": "Tchéquie",
@@ -204,14 +207,17 @@
         "draw": null,
         "away": null
       },
-      "expertDiscussion": []
+      "expertDiscussion": [],
+      "externalIds": {
+        "apiFootball": "1538999"
+      }
     },
     {
       "id": "400021449",
       "stage": "groupes",
       "group": "Groupe B",
-      "date": "2026-06-12T19:00:00Z",
-      "venue": "Stade de Toronto",
+      "date": "2026-06-12T19:00:00+00:00",
+      "venue": "BMO Field",
       "city": "Toronto",
       "home": "Canada",
       "away": "Bosnie-et-Herzégovine",
@@ -296,15 +302,18 @@
         "draw": null,
         "away": null
       },
-      "expertDiscussion": []
+      "expertDiscussion": [],
+      "externalIds": {
+        "apiFootball": "1539000"
+      }
     },
     {
       "id": "400021458",
       "stage": "groupes",
       "group": "Groupe D",
-      "date": "2026-06-13T01:00:00Z",
-      "venue": "Stade de Los Angeles",
-      "city": "Los Angeles",
+      "date": "2026-06-13T01:00:00+00:00",
+      "venue": "SoFi Stadium",
+      "city": "Inglewood",
       "home": "États-Unis",
       "away": "Paraguay",
       "homeCoach": null,
@@ -407,15 +416,18 @@
         "draw": null,
         "away": null
       },
-      "expertDiscussion": []
+      "expertDiscussion": [],
+      "externalIds": {
+        "apiFootball": "1489370"
+      }
     },
     {
       "id": "400021447",
       "stage": "groupes",
       "group": "Groupe B",
-      "date": "2026-06-13T19:00:00Z",
-      "venue": "Stade de la baie de San Francisco",
-      "city": "Région de la baie de San Francisco",
+      "date": "2026-06-13T19:00:00+00:00",
+      "venue": "Levi's Stadium",
+      "city": "Santa Clara",
       "home": "Qatar",
       "away": "Suisse",
       "homeCoach": null,
@@ -499,8 +511,5312 @@
         "draw": null,
         "away": null
       },
+      "expertDiscussion": [],
+      "externalIds": {
+        "apiFootball": "1489373"
+      }
+    },
+    {
+      "id": "1489371",
+      "stage": "groupes",
+      "group": null,
+      "date": "2026-06-13T22:00:00+00:00",
+      "venue": "MetLife Stadium",
+      "city": "East Rutherford",
+      "home": "Brazil",
+      "away": "Morocco",
+      "homeCoach": null,
+      "awayCoach": null,
+      "score": {
+        "home": 1,
+        "away": 1
+      },
+      "scorers": [],
+      "highlights": [],
+      "externalIds": {
+        "apiFootball": "1489371"
+      },
+      "status": "finished",
+      "minute": null,
+      "lineups": {
+        "home": {
+          "team": "Brazil",
+          "formation": null,
+          "players": []
+        },
+        "away": {
+          "team": "Morocco",
+          "formation": null,
+          "players": []
+        }
+      },
+      "probableLineups": {
+        "home": {
+          "team": "Brazil",
+          "formation": null,
+          "players": []
+        },
+        "away": {
+          "team": "Morocco",
+          "formation": null,
+          "players": []
+        }
+      },
+      "stats": {
+        "possession": {
+          "home": null,
+          "away": null
+        },
+        "shots": {
+          "home": null,
+          "away": null
+        },
+        "shotsOnTarget": {
+          "home": null,
+          "away": null
+        },
+        "corners": {
+          "home": null,
+          "away": null
+        },
+        "fouls": {
+          "home": null,
+          "away": null
+        }
+      },
+      "playerRatings": {
+        "home": [],
+        "away": []
+      },
+      "winProbability": {
+        "home": null,
+        "draw": null,
+        "away": null
+      },
+      "expertDiscussion": []
+    },
+    {
+      "id": "1489372",
+      "stage": "groupes",
+      "group": null,
+      "date": "2026-06-14T01:00:00+00:00",
+      "venue": "Gillette Stadium",
+      "city": "Boston",
+      "home": "Haiti",
+      "away": "Scotland",
+      "homeCoach": null,
+      "awayCoach": null,
+      "score": {
+        "home": 0,
+        "away": 1
+      },
+      "scorers": [],
+      "highlights": [],
+      "externalIds": {
+        "apiFootball": "1489372"
+      },
+      "status": "finished",
+      "minute": null,
+      "lineups": {
+        "home": {
+          "team": "Haiti",
+          "formation": null,
+          "players": []
+        },
+        "away": {
+          "team": "Scotland",
+          "formation": null,
+          "players": []
+        }
+      },
+      "probableLineups": {
+        "home": {
+          "team": "Haiti",
+          "formation": null,
+          "players": []
+        },
+        "away": {
+          "team": "Scotland",
+          "formation": null,
+          "players": []
+        }
+      },
+      "stats": {
+        "possession": {
+          "home": null,
+          "away": null
+        },
+        "shots": {
+          "home": null,
+          "away": null
+        },
+        "shotsOnTarget": {
+          "home": null,
+          "away": null
+        },
+        "corners": {
+          "home": null,
+          "away": null
+        },
+        "fouls": {
+          "home": null,
+          "away": null
+        }
+      },
+      "playerRatings": {
+        "home": [],
+        "away": []
+      },
+      "winProbability": {
+        "home": null,
+        "draw": null,
+        "away": null
+      },
+      "expertDiscussion": []
+    },
+    {
+      "id": "1539001",
+      "stage": "groupes",
+      "group": null,
+      "date": "2026-06-14T04:00:00+00:00",
+      "venue": "BC Place",
+      "city": "Vancouver",
+      "home": "Australia",
+      "away": "Türkiye",
+      "homeCoach": null,
+      "awayCoach": null,
+      "score": {
+        "home": 2,
+        "away": 0
+      },
+      "scorers": [],
+      "highlights": [],
+      "externalIds": {
+        "apiFootball": "1539001"
+      },
+      "status": "finished",
+      "minute": null,
+      "lineups": {
+        "home": {
+          "team": "Australia",
+          "formation": null,
+          "players": []
+        },
+        "away": {
+          "team": "Türkiye",
+          "formation": null,
+          "players": []
+        }
+      },
+      "probableLineups": {
+        "home": {
+          "team": "Australia",
+          "formation": null,
+          "players": []
+        },
+        "away": {
+          "team": "Türkiye",
+          "formation": null,
+          "players": []
+        }
+      },
+      "stats": {
+        "possession": {
+          "home": null,
+          "away": null
+        },
+        "shots": {
+          "home": null,
+          "away": null
+        },
+        "shotsOnTarget": {
+          "home": null,
+          "away": null
+        },
+        "corners": {
+          "home": null,
+          "away": null
+        },
+        "fouls": {
+          "home": null,
+          "away": null
+        }
+      },
+      "playerRatings": {
+        "home": [],
+        "away": []
+      },
+      "winProbability": {
+        "home": null,
+        "draw": null,
+        "away": null
+      },
+      "expertDiscussion": []
+    },
+    {
+      "id": "1489374",
+      "stage": "groupes",
+      "group": null,
+      "date": "2026-06-14T17:00:00+00:00",
+      "venue": "NRG Stadium",
+      "city": "Houston",
+      "home": "Germany",
+      "away": "Curaçao",
+      "homeCoach": null,
+      "awayCoach": null,
+      "score": {
+        "home": 7,
+        "away": 1
+      },
+      "scorers": [],
+      "highlights": [],
+      "externalIds": {
+        "apiFootball": "1489374"
+      },
+      "status": "finished",
+      "minute": null,
+      "lineups": {
+        "home": {
+          "team": "Germany",
+          "formation": null,
+          "players": []
+        },
+        "away": {
+          "team": "Curaçao",
+          "formation": null,
+          "players": []
+        }
+      },
+      "probableLineups": {
+        "home": {
+          "team": "Germany",
+          "formation": null,
+          "players": []
+        },
+        "away": {
+          "team": "Curaçao",
+          "formation": null,
+          "players": []
+        }
+      },
+      "stats": {
+        "possession": {
+          "home": null,
+          "away": null
+        },
+        "shots": {
+          "home": null,
+          "away": null
+        },
+        "shotsOnTarget": {
+          "home": null,
+          "away": null
+        },
+        "corners": {
+          "home": null,
+          "away": null
+        },
+        "fouls": {
+          "home": null,
+          "away": null
+        }
+      },
+      "playerRatings": {
+        "home": [],
+        "away": []
+      },
+      "winProbability": {
+        "home": null,
+        "draw": null,
+        "away": null
+      },
+      "expertDiscussion": []
+    },
+    {
+      "id": "1489376",
+      "stage": "groupes",
+      "group": null,
+      "date": "2026-06-14T20:00:00+00:00",
+      "venue": "AT&T Stadium",
+      "city": "Arlington",
+      "home": "Netherlands",
+      "away": "Japan",
+      "homeCoach": null,
+      "awayCoach": null,
+      "score": {
+        "home": 2,
+        "away": 2
+      },
+      "scorers": [],
+      "highlights": [],
+      "externalIds": {
+        "apiFootball": "1489376"
+      },
+      "status": "finished",
+      "minute": null,
+      "lineups": {
+        "home": {
+          "team": "Netherlands",
+          "formation": null,
+          "players": []
+        },
+        "away": {
+          "team": "Japan",
+          "formation": null,
+          "players": []
+        }
+      },
+      "probableLineups": {
+        "home": {
+          "team": "Netherlands",
+          "formation": null,
+          "players": []
+        },
+        "away": {
+          "team": "Japan",
+          "formation": null,
+          "players": []
+        }
+      },
+      "stats": {
+        "possession": {
+          "home": null,
+          "away": null
+        },
+        "shots": {
+          "home": null,
+          "away": null
+        },
+        "shotsOnTarget": {
+          "home": null,
+          "away": null
+        },
+        "corners": {
+          "home": null,
+          "away": null
+        },
+        "fouls": {
+          "home": null,
+          "away": null
+        }
+      },
+      "playerRatings": {
+        "home": [],
+        "away": []
+      },
+      "winProbability": {
+        "home": null,
+        "draw": null,
+        "away": null
+      },
+      "expertDiscussion": []
+    },
+    {
+      "id": "1489375",
+      "stage": "groupes",
+      "group": null,
+      "date": "2026-06-14T23:00:00+00:00",
+      "venue": "Lincoln Financial Field",
+      "city": "Philadelphia",
+      "home": "Ivory Coast",
+      "away": "Ecuador",
+      "homeCoach": null,
+      "awayCoach": null,
+      "score": {
+        "home": 1,
+        "away": 0
+      },
+      "scorers": [],
+      "highlights": [],
+      "externalIds": {
+        "apiFootball": "1489375"
+      },
+      "status": "finished",
+      "minute": null,
+      "lineups": {
+        "home": {
+          "team": "Ivory Coast",
+          "formation": null,
+          "players": []
+        },
+        "away": {
+          "team": "Ecuador",
+          "formation": null,
+          "players": []
+        }
+      },
+      "probableLineups": {
+        "home": {
+          "team": "Ivory Coast",
+          "formation": null,
+          "players": []
+        },
+        "away": {
+          "team": "Ecuador",
+          "formation": null,
+          "players": []
+        }
+      },
+      "stats": {
+        "possession": {
+          "home": null,
+          "away": null
+        },
+        "shots": {
+          "home": null,
+          "away": null
+        },
+        "shotsOnTarget": {
+          "home": null,
+          "away": null
+        },
+        "corners": {
+          "home": null,
+          "away": null
+        },
+        "fouls": {
+          "home": null,
+          "away": null
+        }
+      },
+      "playerRatings": {
+        "home": [],
+        "away": []
+      },
+      "winProbability": {
+        "home": null,
+        "draw": null,
+        "away": null
+      },
+      "expertDiscussion": []
+    },
+    {
+      "id": "1539002",
+      "stage": "groupes",
+      "group": null,
+      "date": "2026-06-15T02:00:00+00:00",
+      "venue": "Estadio BBVA",
+      "city": "Monterrey",
+      "home": "Sweden",
+      "away": "Tunisia",
+      "homeCoach": null,
+      "awayCoach": null,
+      "score": {
+        "home": 5,
+        "away": 1
+      },
+      "scorers": [],
+      "highlights": [],
+      "externalIds": {
+        "apiFootball": "1539002"
+      },
+      "status": "finished",
+      "minute": null,
+      "lineups": {
+        "home": {
+          "team": "Sweden",
+          "formation": null,
+          "players": []
+        },
+        "away": {
+          "team": "Tunisia",
+          "formation": null,
+          "players": []
+        }
+      },
+      "probableLineups": {
+        "home": {
+          "team": "Sweden",
+          "formation": null,
+          "players": []
+        },
+        "away": {
+          "team": "Tunisia",
+          "formation": null,
+          "players": []
+        }
+      },
+      "stats": {
+        "possession": {
+          "home": null,
+          "away": null
+        },
+        "shots": {
+          "home": null,
+          "away": null
+        },
+        "shotsOnTarget": {
+          "home": null,
+          "away": null
+        },
+        "corners": {
+          "home": null,
+          "away": null
+        },
+        "fouls": {
+          "home": null,
+          "away": null
+        }
+      },
+      "playerRatings": {
+        "home": [],
+        "away": []
+      },
+      "winProbability": {
+        "home": null,
+        "draw": null,
+        "away": null
+      },
+      "expertDiscussion": []
+    },
+    {
+      "id": "1489380",
+      "stage": "groupes",
+      "group": null,
+      "date": "2026-06-15T16:00:00+00:00",
+      "venue": "Mercedes-Benz Stadium",
+      "city": "Atlanta",
+      "home": "Spain",
+      "away": "Cape Verde Islands",
+      "homeCoach": null,
+      "awayCoach": null,
+      "score": {
+        "home": 0,
+        "away": 0
+      },
+      "scorers": [],
+      "highlights": [],
+      "externalIds": {
+        "apiFootball": "1489380"
+      },
+      "status": "finished",
+      "minute": null,
+      "lineups": {
+        "home": {
+          "team": "Spain",
+          "formation": null,
+          "players": []
+        },
+        "away": {
+          "team": "Cape Verde Islands",
+          "formation": null,
+          "players": []
+        }
+      },
+      "probableLineups": {
+        "home": {
+          "team": "Spain",
+          "formation": null,
+          "players": []
+        },
+        "away": {
+          "team": "Cape Verde Islands",
+          "formation": null,
+          "players": []
+        }
+      },
+      "stats": {
+        "possession": {
+          "home": null,
+          "away": null
+        },
+        "shots": {
+          "home": null,
+          "away": null
+        },
+        "shotsOnTarget": {
+          "home": null,
+          "away": null
+        },
+        "corners": {
+          "home": null,
+          "away": null
+        },
+        "fouls": {
+          "home": null,
+          "away": null
+        }
+      },
+      "playerRatings": {
+        "home": [],
+        "away": []
+      },
+      "winProbability": {
+        "home": null,
+        "draw": null,
+        "away": null
+      },
+      "expertDiscussion": []
+    },
+    {
+      "id": "1489377",
+      "stage": "groupes",
+      "group": null,
+      "date": "2026-06-15T19:00:00+00:00",
+      "venue": "Lumen Field",
+      "city": "Seattle",
+      "home": "Belgium",
+      "away": "Egypt",
+      "homeCoach": null,
+      "awayCoach": null,
+      "score": {
+        "home": 1,
+        "away": 1
+      },
+      "scorers": [],
+      "highlights": [],
+      "externalIds": {
+        "apiFootball": "1489377"
+      },
+      "status": "finished",
+      "minute": null,
+      "lineups": {
+        "home": {
+          "team": "Belgium",
+          "formation": null,
+          "players": []
+        },
+        "away": {
+          "team": "Egypt",
+          "formation": null,
+          "players": []
+        }
+      },
+      "probableLineups": {
+        "home": {
+          "team": "Belgium",
+          "formation": null,
+          "players": []
+        },
+        "away": {
+          "team": "Egypt",
+          "formation": null,
+          "players": []
+        }
+      },
+      "stats": {
+        "possession": {
+          "home": null,
+          "away": null
+        },
+        "shots": {
+          "home": null,
+          "away": null
+        },
+        "shotsOnTarget": {
+          "home": null,
+          "away": null
+        },
+        "corners": {
+          "home": null,
+          "away": null
+        },
+        "fouls": {
+          "home": null,
+          "away": null
+        }
+      },
+      "playerRatings": {
+        "home": [],
+        "away": []
+      },
+      "winProbability": {
+        "home": null,
+        "draw": null,
+        "away": null
+      },
+      "expertDiscussion": []
+    },
+    {
+      "id": "1489379",
+      "stage": "groupes",
+      "group": null,
+      "date": "2026-06-15T22:00:00+00:00",
+      "venue": "Hard Rock Stadium",
+      "city": "Miami Gardens",
+      "home": "Saudi Arabia",
+      "away": "Uruguay",
+      "homeCoach": null,
+      "awayCoach": null,
+      "score": {
+        "home": 1,
+        "away": 1
+      },
+      "scorers": [],
+      "highlights": [],
+      "externalIds": {
+        "apiFootball": "1489379"
+      },
+      "status": "finished",
+      "minute": null,
+      "lineups": {
+        "home": {
+          "team": "Saudi Arabia",
+          "formation": null,
+          "players": []
+        },
+        "away": {
+          "team": "Uruguay",
+          "formation": null,
+          "players": []
+        }
+      },
+      "probableLineups": {
+        "home": {
+          "team": "Saudi Arabia",
+          "formation": null,
+          "players": []
+        },
+        "away": {
+          "team": "Uruguay",
+          "formation": null,
+          "players": []
+        }
+      },
+      "stats": {
+        "possession": {
+          "home": null,
+          "away": null
+        },
+        "shots": {
+          "home": null,
+          "away": null
+        },
+        "shotsOnTarget": {
+          "home": null,
+          "away": null
+        },
+        "corners": {
+          "home": null,
+          "away": null
+        },
+        "fouls": {
+          "home": null,
+          "away": null
+        }
+      },
+      "playerRatings": {
+        "home": [],
+        "away": []
+      },
+      "winProbability": {
+        "home": null,
+        "draw": null,
+        "away": null
+      },
+      "expertDiscussion": []
+    },
+    {
+      "id": "1489378",
+      "stage": "groupes",
+      "group": null,
+      "date": "2026-06-16T01:00:00+00:00",
+      "venue": "SoFi Stadium",
+      "city": "Inglewood",
+      "home": "Iran",
+      "away": "New Zealand",
+      "homeCoach": null,
+      "awayCoach": null,
+      "score": {
+        "home": 2,
+        "away": 2
+      },
+      "scorers": [],
+      "highlights": [],
+      "externalIds": {
+        "apiFootball": "1489378"
+      },
+      "status": "finished",
+      "minute": null,
+      "lineups": {
+        "home": {
+          "team": "Iran",
+          "formation": null,
+          "players": []
+        },
+        "away": {
+          "team": "New Zealand",
+          "formation": null,
+          "players": []
+        }
+      },
+      "probableLineups": {
+        "home": {
+          "team": "Iran",
+          "formation": null,
+          "players": []
+        },
+        "away": {
+          "team": "New Zealand",
+          "formation": null,
+          "players": []
+        }
+      },
+      "stats": {
+        "possession": {
+          "home": null,
+          "away": null
+        },
+        "shots": {
+          "home": null,
+          "away": null
+        },
+        "shotsOnTarget": {
+          "home": null,
+          "away": null
+        },
+        "corners": {
+          "home": null,
+          "away": null
+        },
+        "fouls": {
+          "home": null,
+          "away": null
+        }
+      },
+      "playerRatings": {
+        "home": [],
+        "away": []
+      },
+      "winProbability": {
+        "home": null,
+        "draw": null,
+        "away": null
+      },
+      "expertDiscussion": []
+    },
+    {
+      "id": "1489383",
+      "stage": "groupes",
+      "group": null,
+      "date": "2026-06-16T19:00:00+00:00",
+      "venue": "MetLife Stadium",
+      "city": "East Rutherford",
+      "home": "France",
+      "away": "Senegal",
+      "homeCoach": null,
+      "awayCoach": null,
+      "score": {
+        "home": 3,
+        "away": 1
+      },
+      "scorers": [],
+      "highlights": [],
+      "externalIds": {
+        "apiFootball": "1489383"
+      },
+      "status": "finished",
+      "minute": null,
+      "lineups": {
+        "home": {
+          "team": "France",
+          "formation": null,
+          "players": []
+        },
+        "away": {
+          "team": "Senegal",
+          "formation": null,
+          "players": []
+        }
+      },
+      "probableLineups": {
+        "home": {
+          "team": "France",
+          "formation": null,
+          "players": []
+        },
+        "away": {
+          "team": "Senegal",
+          "formation": null,
+          "players": []
+        }
+      },
+      "stats": {
+        "possession": {
+          "home": null,
+          "away": null
+        },
+        "shots": {
+          "home": null,
+          "away": null
+        },
+        "shotsOnTarget": {
+          "home": null,
+          "away": null
+        },
+        "corners": {
+          "home": null,
+          "away": null
+        },
+        "fouls": {
+          "home": null,
+          "away": null
+        }
+      },
+      "playerRatings": {
+        "home": [],
+        "away": []
+      },
+      "winProbability": {
+        "home": null,
+        "draw": null,
+        "away": null
+      },
+      "expertDiscussion": []
+    },
+    {
+      "id": "1539016",
+      "stage": "groupes",
+      "group": null,
+      "date": "2026-06-16T22:00:00+00:00",
+      "venue": "Gillette Stadium",
+      "city": "Boston",
+      "home": "Iraq",
+      "away": "Norway",
+      "homeCoach": null,
+      "awayCoach": null,
+      "score": {
+        "home": 1,
+        "away": 4
+      },
+      "scorers": [],
+      "highlights": [],
+      "externalIds": {
+        "apiFootball": "1539016"
+      },
+      "status": "finished",
+      "minute": null,
+      "lineups": {
+        "home": {
+          "team": "Iraq",
+          "formation": null,
+          "players": []
+        },
+        "away": {
+          "team": "Norway",
+          "formation": null,
+          "players": []
+        }
+      },
+      "probableLineups": {
+        "home": {
+          "team": "Iraq",
+          "formation": null,
+          "players": []
+        },
+        "away": {
+          "team": "Norway",
+          "formation": null,
+          "players": []
+        }
+      },
+      "stats": {
+        "possession": {
+          "home": null,
+          "away": null
+        },
+        "shots": {
+          "home": null,
+          "away": null
+        },
+        "shotsOnTarget": {
+          "home": null,
+          "away": null
+        },
+        "corners": {
+          "home": null,
+          "away": null
+        },
+        "fouls": {
+          "home": null,
+          "away": null
+        }
+      },
+      "playerRatings": {
+        "home": [],
+        "away": []
+      },
+      "winProbability": {
+        "home": null,
+        "draw": null,
+        "away": null
+      },
+      "expertDiscussion": []
+    },
+    {
+      "id": "1489381",
+      "stage": "groupes",
+      "group": null,
+      "date": "2026-06-17T01:00:00+00:00",
+      "venue": "Arrowhead Stadium",
+      "city": "Kansas City",
+      "home": "Argentina",
+      "away": "Algeria",
+      "homeCoach": null,
+      "awayCoach": null,
+      "score": {
+        "home": 3,
+        "away": 0
+      },
+      "scorers": [],
+      "highlights": [],
+      "externalIds": {
+        "apiFootball": "1489381"
+      },
+      "status": "finished",
+      "minute": null,
+      "lineups": {
+        "home": {
+          "team": "Argentina",
+          "formation": null,
+          "players": []
+        },
+        "away": {
+          "team": "Algeria",
+          "formation": null,
+          "players": []
+        }
+      },
+      "probableLineups": {
+        "home": {
+          "team": "Argentina",
+          "formation": null,
+          "players": []
+        },
+        "away": {
+          "team": "Algeria",
+          "formation": null,
+          "players": []
+        }
+      },
+      "stats": {
+        "possession": {
+          "home": null,
+          "away": null
+        },
+        "shots": {
+          "home": null,
+          "away": null
+        },
+        "shotsOnTarget": {
+          "home": null,
+          "away": null
+        },
+        "corners": {
+          "home": null,
+          "away": null
+        },
+        "fouls": {
+          "home": null,
+          "away": null
+        }
+      },
+      "playerRatings": {
+        "home": [],
+        "away": []
+      },
+      "winProbability": {
+        "home": null,
+        "draw": null,
+        "away": null
+      },
+      "expertDiscussion": []
+    },
+    {
+      "id": "1489382",
+      "stage": "groupes",
+      "group": null,
+      "date": "2026-06-17T04:00:00+00:00",
+      "venue": "Levi's Stadium",
+      "city": "Santa Clara",
+      "home": "Austria",
+      "away": "Jordan",
+      "homeCoach": null,
+      "awayCoach": null,
+      "score": {
+        "home": 3,
+        "away": 1
+      },
+      "scorers": [],
+      "highlights": [],
+      "externalIds": {
+        "apiFootball": "1489382"
+      },
+      "status": "finished",
+      "minute": null,
+      "lineups": {
+        "home": {
+          "team": "Austria",
+          "formation": null,
+          "players": []
+        },
+        "away": {
+          "team": "Jordan",
+          "formation": null,
+          "players": []
+        }
+      },
+      "probableLineups": {
+        "home": {
+          "team": "Austria",
+          "formation": null,
+          "players": []
+        },
+        "away": {
+          "team": "Jordan",
+          "formation": null,
+          "players": []
+        }
+      },
+      "stats": {
+        "possession": {
+          "home": null,
+          "away": null
+        },
+        "shots": {
+          "home": null,
+          "away": null
+        },
+        "shotsOnTarget": {
+          "home": null,
+          "away": null
+        },
+        "corners": {
+          "home": null,
+          "away": null
+        },
+        "fouls": {
+          "home": null,
+          "away": null
+        }
+      },
+      "playerRatings": {
+        "home": [],
+        "away": []
+      },
+      "winProbability": {
+        "home": null,
+        "draw": null,
+        "away": null
+      },
+      "expertDiscussion": []
+    },
+    {
+      "id": "1539003",
+      "stage": "groupes",
+      "group": null,
+      "date": "2026-06-17T17:00:00+00:00",
+      "venue": "NRG Stadium",
+      "city": "Houston",
+      "home": "Portugal",
+      "away": "Congo DR",
+      "homeCoach": null,
+      "awayCoach": null,
+      "score": {
+        "home": 1,
+        "away": 1
+      },
+      "scorers": [],
+      "highlights": [],
+      "externalIds": {
+        "apiFootball": "1539003"
+      },
+      "status": "finished",
+      "minute": null,
+      "lineups": {
+        "home": {
+          "team": "Portugal",
+          "formation": null,
+          "players": []
+        },
+        "away": {
+          "team": "Congo DR",
+          "formation": null,
+          "players": []
+        }
+      },
+      "probableLineups": {
+        "home": {
+          "team": "Portugal",
+          "formation": null,
+          "players": []
+        },
+        "away": {
+          "team": "Congo DR",
+          "formation": null,
+          "players": []
+        }
+      },
+      "stats": {
+        "possession": {
+          "home": null,
+          "away": null
+        },
+        "shots": {
+          "home": null,
+          "away": null
+        },
+        "shotsOnTarget": {
+          "home": null,
+          "away": null
+        },
+        "corners": {
+          "home": null,
+          "away": null
+        },
+        "fouls": {
+          "home": null,
+          "away": null
+        }
+      },
+      "playerRatings": {
+        "home": [],
+        "away": []
+      },
+      "winProbability": {
+        "home": null,
+        "draw": null,
+        "away": null
+      },
+      "expertDiscussion": []
+    },
+    {
+      "id": "1489384",
+      "stage": "groupes",
+      "group": null,
+      "date": "2026-06-17T20:00:00+00:00",
+      "venue": "AT&T Stadium",
+      "city": "Arlington",
+      "home": "England",
+      "away": "Croatia",
+      "homeCoach": null,
+      "awayCoach": null,
+      "score": {
+        "home": 4,
+        "away": 2
+      },
+      "scorers": [],
+      "highlights": [],
+      "externalIds": {
+        "apiFootball": "1489384"
+      },
+      "status": "finished",
+      "minute": null,
+      "lineups": {
+        "home": {
+          "team": "England",
+          "formation": null,
+          "players": []
+        },
+        "away": {
+          "team": "Croatia",
+          "formation": null,
+          "players": []
+        }
+      },
+      "probableLineups": {
+        "home": {
+          "team": "England",
+          "formation": null,
+          "players": []
+        },
+        "away": {
+          "team": "Croatia",
+          "formation": null,
+          "players": []
+        }
+      },
+      "stats": {
+        "possession": {
+          "home": null,
+          "away": null
+        },
+        "shots": {
+          "home": null,
+          "away": null
+        },
+        "shotsOnTarget": {
+          "home": null,
+          "away": null
+        },
+        "corners": {
+          "home": null,
+          "away": null
+        },
+        "fouls": {
+          "home": null,
+          "away": null
+        }
+      },
+      "playerRatings": {
+        "home": [],
+        "away": []
+      },
+      "winProbability": {
+        "home": null,
+        "draw": null,
+        "away": null
+      },
+      "expertDiscussion": []
+    },
+    {
+      "id": "1489385",
+      "stage": "groupes",
+      "group": null,
+      "date": "2026-06-17T23:00:00+00:00",
+      "venue": "BMO Field",
+      "city": "Toronto",
+      "home": "Ghana",
+      "away": "Panama",
+      "homeCoach": null,
+      "awayCoach": null,
+      "score": {
+        "home": 1,
+        "away": 0
+      },
+      "scorers": [],
+      "highlights": [],
+      "externalIds": {
+        "apiFootball": "1489385"
+      },
+      "status": "finished",
+      "minute": null,
+      "lineups": {
+        "home": {
+          "team": "Ghana",
+          "formation": null,
+          "players": []
+        },
+        "away": {
+          "team": "Panama",
+          "formation": null,
+          "players": []
+        }
+      },
+      "probableLineups": {
+        "home": {
+          "team": "Ghana",
+          "formation": null,
+          "players": []
+        },
+        "away": {
+          "team": "Panama",
+          "formation": null,
+          "players": []
+        }
+      },
+      "stats": {
+        "possession": {
+          "home": null,
+          "away": null
+        },
+        "shots": {
+          "home": null,
+          "away": null
+        },
+        "shotsOnTarget": {
+          "home": null,
+          "away": null
+        },
+        "corners": {
+          "home": null,
+          "away": null
+        },
+        "fouls": {
+          "home": null,
+          "away": null
+        }
+      },
+      "playerRatings": {
+        "home": [],
+        "away": []
+      },
+      "winProbability": {
+        "home": null,
+        "draw": null,
+        "away": null
+      },
+      "expertDiscussion": []
+    },
+    {
+      "id": "1489386",
+      "stage": "groupes",
+      "group": null,
+      "date": "2026-06-18T02:00:00+00:00",
+      "venue": "Estadio Azteca",
+      "city": "Mexico City",
+      "home": "Uzbekistan",
+      "away": "Colombia",
+      "homeCoach": null,
+      "awayCoach": null,
+      "score": {
+        "home": 1,
+        "away": 3
+      },
+      "scorers": [],
+      "highlights": [],
+      "externalIds": {
+        "apiFootball": "1489386"
+      },
+      "status": "finished",
+      "minute": null,
+      "lineups": {
+        "home": {
+          "team": "Uzbekistan",
+          "formation": null,
+          "players": []
+        },
+        "away": {
+          "team": "Colombia",
+          "formation": null,
+          "players": []
+        }
+      },
+      "probableLineups": {
+        "home": {
+          "team": "Uzbekistan",
+          "formation": null,
+          "players": []
+        },
+        "away": {
+          "team": "Colombia",
+          "formation": null,
+          "players": []
+        }
+      },
+      "stats": {
+        "possession": {
+          "home": null,
+          "away": null
+        },
+        "shots": {
+          "home": null,
+          "away": null
+        },
+        "shotsOnTarget": {
+          "home": null,
+          "away": null
+        },
+        "corners": {
+          "home": null,
+          "away": null
+        },
+        "fouls": {
+          "home": null,
+          "away": null
+        }
+      },
+      "playerRatings": {
+        "home": [],
+        "away": []
+      },
+      "winProbability": {
+        "home": null,
+        "draw": null,
+        "away": null
+      },
+      "expertDiscussion": []
+    },
+    {
+      "id": "1539004",
+      "stage": "groupes",
+      "group": null,
+      "date": "2026-06-18T16:00:00+00:00",
+      "venue": "Mercedes-Benz Stadium",
+      "city": "Atlanta",
+      "home": "Czechia",
+      "away": "South Africa",
+      "homeCoach": null,
+      "awayCoach": null,
+      "score": {
+        "home": 1,
+        "away": 1
+      },
+      "scorers": [],
+      "highlights": [],
+      "externalIds": {
+        "apiFootball": "1539004"
+      },
+      "status": "finished",
+      "minute": null,
+      "lineups": {
+        "home": {
+          "team": "Czechia",
+          "formation": null,
+          "players": []
+        },
+        "away": {
+          "team": "South Africa",
+          "formation": null,
+          "players": []
+        }
+      },
+      "probableLineups": {
+        "home": {
+          "team": "Czechia",
+          "formation": null,
+          "players": []
+        },
+        "away": {
+          "team": "South Africa",
+          "formation": null,
+          "players": []
+        }
+      },
+      "stats": {
+        "possession": {
+          "home": null,
+          "away": null
+        },
+        "shots": {
+          "home": null,
+          "away": null
+        },
+        "shotsOnTarget": {
+          "home": null,
+          "away": null
+        },
+        "corners": {
+          "home": null,
+          "away": null
+        },
+        "fouls": {
+          "home": null,
+          "away": null
+        }
+      },
+      "playerRatings": {
+        "home": [],
+        "away": []
+      },
+      "winProbability": {
+        "home": null,
+        "draw": null,
+        "away": null
+      },
+      "expertDiscussion": []
+    },
+    {
+      "id": "1539005",
+      "stage": "groupes",
+      "group": null,
+      "date": "2026-06-18T19:00:00+00:00",
+      "venue": "SoFi Stadium",
+      "city": "Inglewood",
+      "home": "Switzerland",
+      "away": "Bosnia & Herzegovina",
+      "homeCoach": null,
+      "awayCoach": null,
+      "score": {
+        "home": 4,
+        "away": 1
+      },
+      "scorers": [],
+      "highlights": [],
+      "externalIds": {
+        "apiFootball": "1539005"
+      },
+      "status": "finished",
+      "minute": null,
+      "lineups": {
+        "home": {
+          "team": "Switzerland",
+          "formation": null,
+          "players": []
+        },
+        "away": {
+          "team": "Bosnia & Herzegovina",
+          "formation": null,
+          "players": []
+        }
+      },
+      "probableLineups": {
+        "home": {
+          "team": "Switzerland",
+          "formation": null,
+          "players": []
+        },
+        "away": {
+          "team": "Bosnia & Herzegovina",
+          "formation": null,
+          "players": []
+        }
+      },
+      "stats": {
+        "possession": {
+          "home": null,
+          "away": null
+        },
+        "shots": {
+          "home": null,
+          "away": null
+        },
+        "shotsOnTarget": {
+          "home": null,
+          "away": null
+        },
+        "corners": {
+          "home": null,
+          "away": null
+        },
+        "fouls": {
+          "home": null,
+          "away": null
+        }
+      },
+      "playerRatings": {
+        "home": [],
+        "away": []
+      },
+      "winProbability": {
+        "home": null,
+        "draw": null,
+        "away": null
+      },
+      "expertDiscussion": []
+    },
+    {
+      "id": "1489387",
+      "stage": "groupes",
+      "group": null,
+      "date": "2026-06-18T22:00:00+00:00",
+      "venue": "BC Place",
+      "city": "Vancouver",
+      "home": "Canada",
+      "away": "Qatar",
+      "homeCoach": null,
+      "awayCoach": null,
+      "score": {
+        "home": 6,
+        "away": 0
+      },
+      "scorers": [],
+      "highlights": [],
+      "externalIds": {
+        "apiFootball": "1489387"
+      },
+      "status": "finished",
+      "minute": null,
+      "lineups": {
+        "home": {
+          "team": "Canada",
+          "formation": null,
+          "players": []
+        },
+        "away": {
+          "team": "Qatar",
+          "formation": null,
+          "players": []
+        }
+      },
+      "probableLineups": {
+        "home": {
+          "team": "Canada",
+          "formation": null,
+          "players": []
+        },
+        "away": {
+          "team": "Qatar",
+          "formation": null,
+          "players": []
+        }
+      },
+      "stats": {
+        "possession": {
+          "home": null,
+          "away": null
+        },
+        "shots": {
+          "home": null,
+          "away": null
+        },
+        "shotsOnTarget": {
+          "home": null,
+          "away": null
+        },
+        "corners": {
+          "home": null,
+          "away": null
+        },
+        "fouls": {
+          "home": null,
+          "away": null
+        }
+      },
+      "playerRatings": {
+        "home": [],
+        "away": []
+      },
+      "winProbability": {
+        "home": null,
+        "draw": null,
+        "away": null
+      },
+      "expertDiscussion": []
+    },
+    {
+      "id": "1489388",
+      "stage": "groupes",
+      "group": null,
+      "date": "2026-06-19T01:00:00+00:00",
+      "venue": "Estadio Akron",
+      "city": "Guadalajara",
+      "home": "Mexico",
+      "away": "South Korea",
+      "homeCoach": null,
+      "awayCoach": null,
+      "score": {
+        "home": 1,
+        "away": 0
+      },
+      "scorers": [],
+      "highlights": [],
+      "externalIds": {
+        "apiFootball": "1489388"
+      },
+      "status": "finished",
+      "minute": null,
+      "lineups": {
+        "home": {
+          "team": "Mexico",
+          "formation": null,
+          "players": []
+        },
+        "away": {
+          "team": "South Korea",
+          "formation": null,
+          "players": []
+        }
+      },
+      "probableLineups": {
+        "home": {
+          "team": "Mexico",
+          "formation": null,
+          "players": []
+        },
+        "away": {
+          "team": "South Korea",
+          "formation": null,
+          "players": []
+        }
+      },
+      "stats": {
+        "possession": {
+          "home": null,
+          "away": null
+        },
+        "shots": {
+          "home": null,
+          "away": null
+        },
+        "shotsOnTarget": {
+          "home": null,
+          "away": null
+        },
+        "corners": {
+          "home": null,
+          "away": null
+        },
+        "fouls": {
+          "home": null,
+          "away": null
+        }
+      },
+      "playerRatings": {
+        "home": [],
+        "away": []
+      },
+      "winProbability": {
+        "home": null,
+        "draw": null,
+        "away": null
+      },
+      "expertDiscussion": []
+    },
+    {
+      "id": "1489391",
+      "stage": "groupes",
+      "group": null,
+      "date": "2026-06-19T19:00:00+00:00",
+      "venue": "Lumen Field",
+      "city": "Seattle",
+      "home": "USA",
+      "away": "Australia",
+      "homeCoach": null,
+      "awayCoach": null,
+      "score": {
+        "home": 2,
+        "away": 0
+      },
+      "scorers": [],
+      "highlights": [],
+      "externalIds": {
+        "apiFootball": "1489391"
+      },
+      "status": "finished",
+      "minute": null,
+      "lineups": {
+        "home": {
+          "team": "USA",
+          "formation": null,
+          "players": []
+        },
+        "away": {
+          "team": "Australia",
+          "formation": null,
+          "players": []
+        }
+      },
+      "probableLineups": {
+        "home": {
+          "team": "USA",
+          "formation": null,
+          "players": []
+        },
+        "away": {
+          "team": "Australia",
+          "formation": null,
+          "players": []
+        }
+      },
+      "stats": {
+        "possession": {
+          "home": null,
+          "away": null
+        },
+        "shots": {
+          "home": null,
+          "away": null
+        },
+        "shotsOnTarget": {
+          "home": null,
+          "away": null
+        },
+        "corners": {
+          "home": null,
+          "away": null
+        },
+        "fouls": {
+          "home": null,
+          "away": null
+        }
+      },
+      "playerRatings": {
+        "home": [],
+        "away": []
+      },
+      "winProbability": {
+        "home": null,
+        "draw": null,
+        "away": null
+      },
+      "expertDiscussion": []
+    },
+    {
+      "id": "1489390",
+      "stage": "groupes",
+      "group": null,
+      "date": "2026-06-19T22:00:00+00:00",
+      "venue": "Gillette Stadium",
+      "city": "Boston",
+      "home": "Scotland",
+      "away": "Morocco",
+      "homeCoach": null,
+      "awayCoach": null,
+      "score": {
+        "home": 0,
+        "away": 1
+      },
+      "scorers": [],
+      "highlights": [],
+      "externalIds": {
+        "apiFootball": "1489390"
+      },
+      "status": "finished",
+      "minute": null,
+      "lineups": {
+        "home": {
+          "team": "Scotland",
+          "formation": null,
+          "players": []
+        },
+        "away": {
+          "team": "Morocco",
+          "formation": null,
+          "players": []
+        }
+      },
+      "probableLineups": {
+        "home": {
+          "team": "Scotland",
+          "formation": null,
+          "players": []
+        },
+        "away": {
+          "team": "Morocco",
+          "formation": null,
+          "players": []
+        }
+      },
+      "stats": {
+        "possession": {
+          "home": null,
+          "away": null
+        },
+        "shots": {
+          "home": null,
+          "away": null
+        },
+        "shotsOnTarget": {
+          "home": null,
+          "away": null
+        },
+        "corners": {
+          "home": null,
+          "away": null
+        },
+        "fouls": {
+          "home": null,
+          "away": null
+        }
+      },
+      "playerRatings": {
+        "home": [],
+        "away": []
+      },
+      "winProbability": {
+        "home": null,
+        "draw": null,
+        "away": null
+      },
+      "expertDiscussion": []
+    },
+    {
+      "id": "1489389",
+      "stage": "groupes",
+      "group": null,
+      "date": "2026-06-20T00:30:00+00:00",
+      "venue": "Lincoln Financial Field",
+      "city": "Philadelphia",
+      "home": "Brazil",
+      "away": "Haiti",
+      "homeCoach": null,
+      "awayCoach": null,
+      "score": {
+        "home": 3,
+        "away": 0
+      },
+      "scorers": [],
+      "highlights": [],
+      "externalIds": {
+        "apiFootball": "1489389"
+      },
+      "status": "finished",
+      "minute": null,
+      "lineups": {
+        "home": {
+          "team": "Brazil",
+          "formation": null,
+          "players": []
+        },
+        "away": {
+          "team": "Haiti",
+          "formation": null,
+          "players": []
+        }
+      },
+      "probableLineups": {
+        "home": {
+          "team": "Brazil",
+          "formation": null,
+          "players": []
+        },
+        "away": {
+          "team": "Haiti",
+          "formation": null,
+          "players": []
+        }
+      },
+      "stats": {
+        "possession": {
+          "home": null,
+          "away": null
+        },
+        "shots": {
+          "home": null,
+          "away": null
+        },
+        "shotsOnTarget": {
+          "home": null,
+          "away": null
+        },
+        "corners": {
+          "home": null,
+          "away": null
+        },
+        "fouls": {
+          "home": null,
+          "away": null
+        }
+      },
+      "playerRatings": {
+        "home": [],
+        "away": []
+      },
+      "winProbability": {
+        "home": null,
+        "draw": null,
+        "away": null
+      },
+      "expertDiscussion": []
+    },
+    {
+      "id": "1539006",
+      "stage": "groupes",
+      "group": null,
+      "date": "2026-06-20T03:00:00+00:00",
+      "venue": "Levi's Stadium",
+      "city": "Santa Clara",
+      "home": "Türkiye",
+      "away": "Paraguay",
+      "homeCoach": null,
+      "awayCoach": null,
+      "score": {
+        "home": 0,
+        "away": 1
+      },
+      "scorers": [],
+      "highlights": [],
+      "externalIds": {
+        "apiFootball": "1539006"
+      },
+      "status": "finished",
+      "minute": null,
+      "lineups": {
+        "home": {
+          "team": "Türkiye",
+          "formation": null,
+          "players": []
+        },
+        "away": {
+          "team": "Paraguay",
+          "formation": null,
+          "players": []
+        }
+      },
+      "probableLineups": {
+        "home": {
+          "team": "Türkiye",
+          "formation": null,
+          "players": []
+        },
+        "away": {
+          "team": "Paraguay",
+          "formation": null,
+          "players": []
+        }
+      },
+      "stats": {
+        "possession": {
+          "home": null,
+          "away": null
+        },
+        "shots": {
+          "home": null,
+          "away": null
+        },
+        "shotsOnTarget": {
+          "home": null,
+          "away": null
+        },
+        "corners": {
+          "home": null,
+          "away": null
+        },
+        "fouls": {
+          "home": null,
+          "away": null
+        }
+      },
+      "playerRatings": {
+        "home": [],
+        "away": []
+      },
+      "winProbability": {
+        "home": null,
+        "draw": null,
+        "away": null
+      },
+      "expertDiscussion": []
+    },
+    {
+      "id": "1539007",
+      "stage": "groupes",
+      "group": null,
+      "date": "2026-06-20T17:00:00+00:00",
+      "venue": "NRG Stadium",
+      "city": "Houston",
+      "home": "Netherlands",
+      "away": "Sweden",
+      "homeCoach": null,
+      "awayCoach": null,
+      "score": {
+        "home": 5,
+        "away": 1
+      },
+      "scorers": [],
+      "highlights": [],
+      "externalIds": {
+        "apiFootball": "1539007"
+      },
+      "status": "finished",
+      "minute": null,
+      "lineups": {
+        "home": {
+          "team": "Netherlands",
+          "formation": null,
+          "players": []
+        },
+        "away": {
+          "team": "Sweden",
+          "formation": null,
+          "players": []
+        }
+      },
+      "probableLineups": {
+        "home": {
+          "team": "Netherlands",
+          "formation": null,
+          "players": []
+        },
+        "away": {
+          "team": "Sweden",
+          "formation": null,
+          "players": []
+        }
+      },
+      "stats": {
+        "possession": {
+          "home": null,
+          "away": null
+        },
+        "shots": {
+          "home": null,
+          "away": null
+        },
+        "shotsOnTarget": {
+          "home": null,
+          "away": null
+        },
+        "corners": {
+          "home": null,
+          "away": null
+        },
+        "fouls": {
+          "home": null,
+          "away": null
+        }
+      },
+      "playerRatings": {
+        "home": [],
+        "away": []
+      },
+      "winProbability": {
+        "home": null,
+        "draw": null,
+        "away": null
+      },
+      "expertDiscussion": []
+    },
+    {
+      "id": "1489393",
+      "stage": "groupes",
+      "group": null,
+      "date": "2026-06-20T20:00:00+00:00",
+      "venue": "BMO Field",
+      "city": "Toronto",
+      "home": "Germany",
+      "away": "Ivory Coast",
+      "homeCoach": null,
+      "awayCoach": null,
+      "score": {
+        "home": 2,
+        "away": 1
+      },
+      "scorers": [],
+      "highlights": [],
+      "externalIds": {
+        "apiFootball": "1489393"
+      },
+      "status": "finished",
+      "minute": null,
+      "lineups": {
+        "home": {
+          "team": "Germany",
+          "formation": null,
+          "players": []
+        },
+        "away": {
+          "team": "Ivory Coast",
+          "formation": null,
+          "players": []
+        }
+      },
+      "probableLineups": {
+        "home": {
+          "team": "Germany",
+          "formation": null,
+          "players": []
+        },
+        "away": {
+          "team": "Ivory Coast",
+          "formation": null,
+          "players": []
+        }
+      },
+      "stats": {
+        "possession": {
+          "home": null,
+          "away": null
+        },
+        "shots": {
+          "home": null,
+          "away": null
+        },
+        "shotsOnTarget": {
+          "home": null,
+          "away": null
+        },
+        "corners": {
+          "home": null,
+          "away": null
+        },
+        "fouls": {
+          "home": null,
+          "away": null
+        }
+      },
+      "playerRatings": {
+        "home": [],
+        "away": []
+      },
+      "winProbability": {
+        "home": null,
+        "draw": null,
+        "away": null
+      },
+      "expertDiscussion": []
+    },
+    {
+      "id": "1489392",
+      "stage": "groupes",
+      "group": null,
+      "date": "2026-06-21T00:00:00+00:00",
+      "venue": "Arrowhead Stadium",
+      "city": "Kansas City",
+      "home": "Ecuador",
+      "away": "Curaçao",
+      "homeCoach": null,
+      "awayCoach": null,
+      "score": {
+        "home": 0,
+        "away": 0
+      },
+      "scorers": [],
+      "highlights": [],
+      "externalIds": {
+        "apiFootball": "1489392"
+      },
+      "status": "finished",
+      "minute": null,
+      "lineups": {
+        "home": {
+          "team": "Ecuador",
+          "formation": null,
+          "players": []
+        },
+        "away": {
+          "team": "Curaçao",
+          "formation": null,
+          "players": []
+        }
+      },
+      "probableLineups": {
+        "home": {
+          "team": "Ecuador",
+          "formation": null,
+          "players": []
+        },
+        "away": {
+          "team": "Curaçao",
+          "formation": null,
+          "players": []
+        }
+      },
+      "stats": {
+        "possession": {
+          "home": null,
+          "away": null
+        },
+        "shots": {
+          "home": null,
+          "away": null
+        },
+        "shotsOnTarget": {
+          "home": null,
+          "away": null
+        },
+        "corners": {
+          "home": null,
+          "away": null
+        },
+        "fouls": {
+          "home": null,
+          "away": null
+        }
+      },
+      "playerRatings": {
+        "home": [],
+        "away": []
+      },
+      "winProbability": {
+        "home": null,
+        "draw": null,
+        "away": null
+      },
+      "expertDiscussion": []
+    },
+    {
+      "id": "1489394",
+      "stage": "groupes",
+      "group": null,
+      "date": "2026-06-21T04:00:00+00:00",
+      "venue": "Estadio BBVA",
+      "city": "Monterrey",
+      "home": "Tunisia",
+      "away": "Japan",
+      "homeCoach": null,
+      "awayCoach": null,
+      "score": {
+        "home": 0,
+        "away": 4
+      },
+      "scorers": [],
+      "highlights": [],
+      "externalIds": {
+        "apiFootball": "1489394"
+      },
+      "status": "finished",
+      "minute": null,
+      "lineups": {
+        "home": {
+          "team": "Tunisia",
+          "formation": null,
+          "players": []
+        },
+        "away": {
+          "team": "Japan",
+          "formation": null,
+          "players": []
+        }
+      },
+      "probableLineups": {
+        "home": {
+          "team": "Tunisia",
+          "formation": null,
+          "players": []
+        },
+        "away": {
+          "team": "Japan",
+          "formation": null,
+          "players": []
+        }
+      },
+      "stats": {
+        "possession": {
+          "home": null,
+          "away": null
+        },
+        "shots": {
+          "home": null,
+          "away": null
+        },
+        "shotsOnTarget": {
+          "home": null,
+          "away": null
+        },
+        "corners": {
+          "home": null,
+          "away": null
+        },
+        "fouls": {
+          "home": null,
+          "away": null
+        }
+      },
+      "playerRatings": {
+        "home": [],
+        "away": []
+      },
+      "winProbability": {
+        "home": null,
+        "draw": null,
+        "away": null
+      },
+      "expertDiscussion": []
+    },
+    {
+      "id": "1489397",
+      "stage": "groupes",
+      "group": null,
+      "date": "2026-06-21T16:00:00+00:00",
+      "venue": "Mercedes-Benz Stadium",
+      "city": "Atlanta",
+      "home": "Spain",
+      "away": "Saudi Arabia",
+      "homeCoach": null,
+      "awayCoach": null,
+      "score": {
+        "home": 4,
+        "away": 0
+      },
+      "scorers": [],
+      "highlights": [],
+      "externalIds": {
+        "apiFootball": "1489397"
+      },
+      "status": "finished",
+      "minute": null,
+      "lineups": {
+        "home": {
+          "team": "Spain",
+          "formation": null,
+          "players": []
+        },
+        "away": {
+          "team": "Saudi Arabia",
+          "formation": null,
+          "players": []
+        }
+      },
+      "probableLineups": {
+        "home": {
+          "team": "Spain",
+          "formation": null,
+          "players": []
+        },
+        "away": {
+          "team": "Saudi Arabia",
+          "formation": null,
+          "players": []
+        }
+      },
+      "stats": {
+        "possession": {
+          "home": null,
+          "away": null
+        },
+        "shots": {
+          "home": null,
+          "away": null
+        },
+        "shotsOnTarget": {
+          "home": null,
+          "away": null
+        },
+        "corners": {
+          "home": null,
+          "away": null
+        },
+        "fouls": {
+          "home": null,
+          "away": null
+        }
+      },
+      "playerRatings": {
+        "home": [],
+        "away": []
+      },
+      "winProbability": {
+        "home": null,
+        "draw": null,
+        "away": null
+      },
+      "expertDiscussion": []
+    },
+    {
+      "id": "1489395",
+      "stage": "groupes",
+      "group": null,
+      "date": "2026-06-21T19:00:00+00:00",
+      "venue": "SoFi Stadium",
+      "city": "Inglewood",
+      "home": "Belgium",
+      "away": "Iran",
+      "homeCoach": null,
+      "awayCoach": null,
+      "score": {
+        "home": 0,
+        "away": 0
+      },
+      "scorers": [],
+      "highlights": [],
+      "externalIds": {
+        "apiFootball": "1489395"
+      },
+      "status": "finished",
+      "minute": null,
+      "lineups": {
+        "home": {
+          "team": "Belgium",
+          "formation": null,
+          "players": []
+        },
+        "away": {
+          "team": "Iran",
+          "formation": null,
+          "players": []
+        }
+      },
+      "probableLineups": {
+        "home": {
+          "team": "Belgium",
+          "formation": null,
+          "players": []
+        },
+        "away": {
+          "team": "Iran",
+          "formation": null,
+          "players": []
+        }
+      },
+      "stats": {
+        "possession": {
+          "home": null,
+          "away": null
+        },
+        "shots": {
+          "home": null,
+          "away": null
+        },
+        "shotsOnTarget": {
+          "home": null,
+          "away": null
+        },
+        "corners": {
+          "home": null,
+          "away": null
+        },
+        "fouls": {
+          "home": null,
+          "away": null
+        }
+      },
+      "playerRatings": {
+        "home": [],
+        "away": []
+      },
+      "winProbability": {
+        "home": null,
+        "draw": null,
+        "away": null
+      },
+      "expertDiscussion": []
+    },
+    {
+      "id": "1489398",
+      "stage": "groupes",
+      "group": null,
+      "date": "2026-06-21T22:00:00+00:00",
+      "venue": "Hard Rock Stadium",
+      "city": "Miami Gardens",
+      "home": "Uruguay",
+      "away": "Cape Verde Islands",
+      "homeCoach": null,
+      "awayCoach": null,
+      "score": {
+        "home": 2,
+        "away": 2
+      },
+      "scorers": [],
+      "highlights": [],
+      "externalIds": {
+        "apiFootball": "1489398"
+      },
+      "status": "finished",
+      "minute": null,
+      "lineups": {
+        "home": {
+          "team": "Uruguay",
+          "formation": null,
+          "players": []
+        },
+        "away": {
+          "team": "Cape Verde Islands",
+          "formation": null,
+          "players": []
+        }
+      },
+      "probableLineups": {
+        "home": {
+          "team": "Uruguay",
+          "formation": null,
+          "players": []
+        },
+        "away": {
+          "team": "Cape Verde Islands",
+          "formation": null,
+          "players": []
+        }
+      },
+      "stats": {
+        "possession": {
+          "home": null,
+          "away": null
+        },
+        "shots": {
+          "home": null,
+          "away": null
+        },
+        "shotsOnTarget": {
+          "home": null,
+          "away": null
+        },
+        "corners": {
+          "home": null,
+          "away": null
+        },
+        "fouls": {
+          "home": null,
+          "away": null
+        }
+      },
+      "playerRatings": {
+        "home": [],
+        "away": []
+      },
+      "winProbability": {
+        "home": null,
+        "draw": null,
+        "away": null
+      },
+      "expertDiscussion": []
+    },
+    {
+      "id": "1489396",
+      "stage": "groupes",
+      "group": null,
+      "date": "2026-06-22T01:00:00+00:00",
+      "venue": "BC Place",
+      "city": "Vancouver",
+      "home": "New Zealand",
+      "away": "Egypt",
+      "homeCoach": null,
+      "awayCoach": null,
+      "score": {
+        "home": 1,
+        "away": 3
+      },
+      "scorers": [],
+      "highlights": [],
+      "externalIds": {
+        "apiFootball": "1489396"
+      },
+      "status": "finished",
+      "minute": null,
+      "lineups": {
+        "home": {
+          "team": "New Zealand",
+          "formation": null,
+          "players": []
+        },
+        "away": {
+          "team": "Egypt",
+          "formation": null,
+          "players": []
+        }
+      },
+      "probableLineups": {
+        "home": {
+          "team": "New Zealand",
+          "formation": null,
+          "players": []
+        },
+        "away": {
+          "team": "Egypt",
+          "formation": null,
+          "players": []
+        }
+      },
+      "stats": {
+        "possession": {
+          "home": null,
+          "away": null
+        },
+        "shots": {
+          "home": null,
+          "away": null
+        },
+        "shotsOnTarget": {
+          "home": null,
+          "away": null
+        },
+        "corners": {
+          "home": null,
+          "away": null
+        },
+        "fouls": {
+          "home": null,
+          "away": null
+        }
+      },
+      "playerRatings": {
+        "home": [],
+        "away": []
+      },
+      "winProbability": {
+        "home": null,
+        "draw": null,
+        "away": null
+      },
+      "expertDiscussion": []
+    },
+    {
+      "id": "1489399",
+      "stage": "groupes",
+      "group": null,
+      "date": "2026-06-22T17:00:00+00:00",
+      "venue": "AT&T Stadium",
+      "city": "Arlington",
+      "home": "Argentina",
+      "away": "Austria",
+      "homeCoach": null,
+      "awayCoach": null,
+      "score": {
+        "home": 2,
+        "away": 0
+      },
+      "scorers": [],
+      "highlights": [],
+      "externalIds": {
+        "apiFootball": "1489399"
+      },
+      "status": "finished",
+      "minute": null,
+      "lineups": {
+        "home": {
+          "team": "Argentina",
+          "formation": null,
+          "players": []
+        },
+        "away": {
+          "team": "Austria",
+          "formation": null,
+          "players": []
+        }
+      },
+      "probableLineups": {
+        "home": {
+          "team": "Argentina",
+          "formation": null,
+          "players": []
+        },
+        "away": {
+          "team": "Austria",
+          "formation": null,
+          "players": []
+        }
+      },
+      "stats": {
+        "possession": {
+          "home": null,
+          "away": null
+        },
+        "shots": {
+          "home": null,
+          "away": null
+        },
+        "shotsOnTarget": {
+          "home": null,
+          "away": null
+        },
+        "corners": {
+          "home": null,
+          "away": null
+        },
+        "fouls": {
+          "home": null,
+          "away": null
+        }
+      },
+      "playerRatings": {
+        "home": [],
+        "away": []
+      },
+      "winProbability": {
+        "home": null,
+        "draw": null,
+        "away": null
+      },
+      "expertDiscussion": []
+    },
+    {
+      "id": "1539017",
+      "stage": "groupes",
+      "group": null,
+      "date": "2026-06-22T21:00:00+00:00",
+      "venue": "Lincoln Financial Field",
+      "city": "Philadelphia",
+      "home": "France",
+      "away": "Iraq",
+      "homeCoach": null,
+      "awayCoach": null,
+      "score": {
+        "home": 3,
+        "away": 0
+      },
+      "scorers": [],
+      "highlights": [],
+      "externalIds": {
+        "apiFootball": "1539017"
+      },
+      "status": "finished",
+      "minute": null,
+      "lineups": {
+        "home": {
+          "team": "France",
+          "formation": null,
+          "players": []
+        },
+        "away": {
+          "team": "Iraq",
+          "formation": null,
+          "players": []
+        }
+      },
+      "probableLineups": {
+        "home": {
+          "team": "France",
+          "formation": null,
+          "players": []
+        },
+        "away": {
+          "team": "Iraq",
+          "formation": null,
+          "players": []
+        }
+      },
+      "stats": {
+        "possession": {
+          "home": null,
+          "away": null
+        },
+        "shots": {
+          "home": null,
+          "away": null
+        },
+        "shotsOnTarget": {
+          "home": null,
+          "away": null
+        },
+        "corners": {
+          "home": null,
+          "away": null
+        },
+        "fouls": {
+          "home": null,
+          "away": null
+        }
+      },
+      "playerRatings": {
+        "home": [],
+        "away": []
+      },
+      "winProbability": {
+        "home": null,
+        "draw": null,
+        "away": null
+      },
+      "expertDiscussion": []
+    },
+    {
+      "id": "1489401",
+      "stage": "groupes",
+      "group": null,
+      "date": "2026-06-23T00:00:00+00:00",
+      "venue": "MetLife Stadium",
+      "city": "East Rutherford",
+      "home": "Norway",
+      "away": "Senegal",
+      "homeCoach": null,
+      "awayCoach": null,
+      "score": {
+        "home": 3,
+        "away": 2
+      },
+      "scorers": [],
+      "highlights": [],
+      "externalIds": {
+        "apiFootball": "1489401"
+      },
+      "status": "finished",
+      "minute": null,
+      "lineups": {
+        "home": {
+          "team": "Norway",
+          "formation": null,
+          "players": []
+        },
+        "away": {
+          "team": "Senegal",
+          "formation": null,
+          "players": []
+        }
+      },
+      "probableLineups": {
+        "home": {
+          "team": "Norway",
+          "formation": null,
+          "players": []
+        },
+        "away": {
+          "team": "Senegal",
+          "formation": null,
+          "players": []
+        }
+      },
+      "stats": {
+        "possession": {
+          "home": null,
+          "away": null
+        },
+        "shots": {
+          "home": null,
+          "away": null
+        },
+        "shotsOnTarget": {
+          "home": null,
+          "away": null
+        },
+        "corners": {
+          "home": null,
+          "away": null
+        },
+        "fouls": {
+          "home": null,
+          "away": null
+        }
+      },
+      "playerRatings": {
+        "home": [],
+        "away": []
+      },
+      "winProbability": {
+        "home": null,
+        "draw": null,
+        "away": null
+      },
+      "expertDiscussion": []
+    },
+    {
+      "id": "1489400",
+      "stage": "groupes",
+      "group": null,
+      "date": "2026-06-23T03:00:00+00:00",
+      "venue": "Levi's Stadium",
+      "city": "Santa Clara",
+      "home": "Jordan",
+      "away": "Algeria",
+      "homeCoach": null,
+      "awayCoach": null,
+      "score": {
+        "home": 1,
+        "away": 2
+      },
+      "scorers": [],
+      "highlights": [],
+      "externalIds": {
+        "apiFootball": "1489400"
+      },
+      "status": "finished",
+      "minute": null,
+      "lineups": {
+        "home": {
+          "team": "Jordan",
+          "formation": null,
+          "players": []
+        },
+        "away": {
+          "team": "Algeria",
+          "formation": null,
+          "players": []
+        }
+      },
+      "probableLineups": {
+        "home": {
+          "team": "Jordan",
+          "formation": null,
+          "players": []
+        },
+        "away": {
+          "team": "Algeria",
+          "formation": null,
+          "players": []
+        }
+      },
+      "stats": {
+        "possession": {
+          "home": null,
+          "away": null
+        },
+        "shots": {
+          "home": null,
+          "away": null
+        },
+        "shotsOnTarget": {
+          "home": null,
+          "away": null
+        },
+        "corners": {
+          "home": null,
+          "away": null
+        },
+        "fouls": {
+          "home": null,
+          "away": null
+        }
+      },
+      "playerRatings": {
+        "home": [],
+        "away": []
+      },
+      "winProbability": {
+        "home": null,
+        "draw": null,
+        "away": null
+      },
+      "expertDiscussion": []
+    },
+    {
+      "id": "1489404",
+      "stage": "groupes",
+      "group": null,
+      "date": "2026-06-23T17:00:00+00:00",
+      "venue": "NRG Stadium",
+      "city": "Houston",
+      "home": "Portugal",
+      "away": "Uzbekistan",
+      "homeCoach": null,
+      "awayCoach": null,
+      "score": {
+        "home": 5,
+        "away": 0
+      },
+      "scorers": [],
+      "highlights": [],
+      "externalIds": {
+        "apiFootball": "1489404"
+      },
+      "status": "finished",
+      "minute": null,
+      "lineups": {
+        "home": {
+          "team": "Portugal",
+          "formation": null,
+          "players": []
+        },
+        "away": {
+          "team": "Uzbekistan",
+          "formation": null,
+          "players": []
+        }
+      },
+      "probableLineups": {
+        "home": {
+          "team": "Portugal",
+          "formation": null,
+          "players": []
+        },
+        "away": {
+          "team": "Uzbekistan",
+          "formation": null,
+          "players": []
+        }
+      },
+      "stats": {
+        "possession": {
+          "home": null,
+          "away": null
+        },
+        "shots": {
+          "home": null,
+          "away": null
+        },
+        "shotsOnTarget": {
+          "home": null,
+          "away": null
+        },
+        "corners": {
+          "home": null,
+          "away": null
+        },
+        "fouls": {
+          "home": null,
+          "away": null
+        }
+      },
+      "playerRatings": {
+        "home": [],
+        "away": []
+      },
+      "winProbability": {
+        "home": null,
+        "draw": null,
+        "away": null
+      },
+      "expertDiscussion": []
+    },
+    {
+      "id": "1489402",
+      "stage": "groupes",
+      "group": null,
+      "date": "2026-06-23T20:00:00+00:00",
+      "venue": "Gillette Stadium",
+      "city": "Boston",
+      "home": "England",
+      "away": "Ghana",
+      "homeCoach": null,
+      "awayCoach": null,
+      "score": {
+        "home": 0,
+        "away": 0
+      },
+      "scorers": [],
+      "highlights": [],
+      "externalIds": {
+        "apiFootball": "1489402"
+      },
+      "status": "finished",
+      "minute": null,
+      "lineups": {
+        "home": {
+          "team": "England",
+          "formation": null,
+          "players": []
+        },
+        "away": {
+          "team": "Ghana",
+          "formation": null,
+          "players": []
+        }
+      },
+      "probableLineups": {
+        "home": {
+          "team": "England",
+          "formation": null,
+          "players": []
+        },
+        "away": {
+          "team": "Ghana",
+          "formation": null,
+          "players": []
+        }
+      },
+      "stats": {
+        "possession": {
+          "home": null,
+          "away": null
+        },
+        "shots": {
+          "home": null,
+          "away": null
+        },
+        "shotsOnTarget": {
+          "home": null,
+          "away": null
+        },
+        "corners": {
+          "home": null,
+          "away": null
+        },
+        "fouls": {
+          "home": null,
+          "away": null
+        }
+      },
+      "playerRatings": {
+        "home": [],
+        "away": []
+      },
+      "winProbability": {
+        "home": null,
+        "draw": null,
+        "away": null
+      },
+      "expertDiscussion": []
+    },
+    {
+      "id": "1489403",
+      "stage": "groupes",
+      "group": null,
+      "date": "2026-06-23T23:00:00+00:00",
+      "venue": "BMO Field",
+      "city": "Toronto",
+      "home": "Panama",
+      "away": "Croatia",
+      "homeCoach": null,
+      "awayCoach": null,
+      "score": {
+        "home": 0,
+        "away": 1
+      },
+      "scorers": [],
+      "highlights": [],
+      "externalIds": {
+        "apiFootball": "1489403"
+      },
+      "status": "finished",
+      "minute": null,
+      "lineups": {
+        "home": {
+          "team": "Panama",
+          "formation": null,
+          "players": []
+        },
+        "away": {
+          "team": "Croatia",
+          "formation": null,
+          "players": []
+        }
+      },
+      "probableLineups": {
+        "home": {
+          "team": "Panama",
+          "formation": null,
+          "players": []
+        },
+        "away": {
+          "team": "Croatia",
+          "formation": null,
+          "players": []
+        }
+      },
+      "stats": {
+        "possession": {
+          "home": null,
+          "away": null
+        },
+        "shots": {
+          "home": null,
+          "away": null
+        },
+        "shotsOnTarget": {
+          "home": null,
+          "away": null
+        },
+        "corners": {
+          "home": null,
+          "away": null
+        },
+        "fouls": {
+          "home": null,
+          "away": null
+        }
+      },
+      "playerRatings": {
+        "home": [],
+        "away": []
+      },
+      "winProbability": {
+        "home": null,
+        "draw": null,
+        "away": null
+      },
+      "expertDiscussion": []
+    },
+    {
+      "id": "1539008",
+      "stage": "groupes",
+      "group": null,
+      "date": "2026-06-24T02:00:00+00:00",
+      "venue": "Estadio Akron",
+      "city": "Guadalajara",
+      "home": "Colombia",
+      "away": "Congo DR",
+      "homeCoach": null,
+      "awayCoach": null,
+      "score": {
+        "home": 1,
+        "away": 0
+      },
+      "scorers": [],
+      "highlights": [],
+      "externalIds": {
+        "apiFootball": "1539008"
+      },
+      "status": "finished",
+      "minute": null,
+      "lineups": {
+        "home": {
+          "team": "Colombia",
+          "formation": null,
+          "players": []
+        },
+        "away": {
+          "team": "Congo DR",
+          "formation": null,
+          "players": []
+        }
+      },
+      "probableLineups": {
+        "home": {
+          "team": "Colombia",
+          "formation": null,
+          "players": []
+        },
+        "away": {
+          "team": "Congo DR",
+          "formation": null,
+          "players": []
+        }
+      },
+      "stats": {
+        "possession": {
+          "home": null,
+          "away": null
+        },
+        "shots": {
+          "home": null,
+          "away": null
+        },
+        "shotsOnTarget": {
+          "home": null,
+          "away": null
+        },
+        "corners": {
+          "home": null,
+          "away": null
+        },
+        "fouls": {
+          "home": null,
+          "away": null
+        }
+      },
+      "playerRatings": {
+        "home": [],
+        "away": []
+      },
+      "winProbability": {
+        "home": null,
+        "draw": null,
+        "away": null
+      },
+      "expertDiscussion": []
+    },
+    {
+      "id": "1489408",
+      "stage": "groupes",
+      "group": null,
+      "date": "2026-06-24T19:00:00+00:00",
+      "venue": "BC Place",
+      "city": "Vancouver",
+      "home": "Switzerland",
+      "away": "Canada",
+      "homeCoach": null,
+      "awayCoach": null,
+      "score": {
+        "home": null,
+        "away": null
+      },
+      "scorers": [],
+      "highlights": [],
+      "externalIds": {
+        "apiFootball": "1489408"
+      },
+      "status": "upcoming",
+      "minute": null,
+      "lineups": {
+        "home": {
+          "team": "Switzerland",
+          "formation": null,
+          "players": []
+        },
+        "away": {
+          "team": "Canada",
+          "formation": null,
+          "players": []
+        }
+      },
+      "probableLineups": {
+        "home": {
+          "team": "Switzerland",
+          "formation": null,
+          "players": []
+        },
+        "away": {
+          "team": "Canada",
+          "formation": null,
+          "players": []
+        }
+      },
+      "stats": {
+        "possession": {
+          "home": null,
+          "away": null
+        },
+        "shots": {
+          "home": null,
+          "away": null
+        },
+        "shotsOnTarget": {
+          "home": null,
+          "away": null
+        },
+        "corners": {
+          "home": null,
+          "away": null
+        },
+        "fouls": {
+          "home": null,
+          "away": null
+        }
+      },
+      "playerRatings": {
+        "home": [],
+        "away": []
+      },
+      "winProbability": {
+        "home": null,
+        "draw": null,
+        "away": null
+      },
+      "expertDiscussion": []
+    },
+    {
+      "id": "1539009",
+      "stage": "groupes",
+      "group": null,
+      "date": "2026-06-24T19:00:00+00:00",
+      "venue": "Lumen Field",
+      "city": "Seattle",
+      "home": "Bosnia & Herzegovina",
+      "away": "Qatar",
+      "homeCoach": null,
+      "awayCoach": null,
+      "score": {
+        "home": null,
+        "away": null
+      },
+      "scorers": [],
+      "highlights": [],
+      "externalIds": {
+        "apiFootball": "1539009"
+      },
+      "status": "upcoming",
+      "minute": null,
+      "lineups": {
+        "home": {
+          "team": "Bosnia & Herzegovina",
+          "formation": null,
+          "players": []
+        },
+        "away": {
+          "team": "Qatar",
+          "formation": null,
+          "players": []
+        }
+      },
+      "probableLineups": {
+        "home": {
+          "team": "Bosnia & Herzegovina",
+          "formation": null,
+          "players": []
+        },
+        "away": {
+          "team": "Qatar",
+          "formation": null,
+          "players": []
+        }
+      },
+      "stats": {
+        "possession": {
+          "home": null,
+          "away": null
+        },
+        "shots": {
+          "home": null,
+          "away": null
+        },
+        "shotsOnTarget": {
+          "home": null,
+          "away": null
+        },
+        "corners": {
+          "home": null,
+          "away": null
+        },
+        "fouls": {
+          "home": null,
+          "away": null
+        }
+      },
+      "playerRatings": {
+        "home": [],
+        "away": []
+      },
+      "winProbability": {
+        "home": null,
+        "draw": null,
+        "away": null
+      },
+      "expertDiscussion": []
+    },
+    {
+      "id": "1489405",
+      "stage": "groupes",
+      "group": null,
+      "date": "2026-06-24T22:00:00+00:00",
+      "venue": "Mercedes-Benz Stadium",
+      "city": "Atlanta",
+      "home": "Morocco",
+      "away": "Haiti",
+      "homeCoach": null,
+      "awayCoach": null,
+      "score": {
+        "home": null,
+        "away": null
+      },
+      "scorers": [],
+      "highlights": [],
+      "externalIds": {
+        "apiFootball": "1489405"
+      },
+      "status": "upcoming",
+      "minute": null,
+      "lineups": {
+        "home": {
+          "team": "Morocco",
+          "formation": null,
+          "players": []
+        },
+        "away": {
+          "team": "Haiti",
+          "formation": null,
+          "players": []
+        }
+      },
+      "probableLineups": {
+        "home": {
+          "team": "Morocco",
+          "formation": null,
+          "players": []
+        },
+        "away": {
+          "team": "Haiti",
+          "formation": null,
+          "players": []
+        }
+      },
+      "stats": {
+        "possession": {
+          "home": null,
+          "away": null
+        },
+        "shots": {
+          "home": null,
+          "away": null
+        },
+        "shotsOnTarget": {
+          "home": null,
+          "away": null
+        },
+        "corners": {
+          "home": null,
+          "away": null
+        },
+        "fouls": {
+          "home": null,
+          "away": null
+        }
+      },
+      "playerRatings": {
+        "home": [],
+        "away": []
+      },
+      "winProbability": {
+        "home": null,
+        "draw": null,
+        "away": null
+      },
+      "expertDiscussion": []
+    },
+    {
+      "id": "1489406",
+      "stage": "groupes",
+      "group": null,
+      "date": "2026-06-24T22:00:00+00:00",
+      "venue": "Hard Rock Stadium",
+      "city": "Miami",
+      "home": "Scotland",
+      "away": "Brazil",
+      "homeCoach": null,
+      "awayCoach": null,
+      "score": {
+        "home": null,
+        "away": null
+      },
+      "scorers": [],
+      "highlights": [],
+      "externalIds": {
+        "apiFootball": "1489406"
+      },
+      "status": "upcoming",
+      "minute": null,
+      "lineups": {
+        "home": {
+          "team": "Scotland",
+          "formation": null,
+          "players": []
+        },
+        "away": {
+          "team": "Brazil",
+          "formation": null,
+          "players": []
+        }
+      },
+      "probableLineups": {
+        "home": {
+          "team": "Scotland",
+          "formation": null,
+          "players": []
+        },
+        "away": {
+          "team": "Brazil",
+          "formation": null,
+          "players": []
+        }
+      },
+      "stats": {
+        "possession": {
+          "home": null,
+          "away": null
+        },
+        "shots": {
+          "home": null,
+          "away": null
+        },
+        "shotsOnTarget": {
+          "home": null,
+          "away": null
+        },
+        "corners": {
+          "home": null,
+          "away": null
+        },
+        "fouls": {
+          "home": null,
+          "away": null
+        }
+      },
+      "playerRatings": {
+        "home": [],
+        "away": []
+      },
+      "winProbability": {
+        "home": null,
+        "draw": null,
+        "away": null
+      },
+      "expertDiscussion": []
+    },
+    {
+      "id": "1489407",
+      "stage": "groupes",
+      "group": null,
+      "date": "2026-06-25T01:00:00+00:00",
+      "venue": "Estadio BBVA",
+      "city": "Monterrey",
+      "home": "South Africa",
+      "away": "South Korea",
+      "homeCoach": null,
+      "awayCoach": null,
+      "score": {
+        "home": null,
+        "away": null
+      },
+      "scorers": [],
+      "highlights": [],
+      "externalIds": {
+        "apiFootball": "1489407"
+      },
+      "status": "upcoming",
+      "minute": null,
+      "lineups": {
+        "home": {
+          "team": "South Africa",
+          "formation": null,
+          "players": []
+        },
+        "away": {
+          "team": "South Korea",
+          "formation": null,
+          "players": []
+        }
+      },
+      "probableLineups": {
+        "home": {
+          "team": "South Africa",
+          "formation": null,
+          "players": []
+        },
+        "away": {
+          "team": "South Korea",
+          "formation": null,
+          "players": []
+        }
+      },
+      "stats": {
+        "possession": {
+          "home": null,
+          "away": null
+        },
+        "shots": {
+          "home": null,
+          "away": null
+        },
+        "shotsOnTarget": {
+          "home": null,
+          "away": null
+        },
+        "corners": {
+          "home": null,
+          "away": null
+        },
+        "fouls": {
+          "home": null,
+          "away": null
+        }
+      },
+      "playerRatings": {
+        "home": [],
+        "away": []
+      },
+      "winProbability": {
+        "home": null,
+        "draw": null,
+        "away": null
+      },
+      "expertDiscussion": []
+    },
+    {
+      "id": "1539010",
+      "stage": "groupes",
+      "group": null,
+      "date": "2026-06-25T01:00:00+00:00",
+      "venue": "Estadio Azteca",
+      "city": "Mexico City",
+      "home": "Czechia",
+      "away": "Mexico",
+      "homeCoach": null,
+      "awayCoach": null,
+      "score": {
+        "home": null,
+        "away": null
+      },
+      "scorers": [],
+      "highlights": [],
+      "externalIds": {
+        "apiFootball": "1539010"
+      },
+      "status": "upcoming",
+      "minute": null,
+      "lineups": {
+        "home": {
+          "team": "Czechia",
+          "formation": null,
+          "players": []
+        },
+        "away": {
+          "team": "Mexico",
+          "formation": null,
+          "players": []
+        }
+      },
+      "probableLineups": {
+        "home": {
+          "team": "Czechia",
+          "formation": null,
+          "players": []
+        },
+        "away": {
+          "team": "Mexico",
+          "formation": null,
+          "players": []
+        }
+      },
+      "stats": {
+        "possession": {
+          "home": null,
+          "away": null
+        },
+        "shots": {
+          "home": null,
+          "away": null
+        },
+        "shotsOnTarget": {
+          "home": null,
+          "away": null
+        },
+        "corners": {
+          "home": null,
+          "away": null
+        },
+        "fouls": {
+          "home": null,
+          "away": null
+        }
+      },
+      "playerRatings": {
+        "home": [],
+        "away": []
+      },
+      "winProbability": {
+        "home": null,
+        "draw": null,
+        "away": null
+      },
+      "expertDiscussion": []
+    },
+    {
+      "id": "1489409",
+      "stage": "groupes",
+      "group": null,
+      "date": "2026-06-25T20:00:00+00:00",
+      "venue": "Lincoln Financial Field",
+      "city": "Philadelphia",
+      "home": "Curaçao",
+      "away": "Ivory Coast",
+      "homeCoach": null,
+      "awayCoach": null,
+      "score": {
+        "home": null,
+        "away": null
+      },
+      "scorers": [],
+      "highlights": [],
+      "externalIds": {
+        "apiFootball": "1489409"
+      },
+      "status": "upcoming",
+      "minute": null,
+      "lineups": {
+        "home": {
+          "team": "Curaçao",
+          "formation": null,
+          "players": []
+        },
+        "away": {
+          "team": "Ivory Coast",
+          "formation": null,
+          "players": []
+        }
+      },
+      "probableLineups": {
+        "home": {
+          "team": "Curaçao",
+          "formation": null,
+          "players": []
+        },
+        "away": {
+          "team": "Ivory Coast",
+          "formation": null,
+          "players": []
+        }
+      },
+      "stats": {
+        "possession": {
+          "home": null,
+          "away": null
+        },
+        "shots": {
+          "home": null,
+          "away": null
+        },
+        "shotsOnTarget": {
+          "home": null,
+          "away": null
+        },
+        "corners": {
+          "home": null,
+          "away": null
+        },
+        "fouls": {
+          "home": null,
+          "away": null
+        }
+      },
+      "playerRatings": {
+        "home": [],
+        "away": []
+      },
+      "winProbability": {
+        "home": null,
+        "draw": null,
+        "away": null
+      },
+      "expertDiscussion": []
+    },
+    {
+      "id": "1489410",
+      "stage": "groupes",
+      "group": null,
+      "date": "2026-06-25T20:00:00+00:00",
+      "venue": "MetLife Stadium",
+      "city": "New York New Jersey",
+      "home": "Ecuador",
+      "away": "Germany",
+      "homeCoach": null,
+      "awayCoach": null,
+      "score": {
+        "home": null,
+        "away": null
+      },
+      "scorers": [],
+      "highlights": [],
+      "externalIds": {
+        "apiFootball": "1489410"
+      },
+      "status": "upcoming",
+      "minute": null,
+      "lineups": {
+        "home": {
+          "team": "Ecuador",
+          "formation": null,
+          "players": []
+        },
+        "away": {
+          "team": "Germany",
+          "formation": null,
+          "players": []
+        }
+      },
+      "probableLineups": {
+        "home": {
+          "team": "Ecuador",
+          "formation": null,
+          "players": []
+        },
+        "away": {
+          "team": "Germany",
+          "formation": null,
+          "players": []
+        }
+      },
+      "stats": {
+        "possession": {
+          "home": null,
+          "away": null
+        },
+        "shots": {
+          "home": null,
+          "away": null
+        },
+        "shotsOnTarget": {
+          "home": null,
+          "away": null
+        },
+        "corners": {
+          "home": null,
+          "away": null
+        },
+        "fouls": {
+          "home": null,
+          "away": null
+        }
+      },
+      "playerRatings": {
+        "home": [],
+        "away": []
+      },
+      "winProbability": {
+        "home": null,
+        "draw": null,
+        "away": null
+      },
+      "expertDiscussion": []
+    },
+    {
+      "id": "1489412",
+      "stage": "groupes",
+      "group": null,
+      "date": "2026-06-25T23:00:00+00:00",
+      "venue": "Arrowhead Stadium",
+      "city": "Kansas City",
+      "home": "Tunisia",
+      "away": "Netherlands",
+      "homeCoach": null,
+      "awayCoach": null,
+      "score": {
+        "home": null,
+        "away": null
+      },
+      "scorers": [],
+      "highlights": [],
+      "externalIds": {
+        "apiFootball": "1489412"
+      },
+      "status": "upcoming",
+      "minute": null,
+      "lineups": {
+        "home": {
+          "team": "Tunisia",
+          "formation": null,
+          "players": []
+        },
+        "away": {
+          "team": "Netherlands",
+          "formation": null,
+          "players": []
+        }
+      },
+      "probableLineups": {
+        "home": {
+          "team": "Tunisia",
+          "formation": null,
+          "players": []
+        },
+        "away": {
+          "team": "Netherlands",
+          "formation": null,
+          "players": []
+        }
+      },
+      "stats": {
+        "possession": {
+          "home": null,
+          "away": null
+        },
+        "shots": {
+          "home": null,
+          "away": null
+        },
+        "shotsOnTarget": {
+          "home": null,
+          "away": null
+        },
+        "corners": {
+          "home": null,
+          "away": null
+        },
+        "fouls": {
+          "home": null,
+          "away": null
+        }
+      },
+      "playerRatings": {
+        "home": [],
+        "away": []
+      },
+      "winProbability": {
+        "home": null,
+        "draw": null,
+        "away": null
+      },
+      "expertDiscussion": []
+    },
+    {
+      "id": "1539011",
+      "stage": "groupes",
+      "group": null,
+      "date": "2026-06-25T23:00:00+00:00",
+      "venue": "AT&T Stadium",
+      "city": "Dallas",
+      "home": "Japan",
+      "away": "Sweden",
+      "homeCoach": null,
+      "awayCoach": null,
+      "score": {
+        "home": null,
+        "away": null
+      },
+      "scorers": [],
+      "highlights": [],
+      "externalIds": {
+        "apiFootball": "1539011"
+      },
+      "status": "upcoming",
+      "minute": null,
+      "lineups": {
+        "home": {
+          "team": "Japan",
+          "formation": null,
+          "players": []
+        },
+        "away": {
+          "team": "Sweden",
+          "formation": null,
+          "players": []
+        }
+      },
+      "probableLineups": {
+        "home": {
+          "team": "Japan",
+          "formation": null,
+          "players": []
+        },
+        "away": {
+          "team": "Sweden",
+          "formation": null,
+          "players": []
+        }
+      },
+      "stats": {
+        "possession": {
+          "home": null,
+          "away": null
+        },
+        "shots": {
+          "home": null,
+          "away": null
+        },
+        "shotsOnTarget": {
+          "home": null,
+          "away": null
+        },
+        "corners": {
+          "home": null,
+          "away": null
+        },
+        "fouls": {
+          "home": null,
+          "away": null
+        }
+      },
+      "playerRatings": {
+        "home": [],
+        "away": []
+      },
+      "winProbability": {
+        "home": null,
+        "draw": null,
+        "away": null
+      },
+      "expertDiscussion": []
+    },
+    {
+      "id": "1489411",
+      "stage": "groupes",
+      "group": null,
+      "date": "2026-06-26T02:00:00+00:00",
+      "venue": "Levi's Stadium",
+      "city": "San Francisco Bay Area",
+      "home": "Paraguay",
+      "away": "Australia",
+      "homeCoach": null,
+      "awayCoach": null,
+      "score": {
+        "home": null,
+        "away": null
+      },
+      "scorers": [],
+      "highlights": [],
+      "externalIds": {
+        "apiFootball": "1489411"
+      },
+      "status": "upcoming",
+      "minute": null,
+      "lineups": {
+        "home": {
+          "team": "Paraguay",
+          "formation": null,
+          "players": []
+        },
+        "away": {
+          "team": "Australia",
+          "formation": null,
+          "players": []
+        }
+      },
+      "probableLineups": {
+        "home": {
+          "team": "Paraguay",
+          "formation": null,
+          "players": []
+        },
+        "away": {
+          "team": "Australia",
+          "formation": null,
+          "players": []
+        }
+      },
+      "stats": {
+        "possession": {
+          "home": null,
+          "away": null
+        },
+        "shots": {
+          "home": null,
+          "away": null
+        },
+        "shotsOnTarget": {
+          "home": null,
+          "away": null
+        },
+        "corners": {
+          "home": null,
+          "away": null
+        },
+        "fouls": {
+          "home": null,
+          "away": null
+        }
+      },
+      "playerRatings": {
+        "home": [],
+        "away": []
+      },
+      "winProbability": {
+        "home": null,
+        "draw": null,
+        "away": null
+      },
+      "expertDiscussion": []
+    },
+    {
+      "id": "1539012",
+      "stage": "groupes",
+      "group": null,
+      "date": "2026-06-26T02:00:00+00:00",
+      "venue": "SoFi Stadium",
+      "city": "Los Angeles",
+      "home": "Türkiye",
+      "away": "USA",
+      "homeCoach": null,
+      "awayCoach": null,
+      "score": {
+        "home": null,
+        "away": null
+      },
+      "scorers": [],
+      "highlights": [],
+      "externalIds": {
+        "apiFootball": "1539012"
+      },
+      "status": "upcoming",
+      "minute": null,
+      "lineups": {
+        "home": {
+          "team": "Türkiye",
+          "formation": null,
+          "players": []
+        },
+        "away": {
+          "team": "USA",
+          "formation": null,
+          "players": []
+        }
+      },
+      "probableLineups": {
+        "home": {
+          "team": "Türkiye",
+          "formation": null,
+          "players": []
+        },
+        "away": {
+          "team": "USA",
+          "formation": null,
+          "players": []
+        }
+      },
+      "stats": {
+        "possession": {
+          "home": null,
+          "away": null
+        },
+        "shots": {
+          "home": null,
+          "away": null
+        },
+        "shotsOnTarget": {
+          "home": null,
+          "away": null
+        },
+        "corners": {
+          "home": null,
+          "away": null
+        },
+        "fouls": {
+          "home": null,
+          "away": null
+        }
+      },
+      "playerRatings": {
+        "home": [],
+        "away": []
+      },
+      "winProbability": {
+        "home": null,
+        "draw": null,
+        "away": null
+      },
+      "expertDiscussion": []
+    },
+    {
+      "id": "1489416",
+      "stage": "groupes",
+      "group": null,
+      "date": "2026-06-26T19:00:00+00:00",
+      "venue": "Gillette Stadium",
+      "city": "Boston",
+      "home": "Norway",
+      "away": "France",
+      "homeCoach": null,
+      "awayCoach": null,
+      "score": {
+        "home": null,
+        "away": null
+      },
+      "scorers": [],
+      "highlights": [],
+      "externalIds": {
+        "apiFootball": "1489416"
+      },
+      "status": "upcoming",
+      "minute": null,
+      "lineups": {
+        "home": {
+          "team": "Norway",
+          "formation": null,
+          "players": []
+        },
+        "away": {
+          "team": "France",
+          "formation": null,
+          "players": []
+        }
+      },
+      "probableLineups": {
+        "home": {
+          "team": "Norway",
+          "formation": null,
+          "players": []
+        },
+        "away": {
+          "team": "France",
+          "formation": null,
+          "players": []
+        }
+      },
+      "stats": {
+        "possession": {
+          "home": null,
+          "away": null
+        },
+        "shots": {
+          "home": null,
+          "away": null
+        },
+        "shotsOnTarget": {
+          "home": null,
+          "away": null
+        },
+        "corners": {
+          "home": null,
+          "away": null
+        },
+        "fouls": {
+          "home": null,
+          "away": null
+        }
+      },
+      "playerRatings": {
+        "home": [],
+        "away": []
+      },
+      "winProbability": {
+        "home": null,
+        "draw": null,
+        "away": null
+      },
+      "expertDiscussion": []
+    },
+    {
+      "id": "1539074",
+      "stage": "groupes",
+      "group": null,
+      "date": "2026-06-26T19:00:00+00:00",
+      "venue": "BMO Field",
+      "city": "Toronto",
+      "home": "Senegal",
+      "away": "Iraq",
+      "homeCoach": null,
+      "awayCoach": null,
+      "score": {
+        "home": null,
+        "away": null
+      },
+      "scorers": [],
+      "highlights": [],
+      "externalIds": {
+        "apiFootball": "1539074"
+      },
+      "status": "upcoming",
+      "minute": null,
+      "lineups": {
+        "home": {
+          "team": "Senegal",
+          "formation": null,
+          "players": []
+        },
+        "away": {
+          "team": "Iraq",
+          "formation": null,
+          "players": []
+        }
+      },
+      "probableLineups": {
+        "home": {
+          "team": "Senegal",
+          "formation": null,
+          "players": []
+        },
+        "away": {
+          "team": "Iraq",
+          "formation": null,
+          "players": []
+        }
+      },
+      "stats": {
+        "possession": {
+          "home": null,
+          "away": null
+        },
+        "shots": {
+          "home": null,
+          "away": null
+        },
+        "shotsOnTarget": {
+          "home": null,
+          "away": null
+        },
+        "corners": {
+          "home": null,
+          "away": null
+        },
+        "fouls": {
+          "home": null,
+          "away": null
+        }
+      },
+      "playerRatings": {
+        "home": [],
+        "away": []
+      },
+      "winProbability": {
+        "home": null,
+        "draw": null,
+        "away": null
+      },
+      "expertDiscussion": []
+    },
+    {
+      "id": "1489413",
+      "stage": "groupes",
+      "group": null,
+      "date": "2026-06-27T00:00:00+00:00",
+      "venue": "NRG Stadium",
+      "city": "Houston",
+      "home": "Cape Verde Islands",
+      "away": "Saudi Arabia",
+      "homeCoach": null,
+      "awayCoach": null,
+      "score": {
+        "home": null,
+        "away": null
+      },
+      "scorers": [],
+      "highlights": [],
+      "externalIds": {
+        "apiFootball": "1489413"
+      },
+      "status": "upcoming",
+      "minute": null,
+      "lineups": {
+        "home": {
+          "team": "Cape Verde Islands",
+          "formation": null,
+          "players": []
+        },
+        "away": {
+          "team": "Saudi Arabia",
+          "formation": null,
+          "players": []
+        }
+      },
+      "probableLineups": {
+        "home": {
+          "team": "Cape Verde Islands",
+          "formation": null,
+          "players": []
+        },
+        "away": {
+          "team": "Saudi Arabia",
+          "formation": null,
+          "players": []
+        }
+      },
+      "stats": {
+        "possession": {
+          "home": null,
+          "away": null
+        },
+        "shots": {
+          "home": null,
+          "away": null
+        },
+        "shotsOnTarget": {
+          "home": null,
+          "away": null
+        },
+        "corners": {
+          "home": null,
+          "away": null
+        },
+        "fouls": {
+          "home": null,
+          "away": null
+        }
+      },
+      "playerRatings": {
+        "home": [],
+        "away": []
+      },
+      "winProbability": {
+        "home": null,
+        "draw": null,
+        "away": null
+      },
+      "expertDiscussion": []
+    },
+    {
+      "id": "1489417",
+      "stage": "groupes",
+      "group": null,
+      "date": "2026-06-27T00:00:00+00:00",
+      "venue": "Estadio Akron",
+      "city": "Guadalajara",
+      "home": "Uruguay",
+      "away": "Spain",
+      "homeCoach": null,
+      "awayCoach": null,
+      "score": {
+        "home": null,
+        "away": null
+      },
+      "scorers": [],
+      "highlights": [],
+      "externalIds": {
+        "apiFootball": "1489417"
+      },
+      "status": "upcoming",
+      "minute": null,
+      "lineups": {
+        "home": {
+          "team": "Uruguay",
+          "formation": null,
+          "players": []
+        },
+        "away": {
+          "team": "Spain",
+          "formation": null,
+          "players": []
+        }
+      },
+      "probableLineups": {
+        "home": {
+          "team": "Uruguay",
+          "formation": null,
+          "players": []
+        },
+        "away": {
+          "team": "Spain",
+          "formation": null,
+          "players": []
+        }
+      },
+      "stats": {
+        "possession": {
+          "home": null,
+          "away": null
+        },
+        "shots": {
+          "home": null,
+          "away": null
+        },
+        "shotsOnTarget": {
+          "home": null,
+          "away": null
+        },
+        "corners": {
+          "home": null,
+          "away": null
+        },
+        "fouls": {
+          "home": null,
+          "away": null
+        }
+      },
+      "playerRatings": {
+        "home": [],
+        "away": []
+      },
+      "winProbability": {
+        "home": null,
+        "draw": null,
+        "away": null
+      },
+      "expertDiscussion": []
+    },
+    {
+      "id": "1489414",
+      "stage": "groupes",
+      "group": null,
+      "date": "2026-06-27T03:00:00+00:00",
+      "venue": "Lumen Field",
+      "city": "Seattle",
+      "home": "Egypt",
+      "away": "Iran",
+      "homeCoach": null,
+      "awayCoach": null,
+      "score": {
+        "home": null,
+        "away": null
+      },
+      "scorers": [],
+      "highlights": [],
+      "externalIds": {
+        "apiFootball": "1489414"
+      },
+      "status": "upcoming",
+      "minute": null,
+      "lineups": {
+        "home": {
+          "team": "Egypt",
+          "formation": null,
+          "players": []
+        },
+        "away": {
+          "team": "Iran",
+          "formation": null,
+          "players": []
+        }
+      },
+      "probableLineups": {
+        "home": {
+          "team": "Egypt",
+          "formation": null,
+          "players": []
+        },
+        "away": {
+          "team": "Iran",
+          "formation": null,
+          "players": []
+        }
+      },
+      "stats": {
+        "possession": {
+          "home": null,
+          "away": null
+        },
+        "shots": {
+          "home": null,
+          "away": null
+        },
+        "shotsOnTarget": {
+          "home": null,
+          "away": null
+        },
+        "corners": {
+          "home": null,
+          "away": null
+        },
+        "fouls": {
+          "home": null,
+          "away": null
+        }
+      },
+      "playerRatings": {
+        "home": [],
+        "away": []
+      },
+      "winProbability": {
+        "home": null,
+        "draw": null,
+        "away": null
+      },
+      "expertDiscussion": []
+    },
+    {
+      "id": "1489415",
+      "stage": "groupes",
+      "group": null,
+      "date": "2026-06-27T03:00:00+00:00",
+      "venue": "BC Place",
+      "city": "Vancouver",
+      "home": "New Zealand",
+      "away": "Belgium",
+      "homeCoach": null,
+      "awayCoach": null,
+      "score": {
+        "home": null,
+        "away": null
+      },
+      "scorers": [],
+      "highlights": [],
+      "externalIds": {
+        "apiFootball": "1489415"
+      },
+      "status": "upcoming",
+      "minute": null,
+      "lineups": {
+        "home": {
+          "team": "New Zealand",
+          "formation": null,
+          "players": []
+        },
+        "away": {
+          "team": "Belgium",
+          "formation": null,
+          "players": []
+        }
+      },
+      "probableLineups": {
+        "home": {
+          "team": "New Zealand",
+          "formation": null,
+          "players": []
+        },
+        "away": {
+          "team": "Belgium",
+          "formation": null,
+          "players": []
+        }
+      },
+      "stats": {
+        "possession": {
+          "home": null,
+          "away": null
+        },
+        "shots": {
+          "home": null,
+          "away": null
+        },
+        "shotsOnTarget": {
+          "home": null,
+          "away": null
+        },
+        "corners": {
+          "home": null,
+          "away": null
+        },
+        "fouls": {
+          "home": null,
+          "away": null
+        }
+      },
+      "playerRatings": {
+        "home": [],
+        "away": []
+      },
+      "winProbability": {
+        "home": null,
+        "draw": null,
+        "away": null
+      },
+      "expertDiscussion": []
+    },
+    {
+      "id": "1489420",
+      "stage": "groupes",
+      "group": null,
+      "date": "2026-06-27T21:00:00+00:00",
+      "venue": "Lincoln Financial Field",
+      "city": "Philadelphia",
+      "home": "Croatia",
+      "away": "Ghana",
+      "homeCoach": null,
+      "awayCoach": null,
+      "score": {
+        "home": null,
+        "away": null
+      },
+      "scorers": [],
+      "highlights": [],
+      "externalIds": {
+        "apiFootball": "1489420"
+      },
+      "status": "upcoming",
+      "minute": null,
+      "lineups": {
+        "home": {
+          "team": "Croatia",
+          "formation": null,
+          "players": []
+        },
+        "away": {
+          "team": "Ghana",
+          "formation": null,
+          "players": []
+        }
+      },
+      "probableLineups": {
+        "home": {
+          "team": "Croatia",
+          "formation": null,
+          "players": []
+        },
+        "away": {
+          "team": "Ghana",
+          "formation": null,
+          "players": []
+        }
+      },
+      "stats": {
+        "possession": {
+          "home": null,
+          "away": null
+        },
+        "shots": {
+          "home": null,
+          "away": null
+        },
+        "shotsOnTarget": {
+          "home": null,
+          "away": null
+        },
+        "corners": {
+          "home": null,
+          "away": null
+        },
+        "fouls": {
+          "home": null,
+          "away": null
+        }
+      },
+      "playerRatings": {
+        "home": [],
+        "away": []
+      },
+      "winProbability": {
+        "home": null,
+        "draw": null,
+        "away": null
+      },
+      "expertDiscussion": []
+    },
+    {
+      "id": "1489422",
+      "stage": "groupes",
+      "group": null,
+      "date": "2026-06-27T21:00:00+00:00",
+      "venue": "MetLife Stadium",
+      "city": "New York New Jersey",
+      "home": "Panama",
+      "away": "England",
+      "homeCoach": null,
+      "awayCoach": null,
+      "score": {
+        "home": null,
+        "away": null
+      },
+      "scorers": [],
+      "highlights": [],
+      "externalIds": {
+        "apiFootball": "1489422"
+      },
+      "status": "upcoming",
+      "minute": null,
+      "lineups": {
+        "home": {
+          "team": "Panama",
+          "formation": null,
+          "players": []
+        },
+        "away": {
+          "team": "England",
+          "formation": null,
+          "players": []
+        }
+      },
+      "probableLineups": {
+        "home": {
+          "team": "Panama",
+          "formation": null,
+          "players": []
+        },
+        "away": {
+          "team": "England",
+          "formation": null,
+          "players": []
+        }
+      },
+      "stats": {
+        "possession": {
+          "home": null,
+          "away": null
+        },
+        "shots": {
+          "home": null,
+          "away": null
+        },
+        "shotsOnTarget": {
+          "home": null,
+          "away": null
+        },
+        "corners": {
+          "home": null,
+          "away": null
+        },
+        "fouls": {
+          "home": null,
+          "away": null
+        }
+      },
+      "playerRatings": {
+        "home": [],
+        "away": []
+      },
+      "winProbability": {
+        "home": null,
+        "draw": null,
+        "away": null
+      },
+      "expertDiscussion": []
+    },
+    {
+      "id": "1489419",
+      "stage": "groupes",
+      "group": null,
+      "date": "2026-06-27T23:30:00+00:00",
+      "venue": "Hard Rock Stadium",
+      "city": "Miami",
+      "home": "Colombia",
+      "away": "Portugal",
+      "homeCoach": null,
+      "awayCoach": null,
+      "score": {
+        "home": null,
+        "away": null
+      },
+      "scorers": [],
+      "highlights": [],
+      "externalIds": {
+        "apiFootball": "1489419"
+      },
+      "status": "upcoming",
+      "minute": null,
+      "lineups": {
+        "home": {
+          "team": "Colombia",
+          "formation": null,
+          "players": []
+        },
+        "away": {
+          "team": "Portugal",
+          "formation": null,
+          "players": []
+        }
+      },
+      "probableLineups": {
+        "home": {
+          "team": "Colombia",
+          "formation": null,
+          "players": []
+        },
+        "away": {
+          "team": "Portugal",
+          "formation": null,
+          "players": []
+        }
+      },
+      "stats": {
+        "possession": {
+          "home": null,
+          "away": null
+        },
+        "shots": {
+          "home": null,
+          "away": null
+        },
+        "shotsOnTarget": {
+          "home": null,
+          "away": null
+        },
+        "corners": {
+          "home": null,
+          "away": null
+        },
+        "fouls": {
+          "home": null,
+          "away": null
+        }
+      },
+      "playerRatings": {
+        "home": [],
+        "away": []
+      },
+      "winProbability": {
+        "home": null,
+        "draw": null,
+        "away": null
+      },
+      "expertDiscussion": []
+    },
+    {
+      "id": "1539013",
+      "stage": "groupes",
+      "group": null,
+      "date": "2026-06-27T23:30:00+00:00",
+      "venue": "Mercedes-Benz Stadium",
+      "city": "Atlanta",
+      "home": "Congo DR",
+      "away": "Uzbekistan",
+      "homeCoach": null,
+      "awayCoach": null,
+      "score": {
+        "home": null,
+        "away": null
+      },
+      "scorers": [],
+      "highlights": [],
+      "externalIds": {
+        "apiFootball": "1539013"
+      },
+      "status": "upcoming",
+      "minute": null,
+      "lineups": {
+        "home": {
+          "team": "Congo DR",
+          "formation": null,
+          "players": []
+        },
+        "away": {
+          "team": "Uzbekistan",
+          "formation": null,
+          "players": []
+        }
+      },
+      "probableLineups": {
+        "home": {
+          "team": "Congo DR",
+          "formation": null,
+          "players": []
+        },
+        "away": {
+          "team": "Uzbekistan",
+          "formation": null,
+          "players": []
+        }
+      },
+      "stats": {
+        "possession": {
+          "home": null,
+          "away": null
+        },
+        "shots": {
+          "home": null,
+          "away": null
+        },
+        "shotsOnTarget": {
+          "home": null,
+          "away": null
+        },
+        "corners": {
+          "home": null,
+          "away": null
+        },
+        "fouls": {
+          "home": null,
+          "away": null
+        }
+      },
+      "playerRatings": {
+        "home": [],
+        "away": []
+      },
+      "winProbability": {
+        "home": null,
+        "draw": null,
+        "away": null
+      },
+      "expertDiscussion": []
+    },
+    {
+      "id": "1489418",
+      "stage": "groupes",
+      "group": null,
+      "date": "2026-06-28T02:00:00+00:00",
+      "venue": "Arrowhead Stadium",
+      "city": "Kansas City",
+      "home": "Algeria",
+      "away": "Austria",
+      "homeCoach": null,
+      "awayCoach": null,
+      "score": {
+        "home": null,
+        "away": null
+      },
+      "scorers": [],
+      "highlights": [],
+      "externalIds": {
+        "apiFootball": "1489418"
+      },
+      "status": "upcoming",
+      "minute": null,
+      "lineups": {
+        "home": {
+          "team": "Algeria",
+          "formation": null,
+          "players": []
+        },
+        "away": {
+          "team": "Austria",
+          "formation": null,
+          "players": []
+        }
+      },
+      "probableLineups": {
+        "home": {
+          "team": "Algeria",
+          "formation": null,
+          "players": []
+        },
+        "away": {
+          "team": "Austria",
+          "formation": null,
+          "players": []
+        }
+      },
+      "stats": {
+        "possession": {
+          "home": null,
+          "away": null
+        },
+        "shots": {
+          "home": null,
+          "away": null
+        },
+        "shotsOnTarget": {
+          "home": null,
+          "away": null
+        },
+        "corners": {
+          "home": null,
+          "away": null
+        },
+        "fouls": {
+          "home": null,
+          "away": null
+        }
+      },
+      "playerRatings": {
+        "home": [],
+        "away": []
+      },
+      "winProbability": {
+        "home": null,
+        "draw": null,
+        "away": null
+      },
+      "expertDiscussion": []
+    },
+    {
+      "id": "1489421",
+      "stage": "groupes",
+      "group": null,
+      "date": "2026-06-28T02:00:00+00:00",
+      "venue": "AT&T Stadium",
+      "city": "Dallas",
+      "home": "Jordan",
+      "away": "Argentina",
+      "homeCoach": null,
+      "awayCoach": null,
+      "score": {
+        "home": null,
+        "away": null
+      },
+      "scorers": [],
+      "highlights": [],
+      "externalIds": {
+        "apiFootball": "1489421"
+      },
+      "status": "upcoming",
+      "minute": null,
+      "lineups": {
+        "home": {
+          "team": "Jordan",
+          "formation": null,
+          "players": []
+        },
+        "away": {
+          "team": "Argentina",
+          "formation": null,
+          "players": []
+        }
+      },
+      "probableLineups": {
+        "home": {
+          "team": "Jordan",
+          "formation": null,
+          "players": []
+        },
+        "away": {
+          "team": "Argentina",
+          "formation": null,
+          "players": []
+        }
+      },
+      "stats": {
+        "possession": {
+          "home": null,
+          "away": null
+        },
+        "shots": {
+          "home": null,
+          "away": null
+        },
+        "shotsOnTarget": {
+          "home": null,
+          "away": null
+        },
+        "corners": {
+          "home": null,
+          "away": null
+        },
+        "fouls": {
+          "home": null,
+          "away": null
+        }
+      },
+      "playerRatings": {
+        "home": [],
+        "away": []
+      },
+      "winProbability": {
+        "home": null,
+        "draw": null,
+        "away": null
+      },
       "expertDiscussion": []
     }
   ],
-  "knockout": {}
+  "knockout": {},
+  "scheduleSync": {
+    "provider": "api-football",
+    "checkedAt": "2026-06-24T17:03:29.375905Z",
+    "league": 1,
+    "season": 2026,
+    "updatedMatches": 5,
+    "insertedMatches": 67
+  }
 }
