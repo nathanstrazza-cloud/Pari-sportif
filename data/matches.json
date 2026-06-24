@@ -1,5 +1,506 @@
 {
-  "lastUpdated": null,
-  "matches": [],
+  "lastUpdated": "2026-06-24T13:24:00Z",
+  "matches": [
+    {
+      "id": "400021443",
+      "stage": "groupes",
+      "group": "Groupe A",
+      "date": "2026-06-11T19:00:00Z",
+      "venue": "Stade de Mexico",
+      "city": "Mexico",
+      "home": "Mexique",
+      "away": "Afrique du Sud",
+      "homeCoach": null,
+      "awayCoach": null,
+      "status": "finished",
+      "minute": null,
+      "score": {
+        "home": 2,
+        "away": 0
+      },
+      "scorers": [
+        "9' But de Julian QUINONES (Mexique) !",
+        "67' But de Raul JIMENEZ (Mexique) !"
+      ],
+      "highlights": [
+        {
+          "minute": "9'",
+          "text": "But de Julian QUINONES (Mexique) !"
+        },
+        {
+          "minute": "49'",
+          "text": "Sphephelo SITHOLE (Afrique du Sud) est exclu !"
+        },
+        {
+          "minute": "67'",
+          "text": "But de Raul JIMENEZ (Mexique) !"
+        },
+        {
+          "minute": "82'",
+          "text": "Carton rouge administré"
+        },
+        {
+          "minute": "84'",
+          "text": "Themba ZWANE (Afrique du Sud) est exclu !"
+        },
+        {
+          "minute": "90'+2'",
+          "text": "Cesar MONTES (Mexique) est exclu !"
+        },
+        {
+          "minute": "98'",
+          "text": "Coup de sifflet final !"
+        }
+      ],
+      "lineups": {
+        "home": {
+          "team": "Mexique",
+          "formation": null,
+          "players": []
+        },
+        "away": {
+          "team": "Afrique du Sud",
+          "formation": null,
+          "players": []
+        }
+      },
+      "stats": {
+        "possession": {
+          "home": null,
+          "away": null
+        },
+        "shots": {
+          "home": null,
+          "away": null
+        },
+        "shotsOnTarget": {
+          "home": null,
+          "away": null
+        },
+        "corners": {
+          "home": null,
+          "away": null
+        },
+        "fouls": {
+          "home": null,
+          "away": null
+        }
+      },
+      "playerRatings": {
+        "home": [],
+        "away": []
+      },
+      "probableLineups": {
+        "home": {
+          "team": "Mexique",
+          "formation": null,
+          "players": []
+        },
+        "away": {
+          "team": "Afrique du Sud",
+          "formation": null,
+          "players": []
+        }
+      },
+      "winProbability": {
+        "home": null,
+        "draw": null,
+        "away": null
+      },
+      "expertDiscussion": []
+    },
+    {
+      "id": "400021441",
+      "stage": "groupes",
+      "group": "Groupe A",
+      "date": "2026-06-12T02:00:00Z",
+      "venue": "Stade de Guadalajara",
+      "city": "Guadalajara",
+      "home": "République de Corée",
+      "away": "Tchéquie",
+      "homeCoach": null,
+      "awayCoach": null,
+      "status": "finished",
+      "minute": null,
+      "score": {
+        "home": 2,
+        "away": 1
+      },
+      "scorers": [
+        "59' But de Ladislav KREJCI (Tchéquie) !",
+        "67' But de HWANG Inbeom (République de Corée) !",
+        "80' But de OH Hyeongyu (République de Corée) !"
+      ],
+      "highlights": [
+        {
+          "minute": "59'",
+          "text": "But de Ladislav KREJCI (Tchéquie) !"
+        },
+        {
+          "minute": "67'",
+          "text": "But de HWANG Inbeom (République de Corée) !"
+        },
+        {
+          "minute": "80'",
+          "text": "But de OH Hyeongyu (République de Corée) !"
+        },
+        {
+          "minute": "97'",
+          "text": "Coup de sifflet final !"
+        }
+      ],
+      "lineups": {
+        "home": {
+          "team": "République de Corée",
+          "formation": null,
+          "players": []
+        },
+        "away": {
+          "team": "Tchéquie",
+          "formation": null,
+          "players": []
+        }
+      },
+      "stats": {
+        "possession": {
+          "home": null,
+          "away": null
+        },
+        "shots": {
+          "home": null,
+          "away": null
+        },
+        "shotsOnTarget": {
+          "home": null,
+          "away": null
+        },
+        "corners": {
+          "home": null,
+          "away": null
+        },
+        "fouls": {
+          "home": null,
+          "away": null
+        }
+      },
+      "playerRatings": {
+        "home": [],
+        "away": []
+      },
+      "probableLineups": {
+        "home": {
+          "team": "République de Corée",
+          "formation": null,
+          "players": []
+        },
+        "away": {
+          "team": "Tchéquie",
+          "formation": null,
+          "players": []
+        }
+      },
+      "winProbability": {
+        "home": null,
+        "draw": null,
+        "away": null
+      },
+      "expertDiscussion": []
+    },
+    {
+      "id": "400021449",
+      "stage": "groupes",
+      "group": "Groupe B",
+      "date": "2026-06-12T19:00:00Z",
+      "venue": "Stade de Toronto",
+      "city": "Toronto",
+      "home": "Canada",
+      "away": "Bosnie-et-Herzégovine",
+      "homeCoach": null,
+      "awayCoach": null,
+      "status": "finished",
+      "minute": null,
+      "score": {
+        "home": 1,
+        "away": 1
+      },
+      "scorers": [
+        "21' But de Jovo LUKIC (Bosnie-et-Herzégovine) !",
+        "78' But de Cyle LARIN (Canada) !"
+      ],
+      "highlights": [
+        {
+          "minute": "21'",
+          "text": "But de Jovo LUKIC (Bosnie-et-Herzégovine) !"
+        },
+        {
+          "minute": "78'",
+          "text": "But de Cyle LARIN (Canada) !"
+        },
+        {
+          "minute": "97'",
+          "text": "Coup de sifflet final !"
+        }
+      ],
+      "lineups": {
+        "home": {
+          "team": "Canada",
+          "formation": null,
+          "players": []
+        },
+        "away": {
+          "team": "Bosnie-et-Herzégovine",
+          "formation": null,
+          "players": []
+        }
+      },
+      "stats": {
+        "possession": {
+          "home": null,
+          "away": null
+        },
+        "shots": {
+          "home": null,
+          "away": null
+        },
+        "shotsOnTarget": {
+          "home": null,
+          "away": null
+        },
+        "corners": {
+          "home": null,
+          "away": null
+        },
+        "fouls": {
+          "home": null,
+          "away": null
+        }
+      },
+      "playerRatings": {
+        "home": [],
+        "away": []
+      },
+      "probableLineups": {
+        "home": {
+          "team": "Canada",
+          "formation": null,
+          "players": []
+        },
+        "away": {
+          "team": "Bosnie-et-Herzégovine",
+          "formation": null,
+          "players": []
+        }
+      },
+      "winProbability": {
+        "home": null,
+        "draw": null,
+        "away": null
+      },
+      "expertDiscussion": []
+    },
+    {
+      "id": "400021458",
+      "stage": "groupes",
+      "group": "Groupe D",
+      "date": "2026-06-13T01:00:00Z",
+      "venue": "Stade de Los Angeles",
+      "city": "Los Angeles",
+      "home": "États-Unis",
+      "away": "Paraguay",
+      "homeCoach": null,
+      "awayCoach": null,
+      "status": "finished",
+      "minute": null,
+      "score": {
+        "home": 4,
+        "away": 1
+      },
+      "scorers": [
+        "7' Damian BOBADILLA (Paraguay) marque contre son camp.",
+        "31' But de Folarin BALOGUN (États-Unis) !",
+        "45'+5' But de Folarin BALOGUN (États-Unis) !",
+        "73' But de MAURICIO (Paraguay) !",
+        "90'+8' But de Giovanni REYNA (États-Unis) !"
+      ],
+      "highlights": [
+        {
+          "minute": "7'",
+          "text": "Damian BOBADILLA (Paraguay) marque contre son camp."
+        },
+        {
+          "minute": "31'",
+          "text": "But de Folarin BALOGUN (États-Unis) !"
+        },
+        {
+          "minute": "45'+5'",
+          "text": "But de Folarin BALOGUN (États-Unis) !"
+        },
+        {
+          "minute": "52'",
+          "text": "Carton jaune administré à une personne différente"
+        },
+        {
+          "minute": "73'",
+          "text": "But de MAURICIO (Paraguay) !"
+        },
+        {
+          "minute": "90'+8'",
+          "text": "But de Giovanni REYNA (États-Unis) !"
+        },
+        {
+          "minute": "99'",
+          "text": "Coup de sifflet final !"
+        }
+      ],
+      "lineups": {
+        "home": {
+          "team": "États-Unis",
+          "formation": null,
+          "players": []
+        },
+        "away": {
+          "team": "Paraguay",
+          "formation": null,
+          "players": []
+        }
+      },
+      "stats": {
+        "possession": {
+          "home": null,
+          "away": null
+        },
+        "shots": {
+          "home": null,
+          "away": null
+        },
+        "shotsOnTarget": {
+          "home": null,
+          "away": null
+        },
+        "corners": {
+          "home": null,
+          "away": null
+        },
+        "fouls": {
+          "home": null,
+          "away": null
+        }
+      },
+      "playerRatings": {
+        "home": [],
+        "away": []
+      },
+      "probableLineups": {
+        "home": {
+          "team": "États-Unis",
+          "formation": null,
+          "players": []
+        },
+        "away": {
+          "team": "Paraguay",
+          "formation": null,
+          "players": []
+        }
+      },
+      "winProbability": {
+        "home": null,
+        "draw": null,
+        "away": null
+      },
+      "expertDiscussion": []
+    },
+    {
+      "id": "400021447",
+      "stage": "groupes",
+      "group": "Groupe B",
+      "date": "2026-06-13T19:00:00Z",
+      "venue": "Stade de la baie de San Francisco",
+      "city": "Région de la baie de San Francisco",
+      "home": "Qatar",
+      "away": "Suisse",
+      "homeCoach": null,
+      "awayCoach": null,
+      "status": "finished",
+      "minute": null,
+      "score": {
+        "home": 1,
+        "away": 1
+      },
+      "scorers": [
+        "17' Breel EMBOLO (Suisse) transforme le penalty !",
+        "90'+4' Miro MUHEIM (Suisse) marque contre son camp."
+      ],
+      "highlights": [
+        {
+          "minute": "17'",
+          "text": "Breel EMBOLO (Suisse) transforme le penalty !"
+        },
+        {
+          "minute": "90'+4'",
+          "text": "Miro MUHEIM (Suisse) marque contre son camp."
+        },
+        {
+          "minute": "98'",
+          "text": "Coup de sifflet final !"
+        }
+      ],
+      "lineups": {
+        "home": {
+          "team": "Qatar",
+          "formation": null,
+          "players": []
+        },
+        "away": {
+          "team": "Suisse",
+          "formation": null,
+          "players": []
+        }
+      },
+      "stats": {
+        "possession": {
+          "home": null,
+          "away": null
+        },
+        "shots": {
+          "home": null,
+          "away": null
+        },
+        "shotsOnTarget": {
+          "home": null,
+          "away": null
+        },
+        "corners": {
+          "home": null,
+          "away": null
+        },
+        "fouls": {
+          "home": null,
+          "away": null
+        }
+      },
+      "playerRatings": {
+        "home": [],
+        "away": []
+      },
+      "probableLineups": {
+        "home": {
+          "team": "Qatar",
+          "formation": null,
+          "players": []
+        },
+        "away": {
+          "team": "Suisse",
+          "formation": null,
+          "players": []
+        }
+      },
+      "winProbability": {
+        "home": null,
+        "draw": null,
+        "away": null
+      },
+      "expertDiscussion": []
+    }
+  ],
   "knockout": {}
 }
