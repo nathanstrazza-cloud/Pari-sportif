@@ -1,0 +1,37 @@
+name: Update data
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 6 * * *"
+
+permissions:
+  contents: write
+
+jobs:
+  update-data:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Télécharger le repo
+        uses: actions/checkout@v4
+
+      - name: Installer Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Lancer les scripts de mise à jour
+        run: |
+          python scripts/sync_competition_data.py
+          python scripts/sync_live_scores.py
+          python scripts/morning_world_cup_sync.py
+
+      - name: Sauvegarder les fichiers modifiés
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+          git add data/*.json
+          git commit -m "Update live data" || echo "Aucune modification"
+          git push
+          
