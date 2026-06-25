@@ -4,6 +4,7 @@ const state = {
   players: {},
   odds: {},
   selectedMatchId: null,
+  selectedTeam: null,
   activeTab: "matches",
   activeStage: "round32",
   refreshTimer: null,
@@ -30,6 +31,113 @@ const groupStatusLabels = {
   qualified: "Qualifié",
   "best-third": "Meilleur 3e",
   eliminated: "Éliminé",
+};
+
+const teamNameFr = {
+  Algeria: "Algérie",
+  Argentina: "Argentine",
+  Australia: "Australie",
+  Austria: "Autriche",
+  Belgium: "Belgique",
+  Brazil: "Brésil",
+  "Bosnia and Herzegovina": "Bosnie-et-Herzégovine",
+  "Bosnia & Herzegovina": "Bosnie-et-Herzégovine",
+  "Cape Verde": "Cap-Vert",
+  "Cape Verde Islands": "Cap-Vert",
+  Canada: "Canada",
+  Colombia: "Colombie",
+  "Congo DR": "RD Congo",
+  Croatia: "Croatie",
+  Curaçao: "Curaçao",
+  Ecuador: "Équateur",
+  Egypt: "Égypte",
+  England: "Angleterre",
+  France: "France",
+  Germany: "Allemagne",
+  Ghana: "Ghana",
+  Haiti: "Haïti",
+  "IR Iran": "Iran",
+  Iran: "Iran",
+  Iraq: "Irak",
+  "Ivory Coast": "Côte d’Ivoire",
+  Japan: "Japon",
+  Jordan: "Jordanie",
+  Mexico: "Mexique",
+  Morocco: "Maroc",
+  Netherlands: "Pays-Bas",
+  "New Zealand": "Nouvelle-Zélande",
+  Norway: "Norvège",
+  Panama: "Panama",
+  Paraguay: "Paraguay",
+  Portugal: "Portugal",
+  Qatar: "Qatar",
+  Scotland: "Écosse",
+  Senegal: "Sénégal",
+  "Saudi Arabia": "Arabie saoudite",
+  "South Africa": "Afrique du Sud",
+  "South Korea": "République de Corée",
+  Spain: "Espagne",
+  Sweden: "Suède",
+  Switzerland: "Suisse",
+  Tunisia: "Tunisie",
+  Türkiye: "Turquie",
+  Turkey: "Turquie",
+  "United States": "États-Unis",
+  USA: "États-Unis",
+  Uruguay: "Uruguay",
+  Uzbekistan: "Ouzbékistan",
+};
+
+const teamFlags = {
+  "afrique du sud": "za",
+  algerie: "dz",
+  allemagne: "de",
+  angleterre: "gb-eng",
+  "arabie saoudite": "sa",
+  argentine: "ar",
+  australie: "au",
+  autriche: "at",
+  belgique: "be",
+  "bosnie et herzegovine": "ba",
+  bresil: "br",
+  canada: "ca",
+  "cap vert": "cv",
+  chili: "cl",
+  colombie: "co",
+  croatie: "hr",
+  curacao: "cw",
+  "cote d ivoire": "ci",
+  "egypte": "eg",
+  equateur: "ec",
+  ecosse: "gb-sct",
+  espagne: "es",
+  "etats unis": "us",
+  france: "fr",
+  ghana: "gh",
+  haiti: "ht",
+  iran: "ir",
+  irak: "iq",
+  japon: "jp",
+  jordanie: "jo",
+  maroc: "ma",
+  mexique: "mx",
+  norvege: "no",
+  "nouvelle zelande": "nz",
+  ouzbekistan: "uz",
+  panama: "pa",
+  paraguay: "py",
+  "pays bas": "nl",
+  portugal: "pt",
+  qatar: "qa",
+  "rd congo": "cd",
+  "republique de coree": "kr",
+  senegal: "sn",
+  suede: "se",
+  suisse: "ch",
+  tchequie: "cz",
+  tunisie: "tn",
+  turquie: "tr",
+  uruguay: "uy",
 };
 
 const els = {};
@@ -127,6 +235,7 @@ function bindBracket() {
 }
 
 function bindInstallPrompt() {
+  if (!els.installButton) return;
   let deferredPrompt = null;
 
   window.addEventListener("beforeinstallprompt", (event) => {
@@ -152,10 +261,13 @@ async function registerServiceWorker() {
 
 function selectDefaultMatch() {
   const live = state.matches.find((match) => match.status === "live");
+  const upcoming = state.matches
+    .filter((match) => match.status === "upcoming")
+    .sort((a, b) => new Date(a.date) - new Date(b.date))[0];
   const finished = [...state.matches]
     .filter((match) => match.status === "finished")
     .sort((a, b) => new Date(b.date) - new Date(a.date))[0];
-  state.selectedMatchId = (live ?? finished ?? state.matches[0])?.id ?? null;
+  state.selectedMatchId = (live ?? upcoming ?? finished ?? state.matches[0])?.id ?? null;
 }
 
 function renderAll() {
@@ -173,12 +285,19 @@ function renderMatches() {
     ? renderMatchDetail(selected)
     : `<div class="empty-state">Aucun match disponible.</div>`;
 
-  els.matchesList.innerHTML = state.matches.map(renderMatchCard).join("");
-  els.matchesList.querySelectorAll(".match-card").forEach((card) => {
-    card.addEventListener("click", () => {
-      state.selectedMatchId = card.dataset.matchId;
-      renderMatches();
-      els.matchDetail.scrollIntoView({ behavior: "smooth", block: "start" });
+  els.matchesList.innerHTML = [
+    state.selectedTeam ? renderTeamHistory(state.selectedTeam) : "",
+    renderMatchSection("En cours", getMatchesByStatus("live"), "Aucun match en direct."),
+    renderMatchSection("À venir", getMatchesByStatus("upcoming"), "Aucun match à venir."),
+    renderMatchSection("Terminés", getMatchesByStatus("finished"), "Aucun match terminé."),
+  ].filter(Boolean).join("");
+
+  els.matchesList.onclick = handleMatchesListClick;
+  els.matchesList.onkeydown = handleMatchesListKeydown;
+  els.matchDetail.querySelectorAll("[data-team]").forEach((team) => {
+    team.addEventListener("click", (event) => {
+      event.stopPropagation();
+      selectTeam(team.dataset.team);
     });
   });
 }
@@ -186,18 +305,138 @@ function renderMatches() {
 function renderMatchCard(match) {
   const isSelected = match.id === state.selectedMatchId ? " is-selected" : "";
   return `
-    <button class="match-card${isSelected}" type="button" data-match-id="${escapeHtml(match.id)}">
+    <article class="match-card${isSelected}" role="button" tabindex="0" data-match-id="${escapeHtml(match.id)}">
       <span class="match-meta">
         <span>${renderInlineMeta([match.stage, formatDate(match.date)])}</span>
         ${renderStatus(match)}
       </span>
       <span class="match-line">
-        <span class="team-name">${escapeHtml(match.home ?? "Équipe à confirmer")}</span>
+        ${renderMatchTeam(match.home, "home")}
         <span class="compact-score">${scoreText(match)}</span>
-        <span class="team-name">${escapeHtml(match.away ?? "Équipe à confirmer")}</span>
+        ${renderMatchTeam(match.away, "away")}
       </span>
-    </button>
+    </article>
   `;
+}
+
+function renderMatchTeam(team, side = "") {
+  return `
+    <span class="match-team match-team-${escapeHtml(side)} team-link" role="button" tabindex="0" data-team="${escapeHtml(team ?? "")}">
+      ${renderTeamFlag(team, "flag-match")}
+      <span class="team-name">${escapeHtml(displayTeamName(team))}</span>
+    </span>
+  `;
+}
+
+function renderMatchSection(title, matches, emptyText) {
+  return `
+    <section class="match-section">
+      <header class="match-section-header">
+        <h3>${escapeHtml(title)}</h3>
+        <span>${matches.length}</span>
+      </header>
+      <div class="match-section-list">
+        ${matches.length ? matches.map(renderMatchCard).join("") : `<div class="empty-state">${escapeHtml(emptyText)}</div>`}
+      </div>
+    </section>
+  `;
+}
+
+function getMatchesByStatus(status) {
+  const matches = state.matches.filter((match) => match.status === status);
+  return matches.sort((a, b) => {
+    const dateA = new Date(a.date).getTime();
+    const dateB = new Date(b.date).getTime();
+    return status === "finished" ? dateB - dateA : dateA - dateB;
+  });
+}
+
+function handleMatchesListClick(event) {
+  const team = event.target.closest("[data-team]");
+  if (team) {
+    event.preventDefault();
+    event.stopPropagation();
+    selectTeam(team.dataset.team);
+    return;
+  }
+
+  const clearTeam = event.target.closest("[data-clear-team]");
+  if (clearTeam) {
+    state.selectedTeam = null;
+    renderMatches();
+    return;
+  }
+
+  const card = event.target.closest(".match-card");
+  if (!card) return;
+
+  state.selectedMatchId = card.dataset.matchId;
+  renderMatches();
+  els.matchDetail.scrollIntoView({ behavior: "smooth", block: "start" });
+}
+
+function handleMatchesListKeydown(event) {
+  if (!["Enter", " "].includes(event.key)) return;
+  const target = event.target.closest("[data-team], [data-clear-team], .match-card, .team-match-row");
+  if (!target) return;
+  event.preventDefault();
+  target.click();
+}
+
+function selectTeam(team) {
+  if (!team) return;
+  state.selectedTeam = team;
+  renderMatches();
+  document.querySelector(".team-panel")?.scrollIntoView({ behavior: "smooth", block: "start" });
+}
+
+function renderTeamHistory(team) {
+  const teamMatches = state.matches
+    .filter((match) => sameTeam(match.home, team) || sameTeam(match.away, team))
+    .sort((a, b) => new Date(a.date) - new Date(b.date));
+  const played = teamMatches.filter((match) => match.status === "finished");
+  const next = teamMatches.find((match) => match.status !== "finished");
+
+  return `
+    <section class="team-panel">
+      <header>
+        <div>
+          <p class="eyebrow">Parcours équipe</p>
+          <h3>${escapeHtml(displayTeamName(team))}</h3>
+        </div>
+        <button class="icon-button" type="button" data-clear-team aria-label="Fermer le parcours">×</button>
+      </header>
+      <div class="team-summary-grid">
+        <span><strong>${played.length}</strong><small>matchs joués</small></span>
+        <span><strong>${teamRecord(played, team).wins}</strong><small>victoires</small></span>
+        <span><strong>${teamRecord(played, team).draws}</strong><small>nuls</small></span>
+        <span><strong>${teamRecord(played, team).losses}</strong><small>défaites</small></span>
+      </div>
+      ${next ? `<p class="team-next">Prochain match : ${escapeHtml(displayTeamName(next.home))} - ${escapeHtml(displayTeamName(next.away))}, ${escapeHtml(formatDate(next.date))}</p>` : ""}
+      <div class="team-match-list">
+        ${teamMatches.map((match) => `
+          <button class="team-match-row" type="button" data-match-id="${escapeHtml(match.id)}">
+            <span>${escapeHtml(formatDate(match.date))}</span>
+            <strong>${escapeHtml(displayTeamName(match.home))} ${scoreText(match)} ${escapeHtml(displayTeamName(match.away))}</strong>
+            ${renderStatus(match)}
+          </button>
+        `).join("")}
+      </div>
+    </section>
+  `;
+}
+
+function teamRecord(matches, team) {
+  return matches.reduce((record, match) => {
+    if (!hasMatchScore(match)) return record;
+    const isHome = sameTeam(match.home, team);
+    const own = isHome ? match.score.home : match.score.away;
+    const against = isHome ? match.score.away : match.score.home;
+    if (own > against) record.wins += 1;
+    else if (own === against) record.draws += 1;
+    else record.losses += 1;
+    return record;
+  }, { wins: 0, draws: 0, losses: 0 });
 }
 
 function renderMatchDetail(match) {
@@ -211,13 +450,15 @@ function renderMatchDetail(match) {
         </div>
         <div class="score-row">
           <div class="team">
-            <span class="team-name">${escapeHtml(match.home ?? "Équipe à confirmer")}</span>
+            ${renderTeamFlag(match.home, "flag-detail")}
+            <span class="team-name team-link" role="button" tabindex="0" data-team="${escapeHtml(match.home ?? "")}">${escapeHtml(displayTeamName(match.home))}</span>
             ${renderTeamSub(match.homeCoach)}
             ${renderTeamScorers(match, "home")}
           </div>
           <div class="score">${scoreText(match)}</div>
           <div class="team away">
-            <span class="team-name">${escapeHtml(match.away ?? "Équipe à confirmer")}</span>
+            ${renderTeamFlag(match.away, "flag-detail")}
+            <span class="team-name team-link" role="button" tabindex="0" data-team="${escapeHtml(match.away ?? "")}">${escapeHtml(displayTeamName(match.away))}</span>
             ${renderTeamSub(match.awayCoach)}
             ${renderTeamScorers(match, "away")}
           </div>
@@ -242,7 +483,7 @@ function renderPlayedDetail(match) {
 
 function renderUpcomingDetail(match) {
   return `
-    ${renderLineups(match.probableLineups, "Compositions probables")}
+    ${renderLineups(match.probableLineups, lineupSectionTitle(match.probableLineups, "Compositions probables"))}
     ${renderWinProbability(match)}
     <section class="detail-section">
       <h3>Cotes</h3>
@@ -304,7 +545,9 @@ function formatTeamScorer(scorer, team) {
 
 function normalizeTeamName(team) {
   return String(team ?? "")
-    .normalize("NFKC")
+    .normalize("NFKD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .replace(/[’'._-]/g, " ")
     .replace(/\s+/g, " ")
     .trim()
     .toLocaleLowerCase("fr-FR");
@@ -321,9 +564,11 @@ function renderLineups(lineups, title) {
     if (!lineup || !players.length) return "";
 
     const details = [lineup.formation, players.join(", ")].filter(Boolean).join(" • ");
+    const source = formatLineupSource(lineup);
     return `
       <div class="lineup-block">
-        ${lineup.team ? `<strong>${escapeHtml(lineup.team)}</strong>` : ""}
+        ${lineup.team ? `<strong>${escapeHtml(displayTeamName(lineup.team))}</strong>` : ""}
+        ${source ? `<small class="lineup-source">${escapeHtml(source)}</small>` : ""}
         ${details ? `<p>${escapeHtml(details)}</p>` : ""}
       </div>
     `;
@@ -339,6 +584,24 @@ function renderLineups(lineups, title) {
       }
     </section>
   `;
+}
+
+function lineupSectionTitle(lineups, fallback) {
+  const sources = ["home", "away"]
+    .map((side) => lineups?.[side]?.source)
+    .filter(Boolean);
+  if (sources.length && sources.every((source) => source === "Dernière compo connue")) {
+    return "Dernières compos connues";
+  }
+  return fallback;
+}
+
+function formatLineupSource(lineup) {
+  if (!lineup?.source) return "";
+  const parts = [lineup.source];
+  if (lineup.sourceDate) parts.push(formatDate(lineup.sourceDate));
+  if (lineup.sourceMatch) parts.push(lineup.sourceMatch);
+  return parts.join(" • ");
 }
 
 function renderStats(stats) {
@@ -406,9 +669,9 @@ function renderRatings(ratings) {
 
 function renderWinProbability(match) {
   const rows = [
-    [match.home ?? "Domicile", match.winProbability?.home],
+    [displayTeamName(match.home), match.winProbability?.home],
     ["Nul", match.winProbability?.draw],
-    [match.away ?? "Extérieur", match.winProbability?.away],
+    [displayTeamName(match.away), match.winProbability?.away],
   ].filter(([, value]) => isNumber(value));
 
   if (!rows.length) return "";
@@ -434,7 +697,10 @@ function renderProbability(label, value) {
 }
 
 function renderOdds(match) {
-  const odds = Array.isArray(state.odds[match.id]) ? state.odds[match.id] : [];
+  const apiFootballId = match.externalIds?.apiFootball ?? match.apiFootballFixtureId;
+  const odds = [match.id, apiFootballId]
+    .map((id) => state.odds[id])
+    .find((rows) => Array.isArray(rows)) ?? [];
   const rows = odds.filter((book) =>
     book.bookmaker && isNumber(book.home) && isNumber(book.draw) && isNumber(book.away)
   );
@@ -445,9 +711,9 @@ function renderOdds(match) {
   return rows.map((book) => `
     <div class="odds-row">
       <strong>${escapeHtml(book.bookmaker)}</strong>
-      <span>${escapeHtml(match.home ?? "Domicile")} ${book.home.toFixed(2)}</span>
+      <span>${escapeHtml(displayTeamName(match.home))} ${book.home.toFixed(2)}</span>
       <span>Nul ${book.draw.toFixed(2)}</span>
-      <span>${escapeHtml(match.away ?? "Extérieur")} ${book.away.toFixed(2)}</span>
+      <span>${escapeHtml(displayTeamName(match.away))} ${book.away.toFixed(2)}</span>
     </div>
   `).join("");
 }
@@ -457,10 +723,15 @@ function renderStandings() {
     els.standingsLegend.hidden = state.standings.length === 0;
   }
 
-  els.groupsGrid.innerHTML = state.standings.length ? state.standings.map((group) => `
-    <article class="group-card">
+  const groups = sortGroupsByPhase(state.standings);
+
+  els.groupsGrid.innerHTML = groups.length ? groups.map((group) => {
+    const phase = getGroupPhase(group);
+    return `
+    <article class="group-card group-${phase.key}">
       <header>
         <h3>${escapeHtml(group.name ?? "Groupe")}</h3>
+        <span class="group-phase">${escapeHtml(phase.label)}</span>
       </header>
       <div class="standings-table">
         <div class="standing-row is-head">
@@ -471,25 +742,25 @@ function renderStandings() {
           <div class="standing-row">
             <span class="team-cell">
               <i class="status-stripe ${escapeHtml(team.status ?? "")}"></i>
-              ${escapeHtml(team.name ?? "Équipe non renseignée")}
+              ${renderTeamFlag(team.name, "flag-inline")}
+              ${escapeHtml(displayTeamName(team.name))}
             </span>
             <span class="standing-numbers">
               <span>${formatOptionalValue(team.played)}</span>
               <span>${formatGoalDifference(team.gd)}</span>
               <span><strong>${formatOptionalValue(team.points)}</strong></span>
-              <span>${team.status ? escapeHtml(groupStatusLabels[team.status] ?? team.status) : "—"}</span>
+              <span class="team-status-text status-${escapeHtml(team.status ?? "unknown")}">${team.status ? escapeHtml(groupStatusLabels[team.status] ?? team.status) : "—"}</span>
             </span>
           </div>
         `).join("")}
       </div>
     </article>
-  `).join("") : `<div class="empty-state">Aucun classement disponible.</div>`;
+  `;
+  }).join("") : `<div class="empty-state">Aucun classement disponible.</div>`;
 
   const boards = [
     ["Meilleurs buteurs", state.players.topScorers, "goals", "buts"],
     ["Meilleurs passeurs", state.players.topAssists, "assists", "passes"],
-    ["Meilleurs joueurs", state.players.topPlayers, "rating", "moy."],
-    ["Jeunes joueurs", state.players.youngPlayers, "rating", "moy."],
   ].filter(([, rows]) => Array.isArray(rows) && rows.length);
 
   const filledBoards = boards.map(([title, rows = [], key, label]) => [
@@ -504,14 +775,67 @@ function renderStandings() {
       <header><h3>${title}</h3></header>
       <div class="leader-list">
         ${rows.map((player, index) => `
-          <div class="player-row">
-            <span><strong>${index + 1}. ${escapeHtml(player.name)}</strong> <small class="muted">${escapeHtml(player.team)}</small></span>
+          <div class="player-row leader-player${isTeamEliminated(player.team) ? " is-eliminated" : ""}">
+            <span class="leader-name"><strong>${index + 1}.</strong> ${renderTeamFlag(player.team, "flag-inline")} <strong>${escapeHtml(player.name)}</strong> <small class="muted">${escapeHtml(player.team)}</small></span>
             <span class="rating">${formatLeaderValue(player[key])} ${label}</span>
           </div>
         `).join("")}
       </div>
     </article>
   `).join("") : `<div class="empty-state">Aucune performance individuelle disponible.</div>`;
+}
+
+function sortGroupsByPhase(groups) {
+  return [...groups].sort((left, right) => {
+    const leftPhase = getGroupPhase(left);
+    const rightPhase = getGroupPhase(right);
+    if (leftPhase.order !== rightPhase.order) return leftPhase.order - rightPhase.order;
+    return String(left.name ?? "").localeCompare(String(right.name ?? ""), "fr-FR", { numeric: true });
+  });
+}
+
+function getGroupPhase(group) {
+  const groupMatches = getMatchesForGroup(group);
+  if (groupMatches.some((match) => match.status === "live")) {
+    return { key: "live", label: "En direct", order: 0 };
+  }
+  if (groupMatches.some((match) => match.status === "upcoming")) {
+    return { key: "pending", label: "Matchs restants", order: 1 };
+  }
+  return { key: "complete", label: "Terminé", order: 2 };
+}
+
+function getMatchesForGroup(group) {
+  const normalizedGroup = normalizeGroupName(group?.name);
+  const groupTeams = new Set(
+    (group?.teams ?? []).map((team) => normalizeTeamName(displayTeamName(team.name)))
+  );
+
+  return state.matches.filter((match) => {
+    if (normalizeGroupName(match.group) === normalizedGroup) return true;
+    const home = normalizeTeamName(displayTeamName(match.home));
+    const away = normalizeTeamName(displayTeamName(match.away));
+    return groupTeams.has(home) && groupTeams.has(away);
+  });
+}
+
+function normalizeGroupName(groupName) {
+  return String(groupName ?? "")
+    .normalize("NFKC")
+    .replace(/\s+/g, " ")
+    .trim()
+    .toLocaleLowerCase("fr-FR");
+}
+
+function isTeamEliminated(teamName) {
+  const teamKey = normalizeTeamName(displayTeamName(teamName));
+  if (!teamKey) return false;
+
+  return state.standings.some((group) =>
+    (group.teams ?? []).some((team) =>
+      team.status === "eliminated" && normalizeTeamName(displayTeamName(team.name)) === teamKey
+    )
+  );
 }
 
 function renderBracketTabs() {
@@ -548,11 +872,11 @@ function renderBracket() {
             <span>${escapeHtml(formatDate(match.date))}</span>
           </div>
           <div class="bracket-row">
-            <span class="bracket-team">${escapeHtml(match.home ?? "Équipe à confirmer")}</span>
+            <span class="bracket-team">${escapeHtml(displayTeamName(match.home))}</span>
             <span class="bracket-score">${formatBracketScore(match.homeScore)}</span>
           </div>
           <div class="bracket-row">
-            <span class="bracket-team">${escapeHtml(match.away ?? "Équipe à confirmer")}</span>
+            <span class="bracket-team">${escapeHtml(displayTeamName(match.away))}</span>
             <span class="bracket-score">${formatBracketScore(match.awayScore)}</span>
           </div>
         </article>
@@ -608,6 +932,7 @@ async function refreshData() {
 }
 
 function updateRefreshPill() {
+  if (!els.refreshPill) return;
   const hasLiveMatch = state.matches.some((match) => match.status === "live");
   const cadence = hasLiveMatch ? "30 s en live" : "3 min";
   const time = state.lastRefresh
@@ -675,6 +1000,29 @@ function formatGoalDifference(value) {
 
 function formatBracketScore(value) {
   return isNumber(value) ? value : "À venir";
+}
+
+function displayTeamName(team) {
+  const value = String(team ?? "").trim();
+  if (!value || value.toLocaleLowerCase("fr-FR") === "null") return "Équipe à confirmer";
+  return teamNameFr[value] ?? value;
+}
+
+function renderTeamFlag(team, className = "") {
+  const label = displayTeamName(team);
+  const code = teamFlags[normalizeTeamName(label)];
+  if (!code) return "";
+  const classes = ["team-flag", className].filter(Boolean).join(" ");
+  const url = `https://flagcdn.com/${encodeURIComponent(code)}.svg`;
+  return `
+    <span class="${escapeHtml(classes)}" aria-label="Drapeau ${escapeHtml(label)}">
+      <img src="${url}" alt="" loading="lazy" decoding="async" />
+    </span>
+  `;
+}
+
+function sameTeam(left, right) {
+  return normalizeTeamName(displayTeamName(left)) === normalizeTeamName(displayTeamName(right));
 }
 
 function renderError(error) {

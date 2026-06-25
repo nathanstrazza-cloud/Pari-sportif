@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 import argparse
+import copy
 import json
 import os
 import sys
@@ -31,6 +32,52 @@ TEAM_ALIASES = {
     "republique de coree": {"south korea", "korea republic", "korea"},
     "suisse": {"switzerland"},
     "tchequie": {"czech republic", "czechia"},
+}
+
+TEAM_NAME_FR = {
+    "Argentina": "Argentine",
+    "Australia": "Australie",
+    "Austria": "Autriche",
+    "Belgium": "Belgique",
+    "Brazil": "Brésil",
+    "Bosnia and Herzegovina": "Bosnie-et-Herzégovine",
+    "Bosnia & Herzegovina": "Bosnie-et-Herzégovine",
+    "Cape Verde": "Cap-Vert",
+    "Colombia": "Colombie",
+    "Croatia": "Croatie",
+    "Czechia": "Tchéquie",
+    "Ecuador": "Équateur",
+    "Egypt": "Égypte",
+    "England": "Angleterre",
+    "Germany": "Allemagne",
+    "Ghana": "Ghana",
+    "Haiti": "Haïti",
+    "IR Iran": "Iran",
+    "Iraq": "Irak",
+    "Ivory Coast": "Côte d’Ivoire",
+    "Japan": "Japon",
+    "Jordan": "Jordanie",
+    "Mexico": "Mexique",
+    "Morocco": "Maroc",
+    "Netherlands": "Pays-Bas",
+    "New Zealand": "Nouvelle-Zélande",
+    "Norway": "Norvège",
+    "Portugal": "Portugal",
+    "Qatar": "Qatar",
+    "Scotland": "Écosse",
+    "Senegal": "Sénégal",
+    "Saudi Arabia": "Arabie saoudite",
+    "South Africa": "Afrique du Sud",
+    "South Korea": "République de Corée",
+    "Spain": "Espagne",
+    "Sweden": "Suède",
+    "Switzerland": "Suisse",
+    "Tunisia": "Tunisie",
+    "Türkiye": "Turquie",
+    "United States": "États-Unis",
+    "USA": "États-Unis",
+    "Uruguay": "Uruguay",
+    "Uzbekistan": "Ouzbékistan",
 }
 
 STAGE_LABELS = {
@@ -68,6 +115,7 @@ def main():
     parser.add_argument("--after-minutes", type=int, default=150, help="Marge apres coup d'envoi.")
     parser.add_argument("--post-match-after-minutes", type=int, default=165, help="Debut du rattrapage apres coup d'envoi.")
     parser.add_argument("--post-match-until-minutes", type=int, default=360, help="Fin de la fenetre de rattrapage.")
+    parser.add_argument("--lineups-window-hours", type=int, default=36, help="Cherche les compositions des matchs proches.")
     args = parser.parse_args()
 
     load_env_file(Path(args.env))
@@ -155,6 +203,12 @@ def run_upcoming_once(args):
 
     fixtures = fetch_world_cup_fixtures(get_api_key(), args.world_cup_league, args.world_cup_season)
     updated, inserted = merge_world_cup_fixtures(matches, fixtures)
+    lineups_checked, lineups_updated, fallback_lineups = enrich_available_lineups(
+        matches,
+        get_api_key(),
+        now,
+        hours=args.lineups_window_hours,
+    )
     checked_at = now.isoformat().replace("+00:00", "Z")
 
     data["scheduleSync"] = {
@@ -164,9 +218,12 @@ def run_upcoming_once(args):
         "season": args.world_cup_season,
         "updatedMatches": updated,
         "insertedMatches": inserted,
+        "lineupsChecked": lineups_checked,
+        "lineupsUpdated": lineups_updated,
+        "fallbackLineups": fallback_lineups,
     }
 
-    if updated or inserted:
+    if updated or inserted or lineups_updated or fallback_lineups:
         data["lastUpdated"] = checked_at
         matches.sort(key=lambda match: (match.get("date") or "", str(match.get("id") or "")))
 
@@ -175,7 +232,11 @@ def run_upcoming_once(args):
         return
 
     write_json(matches_path, data)
-    print(f"Calendrier Coupe du Monde: {updated} match(s) mis a jour, {inserted} ajoute(s).")
+    print(
+        f"Calendrier Coupe du Monde: {updated} match(s) mis a jour, "
+        f"{inserted} ajoute(s), {lineups_updated} composition(s), "
+        f"{fallback_lineups} derniere(s) compo(s) connue(s)."
+    )
 
 
 def maybe_run_post_match_sync(args):
@@ -323,10 +384,18 @@ def fetch_world_cup_fixtures(api_key, league, season):
     )
 
 
+def fetch_fixture_lineups(api_key, fixture_id):
+    return fetch_fixtures_data(api_key, "fixtures/lineups", {"fixture": fixture_id})
+
+
 def fetch_fixtures(api_key, params):
+    return fetch_fixtures_data(api_key, "fixtures", params)
+
+
+def fetch_fixtures_data(api_key, path, params):
     query = urllib.parse.urlencode(params)
     request = urllib.request.Request(
-        f"{API_URL}?{query}",
+        f"https://v3.football.api-sports.io/{path}?{query}",
         headers={
             "x-apisports-key": api_key,
             "Accept": "application/json",
@@ -468,9 +537,9 @@ def apply_schedule_fixture(match, fixture):
     match["stage"] = stage_from_round(league_info.get("round")) or match.get("stage")
     match["group"] = group_from_round(league_info.get("round")) or match.get("group")
 
-    if not match.get("home") or is_placeholder_team(match.get("home")):
+    if api_team_name(teams.get("home")):
         match["home"] = api_team_name(teams.get("home"))
-    if not match.get("away") or is_placeholder_team(match.get("away")):
+    if api_team_name(teams.get("away")):
         match["away"] = api_team_name(teams.get("away"))
 
     apply_fixture(match, fixture)
@@ -561,12 +630,201 @@ def normalize_round(round_name):
 def api_team_name(team):
     if not isinstance(team, dict):
         return None
-    return team.get("name") or None
+    name = team.get("name") or None
+    return TEAM_NAME_FR.get(name, name)
 
 
 def is_placeholder_team(name):
     normalized = normalize(name)
     return not normalized or normalized in {"tbd", "to be defined", "equipe a confirmer"}
+
+
+def enrich_available_lineups(matches, api_key, now, hours):
+    candidates = find_lineup_candidates(matches, now, timedelta(hours=max(0, hours)))
+    checked = 0
+    updated = 0
+
+    for match in candidates:
+        fixture_id = get_api_fixture_id(match)
+        if not fixture_id:
+            continue
+        checked += 1
+        lineups = fetch_fixture_lineups(api_key, fixture_id)
+        if not lineups:
+            continue
+        if apply_lineups(match, lineups):
+            updated += 1
+
+    fallback_updated = apply_last_known_lineups(matches)
+    return checked, updated, fallback_updated
+
+
+def find_lineup_candidates(matches, now, window):
+    candidates = []
+    for match in matches:
+        match_date = parse_datetime(match.get("date"))
+        if not match_date:
+            continue
+        if match.get("status") == "finished" and not has_lineup_players(match.get("lineups")):
+            candidates.append(match)
+            continue
+        if (
+            match.get("status") in {"upcoming", "live"}
+            and now - timedelta(hours=1) <= match_date <= now + window
+            and not has_lineup_players(match.get("probableLineups" if match.get("status") == "upcoming" else "lineups"))
+        ):
+            candidates.append(match)
+    return candidates
+
+
+def get_api_fixture_id(match):
+    external_ids = match.get("externalIds") if isinstance(match.get("externalIds"), dict) else {}
+    return clean_id(external_ids.get("apiFootball") or match.get("apiFootballFixtureId") or match.get("id"))
+
+
+def apply_lineups(match, lineups):
+    before = json.dumps(
+        {
+            "homeCoach": match.get("homeCoach"),
+            "awayCoach": match.get("awayCoach"),
+            "lineups": match.get("lineups"),
+            "probableLineups": match.get("probableLineups"),
+        },
+        ensure_ascii=False,
+        sort_keys=True,
+    )
+
+    target = "probableLineups" if match.get("status") == "upcoming" else "lineups"
+    match.setdefault(target, empty_sides(match.get("home"), match.get("away")))
+
+    for lineup in lineups:
+        team = api_team_name(lineup.get("team"))
+        side = "home" if team_matches(match.get("home"), team) else "away" if team_matches(match.get("away"), team) else None
+        if not side:
+            continue
+        coach = lineup.get("coach", {}).get("name")
+        if side == "home" and coach:
+            match["homeCoach"] = coach
+        if side == "away" and coach:
+            match["awayCoach"] = coach
+        players = [
+            format_lineup_player(row.get("player", {}))
+            for row in lineup.get("startXI", [])
+            if row.get("player")
+        ]
+        match[target][side] = {
+            "team": team,
+            "formation": lineup.get("formation"),
+            "players": players,
+            "source": "Composition officielle" if target == "lineups" else "Composition probable officielle",
+            "sourceDate": match.get("date"),
+        }
+
+    after = json.dumps(
+        {
+            "homeCoach": match.get("homeCoach"),
+            "awayCoach": match.get("awayCoach"),
+            "lineups": match.get("lineups"),
+            "probableLineups": match.get("probableLineups"),
+        },
+        ensure_ascii=False,
+        sort_keys=True,
+    )
+    return before != after
+
+
+def apply_last_known_lineups(matches):
+    before = json.dumps(
+        [(match.get("id"), match.get("probableLineups"), match.get("homeCoach"), match.get("awayCoach")) for match in matches],
+        ensure_ascii=False,
+        sort_keys=True,
+    )
+    known = build_last_known_lineups(matches)
+
+    for match in sorted(matches, key=lambda item: item.get("date") or ""):
+        if match.get("status") != "upcoming":
+            continue
+        match.setdefault("probableLineups", empty_sides(match.get("home"), match.get("away")))
+        for side in ("home", "away"):
+            current = match["probableLineups"].get(side)
+            if has_single_lineup_players(current):
+                continue
+            team = match.get(side)
+            latest = known.get(normalize(team))
+            if not latest:
+                continue
+            fallback = copy.deepcopy(latest["lineup"])
+            fallback["team"] = team
+            fallback["source"] = "Dernière compo connue"
+            fallback["sourceDate"] = latest.get("date")
+            fallback["sourceMatch"] = latest.get("matchLabel")
+            match["probableLineups"][side] = fallback
+            coach = latest.get("coach")
+            if coach and side == "home" and not match.get("homeCoach"):
+                match["homeCoach"] = coach
+            if coach and side == "away" and not match.get("awayCoach"):
+                match["awayCoach"] = coach
+
+    after = json.dumps(
+        [(match.get("id"), match.get("probableLineups"), match.get("homeCoach"), match.get("awayCoach")) for match in matches],
+        ensure_ascii=False,
+        sort_keys=True,
+    )
+    if before == after:
+        return 0
+
+    return sum(1 for match in matches if match.get("status") == "upcoming" and has_lineup_players(match.get("probableLineups")))
+
+
+def build_last_known_lineups(matches):
+    known = {}
+    for match in sorted(matches, key=lambda item: item.get("date") or ""):
+        if match.get("status") != "finished":
+            continue
+        for side in ("home", "away"):
+            lineup = (match.get("lineups") or {}).get(side)
+            if not has_single_lineup_players(lineup):
+                continue
+            team = match.get(side)
+            known[normalize(team)] = {
+                "date": match.get("date"),
+                "coach": match.get(f"{side}Coach"),
+                "matchLabel": f"{display_match_team(match.get('home'))} {score_text(match)} {display_match_team(match.get('away'))}",
+                "lineup": {
+                    "team": team,
+                    "formation": lineup.get("formation"),
+                    "players": list(lineup.get("players") or []),
+                },
+            }
+    return known
+
+
+def has_lineup_players(lineups):
+    return any(has_single_lineup_players((lineups or {}).get(side)) for side in ("home", "away"))
+
+
+def has_single_lineup_players(lineup):
+    return bool(isinstance(lineup, dict) and lineup.get("players"))
+
+
+def display_match_team(team):
+    return TEAM_NAME_FR.get(team, team or "Équipe à confirmer")
+
+
+def score_text(match):
+    score = match.get("score") or {}
+    if score.get("home") is None or score.get("away") is None:
+        return "-"
+    return f"{score.get('home')}-{score.get('away')}"
+
+
+def format_lineup_player(player):
+    number = player.get("number")
+    name = player.get("name")
+    position = player.get("pos")
+    prefix = f"{number}. " if number else ""
+    suffix = f" ({position})" if position else ""
+    return f"{prefix}{name}{suffix}".strip()
 
 
 def map_status(short_status):

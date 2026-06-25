@@ -1,4 +1,450 @@
 {
-  "lastUpdated": null,
-  "groups": []
+  "lastUpdated": "2026-06-25T07:50:32.414475Z",
+  "source": "api-football",
+  "groups": [
+    {
+      "name": "Groupe A",
+      "teams": [
+        {
+          "rank": 1,
+          "name": "Mexique",
+          "played": 3,
+          "points": 9,
+          "gd": 6,
+          "status": "qualified"
+        },
+        {
+          "rank": 2,
+          "name": "Afrique du Sud",
+          "played": 3,
+          "points": 4,
+          "gd": -1,
+          "status": "qualified"
+        },
+        {
+          "rank": 3,
+          "name": "République de Corée",
+          "played": 3,
+          "points": 3,
+          "gd": -1,
+          "status": "eliminated"
+        },
+        {
+          "rank": 4,
+          "name": "Tchéquie",
+          "played": 3,
+          "points": 1,
+          "gd": -4,
+          "status": "eliminated"
+        }
+      ]
+    },
+    {
+      "name": "Groupe B",
+      "teams": [
+        {
+          "rank": 1,
+          "name": "Suisse",
+          "played": 3,
+          "points": 7,
+          "gd": 4,
+          "status": "qualified"
+        },
+        {
+          "rank": 2,
+          "name": "Canada",
+          "played": 3,
+          "points": 4,
+          "gd": 5,
+          "status": "qualified"
+        },
+        {
+          "rank": 3,
+          "name": "Bosnie-et-Herzégovine",
+          "played": 3,
+          "points": 4,
+          "gd": -1,
+          "status": "best-third"
+        },
+        {
+          "rank": 4,
+          "name": "Qatar",
+          "played": 3,
+          "points": 1,
+          "gd": -8,
+          "status": "eliminated"
+        }
+      ]
+    },
+    {
+      "name": "Groupe C",
+      "teams": [
+        {
+          "rank": 1,
+          "name": "Brésil",
+          "played": 3,
+          "points": 7,
+          "gd": 6,
+          "status": "qualified"
+        },
+        {
+          "rank": 2,
+          "name": "Maroc",
+          "played": 3,
+          "points": 7,
+          "gd": 3,
+          "status": "qualified"
+        },
+        {
+          "rank": 3,
+          "name": "Écosse",
+          "played": 3,
+          "points": 3,
+          "gd": -3,
+          "status": "eliminated"
+        },
+        {
+          "rank": 4,
+          "name": "Haïti",
+          "played": 3,
+          "points": 0,
+          "gd": -6,
+          "status": "eliminated"
+        }
+      ]
+    },
+    {
+      "name": "Groupe D",
+      "teams": [
+        {
+          "rank": 1,
+          "name": "États-Unis",
+          "played": 2,
+          "points": 6,
+          "gd": 5,
+          "status": "qualified"
+        },
+        {
+          "rank": 2,
+          "name": "Australie",
+          "played": 2,
+          "points": 3,
+          "gd": 0,
+          "status": "qualified"
+        },
+        {
+          "rank": 3,
+          "name": "Paraguay",
+          "played": 2,
+          "points": 3,
+          "gd": -2,
+          "status": ""
+        },
+        {
+          "rank": 4,
+          "name": "Turquie",
+          "played": 2,
+          "points": 0,
+          "gd": -3,
+          "status": ""
+        }
+      ]
+    },
+    {
+      "name": "Groupe E",
+      "teams": [
+        {
+          "rank": 1,
+          "name": "Allemagne",
+          "played": 2,
+          "points": 6,
+          "gd": 7,
+          "status": "qualified"
+        },
+        {
+          "rank": 2,
+          "name": "Côte d’Ivoire",
+          "played": 2,
+          "points": 3,
+          "gd": 0,
+          "status": "qualified"
+        },
+        {
+          "rank": 3,
+          "name": "Équateur",
+          "played": 2,
+          "points": 1,
+          "gd": -1,
+          "status": ""
+        },
+        {
+          "rank": 4,
+          "name": "Curaçao",
+          "played": 2,
+          "points": 1,
+          "gd": -6,
+          "status": ""
+        }
+      ]
+    },
+    {
+      "name": "Groupe F",
+      "teams": [
+        {
+          "rank": 1,
+          "name": "Pays-Bas",
+          "played": 2,
+          "points": 4,
+          "gd": 4,
+          "status": "qualified"
+        },
+        {
+          "rank": 2,
+          "name": "Japon",
+          "played": 2,
+          "points": 4,
+          "gd": 4,
+          "status": "qualified"
+        },
+        {
+          "rank": 3,
+          "name": "Suède",
+          "played": 2,
+          "points": 3,
+          "gd": 0,
+          "status": ""
+        },
+        {
+          "rank": 4,
+          "name": "Tunisie",
+          "played": 2,
+          "points": 0,
+          "gd": -8,
+          "status": ""
+        }
+      ]
+    },
+    {
+      "name": "Groupe G",
+      "teams": [
+        {
+          "rank": 1,
+          "name": "Égypte",
+          "played": 2,
+          "points": 4,
+          "gd": 2,
+          "status": "qualified"
+        },
+        {
+          "rank": 2,
+          "name": "Iran",
+          "played": 2,
+          "points": 2,
+          "gd": 0,
+          "status": "qualified"
+        },
+        {
+          "rank": 3,
+          "name": "Belgique",
+          "played": 2,
+          "points": 2,
+          "gd": 0,
+          "status": ""
+        },
+        {
+          "rank": 4,
+          "name": "Nouvelle-Zélande",
+          "played": 2,
+          "points": 1,
+          "gd": -2,
+          "status": ""
+        }
+      ]
+    },
+    {
+      "name": "Groupe H",
+      "teams": [
+        {
+          "rank": 1,
+          "name": "Espagne",
+          "played": 2,
+          "points": 4,
+          "gd": 4,
+          "status": "qualified"
+        },
+        {
+          "rank": 2,
+          "name": "Uruguay",
+          "played": 2,
+          "points": 2,
+          "gd": 0,
+          "status": "qualified"
+        },
+        {
+          "rank": 3,
+          "name": "Cap-Vert",
+          "played": 2,
+          "points": 2,
+          "gd": 0,
+          "status": ""
+        },
+        {
+          "rank": 4,
+          "name": "Arabie saoudite",
+          "played": 2,
+          "points": 1,
+          "gd": -4,
+          "status": ""
+        }
+      ]
+    },
+    {
+      "name": "Groupe I",
+      "teams": [
+        {
+          "rank": 1,
+          "name": "France",
+          "played": 2,
+          "points": 6,
+          "gd": 5,
+          "status": "qualified"
+        },
+        {
+          "rank": 2,
+          "name": "Norvège",
+          "played": 2,
+          "points": 6,
+          "gd": 4,
+          "status": "qualified"
+        },
+        {
+          "rank": 3,
+          "name": "Sénégal",
+          "played": 2,
+          "points": 0,
+          "gd": -3,
+          "status": ""
+        },
+        {
+          "rank": 4,
+          "name": "Irak",
+          "played": 2,
+          "points": 0,
+          "gd": -6,
+          "status": ""
+        }
+      ]
+    },
+    {
+      "name": "Groupe J",
+      "teams": [
+        {
+          "rank": 1,
+          "name": "Argentine",
+          "played": 2,
+          "points": 6,
+          "gd": 5,
+          "status": "qualified"
+        },
+        {
+          "rank": 2,
+          "name": "Autriche",
+          "played": 2,
+          "points": 3,
+          "gd": 0,
+          "status": "qualified"
+        },
+        {
+          "rank": 3,
+          "name": "Algérie",
+          "played": 2,
+          "points": 3,
+          "gd": -2,
+          "status": ""
+        },
+        {
+          "rank": 4,
+          "name": "Jordanie",
+          "played": 2,
+          "points": 0,
+          "gd": -3,
+          "status": ""
+        }
+      ]
+    },
+    {
+      "name": "Groupe K",
+      "teams": [
+        {
+          "rank": 1,
+          "name": "Colombie",
+          "played": 2,
+          "points": 6,
+          "gd": 3,
+          "status": "qualified"
+        },
+        {
+          "rank": 2,
+          "name": "Portugal",
+          "played": 2,
+          "points": 4,
+          "gd": 5,
+          "status": "qualified"
+        },
+        {
+          "rank": 3,
+          "name": "RD Congo",
+          "played": 2,
+          "points": 1,
+          "gd": -1,
+          "status": ""
+        },
+        {
+          "rank": 4,
+          "name": "Ouzbékistan",
+          "played": 2,
+          "points": 0,
+          "gd": -7,
+          "status": ""
+        }
+      ]
+    },
+    {
+      "name": "Groupe L",
+      "teams": [
+        {
+          "rank": 1,
+          "name": "Angleterre",
+          "played": 2,
+          "points": 4,
+          "gd": 2,
+          "status": "qualified"
+        },
+        {
+          "rank": 2,
+          "name": "Ghana",
+          "played": 2,
+          "points": 4,
+          "gd": 1,
+          "status": "qualified"
+        },
+        {
+          "rank": 3,
+          "name": "Croatie",
+          "played": 2,
+          "points": 3,
+          "gd": -1,
+          "status": ""
+        },
+        {
+          "rank": 4,
+          "name": "Panama",
+          "played": 2,
+          "points": 0,
+          "gd": -2,
+          "status": ""
+        }
+      ]
+    }
+  ]
 }

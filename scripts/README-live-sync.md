@@ -71,10 +71,24 @@ Il met a jour les scores des matchs termines et les matchs a venir de la Coupe d
 Il garde une memoire dans `data/sync-state.json` pour ne pas consommer une nouvelle requete si
 la sync du jour a deja ete faite.
 
+La passe du matin met aussi a jour les donnees d'interface :
+classements dans `data/standings.json`, leaders joueurs dans `data/players-ea.json`, cotes dans
+`data/odds.json` et probabilites de victoire dans `data/matches.json`.
+
+Le script tente aussi de recuperer les compositions des matchs proches. API-FOOTBALL ne les
+renvoie generalement que peu de temps avant le coup d'envoi ; si rien n'est disponible, l'app
+affiche simplement "Compositions non disponibles pour le moment".
+
 Pour relancer quand meme :
 
 ```sh
 python3 scripts/morning_world_cup_sync.py --force-today
+```
+
+Pour relancer seulement ces donnees d'interface :
+
+```sh
+python3 scripts/sync_competition_data.py
 ```
 
 La competition ciblee est configuree dans `.env` :

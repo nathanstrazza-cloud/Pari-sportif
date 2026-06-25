@@ -1,17 +1,17 @@
 {
-  "lastUpdated": "2026-06-24T17:03:29.375905Z",
+  "lastUpdated": "2026-06-25T07:23:08.508556Z",
   "matches": [
     {
       "id": "400021443",
       "stage": "groupes",
       "group": "Groupe A",
       "date": "2026-06-11T19:00:00+00:00",
-      "venue": "Estadio Azteca",
+      "venue": "Estadio Banorte",
       "city": "Mexico City",
       "home": "Mexique",
       "away": "Afrique du Sud",
-      "homeCoach": null,
-      "awayCoach": null,
+      "homeCoach": "Javier Aguirre",
+      "awayCoach": "Hugo Broos",
       "status": "finished",
       "minute": null,
       "score": {
@@ -55,13 +55,41 @@
       "lineups": {
         "home": {
           "team": "Mexique",
-          "formation": null,
-          "players": []
+          "formation": "4-1-4-1",
+          "players": [
+            "1. R. Rangel (G)",
+            "15. I. Reyes (D)",
+            "3. C. Montes (D)",
+            "5. J. Vasquez (D)",
+            "23. J. Gallardo (D)",
+            "6. E. Lira (M)",
+            "25. R. Alvarado (M)",
+            "26. B. Gutierrez (M)",
+            "8. A. Fidalgo (M)",
+            "16. J. Quinones (M)",
+            "9. R. Jimenez (F)"
+          ],
+          "source": "Composition officielle",
+          "sourceDate": "2026-06-11T19:00:00+00:00"
         },
         "away": {
           "team": "Afrique du Sud",
-          "formation": null,
-          "players": []
+          "formation": "5-3-2",
+          "players": [
+            "1. R. Williams (G)",
+            "20. K. Mudau (D)",
+            "19. N. Sibisi (D)",
+            "21. I. Okon (D)",
+            "14. M. Mbokazi (D)",
+            "6. A. Modiba (D)",
+            "4. T. Mokoena (M)",
+            "13. Y. Sithole (M)",
+            "23. J. Adams (M)",
+            "15. I. Rayners (F)",
+            "9. L. Foster (F)"
+          ],
+          "source": "Composition officielle",
+          "sourceDate": "2026-06-11T19:00:00+00:00"
         }
       },
       "stats": {
@@ -118,11 +146,11 @@
       "group": "Groupe A",
       "date": "2026-06-12T02:00:00+00:00",
       "venue": "Estadio Akron",
-      "city": "Guadalajara",
+      "city": "Zapopan",
       "home": "République de Corée",
       "away": "Tchéquie",
-      "homeCoach": null,
-      "awayCoach": null,
+      "homeCoach": "Myung-Bo Hong",
+      "awayCoach": "Miroslav Koubek",
       "status": "finished",
       "minute": null,
       "score": {
@@ -155,13 +183,41 @@
       "lineups": {
         "home": {
           "team": "République de Corée",
-          "formation": null,
-          "players": []
+          "formation": "3-4-2-1",
+          "players": [
+            "1. Kim Seung-Gyu (G)",
+            "2. Lee Han-Beom (D)",
+            "4. Kim Min-Jae (D)",
+            "3. Lee Gi-Hyuk (D)",
+            "22. Seol Young-Woo (M)",
+            "6. Hwang In-Beom (M)",
+            "8. Paik Seung-Ho (M)",
+            "13. Lee Tae-Seok (M)",
+            "19. Lee Kang-In (F)",
+            "10. Lee Jae-Sung (F)",
+            "7. Son Heung-Min (F)"
+          ],
+          "source": "Composition officielle",
+          "sourceDate": "2026-06-12T02:00:00+00:00"
         },
         "away": {
           "team": "Tchéquie",
-          "formation": null,
-          "players": []
+          "formation": "3-4-2-1",
+          "players": [
+            "1. M. Kovar (G)",
+            "6. S. Chaloupek (D)",
+            "4. R. Hranac (D)",
+            "7. L. Krejci (D)",
+            "5. V. Coufal (M)",
+            "22. T. Soucek (M)",
+            "24. A. Sojka (M)",
+            "20. J. Zeleny (M)",
+            "17. L. Provod (F)",
+            "15. P. Sulc (F)",
+            "10. P. Schick (F)"
+          ],
+          "source": "Composition officielle",
+          "sourceDate": "2026-06-12T02:00:00+00:00"
         }
       },
       "stats": {
@@ -221,8 +277,8 @@
       "city": "Toronto",
       "home": "Canada",
       "away": "Bosnie-et-Herzégovine",
-      "homeCoach": null,
-      "awayCoach": null,
+      "homeCoach": "Jesse Marsch",
+      "awayCoach": "Sergej Barbarez",
       "status": "finished",
       "minute": null,
       "score": {
@@ -250,13 +306,41 @@
       "lineups": {
         "home": {
           "team": "Canada",
-          "formation": null,
-          "players": []
+          "formation": "4-4-2",
+          "players": [
+            "16. M. Crepeau (G)",
+            "2. A. Johnston (D)",
+            "4. L. De Fougerolles (D)",
+            "13. D. Cornelius (D)",
+            "22. R. Laryea (D)",
+            "17. T. Buchanan (M)",
+            "8. I. Kone (M)",
+            "7. S. Eustaquio (M)",
+            "11. L. Millar (M)",
+            "10. J. David (F)",
+            "12. T. Oluwaseyi (F)"
+          ],
+          "source": "Composition officielle",
+          "sourceDate": "2026-06-12T19:00:00+00:00"
         },
         "away": {
           "team": "Bosnie-et-Herzégovine",
-          "formation": null,
-          "players": []
+          "formation": "4-4-2",
+          "players": [
+            "1. N. Vasilj (G)",
+            "7. A. Dedic (D)",
+            "18. N. Katic (D)",
+            "4. T. Muharemovic (D)",
+            "5. S. Kolasinac (D)",
+            "20. E. Bajraktarevic (M)",
+            "6. B. Tahirovic (M)",
+            "13. I. Basic (M)",
+            "15. A. Memic (M)",
+            "10. E. Demirovic (F)",
+            "25. J. Lukic (F)"
+          ],
+          "source": "Composition officielle",
+          "sourceDate": "2026-06-12T19:00:00+00:00"
         }
       },
       "stats": {
@@ -316,8 +400,8 @@
       "city": "Inglewood",
       "home": "États-Unis",
       "away": "Paraguay",
-      "homeCoach": null,
-      "awayCoach": null,
+      "homeCoach": "Mauricio Pochettino",
+      "awayCoach": "Gustavo Alfaro",
       "status": "finished",
       "minute": null,
       "score": {
@@ -364,13 +448,41 @@
       "lineups": {
         "home": {
           "team": "États-Unis",
-          "formation": null,
-          "players": []
+          "formation": "4-2-3-1",
+          "players": [
+            "24. M. Freese (G)",
+            "16. A. Freeman (D)",
+            "3. C. Richards (D)",
+            "13. T. Ream (D)",
+            "5. A. Robinson (D)",
+            "4. T. Adams (M)",
+            "17. M. Tillman (M)",
+            "2. S. Dest (M)",
+            "8. W. McKennie (M)",
+            "10. C. Pulisic (M)",
+            "20. F. Balogun (F)"
+          ],
+          "source": "Composition officielle",
+          "sourceDate": "2026-06-13T01:00:00+00:00"
         },
         "away": {
           "team": "Paraguay",
-          "formation": null,
-          "players": []
+          "formation": "4-4-2",
+          "players": [
+            "12. O. Gill (G)",
+            "4. J. Caceres (D)",
+            "15. G. Gomez (D)",
+            "3. O. Alderete (D)",
+            "6. J. Alonso (D)",
+            "8. D. Gomez (M)",
+            "14. A. Cubas (M)",
+            "16. D. Bobadilla (M)",
+            "10. M. Almiron (M)",
+            "9. A. Sanabria (F)",
+            "19. J. Enciso (F)"
+          ],
+          "source": "Composition officielle",
+          "sourceDate": "2026-06-13T01:00:00+00:00"
         }
       },
       "stats": {
@@ -430,8 +542,8 @@
       "city": "Santa Clara",
       "home": "Qatar",
       "away": "Suisse",
-      "homeCoach": null,
-      "awayCoach": null,
+      "homeCoach": "Julen Lopetegui",
+      "awayCoach": "Murat Yakin",
       "status": "finished",
       "minute": null,
       "score": {
@@ -459,13 +571,41 @@
       "lineups": {
         "home": {
           "team": "Qatar",
-          "formation": null,
-          "players": []
+          "formation": "4-3-3",
+          "players": [
+            "1. M. Abunada (G)",
+            "13. A. Al Oui (D)",
+            "2. Pedro Miguel (D)",
+            "16. B. Khoukhi (D)",
+            "14. H. Al Amin (D)",
+            "5. J. Gaber (M)",
+            "23. A. O. Madibo (M)",
+            "4. I. Laye (M)",
+            "8. Edmilson Junior (F)",
+            "15. Y. Abdurisag (F)",
+            "11. A. Afif (F)"
+          ],
+          "source": "Composition officielle",
+          "sourceDate": "2026-06-13T19:00:00+00:00"
         },
         "away": {
           "team": "Suisse",
-          "formation": null,
-          "players": []
+          "formation": "4-3-3",
+          "players": [
+            "1. G. Kobel (G)",
+            "6. D. Zakaria (D)",
+            "4. N. Elvedi (D)",
+            "5. M. Akanji (D)",
+            "13. R. Rodriguez (D)",
+            "20. M. Aebischer (M)",
+            "10. G. Xhaka (M)",
+            "8. R. Freuler (M)",
+            "11. D. Ndoye (F)",
+            "7. B. Embolo (F)",
+            "17. R. Vargas (F)"
+          ],
+          "source": "Composition officielle",
+          "sourceDate": "2026-06-13T19:00:00+00:00"
         }
       },
       "stats": {
@@ -523,10 +663,10 @@
       "date": "2026-06-13T22:00:00+00:00",
       "venue": "MetLife Stadium",
       "city": "East Rutherford",
-      "home": "Brazil",
-      "away": "Morocco",
-      "homeCoach": null,
-      "awayCoach": null,
+      "home": "Brésil",
+      "away": "Maroc",
+      "homeCoach": "Carlo Ancelotti",
+      "awayCoach": "Mohamed Ouahbi",
       "score": {
         "home": 1,
         "away": 1
@@ -540,14 +680,42 @@
       "minute": null,
       "lineups": {
         "home": {
-          "team": "Brazil",
-          "formation": null,
-          "players": []
+          "team": "Brésil",
+          "formation": "4-2-3-1",
+          "players": [
+            "1. Alisson (G)",
+            "24. Ibanez (D)",
+            "4. Marquinhos (D)",
+            "3. Gabriel (D)",
+            "16. Douglas Santos (D)",
+            "5. Casemiro (M)",
+            "8. Bruno Guimaraes (M)",
+            "20. Lucas Paqueta (M)",
+            "11. Raphinha (M)",
+            "7. Vinicius Junior (M)",
+            "25. I. Thiago (F)"
+          ],
+          "source": "Composition officielle",
+          "sourceDate": "2026-06-13T22:00:00+00:00"
         },
         "away": {
-          "team": "Morocco",
-          "formation": null,
-          "players": []
+          "team": "Maroc",
+          "formation": "4-2-3-1",
+          "players": [
+            "1. Bono (G)",
+            "2. A. Hakimi (D)",
+            "14. I. Diop (D)",
+            "18. C. Riad (D)",
+            "3. N. Mazraoui (D)",
+            "24. N. El Aynaoui (M)",
+            "6. A. Bouaddi (M)",
+            "10. B. Diaz (M)",
+            "8. A. Ounahi (M)",
+            "23. B. El Khannouss (M)",
+            "11. I. Saibari (F)"
+          ],
+          "source": "Composition officielle",
+          "sourceDate": "2026-06-13T22:00:00+00:00"
         }
       },
       "probableLineups": {
@@ -602,10 +770,10 @@
       "date": "2026-06-14T01:00:00+00:00",
       "venue": "Gillette Stadium",
       "city": "Boston",
-      "home": "Haiti",
-      "away": "Scotland",
-      "homeCoach": null,
-      "awayCoach": null,
+      "home": "Haïti",
+      "away": "Écosse",
+      "homeCoach": "Sebastien Migne",
+      "awayCoach": "Steve Clarke",
       "score": {
         "home": 0,
         "away": 1
@@ -619,14 +787,42 @@
       "minute": null,
       "lineups": {
         "home": {
-          "team": "Haiti",
-          "formation": null,
-          "players": []
+          "team": "Haïti",
+          "formation": "4-4-2",
+          "players": [
+            "1. J. Placide (G)",
+            "2. C. Arcus (D)",
+            "4. R. Ade (D)",
+            "5. H. Delcroix (D)",
+            "8. M. Experience (D)",
+            "11. L. Deedson (M)",
+            "17. D. Jean Jacques (M)",
+            "10. J. Bellegarde (M)",
+            "15. R. Providence (M)",
+            "20. F. Pierrot (F)",
+            "18. W. Isidor (F)"
+          ],
+          "source": "Composition officielle",
+          "sourceDate": "2026-06-14T01:00:00+00:00"
         },
         "away": {
-          "team": "Scotland",
-          "formation": null,
-          "players": []
+          "team": "Écosse",
+          "formation": "4-4-2",
+          "players": [
+            "1. A. Gunn (G)",
+            "2. A. Hickey (D)",
+            "5. G. Hanley (D)",
+            "13. J. Hendry (D)",
+            "3. A. Robertson (D)",
+            "17. B. Gannon-Doak (M)",
+            "4. S. McTominay (M)",
+            "19. L. Ferguson (M)",
+            "7. J. McGinn (M)",
+            "20. L. Shankland (F)",
+            "10. C. Adams (F)"
+          ],
+          "source": "Composition officielle",
+          "sourceDate": "2026-06-14T01:00:00+00:00"
         }
       },
       "probableLineups": {
@@ -681,10 +877,10 @@
       "date": "2026-06-14T04:00:00+00:00",
       "venue": "BC Place",
       "city": "Vancouver",
-      "home": "Australia",
-      "away": "Türkiye",
-      "homeCoach": null,
-      "awayCoach": null,
+      "home": "Australie",
+      "away": "Turquie",
+      "homeCoach": "Tony Popovic",
+      "awayCoach": "Vincenzo Montella",
       "score": {
         "home": 2,
         "away": 0
@@ -698,14 +894,42 @@
       "minute": null,
       "lineups": {
         "home": {
-          "team": "Australia",
-          "formation": null,
-          "players": []
+          "team": "Australie",
+          "formation": "5-4-1",
+          "players": [
+            "18. P. Beach (G)",
+            "4. J. Italiano (D)",
+            "3. A. Circati (D)",
+            "19. H. Souttar (D)",
+            "21. C. Burgess (D)",
+            "5. J. Bos (D)",
+            "8. C. Metcalfe (M)",
+            "13. A. O'Neill (M)",
+            "24. P. Okon-Engstler (M)",
+            "17. N. Irankunda (M)",
+            "9. M. Toure (F)"
+          ],
+          "source": "Composition officielle",
+          "sourceDate": "2026-06-14T04:00:00+00:00"
         },
         "away": {
-          "team": "Türkiye",
-          "formation": null,
-          "players": []
+          "team": "Turquie",
+          "formation": "4-2-3-1",
+          "players": [
+            "23. U. Cakir (G)",
+            "2. Z. Celik (D)",
+            "3. M. Demiral (D)",
+            "14. A. Bardakci (D)",
+            "20. F. Kadioglu (D)",
+            "16. I. Yuksek (M)",
+            "10. H. Calhanoglu (M)",
+            "8. A. Guler (M)",
+            "6. O. Kokcu (M)",
+            "21. B. Yilmaz (M)",
+            "7. K. Akturkoglu (F)"
+          ],
+          "source": "Composition officielle",
+          "sourceDate": "2026-06-14T04:00:00+00:00"
         }
       },
       "probableLineups": {
@@ -760,10 +984,10 @@
       "date": "2026-06-14T17:00:00+00:00",
       "venue": "NRG Stadium",
       "city": "Houston",
-      "home": "Germany",
+      "home": "Allemagne",
       "away": "Curaçao",
-      "homeCoach": null,
-      "awayCoach": null,
+      "homeCoach": "Julian Nagelsmann",
+      "awayCoach": "Dick Advocaat",
       "score": {
         "home": 7,
         "away": 1
@@ -777,14 +1001,42 @@
       "minute": null,
       "lineups": {
         "home": {
-          "team": "Germany",
-          "formation": null,
-          "players": []
+          "team": "Allemagne",
+          "formation": "4-2-3-1",
+          "players": [
+            "1. M. Neuer (G)",
+            "6. J. Kimmich (D)",
+            "4. J. Tah (D)",
+            "15. N. Schlotterbeck (D)",
+            "18. N. Brown (D)",
+            "23. F. Nmecha (M)",
+            "5. A. Pavlovic (M)",
+            "19. L. Sane (M)",
+            "10. J. Musiala (M)",
+            "17. F. Wirtz (M)",
+            "7. K. Havertz (F)"
+          ],
+          "source": "Composition officielle",
+          "sourceDate": "2026-06-14T17:00:00+00:00"
         },
         "away": {
           "team": "Curaçao",
-          "formation": null,
-          "players": []
+          "formation": "4-3-1-2",
+          "players": [
+            "1. E. Room (G)",
+            "5. S. Floranus (D)",
+            "23. R. Bazoer (D)",
+            "18. A. Obispo (D)",
+            "24. D. Fonville (D)",
+            "8. L. Comenencia (M)",
+            "10. L. Bacuna (M)",
+            "7. J. Bacuna (M)",
+            "21. T. Chong (M)",
+            "9. J. Locadia (F)",
+            "12. S. Hansen (F)"
+          ],
+          "source": "Composition officielle",
+          "sourceDate": "2026-06-14T17:00:00+00:00"
         }
       },
       "probableLineups": {
@@ -839,10 +1091,10 @@
       "date": "2026-06-14T20:00:00+00:00",
       "venue": "AT&T Stadium",
       "city": "Arlington",
-      "home": "Netherlands",
-      "away": "Japan",
-      "homeCoach": null,
-      "awayCoach": null,
+      "home": "Pays-Bas",
+      "away": "Japon",
+      "homeCoach": "Ronald Koeman",
+      "awayCoach": "Hajime Moriyasu",
       "score": {
         "home": 2,
         "away": 2
@@ -856,14 +1108,42 @@
       "minute": null,
       "lineups": {
         "home": {
-          "team": "Netherlands",
-          "formation": null,
-          "players": []
+          "team": "Pays-Bas",
+          "formation": "4-3-3",
+          "players": [
+            "1. B. Verbruggen (G)",
+            "22. D. Dumfries (D)",
+            "6. J. P. van Hecke (D)",
+            "4. V. van Dijk (D)",
+            "15. M. van de Ven (D)",
+            "8. R. Gravenberch (M)",
+            "21. F. de Jong (M)",
+            "14. T. Reijnders (M)",
+            "24. C. Summerville (F)",
+            "18. D. Malen (F)",
+            "11. C. Gakpo (F)"
+          ],
+          "source": "Composition officielle",
+          "sourceDate": "2026-06-14T20:00:00+00:00"
         },
         "away": {
-          "team": "Japan",
-          "formation": null,
-          "players": []
+          "team": "Japon",
+          "formation": "3-4-2-1",
+          "players": [
+            "1. Z. Suzuki (G)",
+            "16. T. Watanabe (D)",
+            "3. S. Taniguchi (D)",
+            "21. H. Ito (D)",
+            "10. R. Doan (M)",
+            "24. K. Sano (M)",
+            "15. D. Kamada (M)",
+            "13. K. Nakamura (M)",
+            "8. T. Kubo (F)",
+            "11. D. Maeda (F)",
+            "18. A. Ueda (F)"
+          ],
+          "source": "Composition officielle",
+          "sourceDate": "2026-06-14T20:00:00+00:00"
         }
       },
       "probableLineups": {
@@ -918,10 +1198,10 @@
       "date": "2026-06-14T23:00:00+00:00",
       "venue": "Lincoln Financial Field",
       "city": "Philadelphia",
-      "home": "Ivory Coast",
-      "away": "Ecuador",
-      "homeCoach": null,
-      "awayCoach": null,
+      "home": "Côte d’Ivoire",
+      "away": "Équateur",
+      "homeCoach": "Emerse Fae",
+      "awayCoach": "Sebastian Beccacece",
       "score": {
         "home": 1,
         "away": 0
@@ -935,14 +1215,42 @@
       "minute": null,
       "lineups": {
         "home": {
-          "team": "Ivory Coast",
-          "formation": null,
-          "players": []
+          "team": "Côte d’Ivoire",
+          "formation": "4-4-2",
+          "players": [
+            "1. Y. Fofana (G)",
+            "17. G. Doue (D)",
+            "5. W. Singo (D)",
+            "20. E. Agbadou (D)",
+            "3. G. Konan (D)",
+            "11. Y. Diomande (M)",
+            "8. F. Kessie (M)",
+            "6. S. Fofana (M)",
+            "24. B. Toure (M)",
+            "19. N. Pepe (F)",
+            "12. E. Wahi (F)"
+          ],
+          "source": "Composition officielle",
+          "sourceDate": "2026-06-14T23:00:00+00:00"
         },
         "away": {
-          "team": "Ecuador",
-          "formation": null,
-          "players": []
+          "team": "Équateur",
+          "formation": "4-4-2",
+          "players": [
+            "1. H. Galindez (G)",
+            "21. A. Franco (D)",
+            "4. J. Ordonez (D)",
+            "6. W. Pacho (D)",
+            "3. P. Hincapie (D)",
+            "9. J. Yeboah (M)",
+            "23. M. Caicedo (M)",
+            "15. P. Vite (M)",
+            "14. A. Minda (M)",
+            "19. G. Plata (F)",
+            "13. E. Valencia (F)"
+          ],
+          "source": "Composition officielle",
+          "sourceDate": "2026-06-14T23:00:00+00:00"
         }
       },
       "probableLineups": {
@@ -997,10 +1305,10 @@
       "date": "2026-06-15T02:00:00+00:00",
       "venue": "Estadio BBVA",
       "city": "Monterrey",
-      "home": "Sweden",
-      "away": "Tunisia",
-      "homeCoach": null,
-      "awayCoach": null,
+      "home": "Suède",
+      "away": "Tunisie",
+      "homeCoach": "Graham Potter",
+      "awayCoach": "Herve Renard",
       "score": {
         "home": 5,
         "away": 1
@@ -1014,14 +1322,42 @@
       "minute": null,
       "lineups": {
         "home": {
-          "team": "Sweden",
-          "formation": null,
-          "players": []
+          "team": "Suède",
+          "formation": "3-1-4-2",
+          "players": [
+            "23. K. Nordfeldt (G)",
+            "2. G. Lagerbielke (D)",
+            "4. I. Hien (D)",
+            "3. V. Lindelof (D)",
+            "16. J. Karlstrom (M)",
+            "21. A. Bernhardsson (M)",
+            "10. B. Nygren (M)",
+            "18. Y. Ayari (M)",
+            "5. G. Gudmundsson (M)",
+            "17. V. Gyökeres (F)",
+            "9. A. Isak (F)"
+          ],
+          "source": "Composition officielle",
+          "sourceDate": "2026-06-15T02:00:00+00:00"
         },
         "away": {
-          "team": "Tunisia",
-          "formation": null,
-          "players": []
+          "team": "Tunisie",
+          "formation": "5-3-2",
+          "players": [
+            "1. A. Chamakh (G)",
+            "20. Y. Valery (D)",
+            "4. O. Rekik (D)",
+            "3. M. Talbi (D)",
+            "21. M. Ben Hamida (D)",
+            "2. A. Abdi (D)",
+            "13. R. Khedira (M)",
+            "17. E. Skhiri (M)",
+            "10. H. Mejbri (M)",
+            "8. E. Saad (F)",
+            "25. A. Slimane (F)"
+          ],
+          "source": "Composition officielle",
+          "sourceDate": "2026-06-15T02:00:00+00:00"
         }
       },
       "probableLineups": {
@@ -1076,10 +1412,10 @@
       "date": "2026-06-15T16:00:00+00:00",
       "venue": "Mercedes-Benz Stadium",
       "city": "Atlanta",
-      "home": "Spain",
+      "home": "Espagne",
       "away": "Cape Verde Islands",
-      "homeCoach": null,
-      "awayCoach": null,
+      "homeCoach": "Luis de la Fuente",
+      "awayCoach": "Pedro Leitao Brito",
       "score": {
         "home": 0,
         "away": 0
@@ -1093,14 +1429,42 @@
       "minute": null,
       "lineups": {
         "home": {
-          "team": "Spain",
-          "formation": null,
-          "players": []
+          "team": "Espagne",
+          "formation": "4-3-3",
+          "players": [
+            "23. U. Simon (G)",
+            "5. M. Llorente (D)",
+            "22. P. Cubarsi (D)",
+            "14. A. Laporte (D)",
+            "24. M. Cucurella (D)",
+            "8. F. Ruiz (M)",
+            "16. Rodri (M)",
+            "20. Pedri (M)",
+            "7. F. Torres (F)",
+            "21. M. Oyarzabal (F)",
+            "9. Gavi (F)"
+          ],
+          "source": "Composition officielle",
+          "sourceDate": "2026-06-15T16:00:00+00:00"
         },
         "away": {
           "team": "Cape Verde Islands",
-          "formation": null,
-          "players": []
+          "formation": "4-1-4-1",
+          "players": [
+            "1. Vozinha (G)",
+            "22. S. Moreira (D)",
+            "4. R. Lopes (D)",
+            "3. D. Borges (D)",
+            "13. S. Lopes Cabral (D)",
+            "6. K. Lenini (M)",
+            "20. R. Mendes (M)",
+            "15. L. Duarte (M)",
+            "10. J. Monteiro (M)",
+            "7. J. Cabral (M)",
+            "19. D. Livramento (F)"
+          ],
+          "source": "Composition officielle",
+          "sourceDate": "2026-06-15T16:00:00+00:00"
         }
       },
       "probableLineups": {
@@ -1155,10 +1519,10 @@
       "date": "2026-06-15T19:00:00+00:00",
       "venue": "Lumen Field",
       "city": "Seattle",
-      "home": "Belgium",
-      "away": "Egypt",
-      "homeCoach": null,
-      "awayCoach": null,
+      "home": "Belgique",
+      "away": "Égypte",
+      "homeCoach": "Rudi Garcia",
+      "awayCoach": "Hossam Hassan",
       "score": {
         "home": 1,
         "away": 1
@@ -1172,14 +1536,42 @@
       "minute": null,
       "lineups": {
         "home": {
-          "team": "Belgium",
-          "formation": null,
-          "players": []
+          "team": "Belgique",
+          "formation": "4-2-3-1",
+          "players": [
+            "1. T. Courtois (G)",
+            "15. T. Meunier (D)",
+            "25. N. Ngoy (D)",
+            "4. B. Mechele (D)",
+            "21. T. Castagne (D)",
+            "24. A. Onana (M)",
+            "8. Y. Tielemans (M)",
+            "10. L. Trossard (M)",
+            "7. K. De Bruyne (M)",
+            "11. J. Doku (M)",
+            "17. C. De Ketelaere (F)"
+          ],
+          "source": "Composition officielle",
+          "sourceDate": "2026-06-15T19:00:00+00:00"
         },
         "away": {
-          "team": "Egypt",
-          "formation": null,
-          "players": []
+          "team": "Égypte",
+          "formation": "4-2-3-1",
+          "players": [
+            "23. O. Shobeir (G)",
+            "3. M. Hany (D)",
+            "2. Y. Ibrahim (D)",
+            "14. H. Fathy (D)",
+            "13. A. Fatouh (D)",
+            "19. M. Attia (M)",
+            "17. M. Lasheen (M)",
+            "11. M. Ziko (M)",
+            "10. M. Salah (M)",
+            "8. E. Ashour (M)",
+            "22. O. Marmoush (F)"
+          ],
+          "source": "Composition officielle",
+          "sourceDate": "2026-06-15T19:00:00+00:00"
         }
       },
       "probableLineups": {
@@ -1234,10 +1626,10 @@
       "date": "2026-06-15T22:00:00+00:00",
       "venue": "Hard Rock Stadium",
       "city": "Miami Gardens",
-      "home": "Saudi Arabia",
+      "home": "Arabie saoudite",
       "away": "Uruguay",
-      "homeCoach": null,
-      "awayCoach": null,
+      "homeCoach": "Georgios Donis",
+      "awayCoach": "Marcelo Bielsa",
       "score": {
         "home": 1,
         "away": 1
@@ -1251,14 +1643,42 @@
       "minute": null,
       "lineups": {
         "home": {
-          "team": "Saudi Arabia",
-          "formation": null,
-          "players": []
+          "team": "Arabie saoudite",
+          "formation": "4-4-2",
+          "players": [
+            "21. M. Al Owais (G)",
+            "12. S. Abdulhamid (D)",
+            "4. A. Al Amri (D)",
+            "5. H. Tambakti (D)",
+            "24. M. Al Harbi (D)",
+            "26. M. Abu Al Shamat (M)",
+            "23. M. Kanno (M)",
+            "15. A. Al Khaibari (M)",
+            "10. S. Al Dawsari (M)",
+            "9. F. Al Buraikan (F)",
+            "7. M. Al Juwayr (F)"
+          ],
+          "source": "Composition officielle",
+          "sourceDate": "2026-06-15T22:00:00+00:00"
         },
         "away": {
           "team": "Uruguay",
-          "formation": null,
-          "players": []
+          "formation": "4-2-3-1",
+          "players": [
+            "23. F. Muslera (G)",
+            "13. G. Varela (D)",
+            "3. S. Caceres (D)",
+            "16. M. Olivera (D)",
+            "17. M. Vina (D)",
+            "5. M. Ugarte (M)",
+            "6. R. Bentancur (M)",
+            "8. F. Valverde (M)",
+            "21. F. Vinas (M)",
+            "20. M. Araujo (M)",
+            "9. D. Nunez (F)"
+          ],
+          "source": "Composition officielle",
+          "sourceDate": "2026-06-15T22:00:00+00:00"
         }
       },
       "probableLineups": {
@@ -1314,8 +1734,8 @@
       "venue": "SoFi Stadium",
       "city": "Inglewood",
       "home": "Iran",
-      "away": "New Zealand",
-      "homeCoach": null,
+      "away": "Nouvelle-Zélande",
+      "homeCoach": "Amir Ghalenoei",
       "awayCoach": null,
       "score": {
         "home": 2,
@@ -1331,13 +1751,41 @@
       "lineups": {
         "home": {
           "team": "Iran",
-          "formation": null,
-          "players": []
+          "formation": "4-4-2",
+          "players": [
+            "1. A. Beiranvand (G)",
+            "23. R. Rezaeian (D)",
+            "4. S. Khalilzadeh (D)",
+            "19. A. Nemati",
+            "5. M. Mohammadi (D)",
+            "8. M. Mohebi (M)",
+            "14. S. Ghoddos (M)",
+            "6. S. Ezatolahi (M)",
+            "17. A. Yousefi (M)",
+            "20. S. Moghanlou (F)",
+            "9. M. Taremi (F)"
+          ],
+          "source": "Composition officielle",
+          "sourceDate": "2026-06-16T01:00:00+00:00"
         },
         "away": {
-          "team": "New Zealand",
+          "team": "Nouvelle-Zélande",
           "formation": null,
-          "players": []
+          "players": [
+            "1. M. Crocombe (G)",
+            "2. T. Payne (D)",
+            "16. F. Surman (D)",
+            "5. M. Boxall (D)",
+            "13. L. Cacace (D)",
+            "6. J. Bell (M)",
+            "8. M. Stamenic (M)",
+            "20. C. McCowatt (M)",
+            "10. S. Singh (M)",
+            "11. E. Just (M)",
+            "9. C. Wood (F)"
+          ],
+          "source": "Composition officielle",
+          "sourceDate": "2026-06-16T01:00:00+00:00"
         }
       },
       "probableLineups": {
@@ -1393,9 +1841,9 @@
       "venue": "MetLife Stadium",
       "city": "East Rutherford",
       "home": "France",
-      "away": "Senegal",
-      "homeCoach": null,
-      "awayCoach": null,
+      "away": "Sénégal",
+      "homeCoach": "Didier Deschamps",
+      "awayCoach": "Bouna Thiaw Pape",
       "score": {
         "home": 3,
         "away": 1
@@ -1410,13 +1858,41 @@
       "lineups": {
         "home": {
           "team": "France",
-          "formation": null,
-          "players": []
+          "formation": "4-2-3-1",
+          "players": [
+            "16. M. Maignan (G)",
+            "5. J. Kounde (D)",
+            "4. D. Upamecano (D)",
+            "17. W. Saliba (D)",
+            "19. T. Hernandez (D)",
+            "8. A. Tchouameni (M)",
+            "14. A. Rabiot (M)",
+            "11. M. Olise (M)",
+            "7. O. Dembele (M)",
+            "20. D. Doue (M)",
+            "10. K. Mbappe (F)"
+          ],
+          "source": "Composition officielle",
+          "sourceDate": "2026-06-16T19:00:00+00:00"
         },
         "away": {
-          "team": "Senegal",
-          "formation": null,
-          "players": []
+          "team": "Sénégal",
+          "formation": "4-2-3-1",
+          "players": [
+            "16. E. Mendy (G)",
+            "15. K. Diatta (D)",
+            "3. K. Koulibaly (D)",
+            "19. M. Niakhate (D)",
+            "25. M. Diouf (D)",
+            "5. I. Gueye (M)",
+            "26. P. Gueye (M)",
+            "18. I. Sarr (M)",
+            "8. L. Camara (M)",
+            "10. S. Mane (M)",
+            "11. N. Jackson (F)"
+          ],
+          "source": "Composition officielle",
+          "sourceDate": "2026-06-16T19:00:00+00:00"
         }
       },
       "probableLineups": {
@@ -1471,10 +1947,10 @@
       "date": "2026-06-16T22:00:00+00:00",
       "venue": "Gillette Stadium",
       "city": "Boston",
-      "home": "Iraq",
-      "away": "Norway",
-      "homeCoach": null,
-      "awayCoach": null,
+      "home": "Irak",
+      "away": "Norvège",
+      "homeCoach": "Graham Arnold",
+      "awayCoach": "Stale Solbakken",
       "score": {
         "home": 1,
         "away": 4
@@ -1488,14 +1964,42 @@
       "minute": null,
       "lineups": {
         "home": {
-          "team": "Iraq",
-          "formation": null,
-          "players": []
+          "team": "Irak",
+          "formation": "4-4-2",
+          "players": [
+            "12. J. Hassan (G)",
+            "3. H. Ali (D)",
+            "4. Z. Tahseen (D)",
+            "5. A. Hashem (D)",
+            "23. M. Doski (D)",
+            "8. I. Bayesh (M)",
+            "24. Z. Ismaeel (M)",
+            "16. A. Al Ammari (M)",
+            "17. A. Jasim (M)",
+            "18. A. Hussein (F)",
+            "9. A. Al Hamadi (F)"
+          ],
+          "source": "Composition officielle",
+          "sourceDate": "2026-06-16T22:00:00+00:00"
         },
         "away": {
-          "team": "Norway",
-          "formation": null,
-          "players": []
+          "team": "Norvège",
+          "formation": "4-4-2",
+          "players": [
+            "1. O. Nyland (G)",
+            "26. J. Ryerson (D)",
+            "3. K. Ajer (D)",
+            "17. T. Heggem (D)",
+            "5. D. Wolfe (D)",
+            "10. M. Odegaard (M)",
+            "8. S. Berge (M)",
+            "14. F. Aursnes (M)",
+            "20. A. Nusa (M)",
+            "7. A. Sorloth (F)",
+            "9. E. Haaland (F)"
+          ],
+          "source": "Composition officielle",
+          "sourceDate": "2026-06-16T22:00:00+00:00"
         }
       },
       "probableLineups": {
@@ -1550,10 +2054,10 @@
       "date": "2026-06-17T01:00:00+00:00",
       "venue": "Arrowhead Stadium",
       "city": "Kansas City",
-      "home": "Argentina",
+      "home": "Argentine",
       "away": "Algeria",
-      "homeCoach": null,
-      "awayCoach": null,
+      "homeCoach": "Lionel Scaloni",
+      "awayCoach": "Vladimir Petkovic",
       "score": {
         "home": 3,
         "away": 0
@@ -1567,14 +2071,42 @@
       "minute": null,
       "lineups": {
         "home": {
-          "team": "Argentina",
-          "formation": null,
-          "players": []
+          "team": "Argentine",
+          "formation": "4-4-2",
+          "players": [
+            "23. E. Martinez (G)",
+            "4. G. Montiel (D)",
+            "13. C. Romero (D)",
+            "6. L. Martinez (D)",
+            "25. F. Medina (D)",
+            "7. R. de Paul (M)",
+            "20. A. Mac Allister (M)",
+            "24. E. Fernandez (M)",
+            "16. T. Almada (M)",
+            "10. L. Messi (F)",
+            "22. L. Martinez (F)"
+          ],
+          "source": "Composition officielle",
+          "sourceDate": "2026-06-17T01:00:00+00:00"
         },
         "away": {
           "team": "Algeria",
-          "formation": null,
-          "players": []
+          "formation": "4-3-3",
+          "players": [
+            "23. L. Zidane (G)",
+            "17. R. Belghali (D)",
+            "2. A. Mandi (D)",
+            "21. R. Bensebaini (D)",
+            "15. R. Ait-Nouri (D)",
+            "14. H. Boudaoui (M)",
+            "19. N. Bentaleb (M)",
+            "22. I. Maza (M)",
+            "11. A. Hadj Moussa (F)",
+            "9. A. Gouiri (F)",
+            "10. F. Chaibi (F)"
+          ],
+          "source": "Composition officielle",
+          "sourceDate": "2026-06-17T01:00:00+00:00"
         }
       },
       "probableLineups": {
@@ -1629,10 +2161,10 @@
       "date": "2026-06-17T04:00:00+00:00",
       "venue": "Levi's Stadium",
       "city": "Santa Clara",
-      "home": "Austria",
-      "away": "Jordan",
-      "homeCoach": null,
-      "awayCoach": null,
+      "home": "Autriche",
+      "away": "Jordanie",
+      "homeCoach": "Ralf Rangnick",
+      "awayCoach": "Jamal Sellami",
       "score": {
         "home": 3,
         "away": 1
@@ -1646,14 +2178,42 @@
       "minute": null,
       "lineups": {
         "home": {
-          "team": "Austria",
-          "formation": null,
-          "players": []
+          "team": "Autriche",
+          "formation": "4-2-3-1",
+          "players": [
+            "1. A. Schlager (G)",
+            "5. S. Posch (D)",
+            "15. P. Lienhart (D)",
+            "8. D. Alaba (D)",
+            "16. P. Mwene (D)",
+            "6. N. Seiwald (M)",
+            "4. X. Schlager (M)",
+            "18. R. Schmid (M)",
+            "20. K. Laimer (M)",
+            "9. M. Sabitzer (M)",
+            "14. S. Kalajdzic (F)"
+          ],
+          "source": "Composition officielle",
+          "sourceDate": "2026-06-17T04:00:00+00:00"
         },
         "away": {
-          "team": "Jordan",
-          "formation": null,
-          "players": []
+          "team": "Jordanie",
+          "formation": "3-4-2-1",
+          "players": [
+            "1. Y. Abulaila (G)",
+            "3. A. Nasib (D)",
+            "5. Y. Al Arab (D)",
+            "16. M. Abualnadi (D)",
+            "23. E. Haddad (M)",
+            "21. N. Al Rashdan (M)",
+            "8. N. Al Rawabdeh (M)",
+            "20. M. Abu Taha (M)",
+            "11. O. Al Fakhouri",
+            "9. A. Olwan (F)",
+            "10. M. Tamari (F)"
+          ],
+          "source": "Composition officielle",
+          "sourceDate": "2026-06-17T04:00:00+00:00"
         }
       },
       "probableLineups": {
@@ -1710,8 +2270,8 @@
       "city": "Houston",
       "home": "Portugal",
       "away": "Congo DR",
-      "homeCoach": null,
-      "awayCoach": null,
+      "homeCoach": "Roberto Martinez",
+      "awayCoach": "Sebastien Desabre",
       "score": {
         "home": 1,
         "away": 1
@@ -1726,13 +2286,41 @@
       "lineups": {
         "home": {
           "team": "Portugal",
-          "formation": null,
-          "players": []
+          "formation": "4-2-3-1",
+          "players": [
+            "1. D. Costa (G)",
+            "20. J. Cancelo (D)",
+            "4. T. Araujo (D)",
+            "13. R. Veiga (D)",
+            "25. N. Mendes (D)",
+            "15. J. Neves (M)",
+            "23. Vitinha (M)",
+            "10. B. Silva (M)",
+            "8. B. Fernandes (M)",
+            "18. P. Neto (M)",
+            "7. C. Ronaldo (F)"
+          ],
+          "source": "Composition officielle",
+          "sourceDate": "2026-06-17T17:00:00+00:00"
         },
         "away": {
           "team": "Congo DR",
-          "formation": null,
-          "players": []
+          "formation": "5-3-2",
+          "players": [
+            "1. L. Mpasi-Nzau (G)",
+            "2. A. Wan-Bissaka (D)",
+            "22. C. Mbemba (D)",
+            "4. A. Tuanzebe (D)",
+            "3. S. Kapuadi (D)",
+            "26. A. Masuaku (D)",
+            "6. N. Mukau (M)",
+            "8. S. Moutoussamy (M)",
+            "25. E. Kayembe (M)",
+            "20. Y. Wissa (F)",
+            "17. C. Bakambu (F)"
+          ],
+          "source": "Composition officielle",
+          "sourceDate": "2026-06-17T17:00:00+00:00"
         }
       },
       "probableLineups": {
@@ -1787,10 +2375,10 @@
       "date": "2026-06-17T20:00:00+00:00",
       "venue": "AT&T Stadium",
       "city": "Arlington",
-      "home": "England",
-      "away": "Croatia",
-      "homeCoach": null,
-      "awayCoach": null,
+      "home": "Angleterre",
+      "away": "Croatie",
+      "homeCoach": "Thomas Tuchel",
+      "awayCoach": "Zlatko Dalic",
       "score": {
         "home": 4,
         "away": 2
@@ -1804,14 +2392,42 @@
       "minute": null,
       "lineups": {
         "home": {
-          "team": "England",
-          "formation": null,
-          "players": []
+          "team": "Angleterre",
+          "formation": "4-2-3-1",
+          "players": [
+            "1. J. Pickford (G)",
+            "24. R. James (D)",
+            "2. E. Konsa (D)",
+            "5. J. Stones (D)",
+            "3. N. O'Reilly (D)",
+            "8. E. Anderson (M)",
+            "4. D. Rice (M)",
+            "20. N. Madueke (M)",
+            "10. J. Bellingham (M)",
+            "18. A. Gordon (M)",
+            "9. H. Kane (F)"
+          ],
+          "source": "Composition officielle",
+          "sourceDate": "2026-06-17T20:00:00+00:00"
         },
         "away": {
-          "team": "Croatia",
-          "formation": null,
-          "players": []
+          "team": "Croatie",
+          "formation": "3-4-2-1",
+          "players": [
+            "1. D. Livakovic (G)",
+            "6. J. Sutalo (D)",
+            "22. L. Vuskovic (D)",
+            "4. J. Gvardiol (D)",
+            "2. J. Stanisic (M)",
+            "10. L. Modric (M)",
+            "15. M. Pasalic (M)",
+            "14. I. Perisic (M)",
+            "17. P. Sucic (F)",
+            "16. M. Baturina (F)",
+            "26. P. Musa (F)"
+          ],
+          "source": "Composition officielle",
+          "sourceDate": "2026-06-17T20:00:00+00:00"
         }
       },
       "probableLineups": {
@@ -1868,8 +2484,8 @@
       "city": "Toronto",
       "home": "Ghana",
       "away": "Panama",
-      "homeCoach": null,
-      "awayCoach": null,
+      "homeCoach": "Carlos Queiroz",
+      "awayCoach": "Thomas Christiansen",
       "score": {
         "home": 1,
         "away": 0
@@ -1884,13 +2500,41 @@
       "lineups": {
         "home": {
           "team": "Ghana",
-          "formation": null,
-          "players": []
+          "formation": "4-4-1-1",
+          "players": [
+            "1. L. Ati Zigi (G)",
+            "26. M. Senaya (D)",
+            "4. J. Adjetey (D)",
+            "18. J. Opoku (D)",
+            "14. G. Mensah (D)",
+            "24. E. Nuamah (M)",
+            "3. C. Yirenkyi (M)",
+            "15. E. Owusu (M)",
+            "11. A. Semenyo (M)",
+            "22. K. Sulemana (F)",
+            "9. J. Ayew (F)"
+          ],
+          "source": "Composition officielle",
+          "sourceDate": "2026-06-17T23:00:00+00:00"
         },
         "away": {
           "team": "Panama",
-          "formation": null,
-          "players": []
+          "formation": "3-4-3",
+          "players": [
+            "22. O. Mosquera (G)",
+            "13. J. Ramos (D)",
+            "3. J. Cordoba (D)",
+            "16. A. Andrade (D)",
+            "23. M. Murillo (M)",
+            "14. C. Harvey (M)",
+            "11. Y. Barcenas (M)",
+            "2. C. Blackman (M)",
+            "6. C. Martinez",
+            "18. C. Waterman (F)",
+            "7. J. Rodriguez (F)"
+          ],
+          "source": "Composition officielle",
+          "sourceDate": "2026-06-17T23:00:00+00:00"
         }
       },
       "probableLineups": {
@@ -1943,12 +2587,12 @@
       "stage": "groupes",
       "group": null,
       "date": "2026-06-18T02:00:00+00:00",
-      "venue": "Estadio Azteca",
+      "venue": "Estadio Banorte",
       "city": "Mexico City",
-      "home": "Uzbekistan",
-      "away": "Colombia",
-      "homeCoach": null,
-      "awayCoach": null,
+      "home": "Ouzbékistan",
+      "away": "Colombie",
+      "homeCoach": "Fabio Cannavaro",
+      "awayCoach": "Nestor Lorenzo",
       "score": {
         "home": 1,
         "away": 3
@@ -1962,14 +2606,42 @@
       "minute": null,
       "lineups": {
         "home": {
-          "team": "Uzbekistan",
-          "formation": null,
-          "players": []
+          "team": "Ouzbékistan",
+          "formation": "3-4-2-1",
+          "players": [
+            "1. U. Yusupov (G)",
+            "2. A. Khusanov (D)",
+            "18. A. Abdullaev (D)",
+            "5. R. Ashurmatov (D)",
+            "24. B. Karimov (M)",
+            "6. A. Mozgovoy (M)",
+            "7. O. Shukurov (M)",
+            "13. S. Nasrullaev (M)",
+            "22. A. Fayzullaev (F)",
+            "11. O. Urunov (F)",
+            "14. E. Shomurodov (F)"
+          ],
+          "source": "Composition officielle",
+          "sourceDate": "2026-06-18T02:00:00+00:00"
         },
         "away": {
-          "team": "Colombia",
-          "formation": null,
-          "players": []
+          "team": "Colombie",
+          "formation": "4-3-3",
+          "players": [
+            "12. C. Vargas (G)",
+            "2. D. Munoz (D)",
+            "23. D. Sanchez (D)",
+            "3. J. Lucumi (D)",
+            "17. J. Mojica (D)",
+            "14. G. Puerta (M)",
+            "16. J. Lerma (M)",
+            "11. J. Arias (M)",
+            "10. J. Rodriguez (F)",
+            "25. L. Suarez (F)",
+            "7. L. Diaz (F)"
+          ],
+          "source": "Composition officielle",
+          "sourceDate": "2026-06-18T02:00:00+00:00"
         }
       },
       "probableLineups": {
@@ -2024,10 +2696,10 @@
       "date": "2026-06-18T16:00:00+00:00",
       "venue": "Mercedes-Benz Stadium",
       "city": "Atlanta",
-      "home": "Czechia",
-      "away": "South Africa",
-      "homeCoach": null,
-      "awayCoach": null,
+      "home": "Tchéquie",
+      "away": "Afrique du Sud",
+      "homeCoach": "Miroslav Koubek",
+      "awayCoach": "Hugo Broos",
       "score": {
         "home": 1,
         "away": 1
@@ -2041,14 +2713,42 @@
       "minute": null,
       "lineups": {
         "home": {
-          "team": "Czechia",
-          "formation": null,
-          "players": []
+          "team": "Tchéquie",
+          "formation": "3-5-2",
+          "players": [
+            "1. M. Kovar (G)",
+            "3. T. Holes (D)",
+            "4. R. Hranac (D)",
+            "7. L. Krejci (D)",
+            "5. V. Coufal (M)",
+            "8. V. Darida (M)",
+            "12. L. Cerv (M)",
+            "18. M. Sadilek (M)",
+            "24. A. Sojka (M)",
+            "10. P. Schick (F)",
+            "9. A. Hlozek (F)"
+          ],
+          "source": "Composition officielle",
+          "sourceDate": "2026-06-18T16:00:00+00:00"
         },
         "away": {
-          "team": "South Africa",
-          "formation": null,
-          "players": []
+          "team": "Afrique du Sud",
+          "formation": "4-3-3",
+          "players": [
+            "1. R. Williams (G)",
+            "20. K. Mudau (D)",
+            "21. I. Okon (D)",
+            "14. M. Mbokazi (D)",
+            "6. A. Modiba (D)",
+            "5. T. Mbatha (M)",
+            "4. T. Mokoena (M)",
+            "23. J. Adams (M)",
+            "12. T. Maseko (F)",
+            "15. I. Rayners (F)",
+            "7. O. Appollis (F)"
+          ],
+          "source": "Composition officielle",
+          "sourceDate": "2026-06-18T16:00:00+00:00"
         }
       },
       "probableLineups": {
@@ -2103,10 +2803,10 @@
       "date": "2026-06-18T19:00:00+00:00",
       "venue": "SoFi Stadium",
       "city": "Inglewood",
-      "home": "Switzerland",
-      "away": "Bosnia & Herzegovina",
-      "homeCoach": null,
-      "awayCoach": null,
+      "home": "Suisse",
+      "away": "Bosnie-et-Herzégovine",
+      "homeCoach": "Murat Yakin",
+      "awayCoach": "Sergej Barbarez",
       "score": {
         "home": 4,
         "away": 1
@@ -2120,14 +2820,42 @@
       "minute": null,
       "lineups": {
         "home": {
-          "team": "Switzerland",
-          "formation": null,
-          "players": []
+          "team": "Suisse",
+          "formation": "4-3-1-2",
+          "players": [
+            "1. G. Kobel (G)",
+            "3. S. Widmer (D)",
+            "4. N. Elvedi (D)",
+            "5. M. Akanji (D)",
+            "13. R. Rodriguez (D)",
+            "20. M. Aebischer (M)",
+            "10. G. Xhaka (M)",
+            "8. R. Freuler (M)",
+            "22. F. Rieder (M)",
+            "7. B. Embolo (F)",
+            "11. D. Ndoye (F)"
+          ],
+          "source": "Composition officielle",
+          "sourceDate": "2026-06-18T19:00:00+00:00"
         },
         "away": {
-          "team": "Bosnia & Herzegovina",
-          "formation": null,
-          "players": []
+          "team": "Bosnie-et-Herzégovine",
+          "formation": "4-4-2",
+          "players": [
+            "1. N. Vasilj (G)",
+            "7. A. Dedic (D)",
+            "18. N. Katic (D)",
+            "4. T. Muharemovic (D)",
+            "5. S. Kolasinac (D)",
+            "15. A. Memic (M)",
+            "6. B. Tahirovic (M)",
+            "14. I. Sunjic (M)",
+            "19. K. Alajbegovic (M)",
+            "10. E. Demirovic (F)",
+            "11. E. Dzeko (F)"
+          ],
+          "source": "Composition officielle",
+          "sourceDate": "2026-06-18T19:00:00+00:00"
         }
       },
       "probableLineups": {
@@ -2184,8 +2912,8 @@
       "city": "Vancouver",
       "home": "Canada",
       "away": "Qatar",
-      "homeCoach": null,
-      "awayCoach": null,
+      "homeCoach": "Jesse Marsch",
+      "awayCoach": "Julen Lopetegui",
       "score": {
         "home": 6,
         "away": 0
@@ -2200,13 +2928,41 @@
       "lineups": {
         "home": {
           "team": "Canada",
-          "formation": null,
-          "players": []
+          "formation": "4-4-2",
+          "players": [
+            "16. M. Crepeau (G)",
+            "2. A. Johnston (D)",
+            "4. L. De Fougerolles (D)",
+            "13. D. Cornelius (D)",
+            "22. R. Laryea (D)",
+            "17. T. Buchanan (M)",
+            "8. I. Kone (M)",
+            "7. S. Eustaquio (M)",
+            "20. A. Ahmed (M)",
+            "10. J. David (F)",
+            "9. C. Larin (F)"
+          ],
+          "source": "Composition officielle",
+          "sourceDate": "2026-06-18T22:00:00+00:00"
         },
         "away": {
           "team": "Qatar",
-          "formation": null,
-          "players": []
+          "formation": "4-3-3",
+          "players": [
+            "1. M. Abunada (G)",
+            "13. A. Al Oui (D)",
+            "2. Pedro Miguel (D)",
+            "16. B. Khoukhi (D)",
+            "14. H. Al Amin (D)",
+            "5. J. Gaber (M)",
+            "23. A. O. Madibo (M)",
+            "4. I. Laye (M)",
+            "8. Edmilson Junior (F)",
+            "15. Y. Abdurisag (F)",
+            "11. A. Afif (F)"
+          ],
+          "source": "Composition officielle",
+          "sourceDate": "2026-06-18T22:00:00+00:00"
         }
       },
       "probableLineups": {
@@ -2260,11 +3016,11 @@
       "group": null,
       "date": "2026-06-19T01:00:00+00:00",
       "venue": "Estadio Akron",
-      "city": "Guadalajara",
-      "home": "Mexico",
-      "away": "South Korea",
-      "homeCoach": null,
-      "awayCoach": null,
+      "city": "Zapopan",
+      "home": "Mexique",
+      "away": "République de Corée",
+      "homeCoach": "Javier Aguirre",
+      "awayCoach": "Myung-Bo Hong",
       "score": {
         "home": 1,
         "away": 0
@@ -2278,14 +3034,42 @@
       "minute": null,
       "lineups": {
         "home": {
-          "team": "Mexico",
-          "formation": null,
-          "players": []
+          "team": "Mexique",
+          "formation": "4-3-3",
+          "players": [
+            "1. R. Rangel (G)",
+            "2. J. Sanchez (D)",
+            "4. E. Alvarez (D)",
+            "5. J. Vasquez (D)",
+            "23. J. Gallardo (D)",
+            "26. B. Gutierrez (M)",
+            "6. E. Lira (M)",
+            "7. L. Romo (M)",
+            "25. R. Alvarado (F)",
+            "9. R. Jimenez (F)",
+            "16. J. Quinones (F)"
+          ],
+          "source": "Composition officielle",
+          "sourceDate": "2026-06-19T01:00:00+00:00"
         },
         "away": {
-          "team": "South Korea",
-          "formation": null,
-          "players": []
+          "team": "République de Corée",
+          "formation": "3-4-2-1",
+          "players": [
+            "1. Kim Seung-Gyu (G)",
+            "2. Lee Han-Beom (D)",
+            "4. Kim Min-Jae (D)",
+            "3. Lee Gi-Hyuk (D)",
+            "15. Kim Moon-Hwan (M)",
+            "6. Hwang In-Beom (M)",
+            "8. Paik Seung-Ho (M)",
+            "22. Seol Young-Woo (M)",
+            "19. Lee Kang-In (F)",
+            "10. Lee Jae-Sung (F)",
+            "7. Son Heung-Min (F)"
+          ],
+          "source": "Composition officielle",
+          "sourceDate": "2026-06-19T01:00:00+00:00"
         }
       },
       "probableLineups": {
@@ -2340,10 +3124,10 @@
       "date": "2026-06-19T19:00:00+00:00",
       "venue": "Lumen Field",
       "city": "Seattle",
-      "home": "USA",
-      "away": "Australia",
-      "homeCoach": null,
-      "awayCoach": null,
+      "home": "États-Unis",
+      "away": "Australie",
+      "homeCoach": "Mauricio Pochettino",
+      "awayCoach": "Tony Popovic",
       "score": {
         "home": 2,
         "away": 0
@@ -2357,14 +3141,42 @@
       "minute": null,
       "lineups": {
         "home": {
-          "team": "USA",
-          "formation": null,
-          "players": []
+          "team": "États-Unis",
+          "formation": "3-5-2",
+          "players": [
+            "24. M. Freese (G)",
+            "16. A. Freeman (D)",
+            "3. C. Richards (D)",
+            "13. T. Ream (D)",
+            "2. S. Dest (M)",
+            "8. W. McKennie (M)",
+            "4. T. Adams (M)",
+            "17. M. Tillman (M)",
+            "5. A. Robinson (M)",
+            "20. F. Balogun (F)",
+            "9. R. Pepi (F)"
+          ],
+          "source": "Composition officielle",
+          "sourceDate": "2026-06-19T19:00:00+00:00"
         },
         "away": {
-          "team": "Australia",
-          "formation": null,
-          "players": []
+          "team": "Australie",
+          "formation": "5-4-1",
+          "players": [
+            "18. P. Beach (G)",
+            "4. J. Italiano (D)",
+            "3. A. Circati (D)",
+            "19. H. Souttar (D)",
+            "21. C. Burgess (D)",
+            "5. J. Bos (D)",
+            "7. M. Leckie (M)",
+            "13. A. O'Neill (M)",
+            "24. P. Okon-Engstler (M)",
+            "23. N. Velupillay (M)",
+            "9. M. Toure (F)"
+          ],
+          "source": "Composition officielle",
+          "sourceDate": "2026-06-19T19:00:00+00:00"
         }
       },
       "probableLineups": {
@@ -2419,10 +3231,10 @@
       "date": "2026-06-19T22:00:00+00:00",
       "venue": "Gillette Stadium",
       "city": "Boston",
-      "home": "Scotland",
-      "away": "Morocco",
-      "homeCoach": null,
-      "awayCoach": null,
+      "home": "Écosse",
+      "away": "Maroc",
+      "homeCoach": "Steve Clarke",
+      "awayCoach": "Mohamed Ouahbi",
       "score": {
         "home": 0,
         "away": 1
@@ -2436,14 +3248,42 @@
       "minute": null,
       "lineups": {
         "home": {
-          "team": "Scotland",
-          "formation": null,
-          "players": []
+          "team": "Écosse",
+          "formation": "4-4-1-1",
+          "players": [
+            "1. A. Gunn (G)",
+            "22. N. Patterson (D)",
+            "5. G. Hanley (D)",
+            "13. J. Hendry (D)",
+            "3. A. Robertson (D)",
+            "7. J. McGinn (M)",
+            "11. R. Christie (M)",
+            "19. L. Ferguson (M)",
+            "6. K. Tierney (M)",
+            "4. S. McTominay (F)",
+            "10. C. Adams (F)"
+          ],
+          "source": "Composition officielle",
+          "sourceDate": "2026-06-19T22:00:00+00:00"
         },
         "away": {
-          "team": "Morocco",
-          "formation": null,
-          "players": []
+          "team": "Maroc",
+          "formation": "4-2-3-1",
+          "players": [
+            "1. Bono (G)",
+            "2. A. Hakimi (D)",
+            "14. I. Diop (D)",
+            "18. C. Riad (D)",
+            "3. N. Mazraoui (D)",
+            "6. A. Bouaddi (M)",
+            "24. N. El Aynaoui (M)",
+            "10. B. Diaz (M)",
+            "8. A. Ounahi (M)",
+            "23. B. El Khannouss (M)",
+            "11. I. Saibari (F)"
+          ],
+          "source": "Composition officielle",
+          "sourceDate": "2026-06-19T22:00:00+00:00"
         }
       },
       "probableLineups": {
@@ -2498,10 +3338,10 @@
       "date": "2026-06-20T00:30:00+00:00",
       "venue": "Lincoln Financial Field",
       "city": "Philadelphia",
-      "home": "Brazil",
-      "away": "Haiti",
-      "homeCoach": null,
-      "awayCoach": null,
+      "home": "Brésil",
+      "away": "Haïti",
+      "homeCoach": "Carlo Ancelotti",
+      "awayCoach": "Sebastien Migne",
       "score": {
         "home": 3,
         "away": 0
@@ -2515,14 +3355,42 @@
       "minute": null,
       "lineups": {
         "home": {
-          "team": "Brazil",
-          "formation": null,
-          "players": []
+          "team": "Brésil",
+          "formation": "4-3-3",
+          "players": [
+            "1. Alisson (G)",
+            "13. Danilo (D)",
+            "4. Marquinhos (D)",
+            "3. Gabriel (D)",
+            "16. Douglas Santos (D)",
+            "8. Bruno Guimaraes (M)",
+            "5. Casemiro (M)",
+            "20. Lucas Paqueta (M)",
+            "11. Raphinha (F)",
+            "9. M. Cunha (F)",
+            "7. Vinicius Junior (F)"
+          ],
+          "source": "Composition officielle",
+          "sourceDate": "2026-06-20T00:30:00+00:00"
         },
         "away": {
-          "team": "Haiti",
-          "formation": null,
-          "players": []
+          "team": "Haïti",
+          "formation": "5-4-1",
+          "players": [
+            "1. J. Placide (G)",
+            "2. C. Arcus (D)",
+            "22. J. Duverne (D)",
+            "4. R. Ade (D)",
+            "5. H. Delcroix (D)",
+            "8. M. Experience (D)",
+            "21. J. Casimir (M)",
+            "17. D. Jean Jacques (M)",
+            "10. J. Bellegarde (M)",
+            "15. R. Providence (M)",
+            "20. F. Pierrot (F)"
+          ],
+          "source": "Composition officielle",
+          "sourceDate": "2026-06-20T00:30:00+00:00"
         }
       },
       "probableLineups": {
@@ -2577,10 +3445,10 @@
       "date": "2026-06-20T03:00:00+00:00",
       "venue": "Levi's Stadium",
       "city": "Santa Clara",
-      "home": "Türkiye",
+      "home": "Turquie",
       "away": "Paraguay",
-      "homeCoach": null,
-      "awayCoach": null,
+      "homeCoach": "Vincenzo Montella",
+      "awayCoach": "Gustavo Alfaro",
       "score": {
         "home": 0,
         "away": 1
@@ -2594,14 +3462,42 @@
       "minute": null,
       "lineups": {
         "home": {
-          "team": "Türkiye",
-          "formation": null,
-          "players": []
+          "team": "Turquie",
+          "formation": "4-2-3-1",
+          "players": [
+            "23. U. Cakir (G)",
+            "18. M. Muldur (D)",
+            "3. M. Demiral (D)",
+            "14. A. Bardakci (D)",
+            "20. F. Kadioglu (D)",
+            "10. H. Calhanoglu (M)",
+            "16. I. Yuksek (M)",
+            "19. Y. Akgun (M)",
+            "8. A. Guler (M)",
+            "11. K. Yildiz (M)",
+            "7. K. Akturkoglu (F)"
+          ],
+          "source": "Composition officielle",
+          "sourceDate": "2026-06-20T03:00:00+00:00"
         },
         "away": {
           "team": "Paraguay",
-          "formation": null,
-          "players": []
+          "formation": "4-4-2",
+          "players": [
+            "12. O. Gill (G)",
+            "4. J. Caceres (D)",
+            "15. G. Gomez (D)",
+            "3. O. Alderete (D)",
+            "6. J. Alonso (D)",
+            "10. M. Almiron (M)",
+            "14. A. Cubas (M)",
+            "8. D. Gomez (M)",
+            "23. M. Galarza (M)",
+            "25. I. Pitta (F)",
+            "19. J. Enciso (F)"
+          ],
+          "source": "Composition officielle",
+          "sourceDate": "2026-06-20T03:00:00+00:00"
         }
       },
       "probableLineups": {
@@ -2656,10 +3552,10 @@
       "date": "2026-06-20T17:00:00+00:00",
       "venue": "NRG Stadium",
       "city": "Houston",
-      "home": "Netherlands",
-      "away": "Sweden",
-      "homeCoach": null,
-      "awayCoach": null,
+      "home": "Pays-Bas",
+      "away": "Suède",
+      "homeCoach": "Ronald Koeman",
+      "awayCoach": "Graham Potter",
       "score": {
         "home": 5,
         "away": 1
@@ -2673,14 +3569,42 @@
       "minute": null,
       "lineups": {
         "home": {
-          "team": "Netherlands",
-          "formation": null,
-          "players": []
+          "team": "Pays-Bas",
+          "formation": "4-3-3",
+          "players": [
+            "1. B. Verbruggen (G)",
+            "22. D. Dumfries (D)",
+            "6. J. P. van Hecke (D)",
+            "4. V. van Dijk (D)",
+            "15. M. van de Ven (D)",
+            "8. R. Gravenberch (M)",
+            "21. F. de Jong (M)",
+            "14. T. Reijnders (M)",
+            "18. D. Malen (F)",
+            "19. B. Brobbey (F)",
+            "11. C. Gakpo (F)"
+          ],
+          "source": "Composition officielle",
+          "sourceDate": "2026-06-20T17:00:00+00:00"
         },
         "away": {
-          "team": "Sweden",
-          "formation": null,
-          "players": []
+          "team": "Suède",
+          "formation": "3-1-4-2",
+          "players": [
+            "23. K. Nordfeldt (G)",
+            "2. G. Lagerbielke (D)",
+            "4. I. Hien (D)",
+            "3. V. Lindelof (D)",
+            "16. J. Karlstrom (M)",
+            "21. A. Bernhardsson (M)",
+            "10. B. Nygren (M)",
+            "18. Y. Ayari (M)",
+            "5. G. Gudmundsson (M)",
+            "17. V. Gyökeres (F)",
+            "9. A. Isak (F)"
+          ],
+          "source": "Composition officielle",
+          "sourceDate": "2026-06-20T17:00:00+00:00"
         }
       },
       "probableLineups": {
@@ -2735,10 +3659,10 @@
       "date": "2026-06-20T20:00:00+00:00",
       "venue": "BMO Field",
       "city": "Toronto",
-      "home": "Germany",
-      "away": "Ivory Coast",
-      "homeCoach": null,
-      "awayCoach": null,
+      "home": "Allemagne",
+      "away": "Côte d’Ivoire",
+      "homeCoach": "Julian Nagelsmann",
+      "awayCoach": "Emerse Fae",
       "score": {
         "home": 2,
         "away": 1
@@ -2752,14 +3676,42 @@
       "minute": null,
       "lineups": {
         "home": {
-          "team": "Germany",
-          "formation": null,
-          "players": []
+          "team": "Allemagne",
+          "formation": "4-2-3-1",
+          "players": [
+            "1. M. Neuer (G)",
+            "6. J. Kimmich (D)",
+            "4. J. Tah (D)",
+            "15. N. Schlotterbeck (D)",
+            "18. N. Brown (D)",
+            "23. F. Nmecha (M)",
+            "5. A. Pavlovic (M)",
+            "19. L. Sane (M)",
+            "10. J. Musiala (M)",
+            "17. F. Wirtz (M)",
+            "7. K. Havertz (F)"
+          ],
+          "source": "Composition officielle",
+          "sourceDate": "2026-06-20T20:00:00+00:00"
         },
         "away": {
-          "team": "Ivory Coast",
-          "formation": null,
-          "players": []
+          "team": "Côte d’Ivoire",
+          "formation": "4-1-4-1",
+          "players": [
+            "1. Y. Fofana (G)",
+            "5. W. Singo (D)",
+            "7. O. Kossounou (D)",
+            "20. E. Agbadou (D)",
+            "3. G. Konan (D)",
+            "18. I. Sangare (M)",
+            "15. A. Diallo (M)",
+            "8. F. Kessie (M)",
+            "26. C. Inao Oulai (M)",
+            "11. Y. Diomande (M)",
+            "9. A. Bonny (F)"
+          ],
+          "source": "Composition officielle",
+          "sourceDate": "2026-06-20T20:00:00+00:00"
         }
       },
       "probableLineups": {
@@ -2814,10 +3766,10 @@
       "date": "2026-06-21T00:00:00+00:00",
       "venue": "Arrowhead Stadium",
       "city": "Kansas City",
-      "home": "Ecuador",
+      "home": "Équateur",
       "away": "Curaçao",
-      "homeCoach": null,
-      "awayCoach": null,
+      "homeCoach": "Sebastian Beccacece",
+      "awayCoach": "Dick Advocaat",
       "score": {
         "home": 0,
         "away": 0
@@ -2831,14 +3783,42 @@
       "minute": null,
       "lineups": {
         "home": {
-          "team": "Ecuador",
-          "formation": null,
-          "players": []
+          "team": "Équateur",
+          "formation": "3-1-4-2",
+          "players": [
+            "1. H. Galindez (G)",
+            "21. A. Franco (D)",
+            "6. W. Pacho (D)",
+            "3. P. Hincapie (D)",
+            "5. J. Alcivar (M)",
+            "9. J. Yeboah (M)",
+            "15. P. Vite (M)",
+            "23. M. Caicedo (M)",
+            "7. P. Estupinan (M)",
+            "19. G. Plata (F)",
+            "13. E. Valencia (F)"
+          ],
+          "source": "Composition officielle",
+          "sourceDate": "2026-06-21T00:00:00+00:00"
         },
         "away": {
           "team": "Curaçao",
-          "formation": null,
-          "players": []
+          "formation": "5-4-1",
+          "players": [
+            "1. E. Room (G)",
+            "20. J. Brenet (D)",
+            "3. J. Gaari (D)",
+            "18. A. Obispo (D)",
+            "5. S. Floranus (D)",
+            "24. D. Fonville (D)",
+            "21. T. Chong (M)",
+            "8. L. Comenencia (M)",
+            "10. L. Bacuna (M)",
+            "7. J. Bacuna (M)",
+            "9. J. Locadia (F)"
+          ],
+          "source": "Composition officielle",
+          "sourceDate": "2026-06-21T00:00:00+00:00"
         }
       },
       "probableLineups": {
@@ -2893,10 +3873,10 @@
       "date": "2026-06-21T04:00:00+00:00",
       "venue": "Estadio BBVA",
       "city": "Monterrey",
-      "home": "Tunisia",
-      "away": "Japan",
-      "homeCoach": null,
-      "awayCoach": null,
+      "home": "Tunisie",
+      "away": "Japon",
+      "homeCoach": "Herve Renard",
+      "awayCoach": "Hajime Moriyasu",
       "score": {
         "home": 0,
         "away": 4
@@ -2910,14 +3890,42 @@
       "minute": null,
       "lineups": {
         "home": {
-          "team": "Tunisia",
-          "formation": null,
-          "players": []
+          "team": "Tunisie",
+          "formation": "3-4-2-1",
+          "players": [
+            "16. A. Dahmen (G)",
+            "6. D. Bronn (D)",
+            "3. M. Talbi (D)",
+            "4. O. Rekik (D)",
+            "20. Y. Valery (M)",
+            "25. A. Slimane (M)",
+            "17. E. Skhiri (M)",
+            "2. A. Abdi (M)",
+            "8. E. Saad (F)",
+            "10. H. Mejbri (F)",
+            "26. S. Tounekti (F)"
+          ],
+          "source": "Composition officielle",
+          "sourceDate": "2026-06-21T04:00:00+00:00"
         },
         "away": {
-          "team": "Japan",
-          "formation": null,
-          "players": []
+          "team": "Japon",
+          "formation": "3-4-2-1",
+          "players": [
+            "1. Z. Suzuki (G)",
+            "22. T. Tomiyasu (D)",
+            "4. K. Itakura (D)",
+            "21. H. Ito (D)",
+            "10. R. Doan (M)",
+            "24. K. Sano (M)",
+            "7. A. Tanaka (M)",
+            "13. K. Nakamura (M)",
+            "14. J. Ito (F)",
+            "15. D. Kamada (F)",
+            "18. A. Ueda (F)"
+          ],
+          "source": "Composition officielle",
+          "sourceDate": "2026-06-21T04:00:00+00:00"
         }
       },
       "probableLineups": {
@@ -2972,10 +3980,10 @@
       "date": "2026-06-21T16:00:00+00:00",
       "venue": "Mercedes-Benz Stadium",
       "city": "Atlanta",
-      "home": "Spain",
-      "away": "Saudi Arabia",
-      "homeCoach": null,
-      "awayCoach": null,
+      "home": "Espagne",
+      "away": "Arabie saoudite",
+      "homeCoach": "Luis de la Fuente",
+      "awayCoach": "Georgios Donis",
       "score": {
         "home": 4,
         "away": 0
@@ -2989,14 +3997,42 @@
       "minute": null,
       "lineups": {
         "home": {
-          "team": "Spain",
-          "formation": null,
-          "players": []
+          "team": "Espagne",
+          "formation": "4-3-3",
+          "players": [
+            "23. U. Simon (G)",
+            "12. P. Porro (D)",
+            "22. P. Cubarsi (D)",
+            "14. A. Laporte (D)",
+            "24. M. Cucurella (D)",
+            "10. D. Olmo (M)",
+            "16. Rodri (M)",
+            "20. Pedri (M)",
+            "19. Lamine Yamal (F)",
+            "21. M. Oyarzabal (F)",
+            "15. A. Baena (F)"
+          ],
+          "source": "Composition officielle",
+          "sourceDate": "2026-06-21T16:00:00+00:00"
         },
         "away": {
-          "team": "Saudi Arabia",
-          "formation": null,
-          "players": []
+          "team": "Arabie saoudite",
+          "formation": "5-4-1",
+          "players": [
+            "21. M. Al Owais (G)",
+            "12. S. Abdulhamid (D)",
+            "4. A. Al Amri (D)",
+            "3. A. Lajami (D)",
+            "5. H. Tambakti (D)",
+            "24. M. Al Harbi (D)",
+            "7. M. Al Juwayr (M)",
+            "15. A. Al Khaibari (M)",
+            "6. N. Al Dawsari (M)",
+            "10. S. Al Dawsari (M)",
+            "9. F. Al Buraikan (F)"
+          ],
+          "source": "Composition officielle",
+          "sourceDate": "2026-06-21T16:00:00+00:00"
         }
       },
       "probableLineups": {
@@ -3051,10 +4087,10 @@
       "date": "2026-06-21T19:00:00+00:00",
       "venue": "SoFi Stadium",
       "city": "Inglewood",
-      "home": "Belgium",
+      "home": "Belgique",
       "away": "Iran",
-      "homeCoach": null,
-      "awayCoach": null,
+      "homeCoach": "Rudi Garcia",
+      "awayCoach": "Amir Ghalenoei",
       "score": {
         "home": 0,
         "away": 0
@@ -3068,14 +4104,42 @@
       "minute": null,
       "lineups": {
         "home": {
-          "team": "Belgium",
-          "formation": null,
-          "players": []
+          "team": "Belgique",
+          "formation": "4-2-3-1",
+          "players": [
+            "1. T. Courtois (G)",
+            "15. T. Meunier (D)",
+            "25. N. Ngoy (D)",
+            "4. B. Mechele (D)",
+            "5. M. De Cuyper (D)",
+            "23. N. Raskin (M)",
+            "8. Y. Tielemans (M)",
+            "22. A. Saelemaekers (M)",
+            "7. K. De Bruyne (M)",
+            "10. L. Trossard (M)",
+            "9. R. Lukaku (F)"
+          ],
+          "source": "Composition officielle",
+          "sourceDate": "2026-06-21T19:00:00+00:00"
         },
         "away": {
           "team": "Iran",
-          "formation": null,
-          "players": []
+          "formation": "5-4-1",
+          "players": [
+            "1. A. Beiranvand (G)",
+            "2. S. Hardani (D)",
+            "13. H. Kanaani (D)",
+            "4. S. Khalilzadeh (D)",
+            "19. A. Nemati",
+            "3. E. Hajsafi (D)",
+            "23. R. Rezaeian (M)",
+            "14. S. Ghoddos (M)",
+            "6. S. Ezatolahi (M)",
+            "8. M. Mohebi (M)",
+            "9. M. Taremi (F)"
+          ],
+          "source": "Composition officielle",
+          "sourceDate": "2026-06-21T19:00:00+00:00"
         }
       },
       "probableLineups": {
@@ -3132,8 +4196,8 @@
       "city": "Miami Gardens",
       "home": "Uruguay",
       "away": "Cape Verde Islands",
-      "homeCoach": null,
-      "awayCoach": null,
+      "homeCoach": "Marcelo Bielsa",
+      "awayCoach": "Pedro Leitao Brito",
       "score": {
         "home": 2,
         "away": 2
@@ -3148,13 +4212,41 @@
       "lineups": {
         "home": {
           "team": "Uruguay",
-          "formation": null,
-          "players": []
+          "formation": "4-1-4-1",
+          "players": [
+            "23. F. Muslera (G)",
+            "13. G. Varela (D)",
+            "3. S. Caceres (D)",
+            "16. M. Olivera (D)",
+            "25. J. Sanabria (D)",
+            "5. M. Ugarte (M)",
+            "14. A. Canobbio (M)",
+            "6. R. Bentancur (M)",
+            "8. F. Valverde (M)",
+            "20. M. Araujo (M)",
+            "21. F. Vinas (F)"
+          ],
+          "source": "Composition officielle",
+          "sourceDate": "2026-06-21T22:00:00+00:00"
         },
         "away": {
           "team": "Cape Verde Islands",
-          "formation": null,
-          "players": []
+          "formation": "4-1-4-1",
+          "players": [
+            "1. Vozinha (G)",
+            "22. S. Moreira (D)",
+            "4. R. Lopes (D)",
+            "3. D. Borges (D)",
+            "13. S. Lopes Cabral (D)",
+            "6. K. Lenini (M)",
+            "20. R. Mendes (M)",
+            "18. T. Arcanjo (M)",
+            "10. J. Monteiro (M)",
+            "11. G. Rodrigues (M)",
+            "9. Benchimol (F)"
+          ],
+          "source": "Composition officielle",
+          "sourceDate": "2026-06-21T22:00:00+00:00"
         }
       },
       "probableLineups": {
@@ -3209,10 +4301,10 @@
       "date": "2026-06-22T01:00:00+00:00",
       "venue": "BC Place",
       "city": "Vancouver",
-      "home": "New Zealand",
-      "away": "Egypt",
+      "home": "Nouvelle-Zélande",
+      "away": "Égypte",
       "homeCoach": null,
-      "awayCoach": null,
+      "awayCoach": "Hossam Hassan",
       "score": {
         "home": 1,
         "away": 3
@@ -3226,14 +4318,42 @@
       "minute": null,
       "lineups": {
         "home": {
-          "team": "New Zealand",
+          "team": "Nouvelle-Zélande",
           "formation": null,
-          "players": []
+          "players": [
+            "1. M. Crocombe (G)",
+            "2. T. Payne (D)",
+            "16. F. Surman (D)",
+            "5. M. Boxall (D)",
+            "13. L. Cacace (D)",
+            "6. J. Bell (M)",
+            "8. M. Stamenic (M)",
+            "20. C. McCowatt (M)",
+            "10. S. Singh (M)",
+            "11. E. Just (M)",
+            "9. C. Wood (F)"
+          ],
+          "source": "Composition officielle",
+          "sourceDate": "2026-06-22T01:00:00+00:00"
         },
         "away": {
-          "team": "Egypt",
-          "formation": null,
-          "players": []
+          "team": "Égypte",
+          "formation": "4-2-3-1",
+          "players": [
+            "23. O. Shobeir (G)",
+            "3. M. Hany (D)",
+            "2. Y. Ibrahim (D)",
+            "14. H. Fathy (D)",
+            "13. A. Fatouh (D)",
+            "19. M. Attia (M)",
+            "17. M. Lasheen (M)",
+            "11. M. Ziko (M)",
+            "10. M. Salah (M)",
+            "8. E. Ashour (M)",
+            "22. O. Marmoush (F)"
+          ],
+          "source": "Composition officielle",
+          "sourceDate": "2026-06-22T01:00:00+00:00"
         }
       },
       "probableLineups": {
@@ -3288,10 +4408,10 @@
       "date": "2026-06-22T17:00:00+00:00",
       "venue": "AT&T Stadium",
       "city": "Arlington",
-      "home": "Argentina",
-      "away": "Austria",
-      "homeCoach": null,
-      "awayCoach": null,
+      "home": "Argentine",
+      "away": "Autriche",
+      "homeCoach": "Lionel Scaloni",
+      "awayCoach": "Ralf Rangnick",
       "score": {
         "home": 2,
         "away": 0
@@ -3305,14 +4425,42 @@
       "minute": null,
       "lineups": {
         "home": {
-          "team": "Argentina",
-          "formation": null,
-          "players": []
+          "team": "Argentine",
+          "formation": "4-4-2",
+          "players": [
+            "23. E. Martinez (G)",
+            "26. N. Molina (D)",
+            "13. C. Romero (D)",
+            "6. L. Martinez (D)",
+            "25. F. Medina (D)",
+            "7. R. de Paul (M)",
+            "20. A. Mac Allister (M)",
+            "24. E. Fernandez (M)",
+            "16. T. Almada (M)",
+            "10. L. Messi (F)",
+            "22. L. Martinez (F)"
+          ],
+          "source": "Composition officielle",
+          "sourceDate": "2026-06-22T17:00:00+00:00"
         },
         "away": {
-          "team": "Austria",
-          "formation": null,
-          "players": []
+          "team": "Autriche",
+          "formation": "4-2-3-1",
+          "players": [
+            "1. A. Schlager (G)",
+            "5. S. Posch (D)",
+            "3. K. Danso (D)",
+            "8. D. Alaba (D)",
+            "20. K. Laimer (D)",
+            "6. N. Seiwald (M)",
+            "4. X. Schlager (M)",
+            "18. R. Schmid (M)",
+            "24. P. Wanner (M)",
+            "9. M. Sabitzer (M)",
+            "11. M. Gregoritsch (F)"
+          ],
+          "source": "Composition officielle",
+          "sourceDate": "2026-06-22T17:00:00+00:00"
         }
       },
       "probableLineups": {
@@ -3368,9 +4516,9 @@
       "venue": "Lincoln Financial Field",
       "city": "Philadelphia",
       "home": "France",
-      "away": "Iraq",
-      "homeCoach": null,
-      "awayCoach": null,
+      "away": "Irak",
+      "homeCoach": "Didier Deschamps",
+      "awayCoach": "Graham Arnold",
       "score": {
         "home": 3,
         "away": 0
@@ -3385,13 +4533,41 @@
       "lineups": {
         "home": {
           "team": "France",
-          "formation": null,
-          "players": []
+          "formation": "4-2-3-1",
+          "players": [
+            "16. M. Maignan (G)",
+            "5. J. Kounde (D)",
+            "4. D. Upamecano (D)",
+            "17. W. Saliba (D)",
+            "3. L. Digne (D)",
+            "6. M. Kone (M)",
+            "14. A. Rabiot (M)",
+            "7. O. Dembele (M)",
+            "11. M. Olise (M)",
+            "12. B. Barcola (M)",
+            "10. K. Mbappe (F)"
+          ],
+          "source": "Composition officielle",
+          "sourceDate": "2026-06-22T21:00:00+00:00"
         },
         "away": {
-          "team": "Iraq",
-          "formation": null,
-          "players": []
+          "team": "Irak",
+          "formation": "4-1-4-1",
+          "players": [
+            "22. A. Basil (G)",
+            "3. H. Ali (D)",
+            "4. Z. Tahseen (D)",
+            "5. A. Hashem (D)",
+            "23. M. Doski (D)",
+            "16. A. Al Ammari (M)",
+            "11. A. Qasem (M)",
+            "24. Z. Ismaeel (M)",
+            "14. Z. Iqbal (M)",
+            "8. I. Bayesh (M)",
+            "18. A. Hussein (F)"
+          ],
+          "source": "Composition officielle",
+          "sourceDate": "2026-06-22T21:00:00+00:00"
         }
       },
       "probableLineups": {
@@ -3446,10 +4622,10 @@
       "date": "2026-06-23T00:00:00+00:00",
       "venue": "MetLife Stadium",
       "city": "East Rutherford",
-      "home": "Norway",
-      "away": "Senegal",
-      "homeCoach": null,
-      "awayCoach": null,
+      "home": "Norvège",
+      "away": "Sénégal",
+      "homeCoach": "Stale Solbakken",
+      "awayCoach": "Bouna Thiaw Pape",
       "score": {
         "home": 3,
         "away": 2
@@ -3463,14 +4639,42 @@
       "minute": null,
       "lineups": {
         "home": {
-          "team": "Norway",
-          "formation": null,
-          "players": []
+          "team": "Norvège",
+          "formation": "4-3-3",
+          "players": [
+            "1. Ørjan Nyland (G)",
+            "26. Julian Ryerson (D)",
+            "3. Kristoffer Ajer (D)",
+            "17. Torbjørn Heggem (D)",
+            "5. David Møller Wolfe (D)",
+            "10. Martin Ødegaard (M)",
+            "8. Sander Berge (M)",
+            "14. Fredrik Aursnes (M)",
+            "7. Alexander Sørloth (F)",
+            "9. Erling Haaland (F)",
+            "20. Antonio Nusa (F)"
+          ],
+          "source": "Composition officielle",
+          "sourceDate": "2026-06-23T00:00:00+00:00"
         },
         "away": {
-          "team": "Senegal",
-          "formation": null,
-          "players": []
+          "team": "Sénégal",
+          "formation": "4-2-3-1",
+          "players": [
+            "16. Edouard Mendy (G)",
+            "15. Krépin Diatta (D)",
+            "3. Kalidou Koulibaly (D)",
+            "19. Moussa Niakhaté (D)",
+            "25. El Hadji Malick Diouf (D)",
+            "5. Idrissa Gana Gueye (M)",
+            "26. Pape Gueye (M)",
+            "18. Ismaïla Sarr (M)",
+            "8. Lamine Camara (M)",
+            "10. Sadio Mané (M)",
+            "11. Nicolas Jackson (F)"
+          ],
+          "source": "Composition officielle",
+          "sourceDate": "2026-06-23T00:00:00+00:00"
         }
       },
       "probableLineups": {
@@ -3525,10 +4729,10 @@
       "date": "2026-06-23T03:00:00+00:00",
       "venue": "Levi's Stadium",
       "city": "Santa Clara",
-      "home": "Jordan",
+      "home": "Jordanie",
       "away": "Algeria",
-      "homeCoach": null,
-      "awayCoach": null,
+      "homeCoach": "Jamal Sellami",
+      "awayCoach": "Vladimir Petkovic",
       "score": {
         "home": 1,
         "away": 2
@@ -3542,14 +4746,42 @@
       "minute": null,
       "lineups": {
         "home": {
-          "team": "Jordan",
-          "formation": null,
-          "players": []
+          "team": "Jordanie",
+          "formation": "3-4-2-1",
+          "players": [
+            "1. Yazeed Abu Laila (G)",
+            "3. Abdallah Nasib (D)",
+            "5. Yazan Al-Arab (D)",
+            "4. Husam Ali Mohammad Abudahab (D)",
+            "23. Ehsan Haddad (M)",
+            "21. Nizar Al-Rashdan (M)",
+            "8. Noor Al-Rawabdeh (M)",
+            "20. Mohannad Abu Taha (M)",
+            "9. Ali Olwan (F)",
+            "13. Mahmoud Al-Mardi (F)",
+            "10. Mousa Tamari (F)"
+          ],
+          "source": "Composition officielle",
+          "sourceDate": "2026-06-23T03:00:00+00:00"
         },
         "away": {
           "team": "Algeria",
-          "formation": null,
-          "players": []
+          "formation": "4-2-3-1",
+          "players": [
+            "23. Luca Zidane (G)",
+            "17. Rafik Belghali (D)",
+            "2. Aïssa Mandi (D)",
+            "21. Ramy Bensebaini (D)",
+            "15. Rayan Aït-Nouri (D)",
+            "14. Hicham Boudaoui (M)",
+            "6. Ramiz Zerrouki (M)",
+            "7. Riyad Mahrez (M)",
+            "22. Ibrahim Maza (M)",
+            "10. Farès Chaïbi (M)",
+            "9. Amine Gouiri (F)"
+          ],
+          "source": "Composition officielle",
+          "sourceDate": "2026-06-23T03:00:00+00:00"
         }
       },
       "probableLineups": {
@@ -3605,9 +4837,9 @@
       "venue": "NRG Stadium",
       "city": "Houston",
       "home": "Portugal",
-      "away": "Uzbekistan",
-      "homeCoach": null,
-      "awayCoach": null,
+      "away": "Ouzbékistan",
+      "homeCoach": "Roberto Martinez",
+      "awayCoach": "Fabio Cannavaro",
       "score": {
         "home": 5,
         "away": 0
@@ -3622,13 +4854,41 @@
       "lineups": {
         "home": {
           "team": "Portugal",
-          "formation": null,
-          "players": []
+          "formation": "4-2-3-1",
+          "players": [
+            "1. Diogo Costa (G)",
+            "20. João Cancelo (D)",
+            "3. Rúben Dias (D)",
+            "13. Renato Veiga (D)",
+            "25. Nuno Mendes (D)",
+            "15. João Neves (M)",
+            "23. Vitinha (M)",
+            "18. Pedro Neto (M)",
+            "8. Bruno Fernandes (M)",
+            "11. João Félix (M)",
+            "7. Cristiano Ronaldo (F)"
+          ],
+          "source": "Composition officielle",
+          "sourceDate": "2026-06-23T17:00:00+00:00"
         },
         "away": {
-          "team": "Uzbekistan",
-          "formation": null,
-          "players": []
+          "team": "Ouzbékistan",
+          "formation": "3-4-2-1",
+          "players": [
+            "12. Abduvokhid Nematov (G)",
+            "2. Abdukodir Khusanov (D)",
+            "18. Abdulla Abdullaev (D)",
+            "5. Rustam Ashurmatov (D)",
+            "24. Bekhruz Karimov (M)",
+            "9. Odiljon Khamrobekov (M)",
+            "7. Otabek Shukurov (M)",
+            "13. Sherzod Nasrullaev (M)",
+            "19. Azizjon Ganiev (F)",
+            "22. Abbosbek Fayzullaev (F)",
+            "14. Eldor Shomurodov (F)"
+          ],
+          "source": "Composition officielle",
+          "sourceDate": "2026-06-23T17:00:00+00:00"
         }
       },
       "probableLineups": {
@@ -3683,10 +4943,10 @@
       "date": "2026-06-23T20:00:00+00:00",
       "venue": "Gillette Stadium",
       "city": "Boston",
-      "home": "England",
+      "home": "Angleterre",
       "away": "Ghana",
-      "homeCoach": null,
-      "awayCoach": null,
+      "homeCoach": "Thomas Tuchel",
+      "awayCoach": "Carlos Queiroz",
       "score": {
         "home": 0,
         "away": 0
@@ -3700,14 +4960,42 @@
       "minute": null,
       "lineups": {
         "home": {
-          "team": "England",
-          "formation": null,
-          "players": []
+          "team": "Angleterre",
+          "formation": "4-2-3-1",
+          "players": [
+            "1. Jordan Pickford (G)",
+            "24. Reece James (D)",
+            "2. Ezri Konsa (D)",
+            "6. Marc Guéhi (D)",
+            "25. Djed Spence (D)",
+            "8. Elliot Anderson (M)",
+            "4. Declan Rice (M)",
+            "20. Noni Madueke (M)",
+            "10. Jude Bellingham (M)",
+            "18. Anthony Gordon (M)",
+            "9. Harry Kane (F)"
+          ],
+          "source": "Composition officielle",
+          "sourceDate": "2026-06-23T20:00:00+00:00"
         },
         "away": {
           "team": "Ghana",
-          "formation": null,
-          "players": []
+          "formation": "4-1-4-1",
+          "players": [
+            "16. Benjamin Asare (G)",
+            "26. Marvin Senaya (D)",
+            "4. Jonas Adjei Adjetey (D)",
+            "18. Jerome Opoku (D)",
+            "14. Gideon Mensah (D)",
+            "5. Thomas Partey (M)",
+            "19. Iñaki Williams (M)",
+            "3. Caleb Yirenkyi (M)",
+            "8. Kwasi Sibo (M)",
+            "11. Antoine Semenyo (M)",
+            "9. Jordan Ayew (F)"
+          ],
+          "source": "Composition officielle",
+          "sourceDate": "2026-06-23T20:00:00+00:00"
         }
       },
       "probableLineups": {
@@ -3763,9 +5051,9 @@
       "venue": "BMO Field",
       "city": "Toronto",
       "home": "Panama",
-      "away": "Croatia",
-      "homeCoach": null,
-      "awayCoach": null,
+      "away": "Croatie",
+      "homeCoach": "Thomas Christiansen",
+      "awayCoach": "Zlatko Dalic",
       "score": {
         "home": 0,
         "away": 1
@@ -3780,13 +5068,41 @@
       "lineups": {
         "home": {
           "team": "Panama",
-          "formation": null,
-          "players": []
+          "formation": "5-4-1",
+          "players": [
+            "22. Orlando Mosquera (G)",
+            "23. Amir Murillo (D)",
+            "13. Jiovany Ramos (D)",
+            "3. José Córdoba (D)",
+            "16. Andrés Andrade (D)",
+            "2. César Blackman (D)",
+            "6. Cristian Martínez (M)",
+            "14. Carlos Harvey (M)",
+            "11. Yoel Bárcenas (M)",
+            "7. José Luis Rodríguez (M)",
+            "17. José Fajardo (F)"
+          ],
+          "source": "Composition officielle",
+          "sourceDate": "2026-06-23T23:00:00+00:00"
         },
         "away": {
-          "team": "Croatia",
-          "formation": null,
-          "players": []
+          "team": "Croatie",
+          "formation": "4-2-3-1",
+          "players": [
+            "1. Dominik Livaković (G)",
+            "2. Josip Stanišić (D)",
+            "6. Josip Šutalo (D)",
+            "3. Marin Pongračić (D)",
+            "4. Joško Gvardiol (D)",
+            "10. Luka Modrić (M)",
+            "8. Mateo Kovačić (M)",
+            "24. Marco Pašalić (M)",
+            "16. Martin Baturina (M)",
+            "14. Ivan Perišić (M)",
+            "26. Petar Musa (F)"
+          ],
+          "source": "Composition officielle",
+          "sourceDate": "2026-06-23T23:00:00+00:00"
         }
       },
       "probableLineups": {
@@ -3840,11 +5156,11 @@
       "group": null,
       "date": "2026-06-24T02:00:00+00:00",
       "venue": "Estadio Akron",
-      "city": "Guadalajara",
-      "home": "Colombia",
+      "city": "Zapopan",
+      "home": "Colombie",
       "away": "Congo DR",
-      "homeCoach": null,
-      "awayCoach": null,
+      "homeCoach": "Nestor Lorenzo",
+      "awayCoach": "Sebastien Desabre",
       "score": {
         "home": 1,
         "away": 0
@@ -3858,14 +5174,42 @@
       "minute": null,
       "lineups": {
         "home": {
-          "team": "Colombia",
-          "formation": null,
-          "players": []
+          "team": "Colombie",
+          "formation": "4-3-3",
+          "players": [
+            "12. Camilo Vargas (G)",
+            "2. Daniel Muñoz (D)",
+            "23. Davinson Sánchez (D)",
+            "3. Jhon Lucumí (D)",
+            "17. Johan Mojica (D)",
+            "14. Gustavo Puerta (M)",
+            "16. Jefferson Lerma (M)",
+            "11. Jhon Arias (M)",
+            "10. James Rodríguez (F)",
+            "25. Luis Javier Suárez (F)",
+            "7. Luis Díaz (F)"
+          ],
+          "source": "Composition officielle",
+          "sourceDate": "2026-06-24T02:00:00+00:00"
         },
         "away": {
           "team": "Congo DR",
-          "formation": null,
-          "players": []
+          "formation": "5-3-2",
+          "players": [
+            "1. Lionel Mpasi Nzau (G)",
+            "2. Aaron Wan-Bissaka (D)",
+            "22. Chancel Mbemba (D)",
+            "4. Axel Tuanzebe (D)",
+            "3. Steve Kapuadi (D)",
+            "26. Arthur Masuaku (D)",
+            "6. Ngal'ayel Mukau (M)",
+            "8. Samuel Moutoussamy (M)",
+            "25. Edo Kayembe (M)",
+            "17. Cédric Bakambu (F)",
+            "20. Yoane Wissa (F)"
+          ],
+          "source": "Composition officielle",
+          "sourceDate": "2026-06-24T02:00:00+00:00"
         }
       },
       "probableLineups": {
@@ -3920,43 +5264,101 @@
       "date": "2026-06-24T19:00:00+00:00",
       "venue": "BC Place",
       "city": "Vancouver",
-      "home": "Switzerland",
+      "home": "Suisse",
       "away": "Canada",
-      "homeCoach": null,
-      "awayCoach": null,
+      "homeCoach": "Murat Yakin",
+      "awayCoach": "Jesse Marsch",
       "score": {
-        "home": null,
-        "away": null
+        "home": 2,
+        "away": 1
       },
       "scorers": [],
       "highlights": [],
       "externalIds": {
         "apiFootball": "1489408"
       },
-      "status": "upcoming",
+      "status": "finished",
       "minute": null,
       "lineups": {
         "home": {
-          "team": "Switzerland",
-          "formation": null,
-          "players": []
+          "team": "Suisse",
+          "formation": "4-2-3-1",
+          "players": [
+            "1. Gregor Kobel (G)",
+            "25. Luca Jaquez (D)",
+            "4. Nico Elvedi (D)",
+            "5. Manuel Akanji (D)",
+            "13. Ricardo Rodríguez (D)",
+            "8. Remo Freuler (M)",
+            "10. Granit Xhaka (M)",
+            "15. Djibril Sow (M)",
+            "9. Johan Manzambi (M)",
+            "17. Rubén Vargas (M)",
+            "7. Breel Embolo (F)"
+          ],
+          "source": "Composition officielle",
+          "sourceDate": "2026-06-24T19:00:00+00:00"
         },
         "away": {
           "team": "Canada",
-          "formation": null,
-          "players": []
+          "formation": "4-4-2",
+          "players": [
+            "16. Maxime Crépeau (G)",
+            "2. Alistair Johnston (D)",
+            "4. Luc De Fougerolles (D)",
+            "13. Derek Cornelius (D)",
+            "22. Richie Laryea (D)",
+            "17. Tajon Buchanan (M)",
+            "25. Nathan-Dylan Saliba (M)",
+            "6. Mathieu Choinière (M)",
+            "20. Ali Ahmed (M)",
+            "10. Jonathan David (F)",
+            "9. Cyle Larin (F)"
+          ],
+          "source": "Composition officielle",
+          "sourceDate": "2026-06-24T19:00:00+00:00"
         }
       },
       "probableLineups": {
         "home": {
-          "team": "Switzerland",
-          "formation": null,
-          "players": []
+          "team": "Suisse",
+          "formation": "4-3-1-2",
+          "players": [
+            "1. G. Kobel (G)",
+            "3. S. Widmer (D)",
+            "4. N. Elvedi (D)",
+            "5. M. Akanji (D)",
+            "13. R. Rodriguez (D)",
+            "20. M. Aebischer (M)",
+            "10. G. Xhaka (M)",
+            "8. R. Freuler (M)",
+            "22. F. Rieder (M)",
+            "7. B. Embolo (F)",
+            "11. D. Ndoye (F)"
+          ],
+          "source": "Dernière compo connue",
+          "sourceDate": "2026-06-18T19:00:00+00:00",
+          "sourceMatch": "Suisse 4-1 Bosnie-et-Herzégovine"
         },
         "away": {
           "team": "Canada",
-          "formation": null,
-          "players": []
+          "formation": "4-4-2",
+          "players": [
+            "16. M. Crepeau (G)",
+            "2. A. Johnston (D)",
+            "4. L. De Fougerolles (D)",
+            "13. D. Cornelius (D)",
+            "22. R. Laryea (D)",
+            "17. T. Buchanan (M)",
+            "8. I. Kone (M)",
+            "7. S. Eustaquio (M)",
+            "20. A. Ahmed (M)",
+            "10. J. David (F)",
+            "9. C. Larin (F)"
+          ],
+          "source": "Dernière compo connue",
+          "sourceDate": "2026-06-18T22:00:00+00:00",
+          "sourceMatch": "Canada 6-0 Qatar"
         }
       },
       "stats": {
@@ -3999,43 +5401,101 @@
       "date": "2026-06-24T19:00:00+00:00",
       "venue": "Lumen Field",
       "city": "Seattle",
-      "home": "Bosnia & Herzegovina",
+      "home": "Bosnie-et-Herzégovine",
       "away": "Qatar",
-      "homeCoach": null,
-      "awayCoach": null,
+      "homeCoach": "Sergej Barbarez",
+      "awayCoach": "Julen Lopetegui",
       "score": {
-        "home": null,
-        "away": null
+        "home": 3,
+        "away": 1
       },
       "scorers": [],
       "highlights": [],
       "externalIds": {
         "apiFootball": "1539009"
       },
-      "status": "upcoming",
+      "status": "finished",
       "minute": null,
       "lineups": {
         "home": {
-          "team": "Bosnia & Herzegovina",
-          "formation": null,
-          "players": []
+          "team": "Bosnie-et-Herzégovine",
+          "formation": "4-4-2",
+          "players": [
+            "1. Nikola Vasilj (G)",
+            "24. Arjan Malić (D)",
+            "18. Nikola Katić (D)",
+            "21. Stjepan Radeljić (D)",
+            "5. Sead Kolašinac (D)",
+            "20. Esmir Bajraktarević (M)",
+            "13. Ivan Bašić (M)",
+            "14. Ivan Šunjić (M)",
+            "19. Kerim Alajbegović (M)",
+            "10. Ermedin Demirović (F)",
+            "11. Edin Džeko (F)"
+          ],
+          "source": "Composition officielle",
+          "sourceDate": "2026-06-24T19:00:00+00:00"
         },
         "away": {
           "team": "Qatar",
-          "formation": null,
-          "players": []
+          "formation": "4-3-3",
+          "players": [
+            "1. Mahmud Abunada (G)",
+            "2. Pedro Miguel (D)",
+            "16. Boualem Khoukhi (D)",
+            "4. Issa Laye (D)",
+            "18. Sultan Al-Brake (D)",
+            "5. Jassem Gaber Abdulsallam (M)",
+            "20. Ahmed Fathi (M)",
+            "12. Karim Boudiaf (M)",
+            "8. Edmilson Junior (F)",
+            "11. Akram Afif (F)",
+            "10. Hassan Al Haydos (F)"
+          ],
+          "source": "Composition officielle",
+          "sourceDate": "2026-06-24T19:00:00+00:00"
         }
       },
       "probableLineups": {
         "home": {
-          "team": "Bosnia & Herzegovina",
-          "formation": null,
-          "players": []
+          "team": "Bosnie-et-Herzégovine",
+          "formation": "4-4-2",
+          "players": [
+            "1. N. Vasilj (G)",
+            "7. A. Dedic (D)",
+            "18. N. Katic (D)",
+            "4. T. Muharemovic (D)",
+            "5. S. Kolasinac (D)",
+            "15. A. Memic (M)",
+            "6. B. Tahirovic (M)",
+            "14. I. Sunjic (M)",
+            "19. K. Alajbegovic (M)",
+            "10. E. Demirovic (F)",
+            "11. E. Dzeko (F)"
+          ],
+          "source": "Dernière compo connue",
+          "sourceDate": "2026-06-18T19:00:00+00:00",
+          "sourceMatch": "Suisse 4-1 Bosnie-et-Herzégovine"
         },
         "away": {
           "team": "Qatar",
-          "formation": null,
-          "players": []
+          "formation": "4-3-3",
+          "players": [
+            "1. M. Abunada (G)",
+            "13. A. Al Oui (D)",
+            "2. Pedro Miguel (D)",
+            "16. B. Khoukhi (D)",
+            "14. H. Al Amin (D)",
+            "5. J. Gaber (M)",
+            "23. A. O. Madibo (M)",
+            "4. I. Laye (M)",
+            "8. Edmilson Junior (F)",
+            "15. Y. Abdurisag (F)",
+            "11. A. Afif (F)"
+          ],
+          "source": "Dernière compo connue",
+          "sourceDate": "2026-06-18T22:00:00+00:00",
+          "sourceMatch": "Canada 6-0 Qatar"
         }
       },
       "stats": {
@@ -4078,43 +5538,101 @@
       "date": "2026-06-24T22:00:00+00:00",
       "venue": "Mercedes-Benz Stadium",
       "city": "Atlanta",
-      "home": "Morocco",
-      "away": "Haiti",
-      "homeCoach": null,
-      "awayCoach": null,
+      "home": "Maroc",
+      "away": "Haïti",
+      "homeCoach": "Mohamed Ouahbi",
+      "awayCoach": "Sebastien Migne",
       "score": {
-        "home": null,
-        "away": null
+        "home": 4,
+        "away": 2
       },
       "scorers": [],
       "highlights": [],
       "externalIds": {
         "apiFootball": "1489405"
       },
-      "status": "upcoming",
+      "status": "finished",
       "minute": null,
       "lineups": {
         "home": {
-          "team": "Morocco",
-          "formation": null,
-          "players": []
+          "team": "Maroc",
+          "formation": "4-2-3-1",
+          "players": [
+            "1. Yassine Bounou (G)",
+            "2. Achraf Hakimi (D)",
+            "25. Redouane Halhal (D)",
+            "18. Chadi Riad (D)",
+            "26. Anass Salah-Eddine (D)",
+            "24. Neil El Aynaoui (M)",
+            "4. Sofyan Amrabat (M)",
+            "10. Brahim Díaz (M)",
+            "11. Ismael Saibari (M)",
+            "23. Bilal El Khannouss (M)",
+            "20. Ayoub El Kaabi (F)"
+          ],
+          "source": "Composition officielle",
+          "sourceDate": "2026-06-24T22:00:00+00:00"
         },
         "away": {
-          "team": "Haiti",
-          "formation": null,
-          "players": []
+          "team": "Haïti",
+          "formation": "4-4-1-1",
+          "players": [
+            "1. Johny Placide (G)",
+            "22. Jean-Kévin Duverne (D)",
+            "4. Ricardo Adé (D)",
+            "5. Hannes Delcroix (D)",
+            "8. Martin Expérience (D)",
+            "21. Josué Casimir (M)",
+            "17. Danley Jean Jacques (M)",
+            "10. Jean-Ricner Bellegarde (M)",
+            "15. Ruben Providence (M)",
+            "18. Wilson Isidor (F)",
+            "16. Lenny Joseph (F)"
+          ],
+          "source": "Composition officielle",
+          "sourceDate": "2026-06-24T22:00:00+00:00"
         }
       },
       "probableLineups": {
         "home": {
-          "team": "Morocco",
-          "formation": null,
-          "players": []
+          "team": "Maroc",
+          "formation": "4-2-3-1",
+          "players": [
+            "1. Bono (G)",
+            "2. A. Hakimi (D)",
+            "14. I. Diop (D)",
+            "18. C. Riad (D)",
+            "3. N. Mazraoui (D)",
+            "6. A. Bouaddi (M)",
+            "24. N. El Aynaoui (M)",
+            "10. B. Diaz (M)",
+            "8. A. Ounahi (M)",
+            "23. B. El Khannouss (M)",
+            "11. I. Saibari (F)"
+          ],
+          "source": "Dernière compo connue",
+          "sourceDate": "2026-06-19T22:00:00+00:00",
+          "sourceMatch": "Écosse 0-1 Maroc"
         },
         "away": {
-          "team": "Haiti",
-          "formation": null,
-          "players": []
+          "team": "Haïti",
+          "formation": "5-4-1",
+          "players": [
+            "1. J. Placide (G)",
+            "2. C. Arcus (D)",
+            "22. J. Duverne (D)",
+            "4. R. Ade (D)",
+            "5. H. Delcroix (D)",
+            "8. M. Experience (D)",
+            "21. J. Casimir (M)",
+            "17. D. Jean Jacques (M)",
+            "10. J. Bellegarde (M)",
+            "15. R. Providence (M)",
+            "20. F. Pierrot (F)"
+          ],
+          "source": "Dernière compo connue",
+          "sourceDate": "2026-06-20T00:30:00+00:00",
+          "sourceMatch": "Brésil 3-0 Haïti"
         }
       },
       "stats": {
@@ -4156,44 +5674,102 @@
       "group": null,
       "date": "2026-06-24T22:00:00+00:00",
       "venue": "Hard Rock Stadium",
-      "city": "Miami",
-      "home": "Scotland",
-      "away": "Brazil",
-      "homeCoach": null,
-      "awayCoach": null,
+      "city": "Miami Gardens",
+      "home": "Écosse",
+      "away": "Brésil",
+      "homeCoach": "Steve Clarke",
+      "awayCoach": "Carlo Ancelotti",
       "score": {
-        "home": null,
-        "away": null
+        "home": 0,
+        "away": 3
       },
       "scorers": [],
       "highlights": [],
       "externalIds": {
         "apiFootball": "1489406"
       },
-      "status": "upcoming",
+      "status": "finished",
       "minute": null,
       "lineups": {
         "home": {
-          "team": "Scotland",
-          "formation": null,
-          "players": []
+          "team": "Écosse",
+          "formation": "4-2-3-1",
+          "players": [
+            "1. Angus Gunn (G)",
+            "22. Nathan Patterson (D)",
+            "13. Jack Hendry (D)",
+            "26. Scott McKenna (D)",
+            "3. Andy Robertson (D)",
+            "19. Lewis Ferguson (M)",
+            "23. Kenny McLean (M)",
+            "17. Ben Gannon-Doak (M)",
+            "4. Scott McTominay (M)",
+            "7. John McGinn (M)",
+            "20. Lawrence Shankland (F)"
+          ],
+          "source": "Composition officielle",
+          "sourceDate": "2026-06-24T22:00:00+00:00"
         },
         "away": {
-          "team": "Brazil",
-          "formation": null,
-          "players": []
+          "team": "Brésil",
+          "formation": "4-3-3",
+          "players": [
+            "1. Alisson (G)",
+            "13. Danilo (D)",
+            "4. Marquinhos (D)",
+            "3. Gabriel Magalhães (D)",
+            "16. Douglas Santos (D)",
+            "8. Bruno Guimarães (M)",
+            "5. Casemiro (M)",
+            "20. Lucas Paquetá (M)",
+            "26. Rayan (F)",
+            "9. Matheus Cunha (F)",
+            "7. Vinícius Júnior (F)"
+          ],
+          "source": "Composition officielle",
+          "sourceDate": "2026-06-24T22:00:00+00:00"
         }
       },
       "probableLineups": {
         "home": {
-          "team": "Scotland",
-          "formation": null,
-          "players": []
+          "team": "Écosse",
+          "formation": "4-4-1-1",
+          "players": [
+            "1. A. Gunn (G)",
+            "22. N. Patterson (D)",
+            "5. G. Hanley (D)",
+            "13. J. Hendry (D)",
+            "3. A. Robertson (D)",
+            "7. J. McGinn (M)",
+            "11. R. Christie (M)",
+            "19. L. Ferguson (M)",
+            "6. K. Tierney (M)",
+            "4. S. McTominay (F)",
+            "10. C. Adams (F)"
+          ],
+          "source": "Dernière compo connue",
+          "sourceDate": "2026-06-19T22:00:00+00:00",
+          "sourceMatch": "Écosse 0-1 Maroc"
         },
         "away": {
-          "team": "Brazil",
-          "formation": null,
-          "players": []
+          "team": "Brésil",
+          "formation": "4-3-3",
+          "players": [
+            "1. Alisson (G)",
+            "13. Danilo (D)",
+            "4. Marquinhos (D)",
+            "3. Gabriel (D)",
+            "16. Douglas Santos (D)",
+            "8. Bruno Guimaraes (M)",
+            "5. Casemiro (M)",
+            "20. Lucas Paqueta (M)",
+            "11. Raphinha (F)",
+            "9. M. Cunha (F)",
+            "7. Vinicius Junior (F)"
+          ],
+          "source": "Dernière compo connue",
+          "sourceDate": "2026-06-20T00:30:00+00:00",
+          "sourceMatch": "Brésil 3-0 Haïti"
         }
       },
       "stats": {
@@ -4236,43 +5812,101 @@
       "date": "2026-06-25T01:00:00+00:00",
       "venue": "Estadio BBVA",
       "city": "Monterrey",
-      "home": "South Africa",
-      "away": "South Korea",
-      "homeCoach": null,
-      "awayCoach": null,
+      "home": "Afrique du Sud",
+      "away": "République de Corée",
+      "homeCoach": "Hugo Broos",
+      "awayCoach": "Myung-Bo Hong",
       "score": {
-        "home": null,
-        "away": null
+        "home": 1,
+        "away": 0
       },
       "scorers": [],
       "highlights": [],
       "externalIds": {
         "apiFootball": "1489407"
       },
-      "status": "upcoming",
+      "status": "finished",
       "minute": null,
       "lineups": {
         "home": {
-          "team": "South Africa",
-          "formation": null,
-          "players": []
+          "team": "Afrique du Sud",
+          "formation": "4-2-3-1",
+          "players": [
+            "1. Ronwen Williams (G)",
+            "20. Khuliso Mudau (D)",
+            "21. Ime Okon (D)",
+            "14. Mbekezeli Mbokazi (D)",
+            "6. Aubrey Modiba (D)",
+            "5. Thalente Mbatha (M)",
+            "13. Sphephelo Sithole (M)",
+            "12. Thapelo Maseko (M)",
+            "10. Relebohile Mofokeng (M)",
+            "7. Oswin Appollis (M)",
+            "17. Evidence Makgopa (F)"
+          ],
+          "source": "Composition officielle",
+          "sourceDate": "2026-06-25T01:00:00+00:00"
         },
         "away": {
-          "team": "South Korea",
-          "formation": null,
-          "players": []
+          "team": "République de Corée",
+          "formation": "3-4-2-1",
+          "players": [
+            "1. Kim Seung-gyu (G)",
+            "2. Han-Beom Lee (D)",
+            "4. Kim Min-jae (D)",
+            "3. Gi-Hyuk Lee (D)",
+            "22. Young-woo Seol (M)",
+            "8. Seung Ho Paik (M)",
+            "6. Hwang In-beom (M)",
+            "13. Lee Tae-seok (M)",
+            "19. Kang-in Lee (F)",
+            "11. Hwang Hee-chan (F)",
+            "18. Hyeon-gyu Oh (F)"
+          ],
+          "source": "Composition officielle",
+          "sourceDate": "2026-06-25T01:00:00+00:00"
         }
       },
       "probableLineups": {
         "home": {
-          "team": "South Africa",
-          "formation": null,
-          "players": []
+          "team": "Afrique du Sud",
+          "formation": "4-3-3",
+          "players": [
+            "1. R. Williams (G)",
+            "20. K. Mudau (D)",
+            "21. I. Okon (D)",
+            "14. M. Mbokazi (D)",
+            "6. A. Modiba (D)",
+            "5. T. Mbatha (M)",
+            "4. T. Mokoena (M)",
+            "23. J. Adams (M)",
+            "12. T. Maseko (F)",
+            "15. I. Rayners (F)",
+            "7. O. Appollis (F)"
+          ],
+          "source": "Dernière compo connue",
+          "sourceDate": "2026-06-18T16:00:00+00:00",
+          "sourceMatch": "Tchéquie 1-1 Afrique du Sud"
         },
         "away": {
-          "team": "South Korea",
-          "formation": null,
-          "players": []
+          "team": "République de Corée",
+          "formation": "3-4-2-1",
+          "players": [
+            "1. Kim Seung-Gyu (G)",
+            "2. Lee Han-Beom (D)",
+            "4. Kim Min-Jae (D)",
+            "3. Lee Gi-Hyuk (D)",
+            "15. Kim Moon-Hwan (M)",
+            "6. Hwang In-Beom (M)",
+            "8. Paik Seung-Ho (M)",
+            "22. Seol Young-Woo (M)",
+            "19. Lee Kang-In (F)",
+            "10. Lee Jae-Sung (F)",
+            "7. Son Heung-Min (F)"
+          ],
+          "source": "Dernière compo connue",
+          "sourceDate": "2026-06-19T01:00:00+00:00",
+          "sourceMatch": "Mexique 1-0 République de Corée"
         }
       },
       "stats": {
@@ -4313,45 +5947,103 @@
       "stage": "groupes",
       "group": null,
       "date": "2026-06-25T01:00:00+00:00",
-      "venue": "Estadio Azteca",
+      "venue": "Estadio Banorte",
       "city": "Mexico City",
-      "home": "Czechia",
-      "away": "Mexico",
-      "homeCoach": null,
-      "awayCoach": null,
+      "home": "Tchéquie",
+      "away": "Mexique",
+      "homeCoach": "Miroslav Koubek",
+      "awayCoach": "Javier Aguirre",
       "score": {
-        "home": null,
-        "away": null
+        "home": 0,
+        "away": 3
       },
       "scorers": [],
       "highlights": [],
       "externalIds": {
         "apiFootball": "1539010"
       },
-      "status": "upcoming",
+      "status": "finished",
       "minute": null,
       "lineups": {
         "home": {
-          "team": "Czechia",
-          "formation": null,
-          "players": []
+          "team": "Tchéquie",
+          "formation": "3-4-2-1",
+          "players": [
+            "1. Matěj Kovář (G)",
+            "3. Tomáš Holeš (D)",
+            "4. Robin Hranáč (D)",
+            "7. Ladislav Krejčí (D)",
+            "5. Vladimír Coufal (M)",
+            "12. Lukáš Červ (M)",
+            "18. Michal Sadílek (M)",
+            "21. David Douděra (M)",
+            "15. Pavel Šulc (F)",
+            "26. Denis Višinský (F)",
+            "9. Adam Hložek (F)"
+          ],
+          "source": "Composition officielle",
+          "sourceDate": "2026-06-25T01:00:00+00:00"
         },
         "away": {
-          "team": "Mexico",
-          "formation": null,
-          "players": []
+          "team": "Mexique",
+          "formation": "4-3-3",
+          "players": [
+            "1. Raúl Rangel (G)",
+            "2. Jorge Sánchez (D)",
+            "3. César Montes (D)",
+            "15. Israel Reyes (D)",
+            "20. Mateo Chávez (D)",
+            "19. Gilberto Mora (M)",
+            "4. Edson Álvarez (M)",
+            "7. Luis Romo (M)",
+            "25. Roberto Alvarado (F)",
+            "22. Guillermo Martínez (F)",
+            "16. Julián Quiñones (F)"
+          ],
+          "source": "Composition officielle",
+          "sourceDate": "2026-06-25T01:00:00+00:00"
         }
       },
       "probableLineups": {
         "home": {
-          "team": "Czechia",
-          "formation": null,
-          "players": []
+          "team": "Tchéquie",
+          "formation": "3-5-2",
+          "players": [
+            "1. M. Kovar (G)",
+            "3. T. Holes (D)",
+            "4. R. Hranac (D)",
+            "7. L. Krejci (D)",
+            "5. V. Coufal (M)",
+            "8. V. Darida (M)",
+            "12. L. Cerv (M)",
+            "18. M. Sadilek (M)",
+            "24. A. Sojka (M)",
+            "10. P. Schick (F)",
+            "9. A. Hlozek (F)"
+          ],
+          "source": "Dernière compo connue",
+          "sourceDate": "2026-06-18T16:00:00+00:00",
+          "sourceMatch": "Tchéquie 1-1 Afrique du Sud"
         },
         "away": {
-          "team": "Mexico",
-          "formation": null,
-          "players": []
+          "team": "Mexique",
+          "formation": "4-3-3",
+          "players": [
+            "1. R. Rangel (G)",
+            "2. J. Sanchez (D)",
+            "4. E. Alvarez (D)",
+            "5. J. Vasquez (D)",
+            "23. J. Gallardo (D)",
+            "26. B. Gutierrez (M)",
+            "6. E. Lira (M)",
+            "7. L. Romo (M)",
+            "25. R. Alvarado (F)",
+            "9. R. Jimenez (F)",
+            "16. J. Quinones (F)"
+          ],
+          "source": "Dernière compo connue",
+          "sourceDate": "2026-06-19T01:00:00+00:00",
+          "sourceMatch": "Mexique 1-0 République de Corée"
         }
       },
       "stats": {
@@ -4395,9 +6087,9 @@
       "venue": "Lincoln Financial Field",
       "city": "Philadelphia",
       "home": "Curaçao",
-      "away": "Ivory Coast",
-      "homeCoach": null,
-      "awayCoach": null,
+      "away": "Côte d’Ivoire",
+      "homeCoach": "Dick Advocaat",
+      "awayCoach": "Emerse Fae",
       "score": {
         "home": null,
         "away": null
@@ -4424,13 +6116,43 @@
       "probableLineups": {
         "home": {
           "team": "Curaçao",
-          "formation": null,
-          "players": []
+          "formation": "5-4-1",
+          "players": [
+            "1. E. Room (G)",
+            "20. J. Brenet (D)",
+            "3. J. Gaari (D)",
+            "18. A. Obispo (D)",
+            "5. S. Floranus (D)",
+            "24. D. Fonville (D)",
+            "21. T. Chong (M)",
+            "8. L. Comenencia (M)",
+            "10. L. Bacuna (M)",
+            "7. J. Bacuna (M)",
+            "9. J. Locadia (F)"
+          ],
+          "source": "Dernière compo connue",
+          "sourceDate": "2026-06-21T00:00:00+00:00",
+          "sourceMatch": "Équateur 0-0 Curaçao"
         },
         "away": {
-          "team": "Ivory Coast",
-          "formation": null,
-          "players": []
+          "team": "Côte d’Ivoire",
+          "formation": "4-1-4-1",
+          "players": [
+            "1. Y. Fofana (G)",
+            "5. W. Singo (D)",
+            "7. O. Kossounou (D)",
+            "20. E. Agbadou (D)",
+            "3. G. Konan (D)",
+            "18. I. Sangare (M)",
+            "15. A. Diallo (M)",
+            "8. F. Kessie (M)",
+            "26. C. Inao Oulai (M)",
+            "11. Y. Diomande (M)",
+            "9. A. Bonny (F)"
+          ],
+          "source": "Dernière compo connue",
+          "sourceDate": "2026-06-20T20:00:00+00:00",
+          "sourceMatch": "Allemagne 2-1 Côte d’Ivoire"
         }
       },
       "stats": {
@@ -4460,11 +6182,13 @@
         "away": []
       },
       "winProbability": {
-        "home": null,
-        "draw": null,
-        "away": null
+        "home": 0,
+        "draw": 50,
+        "away": 50
       },
-      "expertDiscussion": []
+      "expertDiscussion": [
+        "Double chance : draw or Ivory Coast"
+      ]
     },
     {
       "id": "1489410",
@@ -4473,10 +6197,10 @@
       "date": "2026-06-25T20:00:00+00:00",
       "venue": "MetLife Stadium",
       "city": "New York New Jersey",
-      "home": "Ecuador",
-      "away": "Germany",
-      "homeCoach": null,
-      "awayCoach": null,
+      "home": "Équateur",
+      "away": "Allemagne",
+      "homeCoach": "Sebastian Beccacece",
+      "awayCoach": "Julian Nagelsmann",
       "score": {
         "home": null,
         "away": null
@@ -4502,14 +6226,44 @@
       },
       "probableLineups": {
         "home": {
-          "team": "Ecuador",
-          "formation": null,
-          "players": []
+          "team": "Équateur",
+          "formation": "3-1-4-2",
+          "players": [
+            "1. H. Galindez (G)",
+            "21. A. Franco (D)",
+            "6. W. Pacho (D)",
+            "3. P. Hincapie (D)",
+            "5. J. Alcivar (M)",
+            "9. J. Yeboah (M)",
+            "15. P. Vite (M)",
+            "23. M. Caicedo (M)",
+            "7. P. Estupinan (M)",
+            "19. G. Plata (F)",
+            "13. E. Valencia (F)"
+          ],
+          "source": "Dernière compo connue",
+          "sourceDate": "2026-06-21T00:00:00+00:00",
+          "sourceMatch": "Équateur 0-0 Curaçao"
         },
         "away": {
-          "team": "Germany",
-          "formation": null,
-          "players": []
+          "team": "Allemagne",
+          "formation": "4-2-3-1",
+          "players": [
+            "1. M. Neuer (G)",
+            "6. J. Kimmich (D)",
+            "4. J. Tah (D)",
+            "15. N. Schlotterbeck (D)",
+            "18. N. Brown (D)",
+            "23. F. Nmecha (M)",
+            "5. A. Pavlovic (M)",
+            "19. L. Sane (M)",
+            "10. J. Musiala (M)",
+            "17. F. Wirtz (M)",
+            "7. K. Havertz (F)"
+          ],
+          "source": "Dernière compo connue",
+          "sourceDate": "2026-06-20T20:00:00+00:00",
+          "sourceMatch": "Allemagne 2-1 Côte d’Ivoire"
         }
       },
       "stats": {
@@ -4539,11 +6293,13 @@
         "away": []
       },
       "winProbability": {
-        "home": null,
-        "draw": null,
-        "away": null
+        "home": 10,
+        "draw": 45,
+        "away": 45
       },
-      "expertDiscussion": []
+      "expertDiscussion": [
+        "Winner : Germany"
+      ]
     },
     {
       "id": "1489412",
@@ -4552,10 +6308,10 @@
       "date": "2026-06-25T23:00:00+00:00",
       "venue": "Arrowhead Stadium",
       "city": "Kansas City",
-      "home": "Tunisia",
-      "away": "Netherlands",
-      "homeCoach": null,
-      "awayCoach": null,
+      "home": "Tunisie",
+      "away": "Pays-Bas",
+      "homeCoach": "Herve Renard",
+      "awayCoach": "Ronald Koeman",
       "score": {
         "home": null,
         "away": null
@@ -4581,14 +6337,44 @@
       },
       "probableLineups": {
         "home": {
-          "team": "Tunisia",
-          "formation": null,
-          "players": []
+          "team": "Tunisie",
+          "formation": "3-4-2-1",
+          "players": [
+            "16. A. Dahmen (G)",
+            "6. D. Bronn (D)",
+            "3. M. Talbi (D)",
+            "4. O. Rekik (D)",
+            "20. Y. Valery (M)",
+            "25. A. Slimane (M)",
+            "17. E. Skhiri (M)",
+            "2. A. Abdi (M)",
+            "8. E. Saad (F)",
+            "10. H. Mejbri (F)",
+            "26. S. Tounekti (F)"
+          ],
+          "source": "Dernière compo connue",
+          "sourceDate": "2026-06-21T04:00:00+00:00",
+          "sourceMatch": "Tunisie 0-4 Japon"
         },
         "away": {
-          "team": "Netherlands",
-          "formation": null,
-          "players": []
+          "team": "Pays-Bas",
+          "formation": "4-3-3",
+          "players": [
+            "1. B. Verbruggen (G)",
+            "22. D. Dumfries (D)",
+            "6. J. P. van Hecke (D)",
+            "4. V. van Dijk (D)",
+            "15. M. van de Ven (D)",
+            "8. R. Gravenberch (M)",
+            "21. F. de Jong (M)",
+            "14. T. Reijnders (M)",
+            "18. D. Malen (F)",
+            "19. B. Brobbey (F)",
+            "11. C. Gakpo (F)"
+          ],
+          "source": "Dernière compo connue",
+          "sourceDate": "2026-06-20T17:00:00+00:00",
+          "sourceMatch": "Pays-Bas 5-1 Suède"
         }
       },
       "stats": {
@@ -4618,11 +6404,13 @@
         "away": []
       },
       "winProbability": {
-        "home": null,
-        "draw": null,
-        "away": null
+        "home": 0,
+        "draw": 50,
+        "away": 50
       },
-      "expertDiscussion": []
+      "expertDiscussion": [
+        "Combo Winner : Netherlands and +2.5 goals"
+      ]
     },
     {
       "id": "1539011",
@@ -4631,10 +6419,10 @@
       "date": "2026-06-25T23:00:00+00:00",
       "venue": "AT&T Stadium",
       "city": "Dallas",
-      "home": "Japan",
-      "away": "Sweden",
-      "homeCoach": null,
-      "awayCoach": null,
+      "home": "Japon",
+      "away": "Suède",
+      "homeCoach": "Hajime Moriyasu",
+      "awayCoach": "Graham Potter",
       "score": {
         "home": null,
         "away": null
@@ -4660,14 +6448,44 @@
       },
       "probableLineups": {
         "home": {
-          "team": "Japan",
-          "formation": null,
-          "players": []
+          "team": "Japon",
+          "formation": "3-4-2-1",
+          "players": [
+            "1. Z. Suzuki (G)",
+            "22. T. Tomiyasu (D)",
+            "4. K. Itakura (D)",
+            "21. H. Ito (D)",
+            "10. R. Doan (M)",
+            "24. K. Sano (M)",
+            "7. A. Tanaka (M)",
+            "13. K. Nakamura (M)",
+            "14. J. Ito (F)",
+            "15. D. Kamada (F)",
+            "18. A. Ueda (F)"
+          ],
+          "source": "Dernière compo connue",
+          "sourceDate": "2026-06-21T04:00:00+00:00",
+          "sourceMatch": "Tunisie 0-4 Japon"
         },
         "away": {
-          "team": "Sweden",
-          "formation": null,
-          "players": []
+          "team": "Suède",
+          "formation": "3-1-4-2",
+          "players": [
+            "23. K. Nordfeldt (G)",
+            "2. G. Lagerbielke (D)",
+            "4. I. Hien (D)",
+            "3. V. Lindelof (D)",
+            "16. J. Karlstrom (M)",
+            "21. A. Bernhardsson (M)",
+            "10. B. Nygren (M)",
+            "18. Y. Ayari (M)",
+            "5. G. Gudmundsson (M)",
+            "17. V. Gyökeres (F)",
+            "9. A. Isak (F)"
+          ],
+          "source": "Dernière compo connue",
+          "sourceDate": "2026-06-20T17:00:00+00:00",
+          "sourceMatch": "Pays-Bas 5-1 Suède"
         }
       },
       "stats": {
@@ -4697,11 +6515,13 @@
         "away": []
       },
       "winProbability": {
-        "home": null,
-        "draw": null,
-        "away": null
+        "home": 45,
+        "draw": 45,
+        "away": 10
       },
-      "expertDiscussion": []
+      "expertDiscussion": [
+        "Combo Double chance : Japan or draw and +2.5 goals"
+      ]
     },
     {
       "id": "1489411",
@@ -4711,9 +6531,9 @@
       "venue": "Levi's Stadium",
       "city": "San Francisco Bay Area",
       "home": "Paraguay",
-      "away": "Australia",
-      "homeCoach": null,
-      "awayCoach": null,
+      "away": "Australie",
+      "homeCoach": "Gustavo Alfaro",
+      "awayCoach": "Tony Popovic",
       "score": {
         "home": null,
         "away": null
@@ -4740,13 +6560,43 @@
       "probableLineups": {
         "home": {
           "team": "Paraguay",
-          "formation": null,
-          "players": []
+          "formation": "4-4-2",
+          "players": [
+            "12. O. Gill (G)",
+            "4. J. Caceres (D)",
+            "15. G. Gomez (D)",
+            "3. O. Alderete (D)",
+            "6. J. Alonso (D)",
+            "10. M. Almiron (M)",
+            "14. A. Cubas (M)",
+            "8. D. Gomez (M)",
+            "23. M. Galarza (M)",
+            "25. I. Pitta (F)",
+            "19. J. Enciso (F)"
+          ],
+          "source": "Dernière compo connue",
+          "sourceDate": "2026-06-20T03:00:00+00:00",
+          "sourceMatch": "Turquie 0-1 Paraguay"
         },
         "away": {
-          "team": "Australia",
-          "formation": null,
-          "players": []
+          "team": "Australie",
+          "formation": "5-4-1",
+          "players": [
+            "18. P. Beach (G)",
+            "4. J. Italiano (D)",
+            "3. A. Circati (D)",
+            "19. H. Souttar (D)",
+            "21. C. Burgess (D)",
+            "5. J. Bos (D)",
+            "7. M. Leckie (M)",
+            "13. A. O'Neill (M)",
+            "24. P. Okon-Engstler (M)",
+            "23. N. Velupillay (M)",
+            "9. M. Toure (F)"
+          ],
+          "source": "Dernière compo connue",
+          "sourceDate": "2026-06-19T19:00:00+00:00",
+          "sourceMatch": "États-Unis 2-0 Australie"
         }
       },
       "stats": {
@@ -4776,11 +6626,13 @@
         "away": []
       },
       "winProbability": {
-        "home": null,
-        "draw": null,
-        "away": null
+        "home": 10,
+        "draw": 45,
+        "away": 45
       },
-      "expertDiscussion": []
+      "expertDiscussion": [
+        "Double chance : draw or Australia"
+      ]
     },
     {
       "id": "1539012",
@@ -4789,10 +6641,10 @@
       "date": "2026-06-26T02:00:00+00:00",
       "venue": "SoFi Stadium",
       "city": "Los Angeles",
-      "home": "Türkiye",
-      "away": "USA",
-      "homeCoach": null,
-      "awayCoach": null,
+      "home": "Turquie",
+      "away": "États-Unis",
+      "homeCoach": "Vincenzo Montella",
+      "awayCoach": "Mauricio Pochettino",
       "score": {
         "home": null,
         "away": null
@@ -4818,14 +6670,44 @@
       },
       "probableLineups": {
         "home": {
-          "team": "Türkiye",
-          "formation": null,
-          "players": []
+          "team": "Turquie",
+          "formation": "4-2-3-1",
+          "players": [
+            "23. U. Cakir (G)",
+            "18. M. Muldur (D)",
+            "3. M. Demiral (D)",
+            "14. A. Bardakci (D)",
+            "20. F. Kadioglu (D)",
+            "10. H. Calhanoglu (M)",
+            "16. I. Yuksek (M)",
+            "19. Y. Akgun (M)",
+            "8. A. Guler (M)",
+            "11. K. Yildiz (M)",
+            "7. K. Akturkoglu (F)"
+          ],
+          "source": "Dernière compo connue",
+          "sourceDate": "2026-06-20T03:00:00+00:00",
+          "sourceMatch": "Turquie 0-1 Paraguay"
         },
         "away": {
-          "team": "USA",
-          "formation": null,
-          "players": []
+          "team": "États-Unis",
+          "formation": "3-5-2",
+          "players": [
+            "24. M. Freese (G)",
+            "16. A. Freeman (D)",
+            "3. C. Richards (D)",
+            "13. T. Ream (D)",
+            "2. S. Dest (M)",
+            "8. W. McKennie (M)",
+            "4. T. Adams (M)",
+            "17. M. Tillman (M)",
+            "5. A. Robinson (M)",
+            "20. F. Balogun (F)",
+            "9. R. Pepi (F)"
+          ],
+          "source": "Dernière compo connue",
+          "sourceDate": "2026-06-19T19:00:00+00:00",
+          "sourceMatch": "États-Unis 2-0 Australie"
         }
       },
       "stats": {
@@ -4855,11 +6737,13 @@
         "away": []
       },
       "winProbability": {
-        "home": null,
-        "draw": null,
-        "away": null
+        "home": 10,
+        "draw": 45,
+        "away": 45
       },
-      "expertDiscussion": []
+      "expertDiscussion": [
+        "Winner : USA"
+      ]
     },
     {
       "id": "1489416",
@@ -4868,10 +6752,10 @@
       "date": "2026-06-26T19:00:00+00:00",
       "venue": "Gillette Stadium",
       "city": "Boston",
-      "home": "Norway",
+      "home": "Norvège",
       "away": "France",
-      "homeCoach": null,
-      "awayCoach": null,
+      "homeCoach": "Stale Solbakken",
+      "awayCoach": "Didier Deschamps",
       "score": {
         "home": null,
         "away": null
@@ -4897,14 +6781,44 @@
       },
       "probableLineups": {
         "home": {
-          "team": "Norway",
-          "formation": null,
-          "players": []
+          "team": "Norvège",
+          "formation": "4-3-3",
+          "players": [
+            "1. Ørjan Nyland (G)",
+            "26. Julian Ryerson (D)",
+            "3. Kristoffer Ajer (D)",
+            "17. Torbjørn Heggem (D)",
+            "5. David Møller Wolfe (D)",
+            "10. Martin Ødegaard (M)",
+            "8. Sander Berge (M)",
+            "14. Fredrik Aursnes (M)",
+            "7. Alexander Sørloth (F)",
+            "9. Erling Haaland (F)",
+            "20. Antonio Nusa (F)"
+          ],
+          "source": "Dernière compo connue",
+          "sourceDate": "2026-06-23T00:00:00+00:00",
+          "sourceMatch": "Norvège 3-2 Sénégal"
         },
         "away": {
           "team": "France",
-          "formation": null,
-          "players": []
+          "formation": "4-2-3-1",
+          "players": [
+            "16. M. Maignan (G)",
+            "5. J. Kounde (D)",
+            "4. D. Upamecano (D)",
+            "17. W. Saliba (D)",
+            "3. L. Digne (D)",
+            "6. M. Kone (M)",
+            "14. A. Rabiot (M)",
+            "7. O. Dembele (M)",
+            "11. M. Olise (M)",
+            "12. B. Barcola (M)",
+            "10. K. Mbappe (F)"
+          ],
+          "source": "Dernière compo connue",
+          "sourceDate": "2026-06-22T21:00:00+00:00",
+          "sourceMatch": "France 3-0 Irak"
         }
       },
       "stats": {
@@ -4934,11 +6848,13 @@
         "away": []
       },
       "winProbability": {
-        "home": null,
-        "draw": null,
-        "away": null
+        "home": 10,
+        "draw": 45,
+        "away": 45
       },
-      "expertDiscussion": []
+      "expertDiscussion": [
+        "Combo Double chance : draw or France and +1.5 goals"
+      ]
     },
     {
       "id": "1539074",
@@ -4947,10 +6863,10 @@
       "date": "2026-06-26T19:00:00+00:00",
       "venue": "BMO Field",
       "city": "Toronto",
-      "home": "Senegal",
-      "away": "Iraq",
-      "homeCoach": null,
-      "awayCoach": null,
+      "home": "Sénégal",
+      "away": "Irak",
+      "homeCoach": "Bouna Thiaw Pape",
+      "awayCoach": "Graham Arnold",
       "score": {
         "home": null,
         "away": null
@@ -4976,14 +6892,44 @@
       },
       "probableLineups": {
         "home": {
-          "team": "Senegal",
-          "formation": null,
-          "players": []
+          "team": "Sénégal",
+          "formation": "4-2-3-1",
+          "players": [
+            "16. Edouard Mendy (G)",
+            "15. Krépin Diatta (D)",
+            "3. Kalidou Koulibaly (D)",
+            "19. Moussa Niakhaté (D)",
+            "25. El Hadji Malick Diouf (D)",
+            "5. Idrissa Gana Gueye (M)",
+            "26. Pape Gueye (M)",
+            "18. Ismaïla Sarr (M)",
+            "8. Lamine Camara (M)",
+            "10. Sadio Mané (M)",
+            "11. Nicolas Jackson (F)"
+          ],
+          "source": "Dernière compo connue",
+          "sourceDate": "2026-06-23T00:00:00+00:00",
+          "sourceMatch": "Norvège 3-2 Sénégal"
         },
         "away": {
-          "team": "Iraq",
-          "formation": null,
-          "players": []
+          "team": "Irak",
+          "formation": "4-1-4-1",
+          "players": [
+            "22. A. Basil (G)",
+            "3. H. Ali (D)",
+            "4. Z. Tahseen (D)",
+            "5. A. Hashem (D)",
+            "23. M. Doski (D)",
+            "16. A. Al Ammari (M)",
+            "11. A. Qasem (M)",
+            "24. Z. Ismaeel (M)",
+            "14. Z. Iqbal (M)",
+            "8. I. Bayesh (M)",
+            "18. A. Hussein (F)"
+          ],
+          "source": "Dernière compo connue",
+          "sourceDate": "2026-06-22T21:00:00+00:00",
+          "sourceMatch": "France 3-0 Irak"
         }
       },
       "stats": {
@@ -5013,11 +6959,13 @@
         "away": []
       },
       "winProbability": {
-        "home": null,
-        "draw": null,
-        "away": null
+        "home": 45,
+        "draw": 45,
+        "away": 10
       },
-      "expertDiscussion": []
+      "expertDiscussion": [
+        "Combo Double chance : Senegal or draw and +1.5 goals"
+      ]
     },
     {
       "id": "1489413",
@@ -5027,9 +6975,9 @@
       "venue": "NRG Stadium",
       "city": "Houston",
       "home": "Cape Verde Islands",
-      "away": "Saudi Arabia",
-      "homeCoach": null,
-      "awayCoach": null,
+      "away": "Arabie saoudite",
+      "homeCoach": "Pedro Leitao Brito",
+      "awayCoach": "Georgios Donis",
       "score": {
         "home": null,
         "away": null
@@ -5056,13 +7004,43 @@
       "probableLineups": {
         "home": {
           "team": "Cape Verde Islands",
-          "formation": null,
-          "players": []
+          "formation": "4-1-4-1",
+          "players": [
+            "1. Vozinha (G)",
+            "22. S. Moreira (D)",
+            "4. R. Lopes (D)",
+            "3. D. Borges (D)",
+            "13. S. Lopes Cabral (D)",
+            "6. K. Lenini (M)",
+            "20. R. Mendes (M)",
+            "18. T. Arcanjo (M)",
+            "10. J. Monteiro (M)",
+            "11. G. Rodrigues (M)",
+            "9. Benchimol (F)"
+          ],
+          "source": "Dernière compo connue",
+          "sourceDate": "2026-06-21T22:00:00+00:00",
+          "sourceMatch": "Uruguay 2-2 Cape Verde Islands"
         },
         "away": {
-          "team": "Saudi Arabia",
-          "formation": null,
-          "players": []
+          "team": "Arabie saoudite",
+          "formation": "5-4-1",
+          "players": [
+            "21. M. Al Owais (G)",
+            "12. S. Abdulhamid (D)",
+            "4. A. Al Amri (D)",
+            "3. A. Lajami (D)",
+            "5. H. Tambakti (D)",
+            "24. M. Al Harbi (D)",
+            "7. M. Al Juwayr (M)",
+            "15. A. Al Khaibari (M)",
+            "6. N. Al Dawsari (M)",
+            "10. S. Al Dawsari (M)",
+            "9. F. Al Buraikan (F)"
+          ],
+          "source": "Dernière compo connue",
+          "sourceDate": "2026-06-21T16:00:00+00:00",
+          "sourceMatch": "Espagne 4-0 Arabie saoudite"
         }
       },
       "stats": {
@@ -5092,11 +7070,13 @@
         "away": []
       },
       "winProbability": {
-        "home": null,
-        "draw": null,
-        "away": null
+        "home": 50,
+        "draw": 50,
+        "away": 0
       },
-      "expertDiscussion": []
+      "expertDiscussion": [
+        "Double chance : Cape Verde Islands or draw"
+      ]
     },
     {
       "id": "1489417",
@@ -5104,11 +7084,11 @@
       "group": null,
       "date": "2026-06-27T00:00:00+00:00",
       "venue": "Estadio Akron",
-      "city": "Guadalajara",
+      "city": "Zapopan",
       "home": "Uruguay",
-      "away": "Spain",
-      "homeCoach": null,
-      "awayCoach": null,
+      "away": "Espagne",
+      "homeCoach": "Marcelo Bielsa",
+      "awayCoach": "Luis de la Fuente",
       "score": {
         "home": null,
         "away": null
@@ -5135,13 +7115,43 @@
       "probableLineups": {
         "home": {
           "team": "Uruguay",
-          "formation": null,
-          "players": []
+          "formation": "4-1-4-1",
+          "players": [
+            "23. F. Muslera (G)",
+            "13. G. Varela (D)",
+            "3. S. Caceres (D)",
+            "16. M. Olivera (D)",
+            "25. J. Sanabria (D)",
+            "5. M. Ugarte (M)",
+            "14. A. Canobbio (M)",
+            "6. R. Bentancur (M)",
+            "8. F. Valverde (M)",
+            "20. M. Araujo (M)",
+            "21. F. Vinas (F)"
+          ],
+          "source": "Dernière compo connue",
+          "sourceDate": "2026-06-21T22:00:00+00:00",
+          "sourceMatch": "Uruguay 2-2 Cape Verde Islands"
         },
         "away": {
-          "team": "Spain",
-          "formation": null,
-          "players": []
+          "team": "Espagne",
+          "formation": "4-3-3",
+          "players": [
+            "23. U. Simon (G)",
+            "12. P. Porro (D)",
+            "22. P. Cubarsi (D)",
+            "14. A. Laporte (D)",
+            "24. M. Cucurella (D)",
+            "10. D. Olmo (M)",
+            "16. Rodri (M)",
+            "20. Pedri (M)",
+            "19. Lamine Yamal (F)",
+            "21. M. Oyarzabal (F)",
+            "15. A. Baena (F)"
+          ],
+          "source": "Dernière compo connue",
+          "sourceDate": "2026-06-21T16:00:00+00:00",
+          "sourceMatch": "Espagne 4-0 Arabie saoudite"
         }
       },
       "stats": {
@@ -5171,11 +7181,13 @@
         "away": []
       },
       "winProbability": {
-        "home": null,
-        "draw": null,
-        "away": null
+        "home": 10,
+        "draw": 45,
+        "away": 45
       },
-      "expertDiscussion": []
+      "expertDiscussion": [
+        "Double chance : draw or Spain"
+      ]
     },
     {
       "id": "1489414",
@@ -5184,10 +7196,10 @@
       "date": "2026-06-27T03:00:00+00:00",
       "venue": "Lumen Field",
       "city": "Seattle",
-      "home": "Egypt",
+      "home": "Égypte",
       "away": "Iran",
-      "homeCoach": null,
-      "awayCoach": null,
+      "homeCoach": "Hossam Hassan",
+      "awayCoach": "Amir Ghalenoei",
       "score": {
         "home": null,
         "away": null
@@ -5213,14 +7225,44 @@
       },
       "probableLineups": {
         "home": {
-          "team": "Egypt",
-          "formation": null,
-          "players": []
+          "team": "Égypte",
+          "formation": "4-2-3-1",
+          "players": [
+            "23. O. Shobeir (G)",
+            "3. M. Hany (D)",
+            "2. Y. Ibrahim (D)",
+            "14. H. Fathy (D)",
+            "13. A. Fatouh (D)",
+            "19. M. Attia (M)",
+            "17. M. Lasheen (M)",
+            "11. M. Ziko (M)",
+            "10. M. Salah (M)",
+            "8. E. Ashour (M)",
+            "22. O. Marmoush (F)"
+          ],
+          "source": "Dernière compo connue",
+          "sourceDate": "2026-06-22T01:00:00+00:00",
+          "sourceMatch": "Nouvelle-Zélande 1-3 Égypte"
         },
         "away": {
           "team": "Iran",
-          "formation": null,
-          "players": []
+          "formation": "5-4-1",
+          "players": [
+            "1. A. Beiranvand (G)",
+            "2. S. Hardani (D)",
+            "13. H. Kanaani (D)",
+            "4. S. Khalilzadeh (D)",
+            "19. A. Nemati",
+            "3. E. Hajsafi (D)",
+            "23. R. Rezaeian (M)",
+            "14. S. Ghoddos (M)",
+            "6. S. Ezatolahi (M)",
+            "8. M. Mohebi (M)",
+            "9. M. Taremi (F)"
+          ],
+          "source": "Dernière compo connue",
+          "sourceDate": "2026-06-21T19:00:00+00:00",
+          "sourceMatch": "Belgique 0-0 Iran"
         }
       },
       "stats": {
@@ -5250,11 +7292,13 @@
         "away": []
       },
       "winProbability": {
-        "home": null,
-        "draw": null,
-        "away": null
+        "home": 45,
+        "draw": 45,
+        "away": 10
       },
-      "expertDiscussion": []
+      "expertDiscussion": [
+        "Double chance : Egypt or draw"
+      ]
     },
     {
       "id": "1489415",
@@ -5263,10 +7307,10 @@
       "date": "2026-06-27T03:00:00+00:00",
       "venue": "BC Place",
       "city": "Vancouver",
-      "home": "New Zealand",
-      "away": "Belgium",
+      "home": "Nouvelle-Zélande",
+      "away": "Belgique",
       "homeCoach": null,
-      "awayCoach": null,
+      "awayCoach": "Rudi Garcia",
       "score": {
         "home": null,
         "away": null
@@ -5292,14 +7336,44 @@
       },
       "probableLineups": {
         "home": {
-          "team": "New Zealand",
+          "team": "Nouvelle-Zélande",
           "formation": null,
-          "players": []
+          "players": [
+            "1. M. Crocombe (G)",
+            "2. T. Payne (D)",
+            "16. F. Surman (D)",
+            "5. M. Boxall (D)",
+            "13. L. Cacace (D)",
+            "6. J. Bell (M)",
+            "8. M. Stamenic (M)",
+            "20. C. McCowatt (M)",
+            "10. S. Singh (M)",
+            "11. E. Just (M)",
+            "9. C. Wood (F)"
+          ],
+          "source": "Dernière compo connue",
+          "sourceDate": "2026-06-22T01:00:00+00:00",
+          "sourceMatch": "Nouvelle-Zélande 1-3 Égypte"
         },
         "away": {
-          "team": "Belgium",
-          "formation": null,
-          "players": []
+          "team": "Belgique",
+          "formation": "4-2-3-1",
+          "players": [
+            "1. T. Courtois (G)",
+            "15. T. Meunier (D)",
+            "25. N. Ngoy (D)",
+            "4. B. Mechele (D)",
+            "5. M. De Cuyper (D)",
+            "23. N. Raskin (M)",
+            "8. Y. Tielemans (M)",
+            "22. A. Saelemaekers (M)",
+            "7. K. De Bruyne (M)",
+            "10. L. Trossard (M)",
+            "9. R. Lukaku (F)"
+          ],
+          "source": "Dernière compo connue",
+          "sourceDate": "2026-06-21T19:00:00+00:00",
+          "sourceMatch": "Belgique 0-0 Iran"
         }
       },
       "stats": {
@@ -5329,11 +7403,13 @@
         "away": []
       },
       "winProbability": {
-        "home": null,
-        "draw": null,
-        "away": null
+        "home": 10,
+        "draw": 45,
+        "away": 45
       },
-      "expertDiscussion": []
+      "expertDiscussion": [
+        "Double chance : draw or Belgium"
+      ]
     },
     {
       "id": "1489420",
@@ -5342,10 +7418,10 @@
       "date": "2026-06-27T21:00:00+00:00",
       "venue": "Lincoln Financial Field",
       "city": "Philadelphia",
-      "home": "Croatia",
+      "home": "Croatie",
       "away": "Ghana",
-      "homeCoach": null,
-      "awayCoach": null,
+      "homeCoach": "Zlatko Dalic",
+      "awayCoach": "Carlos Queiroz",
       "score": {
         "home": null,
         "away": null
@@ -5371,14 +7447,44 @@
       },
       "probableLineups": {
         "home": {
-          "team": "Croatia",
-          "formation": null,
-          "players": []
+          "team": "Croatie",
+          "formation": "4-2-3-1",
+          "players": [
+            "1. Dominik Livaković (G)",
+            "2. Josip Stanišić (D)",
+            "6. Josip Šutalo (D)",
+            "3. Marin Pongračić (D)",
+            "4. Joško Gvardiol (D)",
+            "10. Luka Modrić (M)",
+            "8. Mateo Kovačić (M)",
+            "24. Marco Pašalić (M)",
+            "16. Martin Baturina (M)",
+            "14. Ivan Perišić (M)",
+            "26. Petar Musa (F)"
+          ],
+          "source": "Dernière compo connue",
+          "sourceDate": "2026-06-23T23:00:00+00:00",
+          "sourceMatch": "Panama 0-1 Croatie"
         },
         "away": {
           "team": "Ghana",
-          "formation": null,
-          "players": []
+          "formation": "4-1-4-1",
+          "players": [
+            "16. Benjamin Asare (G)",
+            "26. Marvin Senaya (D)",
+            "4. Jonas Adjei Adjetey (D)",
+            "18. Jerome Opoku (D)",
+            "14. Gideon Mensah (D)",
+            "5. Thomas Partey (M)",
+            "19. Iñaki Williams (M)",
+            "3. Caleb Yirenkyi (M)",
+            "8. Kwasi Sibo (M)",
+            "11. Antoine Semenyo (M)",
+            "9. Jordan Ayew (F)"
+          ],
+          "source": "Dernière compo connue",
+          "sourceDate": "2026-06-23T20:00:00+00:00",
+          "sourceMatch": "Angleterre 0-0 Ghana"
         }
       },
       "stats": {
@@ -5408,11 +7514,13 @@
         "away": []
       },
       "winProbability": {
-        "home": null,
-        "draw": null,
-        "away": null
+        "home": 35,
+        "draw": 35,
+        "away": 30
       },
-      "expertDiscussion": []
+      "expertDiscussion": [
+        "Combo Double chance : Croatia or draw and -3.5 goals"
+      ]
     },
     {
       "id": "1489422",
@@ -5422,9 +7530,9 @@
       "venue": "MetLife Stadium",
       "city": "New York New Jersey",
       "home": "Panama",
-      "away": "England",
-      "homeCoach": null,
-      "awayCoach": null,
+      "away": "Angleterre",
+      "homeCoach": "Thomas Christiansen",
+      "awayCoach": "Thomas Tuchel",
       "score": {
         "home": null,
         "away": null
@@ -5451,13 +7559,43 @@
       "probableLineups": {
         "home": {
           "team": "Panama",
-          "formation": null,
-          "players": []
+          "formation": "5-4-1",
+          "players": [
+            "22. Orlando Mosquera (G)",
+            "23. Amir Murillo (D)",
+            "13. Jiovany Ramos (D)",
+            "3. José Córdoba (D)",
+            "16. Andrés Andrade (D)",
+            "2. César Blackman (D)",
+            "6. Cristian Martínez (M)",
+            "14. Carlos Harvey (M)",
+            "11. Yoel Bárcenas (M)",
+            "7. José Luis Rodríguez (M)",
+            "17. José Fajardo (F)"
+          ],
+          "source": "Dernière compo connue",
+          "sourceDate": "2026-06-23T23:00:00+00:00",
+          "sourceMatch": "Panama 0-1 Croatie"
         },
         "away": {
-          "team": "England",
-          "formation": null,
-          "players": []
+          "team": "Angleterre",
+          "formation": "4-2-3-1",
+          "players": [
+            "1. Jordan Pickford (G)",
+            "24. Reece James (D)",
+            "2. Ezri Konsa (D)",
+            "6. Marc Guéhi (D)",
+            "25. Djed Spence (D)",
+            "8. Elliot Anderson (M)",
+            "4. Declan Rice (M)",
+            "20. Noni Madueke (M)",
+            "10. Jude Bellingham (M)",
+            "18. Anthony Gordon (M)",
+            "9. Harry Kane (F)"
+          ],
+          "source": "Dernière compo connue",
+          "sourceDate": "2026-06-23T20:00:00+00:00",
+          "sourceMatch": "Angleterre 0-0 Ghana"
         }
       },
       "stats": {
@@ -5487,11 +7625,13 @@
         "away": []
       },
       "winProbability": {
-        "home": null,
-        "draw": null,
-        "away": null
+        "home": 10,
+        "draw": 45,
+        "away": 45
       },
-      "expertDiscussion": []
+      "expertDiscussion": [
+        "Combo Winner : England and -3.5 goals"
+      ]
     },
     {
       "id": "1489419",
@@ -5500,10 +7640,10 @@
       "date": "2026-06-27T23:30:00+00:00",
       "venue": "Hard Rock Stadium",
       "city": "Miami",
-      "home": "Colombia",
+      "home": "Colombie",
       "away": "Portugal",
-      "homeCoach": null,
-      "awayCoach": null,
+      "homeCoach": "Nestor Lorenzo",
+      "awayCoach": "Roberto Martinez",
       "score": {
         "home": null,
         "away": null
@@ -5529,14 +7669,44 @@
       },
       "probableLineups": {
         "home": {
-          "team": "Colombia",
-          "formation": null,
-          "players": []
+          "team": "Colombie",
+          "formation": "4-3-3",
+          "players": [
+            "12. Camilo Vargas (G)",
+            "2. Daniel Muñoz (D)",
+            "23. Davinson Sánchez (D)",
+            "3. Jhon Lucumí (D)",
+            "17. Johan Mojica (D)",
+            "14. Gustavo Puerta (M)",
+            "16. Jefferson Lerma (M)",
+            "11. Jhon Arias (M)",
+            "10. James Rodríguez (F)",
+            "25. Luis Javier Suárez (F)",
+            "7. Luis Díaz (F)"
+          ],
+          "source": "Dernière compo connue",
+          "sourceDate": "2026-06-24T02:00:00+00:00",
+          "sourceMatch": "Colombie 1-0 Congo DR"
         },
         "away": {
           "team": "Portugal",
-          "formation": null,
-          "players": []
+          "formation": "4-2-3-1",
+          "players": [
+            "1. Diogo Costa (G)",
+            "20. João Cancelo (D)",
+            "3. Rúben Dias (D)",
+            "13. Renato Veiga (D)",
+            "25. Nuno Mendes (D)",
+            "15. João Neves (M)",
+            "23. Vitinha (M)",
+            "18. Pedro Neto (M)",
+            "8. Bruno Fernandes (M)",
+            "11. João Félix (M)",
+            "7. Cristiano Ronaldo (F)"
+          ],
+          "source": "Dernière compo connue",
+          "sourceDate": "2026-06-23T17:00:00+00:00",
+          "sourceMatch": "Portugal 5-0 Ouzbékistan"
         }
       },
       "stats": {
@@ -5566,11 +7736,13 @@
         "away": []
       },
       "winProbability": {
-        "home": null,
-        "draw": null,
-        "away": null
+        "home": 35,
+        "draw": 35,
+        "away": 30
       },
-      "expertDiscussion": []
+      "expertDiscussion": [
+        "Double chance : Colombia or draw"
+      ]
     },
     {
       "id": "1539013",
@@ -5580,9 +7752,9 @@
       "venue": "Mercedes-Benz Stadium",
       "city": "Atlanta",
       "home": "Congo DR",
-      "away": "Uzbekistan",
-      "homeCoach": null,
-      "awayCoach": null,
+      "away": "Ouzbékistan",
+      "homeCoach": "Sebastien Desabre",
+      "awayCoach": "Fabio Cannavaro",
       "score": {
         "home": null,
         "away": null
@@ -5609,13 +7781,43 @@
       "probableLineups": {
         "home": {
           "team": "Congo DR",
-          "formation": null,
-          "players": []
+          "formation": "5-3-2",
+          "players": [
+            "1. Lionel Mpasi Nzau (G)",
+            "2. Aaron Wan-Bissaka (D)",
+            "22. Chancel Mbemba (D)",
+            "4. Axel Tuanzebe (D)",
+            "3. Steve Kapuadi (D)",
+            "26. Arthur Masuaku (D)",
+            "6. Ngal'ayel Mukau (M)",
+            "8. Samuel Moutoussamy (M)",
+            "25. Edo Kayembe (M)",
+            "17. Cédric Bakambu (F)",
+            "20. Yoane Wissa (F)"
+          ],
+          "source": "Dernière compo connue",
+          "sourceDate": "2026-06-24T02:00:00+00:00",
+          "sourceMatch": "Colombie 1-0 Congo DR"
         },
         "away": {
-          "team": "Uzbekistan",
-          "formation": null,
-          "players": []
+          "team": "Ouzbékistan",
+          "formation": "3-4-2-1",
+          "players": [
+            "12. Abduvokhid Nematov (G)",
+            "2. Abdukodir Khusanov (D)",
+            "18. Abdulla Abdullaev (D)",
+            "5. Rustam Ashurmatov (D)",
+            "24. Bekhruz Karimov (M)",
+            "9. Odiljon Khamrobekov (M)",
+            "7. Otabek Shukurov (M)",
+            "13. Sherzod Nasrullaev (M)",
+            "19. Azizjon Ganiev (F)",
+            "22. Abbosbek Fayzullaev (F)",
+            "14. Eldor Shomurodov (F)"
+          ],
+          "source": "Dernière compo connue",
+          "sourceDate": "2026-06-23T17:00:00+00:00",
+          "sourceMatch": "Portugal 5-0 Ouzbékistan"
         }
       },
       "stats": {
@@ -5645,11 +7847,13 @@
         "away": []
       },
       "winProbability": {
-        "home": null,
-        "draw": null,
-        "away": null
+        "home": 45,
+        "draw": 45,
+        "away": 10
       },
-      "expertDiscussion": []
+      "expertDiscussion": [
+        "Double chance : Congo DR or draw"
+      ]
     },
     {
       "id": "1489418",
@@ -5659,9 +7863,9 @@
       "venue": "Arrowhead Stadium",
       "city": "Kansas City",
       "home": "Algeria",
-      "away": "Austria",
-      "homeCoach": null,
-      "awayCoach": null,
+      "away": "Autriche",
+      "homeCoach": "Vladimir Petkovic",
+      "awayCoach": "Ralf Rangnick",
       "score": {
         "home": null,
         "away": null
@@ -5688,13 +7892,43 @@
       "probableLineups": {
         "home": {
           "team": "Algeria",
-          "formation": null,
-          "players": []
+          "formation": "4-2-3-1",
+          "players": [
+            "23. Luca Zidane (G)",
+            "17. Rafik Belghali (D)",
+            "2. Aïssa Mandi (D)",
+            "21. Ramy Bensebaini (D)",
+            "15. Rayan Aït-Nouri (D)",
+            "14. Hicham Boudaoui (M)",
+            "6. Ramiz Zerrouki (M)",
+            "7. Riyad Mahrez (M)",
+            "22. Ibrahim Maza (M)",
+            "10. Farès Chaïbi (M)",
+            "9. Amine Gouiri (F)"
+          ],
+          "source": "Dernière compo connue",
+          "sourceDate": "2026-06-23T03:00:00+00:00",
+          "sourceMatch": "Jordanie 1-2 Algeria"
         },
         "away": {
-          "team": "Austria",
-          "formation": null,
-          "players": []
+          "team": "Autriche",
+          "formation": "4-2-3-1",
+          "players": [
+            "1. A. Schlager (G)",
+            "5. S. Posch (D)",
+            "3. K. Danso (D)",
+            "8. D. Alaba (D)",
+            "20. K. Laimer (D)",
+            "6. N. Seiwald (M)",
+            "4. X. Schlager (M)",
+            "18. R. Schmid (M)",
+            "24. P. Wanner (M)",
+            "9. M. Sabitzer (M)",
+            "11. M. Gregoritsch (F)"
+          ],
+          "source": "Dernière compo connue",
+          "sourceDate": "2026-06-22T17:00:00+00:00",
+          "sourceMatch": "Argentine 2-0 Autriche"
         }
       },
       "stats": {
@@ -5724,11 +7958,13 @@
         "away": []
       },
       "winProbability": {
-        "home": null,
-        "draw": null,
-        "away": null
+        "home": 10,
+        "draw": 45,
+        "away": 45
       },
-      "expertDiscussion": []
+      "expertDiscussion": [
+        "Double chance : draw or Austria"
+      ]
     },
     {
       "id": "1489421",
@@ -5737,10 +7973,10 @@
       "date": "2026-06-28T02:00:00+00:00",
       "venue": "AT&T Stadium",
       "city": "Dallas",
-      "home": "Jordan",
-      "away": "Argentina",
-      "homeCoach": null,
-      "awayCoach": null,
+      "home": "Jordanie",
+      "away": "Argentine",
+      "homeCoach": "Jamal Sellami",
+      "awayCoach": "Lionel Scaloni",
       "score": {
         "home": null,
         "away": null
@@ -5766,14 +8002,44 @@
       },
       "probableLineups": {
         "home": {
-          "team": "Jordan",
-          "formation": null,
-          "players": []
+          "team": "Jordanie",
+          "formation": "3-4-2-1",
+          "players": [
+            "1. Yazeed Abu Laila (G)",
+            "3. Abdallah Nasib (D)",
+            "5. Yazan Al-Arab (D)",
+            "4. Husam Ali Mohammad Abudahab (D)",
+            "23. Ehsan Haddad (M)",
+            "21. Nizar Al-Rashdan (M)",
+            "8. Noor Al-Rawabdeh (M)",
+            "20. Mohannad Abu Taha (M)",
+            "9. Ali Olwan (F)",
+            "13. Mahmoud Al-Mardi (F)",
+            "10. Mousa Tamari (F)"
+          ],
+          "source": "Dernière compo connue",
+          "sourceDate": "2026-06-23T03:00:00+00:00",
+          "sourceMatch": "Jordanie 1-2 Algeria"
         },
         "away": {
-          "team": "Argentina",
-          "formation": null,
-          "players": []
+          "team": "Argentine",
+          "formation": "4-4-2",
+          "players": [
+            "23. E. Martinez (G)",
+            "26. N. Molina (D)",
+            "13. C. Romero (D)",
+            "6. L. Martinez (D)",
+            "25. F. Medina (D)",
+            "7. R. de Paul (M)",
+            "20. A. Mac Allister (M)",
+            "24. E. Fernandez (M)",
+            "16. T. Almada (M)",
+            "10. L. Messi (F)",
+            "22. L. Martinez (F)"
+          ],
+          "source": "Dernière compo connue",
+          "sourceDate": "2026-06-22T17:00:00+00:00",
+          "sourceMatch": "Argentine 2-0 Autriche"
         }
       },
       "stats": {
@@ -5803,20 +8069,141 @@
         "away": []
       },
       "winProbability": {
+        "home": 0,
+        "draw": 50,
+        "away": 50
+      },
+      "expertDiscussion": [
+        "Winner : Argentina"
+      ]
+    },
+    {
+      "id": "1561329",
+      "stage": "16es",
+      "group": null,
+      "date": "2026-06-28T19:00:00+00:00",
+      "venue": "SoFi Stadium",
+      "city": null,
+      "home": "Afrique du Sud",
+      "away": "Canada",
+      "homeCoach": "Hugo Broos",
+      "awayCoach": "Jesse Marsch",
+      "score": {
         "home": null,
-        "draw": null,
         "away": null
       },
-      "expertDiscussion": []
+      "scorers": [],
+      "highlights": [],
+      "externalIds": {
+        "apiFootball": "1561329"
+      },
+      "status": "upcoming",
+      "minute": null,
+      "lineups": {
+        "home": {
+          "team": "Afrique du Sud",
+          "formation": null,
+          "players": []
+        },
+        "away": {
+          "team": "Canada",
+          "formation": null,
+          "players": []
+        }
+      },
+      "probableLineups": {
+        "home": {
+          "team": "Afrique du Sud",
+          "formation": "4-2-3-1",
+          "players": [
+            "1. Ronwen Williams (G)",
+            "20. Khuliso Mudau (D)",
+            "21. Ime Okon (D)",
+            "14. Mbekezeli Mbokazi (D)",
+            "6. Aubrey Modiba (D)",
+            "5. Thalente Mbatha (M)",
+            "13. Sphephelo Sithole (M)",
+            "12. Thapelo Maseko (M)",
+            "10. Relebohile Mofokeng (M)",
+            "7. Oswin Appollis (M)",
+            "17. Evidence Makgopa (F)"
+          ],
+          "source": "Dernière compo connue",
+          "sourceDate": "2026-06-25T01:00:00+00:00",
+          "sourceMatch": "Afrique du Sud 1-0 République de Corée"
+        },
+        "away": {
+          "team": "Canada",
+          "formation": "4-4-2",
+          "players": [
+            "16. Maxime Crépeau (G)",
+            "2. Alistair Johnston (D)",
+            "4. Luc De Fougerolles (D)",
+            "13. Derek Cornelius (D)",
+            "22. Richie Laryea (D)",
+            "17. Tajon Buchanan (M)",
+            "25. Nathan-Dylan Saliba (M)",
+            "6. Mathieu Choinière (M)",
+            "20. Ali Ahmed (M)",
+            "10. Jonathan David (F)",
+            "9. Cyle Larin (F)"
+          ],
+          "source": "Dernière compo connue",
+          "sourceDate": "2026-06-24T19:00:00+00:00",
+          "sourceMatch": "Suisse 2-1 Canada"
+        }
+      },
+      "stats": {
+        "possession": {
+          "home": null,
+          "away": null
+        },
+        "shots": {
+          "home": null,
+          "away": null
+        },
+        "shotsOnTarget": {
+          "home": null,
+          "away": null
+        },
+        "corners": {
+          "home": null,
+          "away": null
+        },
+        "fouls": {
+          "home": null,
+          "away": null
+        }
+      },
+      "playerRatings": {
+        "home": [],
+        "away": []
+      },
+      "winProbability": {
+        "home": 35,
+        "draw": 35,
+        "away": 30
+      },
+      "expertDiscussion": [
+        "Double chance : South Africa or draw"
+      ]
     }
   ],
   "knockout": {},
   "scheduleSync": {
     "provider": "api-football",
-    "checkedAt": "2026-06-24T17:03:29.375905Z",
+    "checkedAt": "2026-06-25T07:13:33.979427Z",
     "league": 1,
     "season": 2026,
-    "updatedMatches": 5,
-    "insertedMatches": 67
+    "updatedMatches": 12,
+    "insertedMatches": 1,
+    "lineupsChecked": 6,
+    "lineupsUpdated": 6,
+    "fallbackLineups": 19
+  },
+  "predictionSync": {
+    "provider": "api-football",
+    "checkedAt": "2026-06-25T07:23:08.508556Z",
+    "updatedMatches": 19
   }
 }

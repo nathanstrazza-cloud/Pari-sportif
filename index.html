@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-    <meta name="theme-color" content="#005CFF" />
+    <meta name="theme-color" content="#FFFFFF" />
     <meta
       name="description"
       content="Pari Sportif, PWA mobile-first pour suivre la Coupe du Monde FIFA 2026."
@@ -11,7 +11,7 @@
     <title>Pari Sportif</title>
     <link rel="manifest" href="manifest.json" />
     <link rel="icon" href="logo.jpg" type="image/jpeg" />
-    <link rel="stylesheet" href="styles.css?v=5" />
+    <link rel="stylesheet" href="styles.css?v=7" />
   </head>
   <body>
     <div class="loading-screen" id="loadingScreen" aria-live="polite">
@@ -24,26 +24,6 @@
     </div>
 
     <main class="app-shell" id="app" aria-busy="true">
-      <header class="topbar">
-        <div class="brand">
-          <img src="logo.jpg" alt="" class="brand-logo" />
-          <div>
-            <p class="eyebrow">Coupe du Monde FIFA 2026</p>
-            <h1>Pari Sportif</h1>
-          </div>
-        </div>
-        <div class="header-actions">
-          <button class="install-button" id="installButton" type="button" hidden>
-            Installer
-          </button>
-          <span class="refresh-pill" id="refreshPill">Synchronisation locale</span>
-        </div>
-      </header>
-
-      <p class="warning">
-        Paris sportifs réservés aux 18+. Analyse informative, pas une incitation à parier.
-      </p>
-
       <section
         class="tab-panel is-active"
         id="panel-matches"
@@ -123,6 +103,6 @@
     </nav>
 
     <noscript>Activez JavaScript pour utiliser Pari Sportif.</noscript>
-    <script src="app.js?v=5" defer></script>
+    <script src="app.js?v=7" defer></script>
   </body>
 </html>
