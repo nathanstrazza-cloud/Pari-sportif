@@ -22,10 +22,12 @@ jobs:
           python-version: "3.11"
 
       - name: Lancer les scripts de mise à jour
+        env:
+        API_FOOTBALL_KEY: ${{ secrets.API_FOOTBALL_KEY }}
         run: |
-          python scripts/sync_competition_data.py
-          python scripts/sync_live_scores.py
-          python scripts/morning_world_cup_sync.py
+        python scripts/sync_competition_data.py
+        python scripts/sync_live_scores.py
+        python scripts/morning_world_cup_sync.py
 
       - name: Sauvegarder les fichiers modifiés
         run: |
