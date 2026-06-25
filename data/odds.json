@@ -1,6 +1,1671 @@
 {
   "lastUpdated": "2026-06-25T07:50:32.414475Z",
   "source": "api-football",
+  "betSuggestionsSource": {
+    "bookmaker": "Betclic",
+    "checkedAt": "2026-06-25T17:45:00+02:00",
+    "competitionUrl": "https://www.betclic.fr/football-sfootball/coupe-du-monde-2026-c1"
+  },
+  "matchOdds": {
+    "1489409": [
+      {
+        "bookmaker": "Betclic",
+        "label": "Curaçao",
+        "odd": 16,
+        "sourceUrl": "https://www.betclic.fr/football-sfootball/coupe-du-monde-2026-c1/curacao-cote-d-ivoire-m1043586208538624"
+      },
+      {
+        "bookmaker": "Betclic",
+        "label": "Nul",
+        "odd": 8.5,
+        "sourceUrl": "https://www.betclic.fr/football-sfootball/coupe-du-monde-2026-c1/curacao-cote-d-ivoire-m1043586208538624"
+      },
+      {
+        "bookmaker": "Betclic",
+        "label": "Côte d'Ivoire",
+        "odd": 1.16,
+        "sourceUrl": "https://www.betclic.fr/football-sfootball/coupe-du-monde-2026-c1/curacao-cote-d-ivoire-m1043586208538624"
+      }
+    ],
+    "1489410": [
+      {
+        "bookmaker": "Betclic",
+        "label": "Équateur",
+        "odd": 5.5,
+        "sourceUrl": "https://www.betclic.fr/football-sfootball/coupe-du-monde-2026-c1/equateur-allemagne-m1043586210607104"
+      },
+      {
+        "bookmaker": "Betclic",
+        "label": "Nul",
+        "odd": 5,
+        "sourceUrl": "https://www.betclic.fr/football-sfootball/coupe-du-monde-2026-c1/equateur-allemagne-m1043586210607104"
+      },
+      {
+        "bookmaker": "Betclic",
+        "label": "Allemagne",
+        "odd": 1.54,
+        "sourceUrl": "https://www.betclic.fr/football-sfootball/coupe-du-monde-2026-c1/equateur-allemagne-m1043586210607104"
+      }
+    ],
+    "1489411": [
+      {
+        "bookmaker": "Betclic",
+        "label": "Paraguay",
+        "odd": 2.6,
+        "sourceUrl": "https://www.betclic.fr/football-sfootball/coupe-du-monde-2026-c1/paraguay-australie-m1043812705570816"
+      },
+      {
+        "bookmaker": "Betclic",
+        "label": "Nul",
+        "odd": 2.3,
+        "sourceUrl": "https://www.betclic.fr/football-sfootball/coupe-du-monde-2026-c1/paraguay-australie-m1043812705570816"
+      },
+      {
+        "bookmaker": "Betclic",
+        "label": "Australie",
+        "odd": 4.25,
+        "sourceUrl": "https://www.betclic.fr/football-sfootball/coupe-du-monde-2026-c1/paraguay-australie-m1043812705570816"
+      }
+    ],
+    "1489412": [
+      {
+        "bookmaker": "Betclic",
+        "label": "Tunisie",
+        "odd": 30,
+        "sourceUrl": "https://www.betclic.fr/football-sfootball/coupe-du-monde-2026-c1/tunisie-pays-bas-m1043699458940928"
+      },
+      {
+        "bookmaker": "Betclic",
+        "label": "Nul",
+        "odd": 11,
+        "sourceUrl": "https://www.betclic.fr/football-sfootball/coupe-du-monde-2026-c1/tunisie-pays-bas-m1043699458940928"
+      },
+      {
+        "bookmaker": "Betclic",
+        "label": "Pays-Bas",
+        "odd": 1.1,
+        "sourceUrl": "https://www.betclic.fr/football-sfootball/coupe-du-monde-2026-c1/tunisie-pays-bas-m1043699458940928"
+      }
+    ],
+    "1489413": [
+      {
+        "bookmaker": "Betclic",
+        "label": "Cap-Vert",
+        "odd": 2.47,
+        "sourceUrl": "https://www.betclic.fr/football-sfootball/coupe-du-monde-2026-c1/cap-vert-arabie-saoudite-m1044643189964800"
+      },
+      {
+        "bookmaker": "Betclic",
+        "label": "Nul",
+        "odd": 3.43,
+        "sourceUrl": "https://www.betclic.fr/football-sfootball/coupe-du-monde-2026-c1/cap-vert-arabie-saoudite-m1044643189964800"
+      },
+      {
+        "bookmaker": "Betclic",
+        "label": "Arabie saoudite",
+        "odd": 2.82,
+        "sourceUrl": "https://www.betclic.fr/football-sfootball/coupe-du-monde-2026-c1/cap-vert-arabie-saoudite-m1044643189964800"
+      }
+    ],
+    "1489414": [
+      {
+        "bookmaker": "Betclic",
+        "label": "Égypte",
+        "odd": 2.45,
+        "sourceUrl": "https://www.betclic.fr/football-sfootball/coupe-du-monde-2026-c1/egypte-iran-m1044756422541312"
+      },
+      {
+        "bookmaker": "Betclic",
+        "label": "Nul",
+        "odd": 2.67,
+        "sourceUrl": "https://www.betclic.fr/football-sfootball/coupe-du-monde-2026-c1/egypte-iran-m1044756422541312"
+      },
+      {
+        "bookmaker": "Betclic",
+        "label": "Iran",
+        "odd": 3.73,
+        "sourceUrl": "https://www.betclic.fr/football-sfootball/coupe-du-monde-2026-c1/egypte-iran-m1044756422541312"
+      }
+    ],
+    "1489415": [
+      {
+        "bookmaker": "Betclic",
+        "label": "Nouvelle-Zélande",
+        "odd": 17.75,
+        "sourceUrl": "https://www.betclic.fr/football-sfootball/coupe-du-monde-2026-c1/nouvelle-zelande-belgique-m1044756423938048"
+      },
+      {
+        "bookmaker": "Betclic",
+        "label": "Nul",
+        "odd": 8.5,
+        "sourceUrl": "https://www.betclic.fr/football-sfootball/coupe-du-monde-2026-c1/nouvelle-zelande-belgique-m1044756423938048"
+      },
+      {
+        "bookmaker": "Betclic",
+        "label": "Belgique",
+        "odd": 1.14,
+        "sourceUrl": "https://www.betclic.fr/football-sfootball/coupe-du-monde-2026-c1/nouvelle-zelande-belgique-m1044756423938048"
+      }
+    ],
+    "1489416": [
+      {
+        "bookmaker": "Betclic",
+        "label": "Norvège",
+        "odd": 5.1,
+        "sourceUrl": "https://www.betclic.fr/football-sfootball/coupe-du-monde-2026-c1/norvege-france-m1117886904311808"
+      },
+      {
+        "bookmaker": "Betclic",
+        "label": "Nul",
+        "odd": 4.4,
+        "sourceUrl": "https://www.betclic.fr/football-sfootball/coupe-du-monde-2026-c1/norvege-france-m1117886904311808"
+      },
+      {
+        "bookmaker": "Betclic",
+        "label": "France",
+        "odd": 1.6,
+        "sourceUrl": "https://www.betclic.fr/football-sfootball/coupe-du-monde-2026-c1/norvege-france-m1117886904311808"
+      }
+    ],
+    "1489417": [
+      {
+        "bookmaker": "Betclic",
+        "label": "Uruguay",
+        "odd": 7.25,
+        "sourceUrl": "https://www.betclic.fr/football-sfootball/coupe-du-monde-2026-c1/uruguay-espagne-m1044643178733568"
+      },
+      {
+        "bookmaker": "Betclic",
+        "label": "Nul",
+        "odd": 4.2,
+        "sourceUrl": "https://www.betclic.fr/football-sfootball/coupe-du-monde-2026-c1/uruguay-espagne-m1044643178733568"
+      },
+      {
+        "bookmaker": "Betclic",
+        "label": "Espagne",
+        "odd": 1.48,
+        "sourceUrl": "https://www.betclic.fr/football-sfootball/coupe-du-monde-2026-c1/uruguay-espagne-m1044643178733568"
+      }
+    ],
+    "1489418": [
+      {
+        "bookmaker": "Betclic",
+        "label": "Algérie",
+        "odd": 3.68,
+        "sourceUrl": "https://www.betclic.fr/football-sfootball/coupe-du-monde-2026-c1/algerie-autriche-m1117886803468288"
+      },
+      {
+        "bookmaker": "Betclic",
+        "label": "Nul",
+        "odd": 2.27,
+        "sourceUrl": "https://www.betclic.fr/football-sfootball/coupe-du-monde-2026-c1/algerie-autriche-m1117886803468288"
+      },
+      {
+        "bookmaker": "Betclic",
+        "label": "Autriche",
+        "odd": 2.72,
+        "sourceUrl": "https://www.betclic.fr/football-sfootball/coupe-du-monde-2026-c1/algerie-autriche-m1117886803468288"
+      }
+    ],
+    "1489419": [
+      {
+        "bookmaker": "Betclic",
+        "label": "Colombie",
+        "odd": 4.35,
+        "sourceUrl": "https://www.betclic.fr/football-sfootball/coupe-du-monde-2026-c1/colombie-portugal-m1101087127207936"
+      },
+      {
+        "bookmaker": "Betclic",
+        "label": "Nul",
+        "odd": 3.7,
+        "sourceUrl": "https://www.betclic.fr/football-sfootball/coupe-du-monde-2026-c1/colombie-portugal-m1101087127207936"
+      },
+      {
+        "bookmaker": "Betclic",
+        "label": "Portugal",
+        "odd": 1.82,
+        "sourceUrl": "https://www.betclic.fr/football-sfootball/coupe-du-monde-2026-c1/colombie-portugal-m1101087127207936"
+      }
+    ],
+    "1489420": [
+      {
+        "bookmaker": "Betclic",
+        "label": "Croatie",
+        "odd": 1.76,
+        "sourceUrl": "https://www.betclic.fr/football-sfootball/coupe-du-monde-2026-c1/croatie-ghana-m1117886706999296"
+      },
+      {
+        "bookmaker": "Betclic",
+        "label": "Nul",
+        "odd": 3.25,
+        "sourceUrl": "https://www.betclic.fr/football-sfootball/coupe-du-monde-2026-c1/croatie-ghana-m1117886706999296"
+      },
+      {
+        "bookmaker": "Betclic",
+        "label": "Ghana",
+        "odd": 5.75,
+        "sourceUrl": "https://www.betclic.fr/football-sfootball/coupe-du-monde-2026-c1/croatie-ghana-m1117886706999296"
+      }
+    ],
+    "1489421": [
+      {
+        "bookmaker": "Betclic",
+        "label": "Jordanie",
+        "odd": 15.5,
+        "sourceUrl": "https://www.betclic.fr/football-sfootball/coupe-du-monde-2026-c1/jordanie-argentine-m1117887394177024"
+      },
+      {
+        "bookmaker": "Betclic",
+        "label": "Nul",
+        "odd": 7.5,
+        "sourceUrl": "https://www.betclic.fr/football-sfootball/coupe-du-monde-2026-c1/jordanie-argentine-m1117887394177024"
+      },
+      {
+        "bookmaker": "Betclic",
+        "label": "Argentine",
+        "odd": 1.17,
+        "sourceUrl": "https://www.betclic.fr/football-sfootball/coupe-du-monde-2026-c1/jordanie-argentine-m1117887394177024"
+      }
+    ],
+    "1489422": [
+      {
+        "bookmaker": "Betclic",
+        "label": "Panama",
+        "odd": 16,
+        "sourceUrl": "https://www.betclic.fr/football-sfootball/coupe-du-monde-2026-c1/panama-angleterre-m1117886801473536"
+      },
+      {
+        "bookmaker": "Betclic",
+        "label": "Nul",
+        "odd": 8,
+        "sourceUrl": "https://www.betclic.fr/football-sfootball/coupe-du-monde-2026-c1/panama-angleterre-m1117886801473536"
+      },
+      {
+        "bookmaker": "Betclic",
+        "label": "Angleterre",
+        "odd": 1.16,
+        "sourceUrl": "https://www.betclic.fr/football-sfootball/coupe-du-monde-2026-c1/panama-angleterre-m1117886801473536"
+      }
+    ],
+    "1539011": [
+      {
+        "bookmaker": "Betclic",
+        "label": "Japon",
+        "odd": 1.88,
+        "sourceUrl": "https://www.betclic.fr/football-sfootball/coupe-du-monde-2026-c1/japon-suede-m1074354673983488"
+      },
+      {
+        "bookmaker": "Betclic",
+        "label": "Nul",
+        "odd": 3.55,
+        "sourceUrl": "https://www.betclic.fr/football-sfootball/coupe-du-monde-2026-c1/japon-suede-m1074354673983488"
+      },
+      {
+        "bookmaker": "Betclic",
+        "label": "Suède",
+        "odd": 4.5,
+        "sourceUrl": "https://www.betclic.fr/football-sfootball/coupe-du-monde-2026-c1/japon-suede-m1074354673983488"
+      }
+    ],
+    "1539012": [
+      {
+        "bookmaker": "Betclic",
+        "label": "Turquie",
+        "odd": 3.8,
+        "sourceUrl": "https://www.betclic.fr/football-sfootball/coupe-du-monde-2026-c1/turquie-usa-m1074358865928192"
+      },
+      {
+        "bookmaker": "Betclic",
+        "label": "Nul",
+        "odd": 4.2,
+        "sourceUrl": "https://www.betclic.fr/football-sfootball/coupe-du-monde-2026-c1/turquie-usa-m1074358865928192"
+      },
+      {
+        "bookmaker": "Betclic",
+        "label": "USA",
+        "odd": 1.86,
+        "sourceUrl": "https://www.betclic.fr/football-sfootball/coupe-du-monde-2026-c1/turquie-usa-m1074358865928192"
+      }
+    ],
+    "1539013": [
+      {
+        "bookmaker": "Betclic",
+        "label": "RD Congo",
+        "odd": 1.74,
+        "sourceUrl": "https://www.betclic.fr/football-sfootball/coupe-du-monde-2026-c1/rd-congo-ouzbekistan-m1117886900039680"
+      },
+      {
+        "bookmaker": "Betclic",
+        "label": "Nul",
+        "odd": 4,
+        "sourceUrl": "https://www.betclic.fr/football-sfootball/coupe-du-monde-2026-c1/rd-congo-ouzbekistan-m1117886900039680"
+      },
+      {
+        "bookmaker": "Betclic",
+        "label": "Ouzbékistan",
+        "odd": 4.4,
+        "sourceUrl": "https://www.betclic.fr/football-sfootball/coupe-du-monde-2026-c1/rd-congo-ouzbekistan-m1117886900039680"
+      }
+    ],
+    "1539074": [
+      {
+        "bookmaker": "Betclic",
+        "label": "Sénégal",
+        "odd": 1.2,
+        "sourceUrl": "https://www.betclic.fr/football-sfootball/coupe-du-monde-2026-c1/senegal-irak-m1117886432563200"
+      },
+      {
+        "bookmaker": "Betclic",
+        "label": "Nul",
+        "odd": 7,
+        "sourceUrl": "https://www.betclic.fr/football-sfootball/coupe-du-monde-2026-c1/senegal-irak-m1117886432563200"
+      },
+      {
+        "bookmaker": "Betclic",
+        "label": "Irak",
+        "odd": 13,
+        "sourceUrl": "https://www.betclic.fr/football-sfootball/coupe-du-monde-2026-c1/senegal-irak-m1117886432563200"
+      }
+    ]
+  },
+  "betSuggestions": {
+    "1489409": [
+      {
+        "bookmaker": "Betclic",
+        "market": "Nombre total de buts",
+        "label": "Plus de 2,5 buts",
+        "odd": 1.42,
+        "sourceUrl": "https://www.betclic.fr/football-sfootball/coupe-du-monde-2026-c1/curacao-cote-d-ivoire-m1043586208538624"
+      },
+      {
+        "bookmaker": "Betclic",
+        "market": "Nombre total de buts",
+        "label": "Moins de 2,5 buts",
+        "odd": 2.65,
+        "sourceUrl": "https://www.betclic.fr/football-sfootball/coupe-du-monde-2026-c1/curacao-cote-d-ivoire-m1043586208538624"
+      },
+      {
+        "bookmaker": "Betclic",
+        "market": "Les 2 équipes marquent",
+        "label": "Oui",
+        "odd": 2.35,
+        "sourceUrl": "https://www.betclic.fr/football-sfootball/coupe-du-monde-2026-c1/curacao-cote-d-ivoire-m1043586208538624"
+      },
+      {
+        "bookmaker": "Betclic",
+        "market": "Les 2 équipes marquent ou +2,5 buts",
+        "label": "Oui",
+        "odd": 1.4,
+        "sourceUrl": "https://www.betclic.fr/football-sfootball/coupe-du-monde-2026-c1/curacao-cote-d-ivoire-m1043586208538624"
+      },
+      {
+        "bookmaker": "Betclic",
+        "market": "Buteur",
+        "label": "Gervane Kastaneer buteur",
+        "odd": 6.9,
+        "sourceUrl": "https://www.betclic.fr/football-sfootball/coupe-du-monde-2026-c1/curacao-cote-d-ivoire-m1043586208538624"
+      },
+      {
+        "bookmaker": "Betclic",
+        "market": "Buteur",
+        "label": "Jurgen Locadia buteur",
+        "odd": 6.9,
+        "sourceUrl": "https://www.betclic.fr/football-sfootball/coupe-du-monde-2026-c1/curacao-cote-d-ivoire-m1043586208538624"
+      },
+      {
+        "bookmaker": "Betclic",
+        "market": "Buteur",
+        "label": "Jearl Margaritha buteur",
+        "odd": 8,
+        "sourceUrl": "https://www.betclic.fr/football-sfootball/coupe-du-monde-2026-c1/curacao-cote-d-ivoire-m1043586208538624"
+      },
+      {
+        "bookmaker": "Betclic",
+        "market": "Joueur décisif",
+        "label": "Jurgen Locadia décisif",
+        "odd": 4.5,
+        "sourceUrl": "https://www.betclic.fr/football-sfootball/coupe-du-monde-2026-c1/curacao-cote-d-ivoire-m1043586208538624"
+      },
+      {
+        "bookmaker": "Betclic",
+        "market": "Score exact",
+        "label": "0 - 1",
+        "odd": 7.75,
+        "sourceUrl": "https://www.betclic.fr/football-sfootball/coupe-du-monde-2026-c1/curacao-cote-d-ivoire-m1043586208538624"
+      },
+      {
+        "bookmaker": "Betclic",
+        "market": "Équipe qui marque",
+        "label": "Côte d'Ivoire marque le 1er but",
+        "odd": 1.15,
+        "sourceUrl": "https://www.betclic.fr/football-sfootball/coupe-du-monde-2026-c1/curacao-cote-d-ivoire-m1043586208538624"
+      }
+    ],
+    "1489410": [
+      {
+        "bookmaker": "Betclic",
+        "market": "Nombre total de buts",
+        "label": "Plus de 2,5 buts",
+        "odd": 1.61,
+        "sourceUrl": "https://www.betclic.fr/football-sfootball/coupe-du-monde-2026-c1/equateur-allemagne-m1043586210607104"
+      },
+      {
+        "bookmaker": "Betclic",
+        "market": "Nombre total de buts",
+        "label": "Moins de 2,5 buts",
+        "odd": 2.18,
+        "sourceUrl": "https://www.betclic.fr/football-sfootball/coupe-du-monde-2026-c1/equateur-allemagne-m1043586210607104"
+      },
+      {
+        "bookmaker": "Betclic",
+        "market": "Les 2 équipes marquent",
+        "label": "Oui",
+        "odd": 1.71,
+        "sourceUrl": "https://www.betclic.fr/football-sfootball/coupe-du-monde-2026-c1/equateur-allemagne-m1043586210607104"
+      },
+      {
+        "bookmaker": "Betclic",
+        "market": "Les 2 équipes marquent ou +2,5 buts",
+        "label": "Oui",
+        "odd": 1.4,
+        "sourceUrl": "https://www.betclic.fr/football-sfootball/coupe-du-monde-2026-c1/equateur-allemagne-m1043586210607104"
+      },
+      {
+        "bookmaker": "Betclic",
+        "market": "Buteur",
+        "label": "Enner Valencia buteur",
+        "odd": 3.58,
+        "sourceUrl": "https://www.betclic.fr/football-sfootball/coupe-du-monde-2026-c1/equateur-allemagne-m1043586210607104"
+      },
+      {
+        "bookmaker": "Betclic",
+        "market": "Buteur",
+        "label": "Jeremy Arevalo buteur",
+        "odd": 4.25,
+        "sourceUrl": "https://www.betclic.fr/football-sfootball/coupe-du-monde-2026-c1/equateur-allemagne-m1043586210607104"
+      },
+      {
+        "bookmaker": "Betclic",
+        "market": "Buteur",
+        "label": "Jordy Caicedo buteur",
+        "odd": 4.4,
+        "sourceUrl": "https://www.betclic.fr/football-sfootball/coupe-du-monde-2026-c1/equateur-allemagne-m1043586210607104"
+      },
+      {
+        "bookmaker": "Betclic",
+        "market": "Joueur décisif",
+        "label": "Enner Valencia décisif",
+        "odd": 2.75,
+        "sourceUrl": "https://www.betclic.fr/football-sfootball/coupe-du-monde-2026-c1/equateur-allemagne-m1043586210607104"
+      },
+      {
+        "bookmaker": "Betclic",
+        "market": "Score exact",
+        "label": "0 - 1",
+        "odd": 7.5,
+        "sourceUrl": "https://www.betclic.fr/football-sfootball/coupe-du-monde-2026-c1/equateur-allemagne-m1043586210607104"
+      },
+      {
+        "bookmaker": "Betclic",
+        "market": "Équipe qui marque",
+        "label": "Allemagne marque le 1er but",
+        "odd": 1.45,
+        "sourceUrl": "https://www.betclic.fr/football-sfootball/coupe-du-monde-2026-c1/equateur-allemagne-m1043586210607104"
+      }
+    ],
+    "1489411": [
+      {
+        "bookmaker": "Betclic",
+        "market": "Nombre total de buts",
+        "label": "Plus de 2,5 buts",
+        "odd": 3.02,
+        "sourceUrl": "https://www.betclic.fr/football-sfootball/coupe-du-monde-2026-c1/paraguay-australie-m1043812705570816"
+      },
+      {
+        "bookmaker": "Betclic",
+        "market": "Nombre total de buts",
+        "label": "Moins de 2,5 buts",
+        "odd": 1.3,
+        "sourceUrl": "https://www.betclic.fr/football-sfootball/coupe-du-monde-2026-c1/paraguay-australie-m1043812705570816"
+      },
+      {
+        "bookmaker": "Betclic",
+        "market": "Les 2 équipes marquent",
+        "label": "Oui",
+        "odd": 2.1,
+        "sourceUrl": "https://www.betclic.fr/football-sfootball/coupe-du-monde-2026-c1/paraguay-australie-m1043812705570816"
+      },
+      {
+        "bookmaker": "Betclic",
+        "market": "Les 2 équipes marquent ou +2,5 buts",
+        "label": "Oui",
+        "odd": 1.9,
+        "sourceUrl": "https://www.betclic.fr/football-sfootball/coupe-du-monde-2026-c1/paraguay-australie-m1043812705570816"
+      },
+      {
+        "bookmaker": "Betclic",
+        "market": "Buteur",
+        "label": "Alex Arce buteur",
+        "odd": 4.25,
+        "sourceUrl": "https://www.betclic.fr/football-sfootball/coupe-du-monde-2026-c1/paraguay-australie-m1043812705570816"
+      },
+      {
+        "bookmaker": "Betclic",
+        "market": "Buteur",
+        "label": "Isidro Pitta buteur",
+        "odd": 4.45,
+        "sourceUrl": "https://www.betclic.fr/football-sfootball/coupe-du-monde-2026-c1/paraguay-australie-m1043812705570816"
+      },
+      {
+        "bookmaker": "Betclic",
+        "market": "Buteur",
+        "label": "Antonio Sanabria buteur",
+        "odd": 4.65,
+        "sourceUrl": "https://www.betclic.fr/football-sfootball/coupe-du-monde-2026-c1/paraguay-australie-m1043812705570816"
+      },
+      {
+        "bookmaker": "Betclic",
+        "market": "Joueur décisif",
+        "label": "Isidro Pitta décisif",
+        "odd": 3.1,
+        "sourceUrl": "https://www.betclic.fr/football-sfootball/coupe-du-monde-2026-c1/paraguay-australie-m1043812705570816"
+      },
+      {
+        "bookmaker": "Betclic",
+        "market": "Buts par équipe",
+        "label": "Para plus de 1,5 buts",
+        "odd": 2.33,
+        "sourceUrl": "https://www.betclic.fr/football-sfootball/coupe-du-monde-2026-c1/paraguay-australie-m1043812705570816"
+      },
+      {
+        "bookmaker": "Betclic",
+        "market": "Score exact",
+        "label": "1 - 1",
+        "odd": 4.1,
+        "sourceUrl": "https://www.betclic.fr/football-sfootball/coupe-du-monde-2026-c1/paraguay-australie-m1043812705570816"
+      }
+    ],
+    "1489412": [
+      {
+        "bookmaker": "Betclic",
+        "market": "Nombre total de buts",
+        "label": "Plus de 2,5 buts",
+        "odd": 1.36,
+        "sourceUrl": "https://www.betclic.fr/football-sfootball/coupe-du-monde-2026-c1/tunisie-pays-bas-m1043699458940928"
+      },
+      {
+        "bookmaker": "Betclic",
+        "market": "Nombre total de buts",
+        "label": "Moins de 2,5 buts",
+        "odd": 2.92,
+        "sourceUrl": "https://www.betclic.fr/football-sfootball/coupe-du-monde-2026-c1/tunisie-pays-bas-m1043699458940928"
+      },
+      {
+        "bookmaker": "Betclic",
+        "market": "Les 2 équipes marquent",
+        "label": "Oui",
+        "odd": 2.98,
+        "sourceUrl": "https://www.betclic.fr/football-sfootball/coupe-du-monde-2026-c1/tunisie-pays-bas-m1043699458940928"
+      },
+      {
+        "bookmaker": "Betclic",
+        "market": "Les 2 équipes marquent ou +2,5 buts",
+        "label": "Oui",
+        "odd": 1.42,
+        "sourceUrl": "https://www.betclic.fr/football-sfootball/coupe-du-monde-2026-c1/tunisie-pays-bas-m1043699458940928"
+      },
+      {
+        "bookmaker": "Betclic",
+        "market": "Buteur",
+        "label": "Rayan Elloumi buteur",
+        "odd": 9,
+        "sourceUrl": "https://www.betclic.fr/football-sfootball/coupe-du-monde-2026-c1/tunisie-pays-bas-m1043699458940928"
+      },
+      {
+        "bookmaker": "Betclic",
+        "market": "Buteur",
+        "label": "Firas Chaouat buteur",
+        "odd": 9,
+        "sourceUrl": "https://www.betclic.fr/football-sfootball/coupe-du-monde-2026-c1/tunisie-pays-bas-m1043699458940928"
+      },
+      {
+        "bookmaker": "Betclic",
+        "market": "Buteur",
+        "label": "Hazem Mastouri buteur",
+        "odd": 9.5,
+        "sourceUrl": "https://www.betclic.fr/football-sfootball/coupe-du-monde-2026-c1/tunisie-pays-bas-m1043699458940928"
+      },
+      {
+        "bookmaker": "Betclic",
+        "market": "Joueur décisif",
+        "label": "Firas Chaouat décisif",
+        "odd": 5,
+        "sourceUrl": "https://www.betclic.fr/football-sfootball/coupe-du-monde-2026-c1/tunisie-pays-bas-m1043699458940928"
+      },
+      {
+        "bookmaker": "Betclic",
+        "market": "Score exact",
+        "label": "0 - 1",
+        "odd": 8.25,
+        "sourceUrl": "https://www.betclic.fr/football-sfootball/coupe-du-monde-2026-c1/tunisie-pays-bas-m1043699458940928"
+      },
+      {
+        "bookmaker": "Betclic",
+        "market": "Équipe qui marque",
+        "label": "Pays-Bas marque le 1er but",
+        "odd": 1.08,
+        "sourceUrl": "https://www.betclic.fr/football-sfootball/coupe-du-monde-2026-c1/tunisie-pays-bas-m1043699458940928"
+      }
+    ],
+    "1489413": [
+      {
+        "bookmaker": "Betclic",
+        "market": "Nombre total de buts",
+        "label": "Plus de 2,5 buts",
+        "odd": 1.98,
+        "sourceUrl": "https://www.betclic.fr/football-sfootball/coupe-du-monde-2026-c1/cap-vert-arabie-saoudite-m1044643189964800"
+      },
+      {
+        "bookmaker": "Betclic",
+        "market": "Nombre total de buts",
+        "label": "Moins de 2,5 buts",
+        "odd": 1.68,
+        "sourceUrl": "https://www.betclic.fr/football-sfootball/coupe-du-monde-2026-c1/cap-vert-arabie-saoudite-m1044643189964800"
+      },
+      {
+        "bookmaker": "Betclic",
+        "market": "Les 2 équipes marquent",
+        "label": "Oui",
+        "odd": 1.76,
+        "sourceUrl": "https://www.betclic.fr/football-sfootball/coupe-du-monde-2026-c1/cap-vert-arabie-saoudite-m1044643189964800"
+      },
+      {
+        "bookmaker": "Betclic",
+        "market": "Les 2 équipes marquent ou +2,5 buts",
+        "label": "Oui",
+        "odd": 1.5,
+        "sourceUrl": "https://www.betclic.fr/football-sfootball/coupe-du-monde-2026-c1/cap-vert-arabie-saoudite-m1044643189964800"
+      },
+      {
+        "bookmaker": "Betclic",
+        "market": "Buteur",
+        "label": "Gilson Tavares buteur",
+        "odd": 3.88,
+        "sourceUrl": "https://www.betclic.fr/football-sfootball/coupe-du-monde-2026-c1/cap-vert-arabie-saoudite-m1044643189964800"
+      },
+      {
+        "bookmaker": "Betclic",
+        "market": "Buteur",
+        "label": "Nuno Da Costa buteur",
+        "odd": 3.98,
+        "sourceUrl": "https://www.betclic.fr/football-sfootball/coupe-du-monde-2026-c1/cap-vert-arabie-saoudite-m1044643189964800"
+      },
+      {
+        "bookmaker": "Betclic",
+        "market": "Buteur",
+        "label": "Dailon Livramento buteur",
+        "odd": 4,
+        "sourceUrl": "https://www.betclic.fr/football-sfootball/coupe-du-monde-2026-c1/cap-vert-arabie-saoudite-m1044643189964800"
+      },
+      {
+        "bookmaker": "Betclic",
+        "market": "Joueur décisif",
+        "label": "Ryan Mendes décisif",
+        "odd": 2.65,
+        "sourceUrl": "https://www.betclic.fr/football-sfootball/coupe-du-monde-2026-c1/cap-vert-arabie-saoudite-m1044643189964800"
+      },
+      {
+        "bookmaker": "Betclic",
+        "market": "Buts par équipe",
+        "label": "Cap- plus de 1,5 buts",
+        "odd": 1.84,
+        "sourceUrl": "https://www.betclic.fr/football-sfootball/coupe-du-monde-2026-c1/cap-vert-arabie-saoudite-m1044643189964800"
+      },
+      {
+        "bookmaker": "Betclic",
+        "market": "Score exact",
+        "label": "1 - 1",
+        "odd": 5.6,
+        "sourceUrl": "https://www.betclic.fr/football-sfootball/coupe-du-monde-2026-c1/cap-vert-arabie-saoudite-m1044643189964800"
+      }
+    ],
+    "1489414": [
+      {
+        "bookmaker": "Betclic",
+        "market": "Nombre total de buts",
+        "label": "Plus de 2,5 buts",
+        "odd": 2.6,
+        "sourceUrl": "https://www.betclic.fr/football-sfootball/coupe-du-monde-2026-c1/egypte-iran-m1044756422541312"
+      },
+      {
+        "bookmaker": "Betclic",
+        "market": "Nombre total de buts",
+        "label": "Moins de 2,5 buts",
+        "odd": 1.4,
+        "sourceUrl": "https://www.betclic.fr/football-sfootball/coupe-du-monde-2026-c1/egypte-iran-m1044756422541312"
+      },
+      {
+        "bookmaker": "Betclic",
+        "market": "Les 2 équipes marquent",
+        "label": "Oui",
+        "odd": 2.08,
+        "sourceUrl": "https://www.betclic.fr/football-sfootball/coupe-du-monde-2026-c1/egypte-iran-m1044756422541312"
+      },
+      {
+        "bookmaker": "Betclic",
+        "market": "Les 2 équipes marquent ou +2,5 buts",
+        "label": "Oui",
+        "odd": 1.8,
+        "sourceUrl": "https://www.betclic.fr/football-sfootball/coupe-du-monde-2026-c1/egypte-iran-m1044756422541312"
+      },
+      {
+        "bookmaker": "Betclic",
+        "market": "Buteur",
+        "label": "Mohamed Salah buteur",
+        "odd": 3.27,
+        "sourceUrl": "https://www.betclic.fr/football-sfootball/coupe-du-monde-2026-c1/egypte-iran-m1044756422541312"
+      },
+      {
+        "bookmaker": "Betclic",
+        "market": "Buteur",
+        "label": "Omar Marmoush buteur",
+        "odd": 3.83,
+        "sourceUrl": "https://www.betclic.fr/football-sfootball/coupe-du-monde-2026-c1/egypte-iran-m1044756422541312"
+      },
+      {
+        "bookmaker": "Betclic",
+        "market": "Buteur",
+        "label": "Mostafa Ziko buteur",
+        "odd": 4.45,
+        "sourceUrl": "https://www.betclic.fr/football-sfootball/coupe-du-monde-2026-c1/egypte-iran-m1044756422541312"
+      },
+      {
+        "bookmaker": "Betclic",
+        "market": "Joueur décisif",
+        "label": "Mohamed Salah décisif",
+        "odd": 2.25,
+        "sourceUrl": "https://www.betclic.fr/football-sfootball/coupe-du-monde-2026-c1/egypte-iran-m1044756422541312"
+      },
+      {
+        "bookmaker": "Betclic",
+        "market": "Buts par équipe",
+        "label": "Ég plus de 1,5 buts",
+        "odd": 2.06,
+        "sourceUrl": "https://www.betclic.fr/football-sfootball/coupe-du-monde-2026-c1/egypte-iran-m1044756422541312"
+      },
+      {
+        "bookmaker": "Betclic",
+        "market": "Score exact",
+        "label": "1 - 1",
+        "odd": 4.6,
+        "sourceUrl": "https://www.betclic.fr/football-sfootball/coupe-du-monde-2026-c1/egypte-iran-m1044756422541312"
+      }
+    ],
+    "1489415": [
+      {
+        "bookmaker": "Betclic",
+        "market": "Nombre total de buts",
+        "label": "Plus de 2,5 buts",
+        "odd": 1.39,
+        "sourceUrl": "https://www.betclic.fr/football-sfootball/coupe-du-monde-2026-c1/nouvelle-zelande-belgique-m1044756423938048"
+      },
+      {
+        "bookmaker": "Betclic",
+        "market": "Nombre total de buts",
+        "label": "Moins de 2,5 buts",
+        "odd": 2.65,
+        "sourceUrl": "https://www.betclic.fr/football-sfootball/coupe-du-monde-2026-c1/nouvelle-zelande-belgique-m1044756423938048"
+      },
+      {
+        "bookmaker": "Betclic",
+        "market": "Les 2 équipes marquent",
+        "label": "Oui",
+        "odd": 2.2,
+        "sourceUrl": "https://www.betclic.fr/football-sfootball/coupe-du-monde-2026-c1/nouvelle-zelande-belgique-m1044756423938048"
+      },
+      {
+        "bookmaker": "Betclic",
+        "market": "Les 2 équipes marquent ou +2,5 buts",
+        "label": "Oui",
+        "odd": 1.45,
+        "sourceUrl": "https://www.betclic.fr/football-sfootball/coupe-du-monde-2026-c1/nouvelle-zelande-belgique-m1044756423938048"
+      },
+      {
+        "bookmaker": "Betclic",
+        "market": "Buteur",
+        "label": "Chris Wood buteur",
+        "odd": 5.25,
+        "sourceUrl": "https://www.betclic.fr/football-sfootball/coupe-du-monde-2026-c1/nouvelle-zelande-belgique-m1044756423938048"
+      },
+      {
+        "bookmaker": "Betclic",
+        "market": "Buteur",
+        "label": "Ben Waine buteur",
+        "odd": 6.75,
+        "sourceUrl": "https://www.betclic.fr/football-sfootball/coupe-du-monde-2026-c1/nouvelle-zelande-belgique-m1044756423938048"
+      },
+      {
+        "bookmaker": "Betclic",
+        "market": "Buteur",
+        "label": "Logan Rogerson buteur",
+        "odd": 7.75,
+        "sourceUrl": "https://www.betclic.fr/football-sfootball/coupe-du-monde-2026-c1/nouvelle-zelande-belgique-m1044756423938048"
+      },
+      {
+        "bookmaker": "Betclic",
+        "market": "Joueur décisif",
+        "label": "Chris Wood décisif",
+        "odd": 4,
+        "sourceUrl": "https://www.betclic.fr/football-sfootball/coupe-du-monde-2026-c1/nouvelle-zelande-belgique-m1044756423938048"
+      },
+      {
+        "bookmaker": "Betclic",
+        "market": "Score exact",
+        "label": "0 - 1",
+        "odd": 7.75,
+        "sourceUrl": "https://www.betclic.fr/football-sfootball/coupe-du-monde-2026-c1/nouvelle-zelande-belgique-m1044756423938048"
+      },
+      {
+        "bookmaker": "Betclic",
+        "market": "Équipe qui marque",
+        "label": "Belgique marque le 1er but",
+        "odd": 1.15,
+        "sourceUrl": "https://www.betclic.fr/football-sfootball/coupe-du-monde-2026-c1/nouvelle-zelande-belgique-m1044756423938048"
+      }
+    ],
+    "1489416": [
+      {
+        "bookmaker": "Betclic",
+        "market": "Nombre total de buts",
+        "label": "Plus de 2,5 buts",
+        "odd": 1.61,
+        "sourceUrl": "https://www.betclic.fr/football-sfootball/coupe-du-monde-2026-c1/norvege-france-m1117886904311808"
+      },
+      {
+        "bookmaker": "Betclic",
+        "market": "Nombre total de buts",
+        "label": "Moins de 2,5 buts",
+        "odd": 2.1,
+        "sourceUrl": "https://www.betclic.fr/football-sfootball/coupe-du-monde-2026-c1/norvege-france-m1117886904311808"
+      },
+      {
+        "bookmaker": "Betclic",
+        "market": "Les 2 équipes marquent",
+        "label": "Oui",
+        "odd": 1.68,
+        "sourceUrl": "https://www.betclic.fr/football-sfootball/coupe-du-monde-2026-c1/norvege-france-m1117886904311808"
+      },
+      {
+        "bookmaker": "Betclic",
+        "market": "Les 2 équipes marquent ou +2,5 buts",
+        "label": "Oui",
+        "odd": 1.38,
+        "sourceUrl": "https://www.betclic.fr/football-sfootball/coupe-du-monde-2026-c1/norvege-france-m1117886904311808"
+      },
+      {
+        "bookmaker": "Betclic",
+        "market": "Buteur",
+        "label": "Erling Haaland buteur",
+        "odd": 2.6,
+        "sourceUrl": "https://www.betclic.fr/football-sfootball/coupe-du-monde-2026-c1/norvege-france-m1117886904311808"
+      },
+      {
+        "bookmaker": "Betclic",
+        "market": "Buteur",
+        "label": "Jorgen Strand Larsen buteur",
+        "odd": 4.55,
+        "sourceUrl": "https://www.betclic.fr/football-sfootball/coupe-du-monde-2026-c1/norvege-france-m1117886904311808"
+      },
+      {
+        "bookmaker": "Betclic",
+        "market": "Buteur",
+        "label": "Alexander Sørloth buteur",
+        "odd": 4.55,
+        "sourceUrl": "https://www.betclic.fr/football-sfootball/coupe-du-monde-2026-c1/norvege-france-m1117886904311808"
+      },
+      {
+        "bookmaker": "Betclic",
+        "market": "Joueur décisif",
+        "label": "Erling Haaland décisif",
+        "odd": 2.25,
+        "sourceUrl": "https://www.betclic.fr/football-sfootball/coupe-du-monde-2026-c1/norvege-france-m1117886904311808"
+      },
+      {
+        "bookmaker": "Betclic",
+        "market": "Buts par équipe",
+        "label": "Norvège plus de 1,5 buts",
+        "odd": 2.9,
+        "sourceUrl": "https://www.betclic.fr/football-sfootball/coupe-du-monde-2026-c1/norvege-france-m1117886904311808"
+      },
+      {
+        "bookmaker": "Betclic",
+        "market": "Score exact",
+        "label": "0 - 1",
+        "odd": 7.25,
+        "sourceUrl": "https://www.betclic.fr/football-sfootball/coupe-du-monde-2026-c1/norvege-france-m1117886904311808"
+      }
+    ],
+    "1489417": [
+      {
+        "bookmaker": "Betclic",
+        "market": "Nombre total de buts",
+        "label": "Plus de 2,5 buts",
+        "odd": 1.77,
+        "sourceUrl": "https://www.betclic.fr/football-sfootball/coupe-du-monde-2026-c1/uruguay-espagne-m1044643178733568"
+      },
+      {
+        "bookmaker": "Betclic",
+        "market": "Nombre total de buts",
+        "label": "Moins de 2,5 buts",
+        "odd": 1.86,
+        "sourceUrl": "https://www.betclic.fr/football-sfootball/coupe-du-monde-2026-c1/uruguay-espagne-m1044643178733568"
+      },
+      {
+        "bookmaker": "Betclic",
+        "market": "Les 2 équipes marquent",
+        "label": "Oui",
+        "odd": 1.88,
+        "sourceUrl": "https://www.betclic.fr/football-sfootball/coupe-du-monde-2026-c1/uruguay-espagne-m1044643178733568"
+      },
+      {
+        "bookmaker": "Betclic",
+        "market": "Les 2 équipes marquent ou +2,5 buts",
+        "label": "Oui",
+        "odd": 1.5,
+        "sourceUrl": "https://www.betclic.fr/football-sfootball/coupe-du-monde-2026-c1/uruguay-espagne-m1044643178733568"
+      },
+      {
+        "bookmaker": "Betclic",
+        "market": "Buteur",
+        "label": "Darwin Núñez buteur",
+        "odd": 4.9,
+        "sourceUrl": "https://www.betclic.fr/football-sfootball/coupe-du-monde-2026-c1/uruguay-espagne-m1044643178733568"
+      },
+      {
+        "bookmaker": "Betclic",
+        "market": "Buteur",
+        "label": "Federico Vinas buteur",
+        "odd": 5.25,
+        "sourceUrl": "https://www.betclic.fr/football-sfootball/coupe-du-monde-2026-c1/uruguay-espagne-m1044643178733568"
+      },
+      {
+        "bookmaker": "Betclic",
+        "market": "Buteur",
+        "label": "Rodrigo Aguirre buteur",
+        "odd": 5.75,
+        "sourceUrl": "https://www.betclic.fr/football-sfootball/coupe-du-monde-2026-c1/uruguay-espagne-m1044643178733568"
+      },
+      {
+        "bookmaker": "Betclic",
+        "market": "Joueur décisif",
+        "label": "Darwin Núñez décisif",
+        "odd": 3.5,
+        "sourceUrl": "https://www.betclic.fr/football-sfootball/coupe-du-monde-2026-c1/uruguay-espagne-m1044643178733568"
+      },
+      {
+        "bookmaker": "Betclic",
+        "market": "Score exact",
+        "label": "0 - 1",
+        "odd": 6,
+        "sourceUrl": "https://www.betclic.fr/football-sfootball/coupe-du-monde-2026-c1/uruguay-espagne-m1044643178733568"
+      },
+      {
+        "bookmaker": "Betclic",
+        "market": "Équipe qui marque",
+        "label": "Espagne marque le 1er but",
+        "odd": 1.36,
+        "sourceUrl": "https://www.betclic.fr/football-sfootball/coupe-du-monde-2026-c1/uruguay-espagne-m1044643178733568"
+      }
+    ],
+    "1489418": [
+      {
+        "bookmaker": "Betclic",
+        "market": "Nombre total de buts",
+        "label": "Plus de 2,5 buts",
+        "odd": 2.62,
+        "sourceUrl": "https://www.betclic.fr/football-sfootball/coupe-du-monde-2026-c1/algerie-autriche-m1117886803468288"
+      },
+      {
+        "bookmaker": "Betclic",
+        "market": "Nombre total de buts",
+        "label": "Moins de 2,5 buts",
+        "odd": 1.37,
+        "sourceUrl": "https://www.betclic.fr/football-sfootball/coupe-du-monde-2026-c1/algerie-autriche-m1117886803468288"
+      },
+      {
+        "bookmaker": "Betclic",
+        "market": "Les 2 équipes marquent",
+        "label": "Oui",
+        "odd": 1.88,
+        "sourceUrl": "https://www.betclic.fr/football-sfootball/coupe-du-monde-2026-c1/algerie-autriche-m1117886803468288"
+      },
+      {
+        "bookmaker": "Betclic",
+        "market": "Les 2 équipes marquent ou +2,5 buts",
+        "label": "Oui",
+        "odd": 1.75,
+        "sourceUrl": "https://www.betclic.fr/football-sfootball/coupe-du-monde-2026-c1/algerie-autriche-m1117886803468288"
+      },
+      {
+        "bookmaker": "Betclic",
+        "market": "Buteur",
+        "label": "Adil Boulbina buteur",
+        "odd": 4.05,
+        "sourceUrl": "https://www.betclic.fr/football-sfootball/coupe-du-monde-2026-c1/algerie-autriche-m1117886803468288"
+      },
+      {
+        "bookmaker": "Betclic",
+        "market": "Buteur",
+        "label": "Nadhir Benbouali buteur",
+        "odd": 4.15,
+        "sourceUrl": "https://www.betclic.fr/football-sfootball/coupe-du-monde-2026-c1/algerie-autriche-m1117886803468288"
+      },
+      {
+        "bookmaker": "Betclic",
+        "market": "Buteur",
+        "label": "Amine Gouiri buteur",
+        "odd": 4.25,
+        "sourceUrl": "https://www.betclic.fr/football-sfootball/coupe-du-monde-2026-c1/algerie-autriche-m1117886803468288"
+      },
+      {
+        "bookmaker": "Betclic",
+        "market": "Joueur décisif",
+        "label": "Riyad Mahrez décisif",
+        "odd": 2.8,
+        "sourceUrl": "https://www.betclic.fr/football-sfootball/coupe-du-monde-2026-c1/algerie-autriche-m1117886803468288"
+      },
+      {
+        "bookmaker": "Betclic",
+        "market": "Score exact",
+        "label": "1 - 1",
+        "odd": 4.05,
+        "sourceUrl": "https://www.betclic.fr/football-sfootball/coupe-du-monde-2026-c1/algerie-autriche-m1117886803468288"
+      },
+      {
+        "bookmaker": "Betclic",
+        "market": "Équipe qui marque",
+        "label": "Autriche marque le 1er but",
+        "odd": 1.94,
+        "sourceUrl": "https://www.betclic.fr/football-sfootball/coupe-du-monde-2026-c1/algerie-autriche-m1117886803468288"
+      }
+    ],
+    "1489419": [
+      {
+        "bookmaker": "Betclic",
+        "market": "Nombre total de buts",
+        "label": "Plus de 2,5 buts",
+        "odd": 1.92,
+        "sourceUrl": "https://www.betclic.fr/football-sfootball/coupe-du-monde-2026-c1/colombie-portugal-m1101087127207936"
+      },
+      {
+        "bookmaker": "Betclic",
+        "market": "Nombre total de buts",
+        "label": "Moins de 2,5 buts",
+        "odd": 1.7,
+        "sourceUrl": "https://www.betclic.fr/football-sfootball/coupe-du-monde-2026-c1/colombie-portugal-m1101087127207936"
+      },
+      {
+        "bookmaker": "Betclic",
+        "market": "Les 2 équipes marquent",
+        "label": "Oui",
+        "odd": 1.8,
+        "sourceUrl": "https://www.betclic.fr/football-sfootball/coupe-du-monde-2026-c1/colombie-portugal-m1101087127207936"
+      },
+      {
+        "bookmaker": "Betclic",
+        "market": "Les 2 équipes marquent ou +2,5 buts",
+        "label": "Oui",
+        "odd": 1.55,
+        "sourceUrl": "https://www.betclic.fr/football-sfootball/coupe-du-monde-2026-c1/colombie-portugal-m1101087127207936"
+      },
+      {
+        "bookmaker": "Betclic",
+        "market": "Buteur",
+        "label": "Luis Díaz buteur",
+        "odd": 4.2,
+        "sourceUrl": "https://www.betclic.fr/football-sfootball/coupe-du-monde-2026-c1/colombie-portugal-m1101087127207936"
+      },
+      {
+        "bookmaker": "Betclic",
+        "market": "Buteur",
+        "label": "Luis Suárez buteur",
+        "odd": 4.3,
+        "sourceUrl": "https://www.betclic.fr/football-sfootball/coupe-du-monde-2026-c1/colombie-portugal-m1101087127207936"
+      },
+      {
+        "bookmaker": "Betclic",
+        "market": "Buteur",
+        "label": "Jhon Cordoba buteur",
+        "odd": 4.4,
+        "sourceUrl": "https://www.betclic.fr/football-sfootball/coupe-du-monde-2026-c1/colombie-portugal-m1101087127207936"
+      },
+      {
+        "bookmaker": "Betclic",
+        "market": "Joueur décisif",
+        "label": "Luis Díaz décisif",
+        "odd": 3,
+        "sourceUrl": "https://www.betclic.fr/football-sfootball/coupe-du-monde-2026-c1/colombie-portugal-m1101087127207936"
+      },
+      {
+        "bookmaker": "Betclic",
+        "market": "Score exact",
+        "label": "0 - 1",
+        "odd": 6.1,
+        "sourceUrl": "https://www.betclic.fr/football-sfootball/coupe-du-monde-2026-c1/colombie-portugal-m1101087127207936"
+      },
+      {
+        "bookmaker": "Betclic",
+        "market": "Équipe qui marque",
+        "label": "Portugal marque le 1er but",
+        "odd": 1.54,
+        "sourceUrl": "https://www.betclic.fr/football-sfootball/coupe-du-monde-2026-c1/colombie-portugal-m1101087127207936"
+      }
+    ],
+    "1489420": [
+      {
+        "bookmaker": "Betclic",
+        "market": "Nombre total de buts",
+        "label": "Plus de 2,5 buts",
+        "odd": 2.1,
+        "sourceUrl": "https://www.betclic.fr/football-sfootball/coupe-du-monde-2026-c1/croatie-ghana-m1117886706999296"
+      },
+      {
+        "bookmaker": "Betclic",
+        "market": "Nombre total de buts",
+        "label": "Moins de 2,5 buts",
+        "odd": 1.58,
+        "sourceUrl": "https://www.betclic.fr/football-sfootball/coupe-du-monde-2026-c1/croatie-ghana-m1117886706999296"
+      },
+      {
+        "bookmaker": "Betclic",
+        "market": "Les 2 équipes marquent",
+        "label": "Oui",
+        "odd": 1.94,
+        "sourceUrl": "https://www.betclic.fr/football-sfootball/coupe-du-monde-2026-c1/croatie-ghana-m1117886706999296"
+      },
+      {
+        "bookmaker": "Betclic",
+        "market": "Les 2 équipes marquent ou +2,5 buts",
+        "label": "Oui",
+        "odd": 1.65,
+        "sourceUrl": "https://www.betclic.fr/football-sfootball/coupe-du-monde-2026-c1/croatie-ghana-m1117886706999296"
+      },
+      {
+        "bookmaker": "Betclic",
+        "market": "Buteur",
+        "label": "Ante Budimir buteur",
+        "odd": 2.75,
+        "sourceUrl": "https://www.betclic.fr/football-sfootball/coupe-du-monde-2026-c1/croatie-ghana-m1117886706999296"
+      },
+      {
+        "bookmaker": "Betclic",
+        "market": "Buteur",
+        "label": "Petar Musa buteur",
+        "odd": 2.98,
+        "sourceUrl": "https://www.betclic.fr/football-sfootball/coupe-du-monde-2026-c1/croatie-ghana-m1117886706999296"
+      },
+      {
+        "bookmaker": "Betclic",
+        "market": "Buteur",
+        "label": "Igor Matanovic buteur",
+        "odd": 3.08,
+        "sourceUrl": "https://www.betclic.fr/football-sfootball/coupe-du-monde-2026-c1/croatie-ghana-m1117886706999296"
+      },
+      {
+        "bookmaker": "Betclic",
+        "market": "Joueur décisif",
+        "label": "Petar Musa décisif",
+        "odd": 2,
+        "sourceUrl": "https://www.betclic.fr/football-sfootball/coupe-du-monde-2026-c1/croatie-ghana-m1117886706999296"
+      },
+      {
+        "bookmaker": "Betclic",
+        "market": "Buts par équipe",
+        "label": "Cro plus de 1,5 buts",
+        "odd": 1.64,
+        "sourceUrl": "https://www.betclic.fr/football-sfootball/coupe-du-monde-2026-c1/croatie-ghana-m1117886706999296"
+      },
+      {
+        "bookmaker": "Betclic",
+        "market": "Score exact",
+        "label": "1 - 1",
+        "odd": 5.5,
+        "sourceUrl": "https://www.betclic.fr/football-sfootball/coupe-du-monde-2026-c1/croatie-ghana-m1117886706999296"
+      }
+    ],
+    "1489421": [
+      {
+        "bookmaker": "Betclic",
+        "market": "Nombre total de buts",
+        "label": "Plus de 2,5 buts",
+        "odd": 1.53,
+        "sourceUrl": "https://www.betclic.fr/football-sfootball/coupe-du-monde-2026-c1/jordanie-argentine-m1117887394177024"
+      },
+      {
+        "bookmaker": "Betclic",
+        "market": "Nombre total de buts",
+        "label": "Moins de 2,5 buts",
+        "odd": 2.18,
+        "sourceUrl": "https://www.betclic.fr/football-sfootball/coupe-du-monde-2026-c1/jordanie-argentine-m1117887394177024"
+      },
+      {
+        "bookmaker": "Betclic",
+        "market": "Les 2 équipes marquent",
+        "label": "Oui",
+        "odd": 2.38,
+        "sourceUrl": "https://www.betclic.fr/football-sfootball/coupe-du-monde-2026-c1/jordanie-argentine-m1117887394177024"
+      },
+      {
+        "bookmaker": "Betclic",
+        "market": "Les 2 équipes marquent ou +2,5 buts",
+        "label": "Oui",
+        "odd": 1.5,
+        "sourceUrl": "https://www.betclic.fr/football-sfootball/coupe-du-monde-2026-c1/jordanie-argentine-m1117887394177024"
+      },
+      {
+        "bookmaker": "Betclic",
+        "market": "Buteur",
+        "label": "Ali Olwan buteur",
+        "odd": 6.4,
+        "sourceUrl": "https://www.betclic.fr/football-sfootball/coupe-du-monde-2026-c1/jordanie-argentine-m1117887394177024"
+      },
+      {
+        "bookmaker": "Betclic",
+        "market": "Buteur",
+        "label": "Musa Al-Taamari buteur",
+        "odd": 6.6,
+        "sourceUrl": "https://www.betclic.fr/football-sfootball/coupe-du-monde-2026-c1/jordanie-argentine-m1117887394177024"
+      },
+      {
+        "bookmaker": "Betclic",
+        "market": "Buteur",
+        "label": "Ali Azaizeh buteur",
+        "odd": 8,
+        "sourceUrl": "https://www.betclic.fr/football-sfootball/coupe-du-monde-2026-c1/jordanie-argentine-m1117887394177024"
+      },
+      {
+        "bookmaker": "Betclic",
+        "market": "Joueur décisif",
+        "label": "Ali Olwan décisif",
+        "odd": 4.25,
+        "sourceUrl": "https://www.betclic.fr/football-sfootball/coupe-du-monde-2026-c1/jordanie-argentine-m1117887394177024"
+      },
+      {
+        "bookmaker": "Betclic",
+        "market": "Score exact",
+        "label": "0 - 1",
+        "odd": 6,
+        "sourceUrl": "https://www.betclic.fr/football-sfootball/coupe-du-monde-2026-c1/jordanie-argentine-m1117887394177024"
+      },
+      {
+        "bookmaker": "Betclic",
+        "market": "Équipe qui marque",
+        "label": "Argentine marque le 1er but",
+        "odd": 1.16,
+        "sourceUrl": "https://www.betclic.fr/football-sfootball/coupe-du-monde-2026-c1/jordanie-argentine-m1117887394177024"
+      }
+    ],
+    "1489422": [
+      {
+        "bookmaker": "Betclic",
+        "market": "Nombre total de buts",
+        "label": "Plus de 2,5 buts",
+        "odd": 1.39,
+        "sourceUrl": "https://www.betclic.fr/football-sfootball/coupe-du-monde-2026-c1/panama-angleterre-m1117886801473536"
+      },
+      {
+        "bookmaker": "Betclic",
+        "market": "Nombre total de buts",
+        "label": "Moins de 2,5 buts",
+        "odd": 2.55,
+        "sourceUrl": "https://www.betclic.fr/football-sfootball/coupe-du-monde-2026-c1/panama-angleterre-m1117886801473536"
+      },
+      {
+        "bookmaker": "Betclic",
+        "market": "Les 2 équipes marquent",
+        "label": "Oui",
+        "odd": 2.12,
+        "sourceUrl": "https://www.betclic.fr/football-sfootball/coupe-du-monde-2026-c1/panama-angleterre-m1117886801473536"
+      },
+      {
+        "bookmaker": "Betclic",
+        "market": "Les 2 équipes marquent ou +2,5 buts",
+        "label": "Oui",
+        "odd": 1.35,
+        "sourceUrl": "https://www.betclic.fr/football-sfootball/coupe-du-monde-2026-c1/panama-angleterre-m1117886801473536"
+      },
+      {
+        "bookmaker": "Betclic",
+        "market": "Buteur",
+        "label": "Cecilio Waterman buteur",
+        "odd": 5.6,
+        "sourceUrl": "https://www.betclic.fr/football-sfootball/coupe-du-monde-2026-c1/panama-angleterre-m1117886801473536"
+      },
+      {
+        "bookmaker": "Betclic",
+        "market": "Buteur",
+        "label": "Jose Fajardo buteur",
+        "odd": 6.1,
+        "sourceUrl": "https://www.betclic.fr/football-sfootball/coupe-du-monde-2026-c1/panama-angleterre-m1117886801473536"
+      },
+      {
+        "bookmaker": "Betclic",
+        "market": "Buteur",
+        "label": "Ismael Diaz buteur",
+        "odd": 6.1,
+        "sourceUrl": "https://www.betclic.fr/football-sfootball/coupe-du-monde-2026-c1/panama-angleterre-m1117886801473536"
+      },
+      {
+        "bookmaker": "Betclic",
+        "market": "Joueur décisif",
+        "label": "Ismael Diaz décisif",
+        "odd": 4,
+        "sourceUrl": "https://www.betclic.fr/football-sfootball/coupe-du-monde-2026-c1/panama-angleterre-m1117886801473536"
+      },
+      {
+        "bookmaker": "Betclic",
+        "market": "Score exact",
+        "label": "0 - 1",
+        "odd": 7.75,
+        "sourceUrl": "https://www.betclic.fr/football-sfootball/coupe-du-monde-2026-c1/panama-angleterre-m1117886801473536"
+      },
+      {
+        "bookmaker": "Betclic",
+        "market": "Équipe qui marque",
+        "label": "Angleterre marque le 1er but",
+        "odd": 1.16,
+        "sourceUrl": "https://www.betclic.fr/football-sfootball/coupe-du-monde-2026-c1/panama-angleterre-m1117886801473536"
+      }
+    ],
+    "1539011": [
+      {
+        "bookmaker": "Betclic",
+        "market": "Nombre total de buts",
+        "label": "Plus de 2,5 buts",
+        "odd": 1.83,
+        "sourceUrl": "https://www.betclic.fr/football-sfootball/coupe-du-monde-2026-c1/japon-suede-m1074354673983488"
+      },
+      {
+        "bookmaker": "Betclic",
+        "market": "Nombre total de buts",
+        "label": "Moins de 2,5 buts",
+        "odd": 1.88,
+        "sourceUrl": "https://www.betclic.fr/football-sfootball/coupe-du-monde-2026-c1/japon-suede-m1074354673983488"
+      },
+      {
+        "bookmaker": "Betclic",
+        "market": "Les 2 équipes marquent",
+        "label": "Oui",
+        "odd": 1.76,
+        "sourceUrl": "https://www.betclic.fr/football-sfootball/coupe-du-monde-2026-c1/japon-suede-m1074354673983488"
+      },
+      {
+        "bookmaker": "Betclic",
+        "market": "Les 2 équipes marquent ou +2,5 buts",
+        "label": "Oui",
+        "odd": 1.45,
+        "sourceUrl": "https://www.betclic.fr/football-sfootball/coupe-du-monde-2026-c1/japon-suede-m1074354673983488"
+      },
+      {
+        "bookmaker": "Betclic",
+        "market": "Buteur",
+        "label": "Ayase Ueda buteur",
+        "odd": 2.65,
+        "sourceUrl": "https://www.betclic.fr/football-sfootball/coupe-du-monde-2026-c1/japon-suede-m1074354673983488"
+      },
+      {
+        "bookmaker": "Betclic",
+        "market": "Buteur",
+        "label": "Koki Ogawa buteur",
+        "odd": 2.97,
+        "sourceUrl": "https://www.betclic.fr/football-sfootball/coupe-du-monde-2026-c1/japon-suede-m1074354673983488"
+      },
+      {
+        "bookmaker": "Betclic",
+        "market": "Buteur",
+        "label": "Shuto Machino buteur",
+        "odd": 3.1,
+        "sourceUrl": "https://www.betclic.fr/football-sfootball/coupe-du-monde-2026-c1/japon-suede-m1074354673983488"
+      },
+      {
+        "bookmaker": "Betclic",
+        "market": "Joueur décisif",
+        "label": "Ayase Ueda décisif",
+        "odd": 1.95,
+        "sourceUrl": "https://www.betclic.fr/football-sfootball/coupe-du-monde-2026-c1/japon-suede-m1074354673983488"
+      },
+      {
+        "bookmaker": "Betclic",
+        "market": "Score exact",
+        "label": "1 - 1",
+        "odd": 6.4,
+        "sourceUrl": "https://www.betclic.fr/football-sfootball/coupe-du-monde-2026-c1/japon-suede-m1074354673983488"
+      },
+      {
+        "bookmaker": "Betclic",
+        "market": "Équipe qui marque",
+        "label": "Japon marque le 1er but",
+        "odd": 1.57,
+        "sourceUrl": "https://www.betclic.fr/football-sfootball/coupe-du-monde-2026-c1/japon-suede-m1074354673983488"
+      }
+    ],
+    "1539012": [
+      {
+        "bookmaker": "Betclic",
+        "market": "Nombre total de buts",
+        "label": "Plus de 2,5 buts",
+        "odd": 1.6,
+        "sourceUrl": "https://www.betclic.fr/football-sfootball/coupe-du-monde-2026-c1/turquie-usa-m1074358865928192"
+      },
+      {
+        "bookmaker": "Betclic",
+        "market": "Nombre total de buts",
+        "label": "Moins de 2,5 buts",
+        "odd": 2.12,
+        "sourceUrl": "https://www.betclic.fr/football-sfootball/coupe-du-monde-2026-c1/turquie-usa-m1074358865928192"
+      },
+      {
+        "bookmaker": "Betclic",
+        "market": "Les 2 équipes marquent",
+        "label": "Oui",
+        "odd": 1.58,
+        "sourceUrl": "https://www.betclic.fr/football-sfootball/coupe-du-monde-2026-c1/turquie-usa-m1074358865928192"
+      },
+      {
+        "bookmaker": "Betclic",
+        "market": "Les 2 équipes marquent ou +2,5 buts",
+        "label": "Oui",
+        "odd": 1.35,
+        "sourceUrl": "https://www.betclic.fr/football-sfootball/coupe-du-monde-2026-c1/turquie-usa-m1074358865928192"
+      },
+      {
+        "bookmaker": "Betclic",
+        "market": "Buteur",
+        "label": "Kerem Aktürkoğlu buteur",
+        "odd": 3.7,
+        "sourceUrl": "https://www.betclic.fr/football-sfootball/coupe-du-monde-2026-c1/turquie-usa-m1074358865928192"
+      },
+      {
+        "bookmaker": "Betclic",
+        "market": "Buteur",
+        "label": "Deniz Gül buteur",
+        "odd": 3.98,
+        "sourceUrl": "https://www.betclic.fr/football-sfootball/coupe-du-monde-2026-c1/turquie-usa-m1074358865928192"
+      },
+      {
+        "bookmaker": "Betclic",
+        "market": "Buteur",
+        "label": "Arda Güler buteur",
+        "odd": 4.45,
+        "sourceUrl": "https://www.betclic.fr/football-sfootball/coupe-du-monde-2026-c1/turquie-usa-m1074358865928192"
+      },
+      {
+        "bookmaker": "Betclic",
+        "market": "Joueur décisif",
+        "label": "Kerem Aktürkoğlu décisif",
+        "odd": 2.45,
+        "sourceUrl": "https://www.betclic.fr/football-sfootball/coupe-du-monde-2026-c1/turquie-usa-m1074358865928192"
+      },
+      {
+        "bookmaker": "Betclic",
+        "market": "Buts par équipe",
+        "label": "Turquie plus de 1,5 buts",
+        "odd": 2.37,
+        "sourceUrl": "https://www.betclic.fr/football-sfootball/coupe-du-monde-2026-c1/turquie-usa-m1074358865928192"
+      },
+      {
+        "bookmaker": "Betclic",
+        "market": "Score exact",
+        "label": "1 - 1",
+        "odd": 6.9,
+        "sourceUrl": "https://www.betclic.fr/football-sfootball/coupe-du-monde-2026-c1/turquie-usa-m1074358865928192"
+      }
+    ],
+    "1539013": [
+      {
+        "bookmaker": "Betclic",
+        "market": "Nombre total de buts",
+        "label": "Plus de 2,5 buts",
+        "odd": 1.8,
+        "sourceUrl": "https://www.betclic.fr/football-sfootball/coupe-du-monde-2026-c1/rd-congo-ouzbekistan-m1117886900039680"
+      },
+      {
+        "bookmaker": "Betclic",
+        "market": "Nombre total de buts",
+        "label": "Moins de 2,5 buts",
+        "odd": 1.8,
+        "sourceUrl": "https://www.betclic.fr/football-sfootball/coupe-du-monde-2026-c1/rd-congo-ouzbekistan-m1117886900039680"
+      },
+      {
+        "bookmaker": "Betclic",
+        "market": "Les 2 équipes marquent",
+        "label": "Oui",
+        "odd": 1.79,
+        "sourceUrl": "https://www.betclic.fr/football-sfootball/coupe-du-monde-2026-c1/rd-congo-ouzbekistan-m1117886900039680"
+      },
+      {
+        "bookmaker": "Betclic",
+        "market": "Les 2 équipes marquent ou +2,5 buts",
+        "label": "Oui",
+        "odd": 1.5,
+        "sourceUrl": "https://www.betclic.fr/football-sfootball/coupe-du-monde-2026-c1/rd-congo-ouzbekistan-m1117886900039680"
+      },
+      {
+        "bookmaker": "Betclic",
+        "market": "Buteur",
+        "label": "Yoane Wissa buteur",
+        "odd": 2.65,
+        "sourceUrl": "https://www.betclic.fr/football-sfootball/coupe-du-monde-2026-c1/rd-congo-ouzbekistan-m1117886900039680"
+      },
+      {
+        "bookmaker": "Betclic",
+        "market": "Buteur",
+        "label": "Cedric Bakambu buteur",
+        "odd": 2.7,
+        "sourceUrl": "https://www.betclic.fr/football-sfootball/coupe-du-monde-2026-c1/rd-congo-ouzbekistan-m1117886900039680"
+      },
+      {
+        "bookmaker": "Betclic",
+        "market": "Buteur",
+        "label": "Simon Banza buteur",
+        "odd": 2.8,
+        "sourceUrl": "https://www.betclic.fr/football-sfootball/coupe-du-monde-2026-c1/rd-congo-ouzbekistan-m1117886900039680"
+      },
+      {
+        "bookmaker": "Betclic",
+        "market": "Joueur décisif",
+        "label": "Cedric Bakambu décisif",
+        "odd": 2.1,
+        "sourceUrl": "https://www.betclic.fr/football-sfootball/coupe-du-monde-2026-c1/rd-congo-ouzbekistan-m1117886900039680"
+      },
+      {
+        "bookmaker": "Betclic",
+        "market": "Score exact",
+        "label": "1 - 0",
+        "odd": 6.4,
+        "sourceUrl": "https://www.betclic.fr/football-sfootball/coupe-du-monde-2026-c1/rd-congo-ouzbekistan-m1117886900039680"
+      },
+      {
+        "bookmaker": "Betclic",
+        "market": "Équipe qui marque",
+        "label": "RD Congo marque le 1er but",
+        "odd": 1.5,
+        "sourceUrl": "https://www.betclic.fr/football-sfootball/coupe-du-monde-2026-c1/rd-congo-ouzbekistan-m1117886900039680"
+      }
+    ],
+    "1539074": [
+      {
+        "bookmaker": "Betclic",
+        "market": "Nombre total de buts",
+        "label": "Plus de 2,5 buts",
+        "odd": 1.47,
+        "sourceUrl": "https://www.betclic.fr/football-sfootball/coupe-du-monde-2026-c1/senegal-irak-m1117886432563200"
+      },
+      {
+        "bookmaker": "Betclic",
+        "market": "Nombre total de buts",
+        "label": "Moins de 2,5 buts",
+        "odd": 2.38,
+        "sourceUrl": "https://www.betclic.fr/football-sfootball/coupe-du-monde-2026-c1/senegal-irak-m1117886432563200"
+      },
+      {
+        "bookmaker": "Betclic",
+        "market": "Les 2 équipes marquent",
+        "label": "Oui",
+        "odd": 2.1,
+        "sourceUrl": "https://www.betclic.fr/football-sfootball/coupe-du-monde-2026-c1/senegal-irak-m1117886432563200"
+      },
+      {
+        "bookmaker": "Betclic",
+        "market": "Les 2 équipes marquent ou +2,5 buts",
+        "label": "Oui",
+        "odd": 1.42,
+        "sourceUrl": "https://www.betclic.fr/football-sfootball/coupe-du-monde-2026-c1/senegal-irak-m1117886432563200"
+      },
+      {
+        "bookmaker": "Betclic",
+        "market": "Buteur",
+        "label": "Bamba Dieng buteur",
+        "odd": 2.03,
+        "sourceUrl": "https://www.betclic.fr/football-sfootball/coupe-du-monde-2026-c1/senegal-irak-m1117886432563200"
+      },
+      {
+        "bookmaker": "Betclic",
+        "market": "Buteur",
+        "label": "Nicolas Jackson buteur",
+        "odd": 2.07,
+        "sourceUrl": "https://www.betclic.fr/football-sfootball/coupe-du-monde-2026-c1/senegal-irak-m1117886432563200"
+      },
+      {
+        "bookmaker": "Betclic",
+        "market": "Buteur",
+        "label": "Sadio Mané buteur",
+        "odd": 2.25,
+        "sourceUrl": "https://www.betclic.fr/football-sfootball/coupe-du-monde-2026-c1/senegal-irak-m1117886432563200"
+      },
+      {
+        "bookmaker": "Betclic",
+        "market": "Joueur décisif",
+        "label": "Sadio Mané décisif",
+        "odd": 1.65,
+        "sourceUrl": "https://www.betclic.fr/football-sfootball/coupe-du-monde-2026-c1/senegal-irak-m1117886432563200"
+      },
+      {
+        "bookmaker": "Betclic",
+        "market": "Score exact",
+        "label": "2 - 0",
+        "odd": 5.4,
+        "sourceUrl": "https://www.betclic.fr/football-sfootball/coupe-du-monde-2026-c1/senegal-irak-m1117886432563200"
+      },
+      {
+        "bookmaker": "Betclic",
+        "market": "Équipe qui marque",
+        "label": "Sénégal marque le 1er but",
+        "odd": 1.19,
+        "sourceUrl": "https://www.betclic.fr/football-sfootball/coupe-du-monde-2026-c1/senegal-irak-m1117886432563200"
+      }
+    ]
+  },
   "markets": {
     "1489387": [
       {
@@ -12,14 +1677,14 @@
       {
         "bookmaker": "William Hill",
         "home": 1.3,
-        "draw": 5.0,
+        "draw": 5,
         "away": 9.5
       },
       {
         "bookmaker": "Bet365",
         "home": 1.28,
         "draw": 5.75,
-        "away": 10.0
+        "away": 10
       },
       {
         "bookmaker": "Marathonbet",
@@ -49,9 +1714,9 @@
       },
       {
         "bookmaker": "Bet365",
-        "home": 2.0,
+        "home": 2,
         "draw": 3.3,
-        "away": 4.0
+        "away": 4
       },
       {
         "bookmaker": "Marathonbet",
@@ -71,31 +1736,31 @@
         "bookmaker": "10Bet",
         "home": 1.09,
         "draw": 9.6,
-        "away": 19.0
+        "away": 19
       },
       {
         "bookmaker": "William Hill",
         "home": 1.11,
         "draw": 9.5,
-        "away": 21.0
+        "away": 21
       },
       {
         "bookmaker": "Bet365",
         "home": 1.08,
-        "draw": 11.0,
-        "away": 23.0
+        "draw": 11,
+        "away": 23
       },
       {
         "bookmaker": "Marathonbet",
         "home": 1.11,
-        "draw": 11.0,
-        "away": 27.0
+        "draw": 11,
+        "away": 27
       },
       {
         "bookmaker": "Unibet",
         "home": 1.1,
         "draw": 10.5,
-        "away": 23.0
+        "away": 23
       }
     ],
     "1489390": [
@@ -113,7 +1778,7 @@
       },
       {
         "bookmaker": "Bet365",
-        "home": 6.0,
+        "home": 6,
         "draw": 3.6,
         "away": 1.65
       },
@@ -125,7 +1790,7 @@
       },
       {
         "bookmaker": "Unibet",
-        "home": 6.0,
+        "home": 6,
         "draw": 3.65,
         "away": 1.64
       }
@@ -147,7 +1812,7 @@
         "bookmaker": "Bet365",
         "home": 1.62,
         "draw": 4.2,
-        "away": 5.0
+        "away": 5
       },
       {
         "bookmaker": "Marathonbet",
@@ -167,19 +1832,19 @@
         "bookmaker": "10Bet",
         "home": 1.17,
         "draw": 7.4,
-        "away": 13.0
+        "away": 13
       },
       {
         "bookmaker": "William Hill",
         "home": 1.17,
-        "draw": 7.0,
-        "away": 15.0
+        "draw": 7,
+        "away": 15
       },
       {
         "bookmaker": "Bet365",
         "home": 1.14,
         "draw": 8.5,
-        "away": 17.0
+        "away": 17
       },
       {
         "bookmaker": "Marathonbet",
@@ -190,8 +1855,8 @@
       {
         "bookmaker": "Unibet",
         "home": 1.15,
-        "draw": 8.0,
-        "away": 18.0
+        "draw": 8,
+        "away": 18
       }
     ],
     "1489393": [
@@ -205,13 +1870,13 @@
         "bookmaker": "William Hill",
         "home": 1.44,
         "draw": 4.5,
-        "away": 6.0
+        "away": 6
       },
       {
         "bookmaker": "Bet365",
         "home": 1.48,
         "draw": 4.75,
-        "away": 6.0
+        "away": 6
       },
       {
         "bookmaker": "Marathonbet",
@@ -223,25 +1888,25 @@
         "bookmaker": "Unibet",
         "home": 1.42,
         "draw": 4.9,
-        "away": 7.0
+        "away": 7
       }
     ],
     "1489394": [
       {
         "bookmaker": "10Bet",
         "home": 7.25,
-        "draw": 4.0,
+        "draw": 4,
         "away": 1.47
       },
       {
         "bookmaker": "William Hill",
-        "home": 7.0,
-        "draw": 4.0,
+        "home": 7,
+        "draw": 4,
         "away": 1.44
       },
       {
         "bookmaker": "Bet365",
-        "home": 8.0,
+        "home": 8,
         "draw": 4.33,
         "away": 1.44
       },
@@ -253,7 +1918,7 @@
       },
       {
         "bookmaker": "Unibet",
-        "home": 8.0,
+        "home": 8,
         "draw": 4.2,
         "away": 1.45
       }
@@ -275,7 +1940,7 @@
         "bookmaker": "Bet365",
         "home": 1.38,
         "draw": 4.9,
-        "away": 8.0
+        "away": 8
       },
       {
         "bookmaker": "Marathonbet",
@@ -305,7 +1970,7 @@
       },
       {
         "bookmaker": "Bet365",
-        "home": 6.0,
+        "home": 6,
         "draw": 4.2,
         "away": 1.55
       },

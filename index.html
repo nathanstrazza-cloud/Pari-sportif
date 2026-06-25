@@ -11,7 +11,7 @@
     <title>Pari Sportif</title>
     <link rel="manifest" href="manifest.json" />
     <link rel="icon" href="logo.jpg" type="image/jpeg" />
-    <link rel="stylesheet" href="styles.css?v=10" />
+    <link rel="stylesheet" href="styles.css?v=23" />
   </head>
   <body>
     <div class="loading-screen" id="loadingScreen" aria-live="polite">
@@ -37,7 +37,6 @@
           </div>
           <span class="count-pill" id="matchesCount">0</span>
         </div>
-        <div id="matchDetail" class="match-detail" aria-live="polite"></div>
         <div id="matchesList" class="match-list" aria-label="Liste des matchs"></div>
       </section>
 
@@ -111,6 +110,18 @@
       </section>
     </main>
 
+    <div class="match-modal" id="matchModal" hidden>
+      <div class="match-modal-backdrop" data-close-match-modal></div>
+      <article class="match-modal-panel" role="dialog" aria-modal="true" aria-labelledby="matchModalTitle">
+        <header class="match-modal-header">
+          <div id="matchModalTitle"></div>
+          <button class="icon-button" id="matchModalClose" type="button" aria-label="Fermer le détail">×</button>
+        </header>
+        <div class="match-modal-tabs" id="matchModalTabs" role="tablist" aria-label="Détails du match"></div>
+        <div class="match-modalBody" id="matchModalBody"></div>
+      </article>
+    </div>
+
     <nav class="bottom-tabs" aria-label="Navigation principale">
       <button class="tab-button is-active" id="tab-matches" type="button" data-tab="matches">
         <img src="Accueil.PNG" alt="" />
@@ -127,6 +138,6 @@
     </nav>
 
     <noscript>Activez JavaScript pour utiliser Pari Sportif.</noscript>
-    <script src="app.js?v=10" defer></script>
+    <script src="app.js?v=23" defer></script>
   </body>
 </html>
