@@ -11,7 +11,7 @@
     <title>Pari Sportif</title>
     <link rel="manifest" href="manifest.json" />
     <link rel="icon" href="logo.jpg" type="image/jpeg" />
-    <link rel="stylesheet" href="styles.css?v=23" />
+    <link rel="stylesheet" href="styles.css?v=26" />
   </head>
   <body>
     <div class="loading-screen" id="loadingScreen" aria-live="polite">
@@ -122,6 +122,17 @@
       </article>
     </div>
 
+    <div class="team-modal" id="teamModal" hidden>
+      <div class="match-modal-backdrop" data-close-team-modal></div>
+      <article class="match-modal-panel team-modal-panel" role="dialog" aria-modal="true" aria-labelledby="teamModalTitle">
+        <header class="match-modal-header team-modal-header">
+          <div id="teamModalTitle"></div>
+          <button class="icon-button" id="teamModalClose" type="button" aria-label="Fermer la fiche équipe">×</button>
+        </header>
+        <div class="team-modal-body" id="teamModalBody"></div>
+      </article>
+    </div>
+
     <nav class="bottom-tabs" aria-label="Navigation principale">
       <button class="tab-button is-active" id="tab-matches" type="button" data-tab="matches">
         <img src="Accueil.PNG" alt="" />
@@ -138,6 +149,6 @@
     </nav>
 
     <noscript>Activez JavaScript pour utiliser Pari Sportif.</noscript>
-    <script src="app.js?v=23" defer></script>
+    <script src="app.js?v=26" defer></script>
   </body>
 </html>
