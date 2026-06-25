@@ -13,7 +13,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Télécharger le repo
+      - name: Télécharger le repo
         uses: actions/checkout@v4
 
       - name: Installer Python
@@ -21,19 +21,18 @@ jobs:
         with:
           python-version: "3.11"
 
-      - name: Lancer les scripts de mise à jour
+      - name: Lancer les scripts de mise à jour
         env:
-        API_FOOTBALL_KEY: ${{ secrets.API_FOOTBALL_KEY }}
+          API_FOOTBALL_KEY: ${{ secrets.API_FOOTBALL_KEY }}
         run: |
-        python scripts/sync_competition_data.py
-        python scripts/sync_live_scores.py
-        python scripts/morning_world_cup_sync.py
+          python scripts/sync_competition_data.py
+          python scripts/sync_live_scores.py
+          python scripts/morning_world_cup_sync.py
 
-      - name: Sauvegarder les fichiers modifiés
+      - name: Sauvegarder les fichiers modifiés
         run: |
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
           git add data/*.json
           git commit -m "Update live data" || echo "Aucune modification"
           git push
-          
