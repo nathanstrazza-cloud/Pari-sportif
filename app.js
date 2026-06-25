@@ -6,6 +6,7 @@ const state = {
   selectedMatchId: null,
   selectedTeam: null,
   activeTab: "matches",
+  activeStandingView: "groups",
   activeStage: "round32",
   refreshTimer: null,
   touchStartX: 0,
@@ -32,6 +33,8 @@ const groupStatusLabels = {
   "best-third": "Meilleur 3e",
   eliminated: "Éliminé",
 };
+
+const bestThirdQualifyingCount = 8;
 
 const teamNameFr = {
   Algeria: "Algérie",
@@ -172,9 +175,12 @@ function cacheElements() {
   els.matchDetail = document.querySelector("#matchDetail");
   els.matchesList = document.querySelector("#matchesList");
   els.matchesCount = document.querySelector("#matchesCount");
+  els.standingsSubtabs = document.querySelector("#standingsSubtabs");
   els.groupsGrid = document.querySelector("#groupsGrid");
   els.standingsLegend = document.querySelector("#standingsLegend");
-  els.playersBoards = document.querySelector("#playersBoards");
+  els.bestThirdBoard = document.querySelector("#bestThirdBoard");
+  els.topScorersBoard = document.querySelector("#topScorersBoard");
+  els.topAssistsBoard = document.querySelector("#topAssistsBoard");
   els.stageTabs = document.querySelector("#stageTabs");
   els.bracketStage = document.querySelector("#bracketStage");
   els.refreshPill = document.querySelector("#refreshPill");
@@ -210,6 +216,13 @@ async function fetchJson(path) {
 function bindNavigation() {
   document.querySelectorAll(".tab-button").forEach((button) => {
     button.addEventListener("click", () => setActiveTab(button.dataset.tab));
+  });
+
+  document.querySelectorAll(".standing-view-tab").forEach((button) => {
+    button.addEventListener("click", () => {
+      state.activeStandingView = button.dataset.standingsView;
+      renderStandingViews();
+    });
   });
 }
 
@@ -724,6 +737,8 @@ function renderStandings() {
   }
 
   const groups = sortGroupsByPhase(state.standings);
+  const currentBestThirdKeys = getCurrentBestThirdKeySet();
+  const allGroupsComplete = areAllGroupsComplete();
 
   els.groupsGrid.innerHTML = groups.length ? groups.map((group) => {
     const phase = getGroupPhase(group);
@@ -739,42 +754,255 @@ function renderStandings() {
           <span class="standing-numbers"><span>J</span><span>Diff</span><span>Pts</span><span>Statut</span></span>
         </div>
         ${(Array.isArray(group.teams) ? group.teams : []).map((team) => `
-          <div class="standing-row">
-            <span class="team-cell">
-              <i class="status-stripe ${escapeHtml(team.status ?? "")}"></i>
-              ${renderTeamFlag(team.name, "flag-inline")}
-              ${escapeHtml(displayTeamName(team.name))}
-            </span>
-            <span class="standing-numbers">
-              <span>${formatOptionalValue(team.played)}</span>
-              <span>${formatGoalDifference(team.gd)}</span>
-              <span><strong>${formatOptionalValue(team.points)}</strong></span>
-              <span class="team-status-text status-${escapeHtml(team.status ?? "unknown")}">${team.status ? escapeHtml(groupStatusLabels[team.status] ?? team.status) : "—"}</span>
-            </span>
-          </div>
+          ${renderGroupTeamRow(group, team, currentBestThirdKeys, allGroupsComplete)}
         `).join("")}
       </div>
     </article>
   `;
   }).join("") : `<div class="empty-state">Aucun classement disponible.</div>`;
 
-  const boards = [
-    ["Meilleurs buteurs", state.players.topScorers, "goals", "buts"],
-    ["Meilleurs passeurs", state.players.topAssists, "assists", "passes"],
-  ].filter(([, rows]) => Array.isArray(rows) && rows.length);
+  els.bestThirdBoard.innerHTML = renderBestThirdBoard(currentBestThirdKeys, allGroupsComplete);
+  els.topScorersBoard.innerHTML = renderPlayerBoard("Meilleurs buteurs", state.players.topScorers, "goals", "buts");
+  els.topAssistsBoard.innerHTML = renderPlayerBoard("Meilleurs passeurs", state.players.topAssists, "assists", "passes");
+  renderStandingViews();
+}
 
-  const filledBoards = boards.map(([title, rows = [], key, label]) => [
-    title,
-    rows.filter((player) => player.name && player.team && player[key] !== undefined),
+function renderGroupTeamRow(group, team, currentBestThirdKeys, allGroupsComplete) {
+  const status = getTeamQualificationStatus(group, team, currentBestThirdKeys, allGroupsComplete);
+  return `
+    <div class="standing-row">
+      <span class="team-cell">
+        <i class="status-stripe ${escapeHtml(status.key)}"></i>
+        ${renderTeamFlag(team.name, "flag-inline")}
+        ${escapeHtml(displayTeamName(team.name))}
+      </span>
+      <span class="standing-numbers">
+        <span>${formatOptionalValue(team.played)}</span>
+        <span>${formatGoalDifference(team.gd)}</span>
+        <span><strong>${formatOptionalValue(team.points)}</strong></span>
+        <span class="team-status-text status-${escapeHtml(status.key)}">${escapeHtml(status.label)}</span>
+      </span>
+    </div>
+  `;
+}
+
+function getTeamQualificationStatus(group, team, currentBestThirdKeys, allGroupsComplete) {
+  const rank = Number(team.rank);
+  let key = "eliminated";
+
+  if (rank <= 2) {
+    key = "qualified";
+  } else if (rank === 3 && currentBestThirdKeys.has(getBestThirdKey(group.name, team.name))) {
+    key = "best-third";
+  }
+
+  const canChange = canTeamQualificationStatusChange(group, team, key, currentBestThirdKeys, allGroupsComplete);
+  const label = groupStatusLabels[key] ?? key;
+
+  return {
     key,
-    label,
-  ]).filter(([, rows]) => rows.length);
+    label: canChange ? `(${label})` : label,
+  };
+}
 
-  els.playersBoards.innerHTML = filledBoards.length ? filledBoards.map(([title, rows, key, label]) => `
+function canTeamQualificationStatusChange(group, team, statusKey, currentBestThirdKeys, allGroupsComplete) {
+  if (statusKey === "qualified") {
+    return !isGuaranteedGroupTopTwo(group, team);
+  }
+
+  if (statusKey === "best-third") {
+    if (allGroupsComplete) return false;
+    return !isGuaranteedBestThird(group, team, currentBestThirdKeys);
+  }
+
+  return !isDefinitelyEliminated(group, team, currentBestThirdKeys);
+}
+
+function isGuaranteedGroupTopTwo(group, team) {
+  const rank = Number(team.rank);
+  if (getGroupPhase(group).key === "complete") return rank <= 2;
+
+  const teamKey = normalizeTeamName(displayTeamName(team.name));
+  return getGroupPointScenarios(group).every((scenario) => {
+    const teamPoints = scenario.get(teamKey);
+    if (!isNumber(teamPoints)) return false;
+    const teamsAtLeastLevel = [...scenario.values()].filter((points) => points >= teamPoints).length;
+    return teamsAtLeastLevel <= 2;
+  });
+}
+
+function canFinishGroupTopTwo(group, team) {
+  const rank = Number(team.rank);
+  if (getGroupPhase(group).key === "complete") return rank <= 2;
+
+  const teamKey = normalizeTeamName(displayTeamName(team.name));
+  return getGroupPointScenarios(group).some((scenario) => {
+    const teamPoints = scenario.get(teamKey);
+    if (!isNumber(teamPoints)) return false;
+    const teamsAbove = [...scenario.values()].filter((points) => points > teamPoints).length;
+    return teamsAbove < 2;
+  });
+}
+
+function isDefinitelyEliminated(group, team, currentBestThirdKeys) {
+  const rank = Number(team.rank);
+  const groupComplete = getGroupPhase(group).key === "complete";
+
+  if (groupComplete && rank > 3) return true;
+  if (canFinishGroupTopTwo(group, team)) return false;
+
+  return !canStillReachBestThird(group, team, currentBestThirdKeys);
+}
+
+function isGuaranteedBestThird(group, team, currentBestThirdKeys) {
+  if (!currentBestThirdKeys.has(getBestThirdKey(group.name, team.name))) return false;
+  const candidate = getBestThirdCandidateProfile(group, team, "min");
+  if (!candidate) return false;
+
+  const possibleThreats = state.standings.filter((otherGroup) => {
+    if (normalizeGroupName(otherGroup.name) === normalizeGroupName(group.name)) return false;
+    const best = getGroupThirdPointRange(otherGroup).max;
+    return best >= candidate.points;
+  }).length;
+
+  return possibleThreats < bestThirdQualifyingCount;
+}
+
+function canStillReachBestThird(group, team, currentBestThirdKeys) {
+  if (currentBestThirdKeys.has(getBestThirdKey(group.name, team.name))) return true;
+
+  const candidate = getBestThirdCandidateProfile(group, team, "max");
+  if (!candidate) return false;
+
+  const guaranteedBetterThirds = state.standings.filter((otherGroup) => {
+    if (normalizeGroupName(otherGroup.name) === normalizeGroupName(group.name)) return false;
+    const worst = getGroupThirdPointRange(otherGroup).min;
+    return worst > candidate.points;
+  }).length;
+
+  return guaranteedBetterThirds < bestThirdQualifyingCount;
+}
+
+function getBestThirdCandidateProfile(group, team, mode) {
+  const teamKey = normalizeTeamName(displayTeamName(team.name));
+  const scenarios = getGroupPointScenarios(group)
+    .map((scenario) => getPossibleThirdProfileFromScenario(scenario, teamKey))
+    .filter(Boolean);
+
+  if (!scenarios.length) return null;
+  return scenarios.sort((left, right) => mode === "max" ? right.points - left.points : left.points - right.points)[0];
+}
+
+function getPossibleThirdProfileFromScenario(scenario, teamKey) {
+  const teamPoints = scenario.get(teamKey);
+  if (!isNumber(teamPoints)) return null;
+
+  const teamsAbove = [...scenario.entries()].filter(([key, points]) => key !== teamKey && points > teamPoints).length;
+  const teamsAtLeastLevel = [...scenario.entries()].filter(([, points]) => points >= teamPoints).length;
+
+  if (teamsAbove > 2 || teamsAtLeastLevel < 3) return null;
+  return { points: teamPoints };
+}
+
+function getGroupThirdPointRange(group) {
+  const thirdPoints = getGroupPointScenarios(group)
+    .map((scenario) => [...scenario.values()].sort((left, right) => right - left)[2])
+    .filter(isNumber);
+
+  return {
+    min: thirdPoints.length ? Math.min(...thirdPoints) : -Infinity,
+    max: thirdPoints.length ? Math.max(...thirdPoints) : -Infinity,
+  };
+}
+
+function getGroupPointScenarios(group) {
+  const base = new Map(
+    (group?.teams ?? []).map((team) => [
+      normalizeTeamName(displayTeamName(team.name)),
+      Number(team.points ?? 0),
+    ])
+  );
+  const remainingMatches = getMatchesForGroup(group).filter((match) => match.status !== "finished");
+  if (!remainingMatches.length) return [base];
+
+  return remainingMatches.reduce((scenarios, match) => {
+    const homeKey = normalizeTeamName(displayTeamName(match.home));
+    const awayKey = normalizeTeamName(displayTeamName(match.away));
+    if (!base.has(homeKey) || !base.has(awayKey)) return scenarios;
+
+    return scenarios.flatMap((scenario) => [
+      addScenarioPoints(scenario, homeKey, 3, awayKey, 0),
+      addScenarioPoints(scenario, homeKey, 1, awayKey, 1),
+      addScenarioPoints(scenario, homeKey, 0, awayKey, 3),
+    ]);
+  }, [base]);
+}
+
+function addScenarioPoints(scenario, homeKey, homePoints, awayKey, awayPoints) {
+  const next = new Map(scenario);
+  next.set(homeKey, (next.get(homeKey) ?? 0) + homePoints);
+  next.set(awayKey, (next.get(awayKey) ?? 0) + awayPoints);
+  return next;
+}
+
+function renderBestThirdBoard(currentBestThirdKeys, allGroupsComplete) {
+  const rows = getThirdPlacedTeams();
+
+  if (!rows.length) {
+    return `<div class="empty-state">Aucun meilleur 3e disponible.</div>`;
+  }
+
+  return `
+    <article class="leader-card best-third-card">
+      <header>
+        <h3>Classement des meilleurs 3e</h3>
+      </header>
+      <div class="standings-table">
+        <div class="standing-row is-head">
+          <span class="team-cell">Équipe</span>
+          <span class="standing-numbers"><span>J</span><span>Diff</span><span>Pts</span><span>Statut</span></span>
+        </div>
+        ${rows.map((row, index) => {
+          const status = getTeamQualificationStatus(
+            row.group,
+            row.team,
+            currentBestThirdKeys,
+            allGroupsComplete
+          );
+          return `
+          <div class="standing-row">
+            <span class="team-cell">
+              <i class="status-stripe ${escapeHtml(status.key)}"></i>
+              ${renderTeamFlag(row.team.name, "flag-inline")}
+              <span>
+                ${escapeHtml(displayTeamName(row.team.name))}
+                <small class="muted">${escapeHtml(row.groupName)} • ${escapeHtml(row.phase.label)}</small>
+              </span>
+            </span>
+            <span class="standing-numbers">
+              <span>${formatOptionalValue(row.team.played)}</span>
+              <span>${formatGoalDifference(row.team.gd)}</span>
+              <span><strong>${formatOptionalValue(row.team.points)}</strong></span>
+              <span class="team-status-text status-${escapeHtml(status.key || "unknown")}">${escapeHtml(status.label)}</span>
+            </span>
+          </div>
+        `;
+        }).join("")}
+      </div>
+    </article>
+  `;
+}
+
+function renderPlayerBoard(title, rows = [], key, label) {
+  const filledRows = Array.isArray(rows)
+    ? rows.filter((player) => player.name && player.team && player[key] !== undefined)
+    : [];
+
+  return filledRows.length ? `
     <article class="leader-card">
       <header><h3>${title}</h3></header>
       <div class="leader-list">
-        ${rows.map((player, index) => `
+        ${filledRows.map((player, index) => `
           <div class="player-row leader-player${isTeamEliminated(player.team) ? " is-eliminated" : ""}">
             <span class="leader-name"><strong>${index + 1}.</strong> ${renderTeamFlag(player.team, "flag-inline")} <strong>${escapeHtml(player.name)}</strong> <small class="muted">${escapeHtml(player.team)}</small></span>
             <span class="rating">${formatLeaderValue(player[key])} ${label}</span>
@@ -782,7 +1010,59 @@ function renderStandings() {
         `).join("")}
       </div>
     </article>
-  `).join("") : `<div class="empty-state">Aucune performance individuelle disponible.</div>`;
+  ` : `<div class="empty-state">Aucune donnée disponible.</div>`;
+}
+
+function renderStandingViews() {
+  document.querySelectorAll(".standing-view-tab").forEach((button) => {
+    const isActive = button.dataset.standingsView === state.activeStandingView;
+    button.classList.toggle("is-active", isActive);
+    button.setAttribute("aria-selected", String(isActive));
+  });
+
+  document.querySelectorAll(".standing-view").forEach((view) => {
+    view.classList.toggle("is-active", view.dataset.standingView === state.activeStandingView);
+  });
+}
+
+function getCurrentBestThirdKeySet() {
+  return new Set(
+    getThirdPlacedTeams()
+      .slice(0, bestThirdQualifyingCount)
+      .map((row) => getBestThirdKey(row.groupName, row.team.name))
+  );
+}
+
+function getThirdPlacedTeams() {
+  return state.standings
+    .map((group) => {
+      const teams = Array.isArray(group.teams) ? group.teams : [];
+      const team = teams.find((row) => Number(row.rank) === 3);
+      return team ? { group, groupName: group.name ?? "Groupe", phase: getGroupPhase(group), team } : null;
+    })
+    .filter(Boolean)
+    .sort(compareThirdPlacedTeams);
+}
+
+function areAllGroupsComplete() {
+  return state.standings.length > 0 && state.standings.every((group) => getGroupPhase(group).key === "complete");
+}
+
+function compareThirdPlacedTeams(left, right) {
+  const points = Number(right.team.points ?? -Infinity) - Number(left.team.points ?? -Infinity);
+  if (points) return points;
+
+  const goalDifference = Number(right.team.gd ?? -Infinity) - Number(left.team.gd ?? -Infinity);
+  if (goalDifference) return goalDifference;
+
+  const played = Number(left.team.played ?? Infinity) - Number(right.team.played ?? Infinity);
+  if (played) return played;
+
+  return String(left.groupName).localeCompare(String(right.groupName), "fr-FR", { numeric: true });
+}
+
+function getBestThirdKey(groupName, teamName) {
+  return `${normalizeGroupName(groupName)}::${normalizeTeamName(displayTeamName(teamName))}`;
 }
 
 function sortGroupsByPhase(groups) {
@@ -831,9 +1111,13 @@ function isTeamEliminated(teamName) {
   const teamKey = normalizeTeamName(displayTeamName(teamName));
   if (!teamKey) return false;
 
+  const currentBestThirdKeys = getCurrentBestThirdKeySet();
+  const allGroupsComplete = areAllGroupsComplete();
+
   return state.standings.some((group) =>
     (group.teams ?? []).some((team) =>
-      team.status === "eliminated" && normalizeTeamName(displayTeamName(team.name)) === teamKey
+      normalizeTeamName(displayTeamName(team.name)) === teamKey
+        && getTeamQualificationStatus(group, team, currentBestThirdKeys, allGroupsComplete).key === "eliminated"
     )
   );
 }

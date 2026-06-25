@@ -753,6 +753,52 @@ h3 {
   font-weight: 800;
 }
 
+.standings-subtabs {
+  position: sticky;
+  top: 0;
+  z-index: 9;
+  display: flex;
+  gap: 0.45rem;
+  margin: 0 -1rem 1rem;
+  padding: 0.55rem 1rem;
+  overflow-x: auto;
+  border-bottom: 1px solid var(--line);
+  background: rgba(247, 250, 255, 0.96);
+  backdrop-filter: blur(18px);
+  scrollbar-width: none;
+}
+
+.standings-subtabs::-webkit-scrollbar {
+  display: none;
+}
+
+.standing-view-tab {
+  flex: 0 0 auto;
+  min-height: 2.25rem;
+  padding: 0 0.7rem;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: #FFFFFF;
+  color: var(--blue);
+  font-size: 0.76rem;
+  font-weight: 850;
+  white-space: nowrap;
+}
+
+.standing-view-tab.is-active {
+  border-color: rgba(215, 180, 90, 0.78);
+  background: rgba(215, 180, 90, 0.12);
+  color: var(--gold-light);
+}
+
+.standing-view {
+  display: none;
+}
+
+.standing-view.is-active {
+  display: block;
+}
+
 .legend span {
   display: inline-flex;
   align-items: center;
@@ -926,6 +972,23 @@ h3 {
 
 .players-boards {
   margin-top: 1rem;
+}
+
+.players-boards.players-boards-single {
+  margin-top: 0;
+  grid-template-columns: 1fr;
+}
+
+.best-third-card .team-cell > span:last-child {
+  display: grid;
+  min-width: 0;
+  gap: 0.12rem;
+}
+
+.best-third-card .team-cell small {
+  display: block;
+  font-size: 0.7rem;
+  font-weight: 750;
 }
 
 .leader-list {
