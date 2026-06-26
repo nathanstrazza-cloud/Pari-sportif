@@ -48,20 +48,33 @@ const EXPERT_SYSTEM = [
   "Avis 1, 2 et 3 : sur le RESULTAT du match. Chacun finit par \"Parti pris : <equipe> gagne\" ou \"Parti pris : match nul\".",
   "Avis 4 et 5 : sur le SCORE EXACT. Chacun finit par \"Parti pris : Score exact - X - Y\".",
   "Varie les angles (talents, collectif, donnees, emotion, value). Interdit : paris d'argent, buteurs, nombre de buts, joueur decisif.",
-  "Reponds UNIQUEMENT par un tableau JSON de 5 chaines de caracteres, sans texte autour.",
+  "Format de reponse OBLIGATOIRE : 5 lignes, une par avis, numerotees de 1. a 5. Rien d'autre (pas d'introduction, pas de conclusion).",
 ].join("\n");
 
 function parseStringArray(text: string): string[] | null {
-  const tryParse = (s: string) => {
+  const t = String(text ?? "").trim();
+  // 1) JSON (tableau de chaines, ou objet { avis: [...] })
+  const tryJson = (s: string): string[] | null => {
     try {
       const j = JSON.parse(s);
-      if (Array.isArray(j)) return j.map((x) => String(x).trim()).filter(Boolean);
+      const a = Array.isArray(j) ? j : Array.isArray(j?.avis) ? j.avis : null;
+      if (a) return a.map((x: any) => String(x).trim()).filter(Boolean);
     } catch {
       /* ignore */
     }
     return null;
   };
-  return tryParse(text) ?? tryParse((text.match(/\[[\s\S]*\]/) || [""])[0]);
+  const json = tryJson(t) ?? tryJson((t.match(/[\[{][\s\S]*[\]}]/) || [""])[0]);
+  if (json && json.length >= 5) return json.slice(0, 5);
+  // 2) Liste numerotee : 5 lignes "1. ... 2. ..."
+  const lines = t
+    .split(/\r?\n/)
+    .map((l) => l.trim())
+    .filter((l) => /^\d+\s*[\.\)\-]/.test(l))
+    .map((l) => l.replace(/^\d+\s*[\.\)\-]\s*/, "").trim())
+    .filter(Boolean);
+  if (lines.length >= 5) return lines.slice(0, 5);
+  return null;
 }
 
 // Genere les 5 avis (3 resultat + 2 score) pour un match via Workers AI.
@@ -79,7 +92,7 @@ async function generateMatchExperts(env: Env, match: Match): Promise<string[] | 
         { role: "system", content: EXPERT_SYSTEM },
         { role: "user", content: userMsg },
       ],
-      max_tokens: 700,
+      max_tokens: 900,
     });
     const text = typeof res === "string" ? res : res?.response ?? "";
     const arr = parseStringArray(String(text));
