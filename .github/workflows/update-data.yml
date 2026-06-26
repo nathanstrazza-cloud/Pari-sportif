@@ -34,13 +34,6 @@ jobs:
         run: |
           python scripts/morning_world_cup_sync.py --force-today
 
-      - name: (Preprod a la demande) Capturer aussi les scores live
-        if: github.event_name == 'workflow_dispatch' && (inputs.target == 'preprod' || inputs.target == 'both')
-        env:
-          API_FOOTBALL_KEY: ${{ secrets.API_FOOTBALL_KEY }}
-        run: |
-          python scripts/sync_live_scores.py --force
-
       - name: Pousser les donnees vers Cloudflare KV (preprod + prod)
         env:
           CF_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
@@ -73,6 +66,22 @@ jobs:
             put_kv "$ns" "odds"           data/odds.json
             put_kv "$ns" "cards"          data/Cartes.json
           done
+
+      - name: Declencher le live du Worker (merge live cote Cloudflare)
+        if: github.event_name == 'workflow_dispatch'
+        env:
+          SYNC_TOKEN: ${{ secrets.SYNC_TOKEN }}
+          TARGET: ${{ github.event.inputs.target }}
+          PREPROD_URL: https://pari-sportif-live-preprod.bstrazza.workers.dev
+          PROD_URL: https://pari-sportif-live-prod.bstrazza.workers.dev
+        run: |
+          set -e
+          ping () { echo "sync -> $1"; curl -fsS -X POST "$1/sync?token=${SYNC_TOKEN}" && echo || echo "  (worker injoignable, ignore)"; }
+          case "$TARGET" in
+            preprod) ping "$PREPROD_URL" ;;
+            both)    ping "$PREPROD_URL"; ping "$PROD_URL" ;;
+            *)       echo "Cible prod : le live est gere par le cron du Worker, rien a declencher." ;;
+          esac
 
       - name: Sauvegarder les fichiers modifiés
         run: |
