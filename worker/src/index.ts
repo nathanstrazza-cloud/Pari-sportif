@@ -39,7 +39,7 @@ const POST_MATCH_EVERY_MIN = 10;
 const DEFAULT_RESEED_HOUR = 11; // UTC, apres la passe Python du matin (cron 10h UTC)
 
 // --- Generation des "Discussions de nos experts" via Workers AI ---
-const EXPERT_MODEL = "@cf/meta/llama-3.1-8b-instruct";
+const EXPERT_MODEL = "@cf/meta/llama-3.3-70b-instruct-fp8-fast";
 const EXPERT_HORIZON_MS = 5 * 24 * 60 * 60 * 1000; // ne genere que pour les matchs des ~5 prochains jours
 const EXPERT_BATCH = 4; // nb de matchs traites par passage du cron (limite la conso)
 const EXPERT_SYSTEM = [
