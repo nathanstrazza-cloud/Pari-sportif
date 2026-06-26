@@ -10,9 +10,9 @@
   "theme_color": "#005CFF",
   "icons": [
     {
-      "src": "logo.jpg",
-      "sizes": "912x1136",
-      "type": "image/jpeg",
+      "src": "logo.PNG",
+      "sizes": "1254x1254",
+      "type": "image/png",
       "purpose": "any"
     }
   ]

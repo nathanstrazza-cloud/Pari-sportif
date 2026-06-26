@@ -126,7 +126,7 @@ function setSurfaceAccess(isAccessible) {
 
 function fillAccount(user) {
   const fallbackName = user.email || "Compte Google";
-  const photo = user.photoURL || "logo.jpg";
+  const photo = user.photoURL || "logo.PNG";
   authEls.accountAvatar?.setAttribute("src", photo);
   authEls.accountMenuAvatar?.setAttribute("src", photo);
   if (authEls.accountName) authEls.accountName.textContent = user.displayName || fallbackName;
@@ -135,8 +135,8 @@ function fillAccount(user) {
 
 function clearAccount() {
   closeAccountMenu();
-  authEls.accountAvatar?.setAttribute("src", "logo.jpg");
-  authEls.accountMenuAvatar?.setAttribute("src", "logo.jpg");
+  authEls.accountAvatar?.setAttribute("src", "logo.PNG");
+  authEls.accountMenuAvatar?.setAttribute("src", "logo.PNG");
   if (authEls.accountName) authEls.accountName.textContent = "Compte Google";
   if (authEls.accountEmail) authEls.accountEmail.textContent = "";
 }

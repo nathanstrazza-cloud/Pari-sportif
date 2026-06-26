@@ -56,6 +56,10 @@ img {
   display: block;
 }
 
+[hidden] {
+  display: none !important;
+}
+
 noscript {
   display: block;
   margin: 1rem;
@@ -210,9 +214,11 @@ body.is-authenticated .auth-overlay {
 
 .account-widget {
   position: fixed;
-  top: max(0.8rem, env(safe-area-inset-top));
-  right: max(0.8rem, env(safe-area-inset-right));
+  top: calc(env(safe-area-inset-top) + 0.8rem);
+  right: calc(env(safe-area-inset-right) + 0.8rem);
   z-index: 35;
+  transform: translateZ(0);
+  will-change: transform;
 }
 
 .account-avatar-button {
@@ -311,7 +317,7 @@ body.is-authenticated .auth-overlay {
   width: min(100%, 48rem);
   min-height: 100vh;
   margin: 0 auto;
-  padding: max(1rem, env(safe-area-inset-top)) 1rem 6.75rem;
+  padding: max(1rem, env(safe-area-inset-top)) 1rem 7.6rem;
 }
 
 .topbar {
@@ -2061,9 +2067,10 @@ h3 {
   z-index: 10;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  gap: 0.2rem 0;
   width: min(100%, 48rem);
   margin: 0 auto;
-  padding: 0.55rem max(0.75rem, env(safe-area-inset-right)) max(0.55rem, env(safe-area-inset-bottom))
+  padding: 0.5rem max(0.75rem, env(safe-area-inset-right)) max(0.42rem, env(safe-area-inset-bottom))
     max(0.75rem, env(safe-area-inset-left));
   border-top: 1px solid var(--line);
   background: rgba(255, 255, 255, 0.96);
@@ -2097,6 +2104,17 @@ h3 {
 
 .tab-button.is-active img {
   filter: invert(22%) sepia(97%) saturate(4588%) hue-rotate(218deg) brightness(101%) contrast(104%);
+}
+
+.footer-credit {
+  grid-column: 1 / -1;
+  margin: -0.05rem 0 0;
+  color: var(--blue);
+  font-size: 0.66rem;
+  font-weight: 800;
+  line-height: 1.1;
+  text-align: center;
+  opacity: 0.68;
 }
 
 .empty-state {
