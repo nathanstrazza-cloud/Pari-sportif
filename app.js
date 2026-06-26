@@ -1,6 +1,6 @@
 // URL du Worker Cloudflare qui sert les scores live (cron 1 min).
-// A remplir apres `wrangler deploy`. Laisser "" pour n'utiliser que data/matches.json.
-const LIVE_DATA_URL = "";
+// Laisser "" pour n'utiliser que data/matches.json.
+const LIVE_DATA_URL = "https://pari-sportif-live.bstrazza.workers.dev";
 
 const state = {
   matches: [],
