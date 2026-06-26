@@ -8741,10 +8741,10 @@
   "knockout": {},
   "scheduleSync": {
     "provider": "api-football",
-    "checkedAt": "2026-06-26T10:24:12.988371Z",
+    "checkedAt": "2026-06-26T11:09:30.944454Z",
     "league": 1,
     "season": 2026,
-    "updatedMatches": 3,
+    "updatedMatches": 0,
     "insertedMatches": 0,
     "lineupsChecked": 0,
     "lineupsUpdated": 0,
