@@ -11,9 +11,9 @@
     <title>Pari Sportif</title>
     <link rel="manifest" href="manifest.json" />
     <link rel="icon" href="logo.jpg" type="image/jpeg" />
-    <link rel="stylesheet" href="styles.css?v=26" />
+    <link rel="stylesheet" href="styles.css?v=27" />
   </head>
-  <body>
+  <body class="auth-pending">
     <div class="loading-screen" id="loadingScreen" aria-live="polite">
       <img src="logo.jpg" alt="" class="loading-logo" />
       <div>
@@ -21,6 +21,36 @@
         <h1>Pari Sportif</h1>
       </div>
       <span class="loader" aria-hidden="true"></span>
+    </div>
+
+    <div class="auth-overlay" id="authOverlay" role="dialog" aria-modal="true" aria-labelledby="authTitle">
+      <section class="auth-card">
+        <img src="logo.jpg" alt="" class="auth-logo" />
+        <p class="eyebrow">Accès sécurisé</p>
+        <h1 id="authTitle">Pari Sportif</h1>
+        <p class="auth-copy">Connectez-vous avec votre compte Google pour accéder à l’application.</p>
+        <button class="google-signin-button" id="googleSignInButton" type="button">
+          <span class="google-mark" aria-hidden="true">G</span>
+          <span>Se connecter avec Google</span>
+        </button>
+        <p class="auth-status" id="authStatus" aria-live="polite">Vérification de la connexion...</p>
+      </section>
+    </div>
+
+    <div class="account-widget" id="accountWidget" hidden>
+      <button class="account-avatar-button" id="accountMenuButton" type="button" aria-label="Ouvrir le menu du compte" aria-expanded="false">
+        <img id="accountAvatar" src="logo.jpg" alt="" />
+      </button>
+      <div class="account-menu" id="accountMenu" hidden>
+        <div class="account-summary">
+          <img id="accountMenuAvatar" src="logo.jpg" alt="" />
+          <div>
+            <strong id="accountName">Compte Google</strong>
+            <span id="accountEmail"></span>
+          </div>
+        </div>
+        <button class="signout-button" id="signOutButton" type="button">Se déconnecter</button>
+      </div>
     </div>
 
     <main class="app-shell" id="app" aria-busy="true">
@@ -149,6 +179,7 @@
     </nav>
 
     <noscript>Activez JavaScript pour utiliser Pari Sportif.</noscript>
-    <script src="app.js?v=26" defer></script>
+    <script src="auth.js?v=1" type="module"></script>
+    <script src="app.js?v=27" defer></script>
   </body>
 </html>

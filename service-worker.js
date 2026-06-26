@@ -1,8 +1,9 @@
-const CACHE_NAME = "pari-sportif-v26";
+const CACHE_NAME = "pari-sportif-v27";
 const APP_SHELL = [
   "./",
   "index.html",
   "styles.css",
+  "auth.js",
   "app.js",
   "manifest.json",
   "logo.jpg",
