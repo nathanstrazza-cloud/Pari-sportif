@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-25T17:03:07.326534Z",
+  "lastUpdated": "2026-06-26T07:21:38.759558Z",
   "source": "api-football",
   "topScorers": [
     {
@@ -39,15 +39,15 @@
       "goals": 3.0
     },
     {
-      "name": "Matheus Cunha",
-      "team": "Brésil",
-      "age": 26,
+      "name": "B. Brobbey",
+      "team": "Pays-Bas",
+      "age": 23,
       "goals": 3.0
     },
     {
-      "name": "I. Saibari",
-      "team": "Maroc",
-      "age": 24,
+      "name": "Matheus Cunha",
+      "team": "Brésil",
+      "age": 26,
       "goals": 3.0
     },
     {
@@ -57,10 +57,10 @@
       "goals": 3.0
     },
     {
-      "name": "R. Vargas",
-      "team": "Suisse",
-      "age": 27,
-      "goals": 2.0
+      "name": "I. Saibari",
+      "team": "Maroc",
+      "age": 24,
+      "goals": 3.0
     },
     {
       "name": "C. Summerville",
@@ -69,15 +69,9 @@
       "goals": 2.0
     },
     {
-      "name": "Mikel Oyarzabal",
-      "team": "Espagne",
-      "age": 28,
-      "goals": 2.0
-    },
-    {
-      "name": "M. Araújo",
-      "team": "Uruguay",
-      "age": 25,
+      "name": "R. Vargas",
+      "team": "Suisse",
+      "age": 27,
       "goals": 2.0
     },
     {
@@ -93,6 +87,30 @@
       "goals": 2.0
     },
     {
+      "name": "Mikel Oyarzabal",
+      "team": "Espagne",
+      "age": 28,
+      "goals": 2.0
+    },
+    {
+      "name": "M. Araújo",
+      "team": "Uruguay",
+      "age": 25,
+      "goals": 2.0
+    },
+    {
+      "name": "A. Elanga",
+      "team": "Suède",
+      "age": 23,
+      "goals": 2.0
+    },
+    {
+      "name": "N. Pépé",
+      "team": "Côte d’Ivoire",
+      "age": 30,
+      "goals": 2.0
+    },
+    {
       "name": "C. Larin",
       "team": "Canada",
       "age": 30,
@@ -102,24 +120,6 @@
       "name": "J. Quiñones",
       "team": "Mexique",
       "age": 28,
-      "goals": 2.0
-    },
-    {
-      "name": "Ermin Mahmić",
-      "team": "Bosnie-et-Herzégovine",
-      "age": 20,
-      "goals": 2.0
-    },
-    {
-      "name": "B. Brobbey",
-      "team": "Pays-Bas",
-      "age": 23,
-      "goals": 2.0
-    },
-    {
-      "name": "F. Balogun",
-      "team": "États-Unis",
-      "age": 24,
       "goals": 2.0
     }
   ],
@@ -167,27 +167,21 @@
       "assists": 2.0
     },
     {
-      "name": "Brahim Díaz",
-      "team": "Maroc",
-      "age": 26,
-      "assists": 2.0
-    },
-    {
-      "name": "R. Alvarado",
-      "team": "Mexique",
-      "age": 27,
-      "assists": 2.0
-    },
-    {
       "name": "R. Gravenberch",
       "team": "Pays-Bas",
       "age": 23,
       "assists": 2.0
     },
     {
-      "name": "M. Ødegaard",
-      "team": "Norvège",
-      "age": 27,
+      "name": "D. Dumfries",
+      "team": "Pays-Bas",
+      "age": 29,
+      "assists": 2.0
+    },
+    {
+      "name": "Brahim Díaz",
+      "team": "Maroc",
+      "age": 26,
       "assists": 2.0
     },
     {
@@ -197,15 +191,27 @@
       "assists": 2.0
     },
     {
-      "name": "J. Enciso",
-      "team": "Paraguay",
-      "age": 21,
+      "name": "F. Wirtz",
+      "team": "Allemagne",
+      "age": 22,
       "assists": 2.0
     },
     {
-      "name": "D. Dumfries",
-      "team": "Pays-Bas",
-      "age": 29,
+      "name": "R. Alvarado",
+      "team": "Mexique",
+      "age": 27,
+      "assists": 2.0
+    },
+    {
+      "name": "M. Ødegaard",
+      "team": "Norvège",
+      "age": 27,
+      "assists": 2.0
+    },
+    {
+      "name": "J. Enciso",
+      "team": "Paraguay",
+      "age": 21,
       "assists": 2.0
     },
     {
@@ -227,21 +233,15 @@
       "assists": 1.0
     },
     {
-      "name": "R. Vargas",
-      "team": "Suisse",
+      "name": "A. Ueda",
+      "team": "Japon",
       "age": 27,
       "assists": 1.0
     },
     {
-      "name": "C. Summerville",
+      "name": "C. Gakpo",
       "team": "Pays-Bas",
-      "age": 24,
-      "assists": 1.0
-    },
-    {
-      "name": "Mikel Oyarzabal",
-      "team": "Espagne",
-      "age": 28,
+      "age": 26,
       "assists": 1.0
     }
   ],

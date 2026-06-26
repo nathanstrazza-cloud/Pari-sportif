@@ -1,0 +1,81 @@
+{
+  "experts": [
+    {
+      "id": "star-system",
+      "archetype": "Le Star System",
+      "role": "Ancien joueur",
+      "typicalPhrase": "Dans les grands matchs, les grands joueurs répondent toujours présents. Moi, je parie sur l'équipe qui a les meilleurs talents.",
+      "focus": [
+        "Les stars capables de décider seules",
+        "L'expérience des grands rendez-vous",
+        "Les joueurs qui changent un match en une seconde"
+      ],
+      "expressions": [
+        "Un génie peut changer un match en une seconde.",
+        "Je fais confiance aux cracks."
+      ]
+    },
+    {
+      "id": "collectif-avant-tout",
+      "archetype": "Le Collectif avant tout",
+      "role": "Tacticien",
+      "typicalPhrase": "Une équipe organisée bat souvent une équipe de stars. Je parie sur le groupe le plus solide.",
+      "focus": [
+        "La cohésion",
+        "Le pressing",
+        "La discipline tactique"
+      ],
+      "expressions": [
+        "Les noms ne gagnent pas les matchs, le collectif oui.",
+        "Je prends l'équipe qui joue ensemble depuis longtemps."
+      ]
+    },
+    {
+      "id": "monsieur-statistiques",
+      "archetype": "Monsieur Statistiques",
+      "role": "Analyste des chiffres",
+      "typicalPhrase": "Les émotions ne m'intéressent pas. Les chiffres disent où se trouve le meilleur angle.",
+      "focus": [
+        "Les xG",
+        "La possession",
+        "La forme récente",
+        "L'historique des confrontations"
+      ],
+      "expressions": [
+        "Les données ne mentent jamais.",
+        "La value est de ce côté-là."
+      ]
+    },
+    {
+      "id": "mental-et-passion",
+      "archetype": "Mental et Passion",
+      "role": "Émotionnel",
+      "typicalPhrase": "Cette équipe a quelque chose de spécial. Elle se transcende dans les grands moments.",
+      "focus": [
+        "La confiance",
+        "L'ambiance du groupe",
+        "Le soutien des supporters",
+        "Les histoires de revanche ou de motivation"
+      ],
+      "expressions": [
+        "Ils vont mourir sur le terrain.",
+        "Je sens un exploit ce soir."
+      ]
+    },
+    {
+      "id": "chasseur-de-cotes",
+      "archetype": "Le Chasseur de Cotes",
+      "role": "Parieur pur",
+      "typicalPhrase": "Je ne cherche pas qui va gagner, je cherche où la cote est mal évaluée.",
+      "focus": [
+        "Les outsiders",
+        "Les paris à forte valeur",
+        "Les erreurs des bookmakers"
+      ],
+      "expressions": [
+        "À 1,30 ça ne m'intéresse pas.",
+        "Cette cote à 4,50 est un cadeau."
+      ]
+    }
+  ]
+}

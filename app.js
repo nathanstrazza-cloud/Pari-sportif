@@ -327,7 +327,7 @@ function buildKnockout(rawKnockout, matches, standings) {
     .filter((match) => getKnockoutStageKey(match.stage))
     .forEach((match) => {
       const stage = getKnockoutStageKey(match.stage);
-      const bracketMatch = mapMatchToBracketMatch(match);
+      const bracketMatch = mapMatchToBracketMatch(match, standings);
       const alreadyListed = knockout[stage].some((item) => isSameBracketMatch(item, bracketMatch));
       if (!alreadyListed) {
         knockout[stage].push(bracketMatch);
@@ -336,7 +336,7 @@ function buildKnockout(rawKnockout, matches, standings) {
 
   knockout.round32 = mergeProjectedMatches(
     knockout.round32,
-    buildProjectedRound32(standings),
+    buildProjectedRound32(standings, knockout.round32),
   );
   knockout.round16 = mergeProjectedMatches(
     knockout.round16,
@@ -370,8 +370,8 @@ function thirdSeed(groups) {
   return { type: "third", groups };
 }
 
-function buildProjectedRound32(standings) {
-  const thirdAssignments = assignThirdPlaceSlots(standings);
+function buildProjectedRound32(standings, existingRound32Matches = []) {
+  const thirdAssignments = assignThirdPlaceSlots(standings, existingRound32Matches);
 
   return round32Fixtures.map((fixture) => {
     const home = resolveRound32Seed(fixture.home, standings, thirdAssignments, fixture.match);
@@ -466,7 +466,7 @@ function resolveRound32Seed(seed, standings, thirdAssignments, matchNumber) {
   return getGroupTeamByRank(standings, seed.group, seed.rank)?.name ?? formatSeedLabel(seed);
 }
 
-function assignThirdPlaceSlots(standings) {
+function assignThirdPlaceSlots(standings, existingRound32Matches = []) {
   const thirdRows = getThirdPlacedRows(standings).slice(0, bestThirdQualifyingCount);
   const slots = round32Fixtures
     .filter((fixture) => fixture.away.type === "third" || fixture.home.type === "third")
@@ -474,7 +474,8 @@ function assignThirdPlaceSlots(standings) {
       match: fixture.match,
       groups: (fixture.away.type === "third" ? fixture.away.groups : fixture.home.groups),
     }));
-  const assignment = findThirdPlaceAssignment(slots, thirdRows);
+  const lockedAssignment = getKnownThirdPlaceAssignments(slots, thirdRows, existingRound32Matches);
+  const assignment = findThirdPlaceAssignment(slots, thirdRows, lockedAssignment);
 
   return Object.fromEntries(
     Object.entries(assignment).map(([match, groupLetter]) => [
@@ -484,8 +485,27 @@ function assignThirdPlaceSlots(standings) {
   );
 }
 
-function findThirdPlaceAssignment(slots, thirdRows) {
+function getKnownThirdPlaceAssignments(slots, thirdRows, existingRound32Matches) {
+  return Object.fromEntries(
+    existingRound32Matches
+      .filter((match) => !match.projected)
+      .map((match) => {
+        const matchNumber = getBracketMatchNumber(match);
+        const slot = slots.find((item) => item.match === matchNumber);
+        if (!slot) return null;
+        const row = thirdRows.find((candidate) =>
+          slot.groups.includes(candidate.groupLetter)
+            && (sameTeam(candidate.team.name, match.home) || sameTeam(candidate.team.name, match.away))
+        );
+        return row ? [String(slot.match), row.groupLetter] : null;
+      })
+      .filter(Boolean)
+  );
+}
+
+function findThirdPlaceAssignment(slots, thirdRows, initialAssignment = {}) {
   const rowsByGroup = Object.fromEntries(thirdRows.map((row) => [row.groupLetter, row]));
+  const initialUsedGroups = new Set(Object.values(initialAssignment));
   const slotOptions = slots.map((slot) => ({
     ...slot,
     options: slot.groups.filter((group) => rowsByGroup[group]),
@@ -514,7 +534,7 @@ function findThirdPlaceAssignment(slots, thirdRows) {
     return null;
   }
 
-  return search({}, new Set()) ?? {};
+  return search({ ...initialAssignment }, initialUsedGroups) ?? initialAssignment;
 }
 
 function getThirdPlacedRows(standings) {
@@ -635,10 +655,15 @@ function getKnockoutStageKey(stage) {
   return knockoutStageByMatchStage[key] ?? null;
 }
 
-function mapMatchToBracketMatch(match) {
+function mapMatchToBracketMatch(match, standings = []) {
+  const stage = getKnockoutStageKey(match.stage);
+  const matchNumber = inferBracketMatchNumber(match, stage, standings);
   return {
     id: match.id,
-    slot: match.slot ?? match.stage,
+    matchNumber,
+    stage: stageLabels[stage] ?? match.stage,
+    slot: match.slot ?? (matchNumber ? formatStageSlot(stage, getStageOrderIndex(stage, matchNumber)) : match.stage),
+    sortOrder: matchNumber ? getStageSortOrder(stage, matchNumber) : undefined,
     date: match.date,
     status: match.status,
     venue: match.venue,
@@ -647,6 +672,36 @@ function mapMatchToBracketMatch(match) {
     homeScore: match.homeScore ?? match.score?.home ?? null,
     awayScore: match.awayScore ?? match.score?.away ?? null,
   };
+}
+
+function inferBracketMatchNumber(match, stage, standings) {
+  if (stage === "round32") {
+    return inferRound32MatchNumber(match, standings);
+  }
+  return getBracketMatchNumber(match);
+}
+
+function inferRound32MatchNumber(match, standings) {
+  const fixture = round32Fixtures.find((item) =>
+    seedMatchesTeam(item.home, match.home, standings)
+      && seedMatchesTeam(item.away, match.away, standings)
+  );
+  return fixture?.match ?? null;
+}
+
+function seedMatchesTeam(seed, team, standings) {
+  if (seed.type === "rank") {
+    return sameTeam(getGroupTeamByRank(standings, seed.group, seed.rank)?.name, team);
+  }
+
+  if (seed.type === "third") {
+    return seed.groups.some((groupLetter) => {
+      const third = getGroupTeamByRank(standings, groupLetter, 3);
+      return third && sameTeam(third.name, team);
+    });
+  }
+
+  return false;
 }
 
 function isSameBracketMatch(left, right) {
@@ -1663,14 +1718,16 @@ function formatLineupSource(lineup) {
 function renderBetSuggestions(match) {
   const suggestions = getBetSuggestions(match);
   const matchOdds = getMatchWinnerOdds(match);
+  const probabilities = getPredictionRows(match);
 
-  if (!suggestions.length && !matchOdds.length) {
+  if (!suggestions.length && !matchOdds.length && !probabilities.length) {
     return `<p class="muted">Aucune cote disponible pour ce match pour le moment.</p>`;
   }
 
   return `
-    <p class="muted">Paris relevés sur les pages publiques des bookmakers. Les valeurs peuvent bouger.</p>
+    <p class="muted">${matchOdds.length || suggestions.length ? "Paris relevés sur les pages publiques des bookmakers. Les valeurs peuvent bouger." : "Les cotes ne sont pas encore disponibles, voici les probabilités synchronisées."}</p>
     ${matchOdds.length ? renderMatchWinnerOdds(matchOdds) : ""}
+    ${!matchOdds.length && probabilities.length ? renderPredictionRows(probabilities) : ""}
     ${suggestions.length ? `
       <div class="bet-card-grid">
         ${suggestions.map((bet) => `
@@ -1688,6 +1745,19 @@ function renderBetSuggestions(match) {
   `;
 }
 
+function renderPredictionRows(probabilities) {
+  return `
+    <div class="match-winner-odds" aria-label="Probabilités du match">
+      ${probabilities.map((row) => `
+        <span>
+          <small>${escapeHtml(row.label)}</small>
+          <b>${escapeHtml(row.probability)}%</b>
+        </span>
+      `).join("")}
+    </div>
+  `;
+}
+
 function renderMatchWinnerOdds(matchOdds) {
   return `
     <div class="match-winner-odds" aria-label="Paris résultat du match">
@@ -1702,8 +1772,7 @@ function renderMatchWinnerOdds(matchOdds) {
 }
 
 function getBetSuggestions(match) {
-  const apiFootballId = match.externalIds?.apiFootball ?? match.apiFootballFixtureId;
-  const detailed = [match.id, apiFootballId]
+  const detailed = getMatchLookupIds(match)
     .map((id) => state.betSuggestions[id])
     .find((rows) => Array.isArray(rows)) ?? [];
   if (detailed.length) {
@@ -1732,8 +1801,7 @@ function getBetSuggestions(match) {
 function getMatchWinnerOdds(match) {
   if (match.status === "finished") return [];
 
-  const apiFootballId = match.externalIds?.apiFootball ?? match.apiFootballFixtureId;
-  const stored = [match.id, apiFootballId]
+  const stored = getMatchLookupIds(match)
     .map((id) => state.matchOdds[id])
     .find((rows) => Array.isArray(rows)) ?? [];
   if (stored.length) {
@@ -1751,13 +1819,33 @@ function getMatchWinnerOdds(match) {
 }
 
 function getOddsRows(match) {
-  const apiFootballId = match.externalIds?.apiFootball ?? match.apiFootballFixtureId;
-  const odds = [match.id, apiFootballId]
+  const odds = getMatchLookupIds(match)
     .map((id) => state.odds[id])
     .find((rows) => Array.isArray(rows)) ?? [];
   return odds.filter((book) =>
     book.bookmaker && isNumber(book.home) && isNumber(book.draw) && isNumber(book.away)
   );
+}
+
+function getPredictionRows(match) {
+  if (match.status === "finished") return [];
+  const probabilities = match.winProbability || {};
+  return [
+    { label: displayTeamName(match.home), probability: probabilities.home },
+    { label: "Nul", probability: probabilities.draw },
+    { label: displayTeamName(match.away), probability: probabilities.away },
+  ].filter((row) => isNumber(row.probability));
+}
+
+function getMatchLookupIds(match) {
+  return [
+    match?.id,
+    match?.apiFootballFixtureId,
+    match?.externalIds?.apiFootball,
+  ]
+    .filter((id) => id !== undefined && id !== null && id !== "")
+    .map(String)
+    .filter((id, index, ids) => ids.indexOf(id) === index);
 }
 
 function renderStandings() {
@@ -2364,9 +2452,10 @@ function renderBracketTeamRow(match, side, winner) {
   const options = match[`${side}Options`];
   const score = formatBracketScore(match[`${side}Score`]);
   const isWinner = winner && sameTeam(winner, team);
+  const isLockedSlot = isTeamLockedInBracketSlot(match, side);
   return `
     <div class="bracket-row${isWinner ? " is-winner" : ""}">
-      <span class="bracket-team">${renderBracketTeam(team, options)}</span>
+      <span class="bracket-team">${renderBracketTeam(team, options, isLockedSlot)}</span>
       ${score ? `<span class="bracket-score">${escapeHtml(score)}</span>` : ""}
     </div>
   `;
@@ -2391,7 +2480,7 @@ function renderBracketConnector(connector) {
   `;
 }
 
-function renderBracketTeam(team, options) {
+function renderBracketTeam(team, options, isLockedSlot = false) {
   if (Array.isArray(options) && options.length) {
     return `
       <span class="bracket-team-options" aria-label="${escapeHtml(formatTeamOptionsLabel(options))}">
@@ -2408,13 +2497,58 @@ function renderBracketTeam(team, options) {
   const isClickable = isConcreteTeam(team);
   return `
     <span
-      class="bracket-team-label${isClickable ? " team-link" : ""}"
+      class="bracket-team-label${isClickable ? " team-link" : ""}${isLockedSlot ? " is-locked-slot" : ""}"
       ${isClickable ? `role="button" tabindex="0" data-team="${escapeHtml(team)}" aria-label="Ouvrir la fiche ${escapeHtml(displayTeamName(team))}"` : ""}
     >
       ${renderTeamFlag(team, "flag-bracket")}
       <span>${escapeHtml(displayTeamName(team))}</span>
     </span>
   `;
+}
+
+function isTeamLockedInBracketSlot(match, side) {
+  const team = match?.[side];
+  if (!isConcreteTeam(team)) return false;
+
+  const stage = getKnockoutStageKey(match.stage);
+  if (stage === "round32") {
+    return isTeamLockedInRound32Slot(match, side);
+  }
+
+  if (stage === "semifinals") {
+    return isTeamLockedInSingleSemifinal(team);
+  }
+
+  return false;
+}
+
+function isTeamLockedInRound32Slot(match, side) {
+  if (!match.projected) return true;
+
+  const matchNumber = getBracketMatchNumber(match);
+  const fixture = round32Fixtures.find((item) => item.match === matchNumber);
+  const seed = fixture?.[side];
+  if (!seed) return false;
+
+  if (seed.type === "rank") {
+    return isGroupComplete(seed.group) && seedMatchesTeam(seed, match[side], state.standings);
+  }
+
+  return areAllGroupsComplete() && seedMatchesTeam(seed, match[side], state.standings);
+}
+
+function isGroupComplete(groupLetter) {
+  const group = getGroupByLetter(state.standings, groupLetter);
+  return Boolean(group && getGroupPhase(group).key === "complete");
+}
+
+function isTeamLockedInSingleSemifinal(team) {
+  if (!isConcreteTeam(team)) return false;
+  const semifinalMatches = (state.knockout?.semifinals ?? [])
+    .filter((match) => !match.projected && (sameTeam(match.home, team) || sameTeam(match.away, team)))
+    .map(getBracketMatchNumber)
+    .filter(Boolean);
+  return new Set(semifinalMatches).size === 1;
 }
 
 function formatTeamOptionsLabel(options) {

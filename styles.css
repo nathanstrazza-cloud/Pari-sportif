@@ -1344,6 +1344,14 @@ h3 {
   overflow-wrap: anywhere;
 }
 
+.bracket-team-label.is-locked-slot span:last-child {
+  color: var(--blue);
+  text-decoration: underline;
+  text-decoration-color: var(--blue);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 0.18em;
+}
+
 .bracket-team-options {
   gap: 0.32rem;
 }

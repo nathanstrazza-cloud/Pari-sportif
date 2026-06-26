@@ -3,7 +3,7 @@ name: Update data
 on:
   workflow_dispatch:
   schedule:
-    - cron: "0 6 * * *"
+    - cron: "0 10 * * *"
 
 permissions:
   contents: write
@@ -25,14 +25,12 @@ jobs:
         env:
           API_FOOTBALL_KEY: ${{ secrets.API_FOOTBALL_KEY }}
         run: |
-          python scripts/sync_competition_data.py
-          python scripts/sync_live_scores.py
-          python scripts/morning_world_cup_sync.py
+          python scripts/morning_world_cup_sync.py --force-today
 
       - name: Sauvegarder les fichiers modifiés
         run: |
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
-          git add data/matches.json data/odds.json data/players-ea.json data/standings.json
+          git add data/matches.json data/odds.json data/players-ea.json data/standings.json data/today-kickoffs.json
           git commit -m "Update live data" || echo "Aucune modification"
           git push

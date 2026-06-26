@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-25T17:03:07.326534Z",
+  "lastUpdated": "2026-06-26T07:21:38.759558Z",
   "source": "api-football",
   "groups": [
     {
@@ -119,34 +119,34 @@
         {
           "rank": 1,
           "name": "États-Unis",
-          "played": 2,
+          "played": 3,
           "points": 6,
-          "gd": 5,
+          "gd": 4,
           "status": "qualified"
         },
         {
           "rank": 2,
           "name": "Australie",
-          "played": 2,
-          "points": 3,
+          "played": 3,
+          "points": 4,
           "gd": 0,
           "status": "qualified"
         },
         {
           "rank": 3,
           "name": "Paraguay",
-          "played": 2,
-          "points": 3,
+          "played": 3,
+          "points": 4,
           "gd": -2,
-          "status": ""
+          "status": "eliminated"
         },
         {
           "rank": 4,
           "name": "Turquie",
-          "played": 2,
-          "points": 0,
-          "gd": -3,
-          "status": ""
+          "played": 3,
+          "points": 3,
+          "gd": -2,
+          "status": "eliminated"
         }
       ]
     },
@@ -156,34 +156,34 @@
         {
           "rank": 1,
           "name": "Allemagne",
-          "played": 2,
+          "played": 3,
           "points": 6,
-          "gd": 7,
+          "gd": 6,
           "status": "qualified"
         },
         {
           "rank": 2,
           "name": "Côte d’Ivoire",
-          "played": 2,
-          "points": 3,
-          "gd": 0,
+          "played": 3,
+          "points": 6,
+          "gd": 2,
           "status": "qualified"
         },
         {
           "rank": 3,
           "name": "Équateur",
-          "played": 2,
-          "points": 1,
-          "gd": -1,
-          "status": ""
+          "played": 3,
+          "points": 4,
+          "gd": 0,
+          "status": "best-third"
         },
         {
           "rank": 4,
           "name": "Curaçao",
-          "played": 2,
+          "played": 3,
           "points": 1,
-          "gd": -6,
-          "status": ""
+          "gd": -8,
+          "status": "eliminated"
         }
       ]
     },
@@ -193,34 +193,34 @@
         {
           "rank": 1,
           "name": "Pays-Bas",
-          "played": 2,
-          "points": 4,
-          "gd": 4,
+          "played": 3,
+          "points": 7,
+          "gd": 6,
           "status": "qualified"
         },
         {
           "rank": 2,
           "name": "Japon",
-          "played": 2,
-          "points": 4,
+          "played": 3,
+          "points": 5,
           "gd": 4,
           "status": "qualified"
         },
         {
           "rank": 3,
           "name": "Suède",
-          "played": 2,
-          "points": 3,
+          "played": 3,
+          "points": 4,
           "gd": 0,
-          "status": ""
+          "status": "best-third"
         },
         {
           "rank": 4,
           "name": "Tunisie",
-          "played": 2,
+          "played": 3,
           "points": 0,
-          "gd": -8,
-          "status": ""
+          "gd": -10,
+          "status": "eliminated"
         }
       ]
     },

@@ -86,7 +86,11 @@ def run_once(args, api_key):
 
     standings_data = build_standings(api_key, args.world_cup_league, args.world_cup_season, checked_at)
     players_data = build_players(api_key, args.world_cup_league, args.world_cup_season, checked_at)
-    odds_data = build_odds(api_key, args.world_cup_league, args.world_cup_season, matches, checked_at)
+    existing_odds_data = read_json(Path(args.odds), default={})
+    odds_data = preserve_manual_odds(
+        existing_odds_data,
+        build_odds(api_key, args.world_cup_league, args.world_cup_season, matches, checked_at),
+    )
     predictions = apply_predictions(
         api_key,
         matches,
@@ -120,6 +124,21 @@ def run_once(args, api_key):
     if predictions:
         write_json(matches_path, matches_data)
     return summary
+
+
+def read_json(path, default):
+    try:
+        return json.loads(path.read_text(encoding="utf-8"))
+    except (OSError, ValueError):
+        return default
+
+
+def preserve_manual_odds(existing, updated):
+    for key in ("betSuggestionsSource", "matchOdds", "betSuggestions"):
+        value = existing.get(key) if isinstance(existing, dict) else None
+        if value:
+            updated[key] = value
+    return updated
 
 
 def build_standings(api_key, league, season, checked_at):

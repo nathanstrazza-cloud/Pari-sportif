@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-25T07:23:08.508556Z",
+  "lastUpdated": "2026-06-26T07:21:38.620668Z",
   "matches": [
     {
       "id": "400021443",
@@ -1413,7 +1413,7 @@
       "venue": "Mercedes-Benz Stadium",
       "city": "Atlanta",
       "home": "Espagne",
-      "away": "Cape Verde Islands",
+      "away": "Cap-Vert",
       "homeCoach": "Luis de la Fuente",
       "awayCoach": "Pedro Leitao Brito",
       "score": {
@@ -2055,7 +2055,7 @@
       "venue": "Arrowhead Stadium",
       "city": "Kansas City",
       "home": "Argentine",
-      "away": "Algeria",
+      "away": "Algérie",
       "homeCoach": "Lionel Scaloni",
       "awayCoach": "Vladimir Petkovic",
       "score": {
@@ -2269,7 +2269,7 @@
       "venue": "NRG Stadium",
       "city": "Houston",
       "home": "Portugal",
-      "away": "Congo DR",
+      "away": "RD Congo",
       "homeCoach": "Roberto Martinez",
       "awayCoach": "Sebastien Desabre",
       "score": {
@@ -4195,7 +4195,7 @@
       "venue": "Hard Rock Stadium",
       "city": "Miami Gardens",
       "home": "Uruguay",
-      "away": "Cape Verde Islands",
+      "away": "Cap-Vert",
       "homeCoach": "Marcelo Bielsa",
       "awayCoach": "Pedro Leitao Brito",
       "score": {
@@ -4730,7 +4730,7 @@
       "venue": "Levi's Stadium",
       "city": "Santa Clara",
       "home": "Jordanie",
-      "away": "Algeria",
+      "away": "Algérie",
       "homeCoach": "Jamal Sellami",
       "awayCoach": "Vladimir Petkovic",
       "score": {
@@ -5158,7 +5158,7 @@
       "venue": "Estadio Akron",
       "city": "Zapopan",
       "home": "Colombie",
-      "away": "Congo DR",
+      "away": "RD Congo",
       "homeCoach": "Nestor Lorenzo",
       "awayCoach": "Sebastien Desabre",
       "score": {
@@ -6088,29 +6088,57 @@
       "city": "Philadelphia",
       "home": "Curaçao",
       "away": "Côte d’Ivoire",
-      "homeCoach": "Dick Advocaat",
-      "awayCoach": "Emerse Fae",
+      "homeCoach": "D. Advocaat",
+      "awayCoach": "E. Faé",
       "score": {
-        "home": null,
-        "away": null
+        "home": 0,
+        "away": 2
       },
       "scorers": [],
       "highlights": [],
       "externalIds": {
         "apiFootball": "1489409"
       },
-      "status": "upcoming",
+      "status": "finished",
       "minute": null,
       "lineups": {
         "home": {
           "team": "Curaçao",
-          "formation": null,
-          "players": []
+          "formation": "5-3-2",
+          "players": [
+            "1. E. Room (G)",
+            "20. J. Brenet (D)",
+            "3. J. Gaari (D)",
+            "18. A. Obispo (D)",
+            "5. S. Floranus (D)",
+            "24. Deveron Fonville (D)",
+            "21. T. Chong (F)",
+            "10. L. Bacuna (M)",
+            "8. L. Comenencia (M)",
+            "9. J. Locadia (F)",
+            "7. J. Bacuna (F)"
+          ],
+          "source": "Composition officielle",
+          "sourceDate": "2026-06-25T20:00:00+00:00"
         },
         "away": {
-          "team": "Ivory Coast",
-          "formation": null,
-          "players": []
+          "team": "Côte d’Ivoire",
+          "formation": "4-4-2",
+          "players": [
+            "1. Y. Fofana (G)",
+            "17. G. Doué (D)",
+            "7. O. Kossounou (D)",
+            "2. O. Diomande (D)",
+            "13. C. Operi (D)",
+            "15. A. Diallo (F)",
+            "18. I. Sangaré (M)",
+            "8. F. Kessié (M)",
+            "11. Y. Diomande (F)",
+            "19. N. Pépé (F)",
+            "9. A. Bonny (F)"
+          ],
+          "source": "Composition officielle",
+          "sourceDate": "2026-06-25T20:00:00+00:00"
         }
       },
       "probableLineups": {
@@ -6196,32 +6224,60 @@
       "group": null,
       "date": "2026-06-25T20:00:00+00:00",
       "venue": "MetLife Stadium",
-      "city": "New York New Jersey",
+      "city": "East Rutherford",
       "home": "Équateur",
       "away": "Allemagne",
-      "homeCoach": "Sebastian Beccacece",
-      "awayCoach": "Julian Nagelsmann",
+      "homeCoach": "S. Beccacece",
+      "awayCoach": "J. Nagelsmann",
       "score": {
-        "home": null,
-        "away": null
+        "home": 2,
+        "away": 1
       },
       "scorers": [],
       "highlights": [],
       "externalIds": {
         "apiFootball": "1489410"
       },
-      "status": "upcoming",
+      "status": "finished",
       "minute": null,
       "lineups": {
         "home": {
-          "team": "Ecuador",
-          "formation": null,
-          "players": []
+          "team": "Équateur",
+          "formation": "4-4-2",
+          "players": [
+            "1. H. Galíndez (G)",
+            "21. A. Franco (M)",
+            "4. J. Ordoñez (D)",
+            "6. W. Pacho (D)",
+            "3. P. Hincapié (D)",
+            "9. J. Yeboah (M)",
+            "23. M. Caicedo (M)",
+            "15. P. Vite (M)",
+            "20. N. Angulo (F)",
+            "19. G. Plata (F)",
+            "13. E. Valencia (F)"
+          ],
+          "source": "Composition officielle",
+          "sourceDate": "2026-06-25T20:00:00+00:00"
         },
         "away": {
-          "team": "Germany",
-          "formation": null,
-          "players": []
+          "team": "Allemagne",
+          "formation": "4-2-3-1",
+          "players": [
+            "1. M. Neuer (G)",
+            "6. J. Kimmich (M)",
+            "4. J. Tah (D)",
+            "2. A. Rüdiger (D)",
+            "22. D. Raum (D)",
+            "23. F. Nmecha (M)",
+            "5. A. Pavlović (M)",
+            "19. L. Sané (F)",
+            "10. J. Musiala (M)",
+            "17. F. Wirtz (M)",
+            "7. K. Havertz (F)"
+          ],
+          "source": "Composition officielle",
+          "sourceDate": "2026-06-25T20:00:00+00:00"
         }
       },
       "probableLineups": {
@@ -6310,29 +6366,57 @@
       "city": "Kansas City",
       "home": "Tunisie",
       "away": "Pays-Bas",
-      "homeCoach": "Herve Renard",
-      "awayCoach": "Ronald Koeman",
+      "homeCoach": "Hervé Renard",
+      "awayCoach": "R. Koeman",
       "score": {
-        "home": null,
-        "away": null
+        "home": 1,
+        "away": 3
       },
       "scorers": [],
       "highlights": [],
       "externalIds": {
         "apiFootball": "1489412"
       },
-      "status": "upcoming",
+      "status": "finished",
       "minute": null,
       "lineups": {
         "home": {
-          "team": "Tunisia",
-          "formation": null,
-          "players": []
+          "team": "Tunisie",
+          "formation": "5-3-2",
+          "players": [
+            "16. A. Dahmen (G)",
+            "20. Y. Valery (D)",
+            "13. R. Khedira (M)",
+            "3. M. Talbi (D)",
+            "21. A. Ben Hmida (D)",
+            "2. A. Abdi (D)",
+            "17. E. Skhiri (M)",
+            "10. H. Mejbri (M)",
+            "11. Ismaël Gharbi (M)",
+            "9. H. Mastouri (F)",
+            "25. A. Ben Slimane (M)"
+          ],
+          "source": "Composition officielle",
+          "sourceDate": "2026-06-25T23:00:00+00:00"
         },
         "away": {
-          "team": "Netherlands",
-          "formation": null,
-          "players": []
+          "team": "Pays-Bas",
+          "formation": "4-3-3",
+          "players": [
+            "1. B. Verbruggen (G)",
+            "22. D. Dumfries (D)",
+            "6. J. van Hecke (D)",
+            "4. V. van Dijk (D)",
+            "5. N. Aké (D)",
+            "8. R. Gravenberch (M)",
+            "21. F. de Jong (M)",
+            "14. T. Reijnders (M)",
+            "18. D. Malen (F)",
+            "19. B. Brobbey (F)",
+            "11. C. Gakpo (F)"
+          ],
+          "source": "Composition officielle",
+          "sourceDate": "2026-06-25T23:00:00+00:00"
         }
       },
       "probableLineups": {
@@ -6421,29 +6505,57 @@
       "city": "Dallas",
       "home": "Japon",
       "away": "Suède",
-      "homeCoach": "Hajime Moriyasu",
-      "awayCoach": "Graham Potter",
+      "homeCoach": "H. Moriyasu",
+      "awayCoach": "G. Potter",
       "score": {
-        "home": null,
-        "away": null
+        "home": 1,
+        "away": 1
       },
       "scorers": [],
       "highlights": [],
       "externalIds": {
         "apiFootball": "1539011"
       },
-      "status": "upcoming",
+      "status": "finished",
       "minute": null,
       "lineups": {
         "home": {
-          "team": "Japan",
-          "formation": null,
-          "players": []
+          "team": "Japon",
+          "formation": "3-4-3",
+          "players": [
+            "1. Z. Suzuki (G)",
+            "20. A. Seko (D)",
+            "4. K. Itakura (D)",
+            "21. H. Ito (D)",
+            "2. Y. Sugawara (D)",
+            "15. D. Kamada (M)",
+            "7. A. Tanaka (M)",
+            "13. Keito Nakamura (F)",
+            "10. R. Dōan (M)",
+            "18. A. Ueda (F)",
+            "11. D. Maeda (F)"
+          ],
+          "source": "Composition officielle",
+          "sourceDate": "2026-06-25T23:00:00+00:00"
         },
         "away": {
-          "team": "Sweden",
-          "formation": null,
-          "players": []
+          "team": "Suède",
+          "formation": "3-4-1-2",
+          "players": [
+            "1. J. Widell Zetterström (G)",
+            "2. G. Lagerbielke (D)",
+            "4. I. Hien (D)",
+            "3. V. Lindelöf (D)",
+            "21. A. Bernhardsson (F)",
+            "24. E. Stroud (D)",
+            "18. Y. Ayari (M)",
+            "5. G. Gudmundsson (D)",
+            "11. A. Elanga (F)",
+            "17. V. Gyökeres (F)",
+            "9. A. Isak (F)"
+          ],
+          "source": "Composition officielle",
+          "sourceDate": "2026-06-25T23:00:00+00:00"
         }
       },
       "probableLineups": {
@@ -6532,29 +6644,57 @@
       "city": "San Francisco Bay Area",
       "home": "Paraguay",
       "away": "Australie",
-      "homeCoach": "Gustavo Alfaro",
-      "awayCoach": "Tony Popovic",
+      "homeCoach": "G. Alfaro",
+      "awayCoach": "T. Popović",
       "score": {
-        "home": null,
-        "away": null
+        "home": 0,
+        "away": 0
       },
       "scorers": [],
       "highlights": [],
       "externalIds": {
         "apiFootball": "1489411"
       },
-      "status": "upcoming",
+      "status": "finished",
       "minute": null,
       "lineups": {
         "home": {
           "team": "Paraguay",
-          "formation": null,
-          "players": []
+          "formation": "5-4-1",
+          "players": [
+            "12. O. Gill (G)",
+            "4. J. Cáceres (D)",
+            "2. G. Velázquez (D)",
+            "15. G. Gómez (D)",
+            "3. O. Alderete (D)",
+            "26. A. Maidana (D)",
+            "8. D. Gómez (M)",
+            "14. A. Cubas (M)",
+            "23. M. Galarza (M)",
+            "19. J. Enciso (M)",
+            "21. G. Ávalos (F)"
+          ],
+          "source": "Composition officielle",
+          "sourceDate": "2026-06-26T02:00:00+00:00"
         },
         "away": {
-          "team": "Australia",
-          "formation": null,
-          "players": []
+          "team": "Australie",
+          "formation": "3-4-3",
+          "players": [
+            "18. P. Beach (G)",
+            "3. A. Circati (D)",
+            "19. H. Souttar (D)",
+            "25. L. Herrington (D)",
+            "16. A. Behich (M)",
+            "13. A. O&apos;Neill (M)",
+            "22. J. Irvine (M)",
+            "5. J. Bos (M)",
+            "8. C. Metcalfe (M)",
+            "17. N. Irankunda (F)",
+            "20. C. Volpato (M)"
+          ],
+          "source": "Composition officielle",
+          "sourceDate": "2026-06-26T02:00:00+00:00"
         }
       },
       "probableLineups": {
@@ -6643,29 +6783,57 @@
       "city": "Los Angeles",
       "home": "Turquie",
       "away": "États-Unis",
-      "homeCoach": "Vincenzo Montella",
-      "awayCoach": "Mauricio Pochettino",
+      "homeCoach": "V. Montella",
+      "awayCoach": "M. Pochettino",
       "score": {
-        "home": null,
-        "away": null
+        "home": 3,
+        "away": 2
       },
       "scorers": [],
       "highlights": [],
       "externalIds": {
         "apiFootball": "1539012"
       },
-      "status": "upcoming",
+      "status": "finished",
       "minute": null,
       "lineups": {
         "home": {
-          "team": "Türkiye",
-          "formation": null,
-          "players": []
+          "team": "Turquie",
+          "formation": "4-2-3-1",
+          "players": [
+            "23. U. Çakır (G)",
+            "2. Z. Çelik (D)",
+            "15. O. Kabak (D)",
+            "14. A. Bardakcı (D)",
+            "13. E. Elmalı (D)",
+            "6. O. Kökçü (M)",
+            "5. S. Özcan (M)",
+            "24. O. Aydın (M)",
+            "8. A. Güler (M)",
+            "11. K. Yıldız (M)",
+            "21. B. Yılmaz (F)"
+          ],
+          "source": "Composition officielle",
+          "sourceDate": "2026-06-26T02:00:00+00:00"
         },
         "away": {
-          "team": "USA",
-          "formation": null,
-          "players": []
+          "team": "États-Unis",
+          "formation": "4-1-2-3",
+          "players": [
+            "1. M. Turner (G)",
+            "23. J. Scally (D)",
+            "22. M. McKenzie (D)",
+            "12. M. Robinson (D)",
+            "6. A. Trusty (D)",
+            "8. W. McKennie (M)",
+            "14. S. Berhalter (M)",
+            "7. G. Reyna (M)",
+            "21. T. Weah (M)",
+            "9. R. Pepi (F)",
+            "11. B. Aaronson (M)"
+          ],
+          "source": "Composition officielle",
+          "sourceDate": "2026-06-26T02:00:00+00:00"
         }
       },
       "probableLineups": {
@@ -6853,7 +7021,11 @@
         "away": 45
       },
       "expertDiscussion": [
-        "Combo Double chance : draw or France and +1.5 goals"
+        "Dans ce type d'affiche, je regarde d'abord les joueurs qui peuvent tout faire basculer sans prévenir. La France a du répondant, mais un vrai finisseur côté norvégien peut transformer une demi-occasion en but. Parti pris : Erling Haaland buteur.",
+        "La Norvège peut être dangereuse, mais je vois surtout deux blocs capables de se respecter et de fermer les intervalles. Les noms ne gagnent pas les matchs, le collectif oui. Parti pris : Score exact - 0 - 1.",
+        "Les profils offensifs des deux côtés poussent vers un match avec des occasions franches. Les données ne mentent jamais : quand deux attaques ont autant de points d'appui, je prends le scénario où les deux trouvent la faille. Parti pris : Les 2 équipes marquent - Oui.",
+        "Il y a une énergie particulière dans ce rendez-vous pour la Norvège, comme si elle avait quelque chose à prouver face à une grande nation. Je sens un match où elle ne reste pas muette. Parti pris : Norvège plus de 1,5 buts.",
+        "Je ne cherche pas le favori, je cherche la cote qui respire. À 4,55, un attaquant norvégien dans un match ouvert mérite d'être tenté. Parti pris : Jorgen Strand Larsen buteur."
       ]
     },
     {
@@ -6964,7 +7136,11 @@
         "away": 10
       },
       "expertDiscussion": [
-        "Combo Double chance : Senegal or draw and +1.5 goals"
+        "Dans les grands matchs, les grands joueurs répondent toujours présents, et le Sénégal a ce profil capable de faire parler le talent dans la dernière passe. Je fais confiance aux cracks. Parti pris : Sadio Mané décisif.",
+        "Le Sénégal a plus d'automatismes pour imposer son rythme dès le départ. Une équipe organisée met souvent la pression au bon moment, surtout contre un bloc qui risque de subir. Parti pris : Sénégal marque le 1er but.",
+        "La dynamique des cotes indique un match qui peut vite s'ouvrir si le premier but arrive tôt. Les émotions ne m'intéressent pas, le total buts a le meilleur angle. Parti pris : Plus de 2,5 buts.",
+        "L'Irak n'a rien à perdre et c'est exactement le genre de contexte qui peut libérer une équipe. Ils vont se jeter dans le match, même si le Sénégal garde l'avantage. Parti pris : Les 2 équipes marquent - Oui.",
+        "Je ne paie pas une évidence trop basse si je peux prendre un profil offensif mieux rémunéré. La cote reste correcte pour un attaquant qui peut profiter d'un match dominé. Parti pris : Nicolas Jackson buteur."
       ]
     },
     {
@@ -6974,7 +7150,7 @@
       "date": "2026-06-27T00:00:00+00:00",
       "venue": "NRG Stadium",
       "city": "Houston",
-      "home": "Cape Verde Islands",
+      "home": "Cap-Vert",
       "away": "Arabie saoudite",
       "homeCoach": "Pedro Leitao Brito",
       "awayCoach": "Georgios Donis",
@@ -7075,7 +7251,11 @@
         "away": 0
       },
       "expertDiscussion": [
-        "Double chance : Cape Verde Islands or draw"
+        "Quand le match se tend, je veux un joueur qui assume le ballon décisif. Le Cap-Vert a ce petit supplément de créativité pour faire la différence sur une action. Parti pris : Ryan Mendes décisif.",
+        "Je vois deux équipes prudentes, avec beaucoup d'attention à ne pas se découvrir trop vite. Le collectif le plus discipliné peut prendre le dessus dans un match fermé. Parti pris : Moins de 2,5 buts.",
+        "Les deux blocs ont des arguments pour marquer, mais aucun ne donne assez de garanties pour contrôler complètement. La value est du côté du scénario partagé. Parti pris : Les 2 équipes marquent - Oui.",
+        "Ce match sent la bataille nerveuse, le moment où chaque équipe refuse de lâcher. Je sens un partage avec beaucoup d'intensité et peu de marge. Parti pris : Score exact - 1 - 1.",
+        "À 4,00, je préfère viser un profil de buteur plutôt que de courir après une cote courte. Cette cote a assez de jus pour valoir le risque. Parti pris : Dailon Livramento buteur."
       ]
     },
     {
@@ -7186,7 +7366,11 @@
         "away": 45
       },
       "expertDiscussion": [
-        "Double chance : draw or Spain"
+        "Dans un choc pareil, je regarde le joueur qui peut gagner son duel sans demander la permission. L'Uruguay a un attaquant capable de transformer le match sur une seule course. Parti pris : Darwin Núñez buteur.",
+        "L'Espagne peut monopoliser, l'Uruguay peut casser le rythme, et tout cela peut produire un vrai bras de fer tactique. Je prends le match maîtrisé plutôt que le feu d'artifice. Parti pris : Moins de 2,5 buts.",
+        "Les deux équipes génèrent assez de situations pour exister dans la surface adverse. Les données me poussent vers un but de chaque côté. Parti pris : Les 2 équipes marquent - Oui.",
+        "L'Uruguay vit pour ce genre de défi, avec une intensité qui change l'ambiance d'un match. Je sens une réaction d'orgueil portée par son avant-centre. Parti pris : Darwin Núñez décisif.",
+        "À 5,25, je ne demande pas une certitude, je demande une cote mal évaluée. Un buteur uruguayen dans un match de duels, ça se tente. Parti pris : Federico Vinas buteur."
       ]
     },
     {
@@ -7297,7 +7481,11 @@
         "away": 10
       },
       "expertDiscussion": [
-        "Double chance : Egypt or draw"
+        "Un grand joueur n'a besoin que d'une seconde pour mettre tout le monde d'accord. Dans un match serré, je fais confiance au talent individuel pour débloquer la soirée. Parti pris : Mohamed Salah buteur.",
+        "L'Iran sait fermer les espaces et l'Égypte peut accepter un rythme patient. Les noms ne gagnent pas les matchs, l'organisation oui. Parti pris : Moins de 2,5 buts.",
+        "Les probabilités racontent un match équilibré, avec peu d'écart entre les deux scénarios principaux. Le score de compromis a du sens. Parti pris : Score exact - 1 - 1.",
+        "L'Égypte a une charge émotionnelle forte dans ce genre de rencontre, et certains joueurs se nourrissent de ça. Je sens une action qui sort du cadre habituel. Parti pris : Omar Marmoush buteur.",
+        "À 2,60, le marché sous-estime peut-être le déclic offensif. Quand tout le monde attend un match fermé, je regarde l'autre côté. Parti pris : Plus de 2,5 buts."
       ]
     },
     {
@@ -7408,7 +7596,11 @@
         "away": 45
       },
       "expertDiscussion": [
-        "Double chance : draw or Belgium"
+        "Je parie d'abord sur l'équipe qui a les meilleurs talents pour imposer la première vraie séquence. La Belgique peut frapper avant que le match ne s'installe. Parti pris : Belgique marque le 1er but.",
+        "La Nouvelle-Zélande risque de défendre bas, mais si la Belgique trouve vite les décalages, le match peut s'étirer. Une équipe structurée finit souvent par créer du volume. Parti pris : Plus de 2,5 buts.",
+        "Le total buts est soutenu par la différence de potentiel offensif et par la cote proposée. Les chiffres pointent vers un match avec plusieurs occasions nettes. Parti pris : Plus de 2,5 buts.",
+        "Même dominée, la Nouvelle-Zélande a ce côté combat qui peut réveiller un stade. Je sens un moment de fierté, une vraie présence dans la surface. Parti pris : Chris Wood buteur.",
+        "Les cotes courtes ne me racontent pas grand-chose ici. À 7,75, je préfère un outsider de surface qui peut tout changer sur un ballon. Parti pris : Logan Rogerson buteur."
       ]
     },
     {
@@ -7519,7 +7711,11 @@
         "away": 30
       },
       "expertDiscussion": [
-        "Combo Double chance : Croatia or draw and -3.5 goals"
+        "Dans une rencontre serrée, je regarde le joueur capable de peser physiquement et de finir la première occasion propre. La Croatie a ce profil devant. Parti pris : Ante Budimir buteur.",
+        "La Croatie peut contrôler le tempo, le Ghana peut attendre ses transitions, et ça donne souvent un match plus fermé qu'annoncé. Je prends la discipline. Parti pris : Moins de 2,5 buts.",
+        "La cote sur les buts croates paraît cohérente avec leur capacité à installer des séquences longues. Les données ne mentent jamais quand le volume se répète. Parti pris : Cro plus de 1,5 buts.",
+        "Le Ghana joue avec une intensité émotionnelle qui peut casser les plans les plus propres. Je sens un match où chacun aura son moment. Parti pris : Les 2 équipes marquent - Oui.",
+        "À 5,50, le nul avec buts m'intéresse bien plus qu'une cote favorite tiède. Ce type d'affiche peut finir exactement dans cette zone. Parti pris : Score exact - 1 - 1."
       ]
     },
     {
@@ -7630,7 +7826,11 @@
         "away": 45
       },
       "expertDiscussion": [
-        "Combo Winner : England and -3.5 goals"
+        "Dans les grands rendez-vous, je fais confiance aux cracks pour poser le décor rapidement. L'Angleterre a assez de talent pour marquer avant que le Panama ne trouve son rythme. Parti pris : Angleterre marque le 1er but.",
+        "Si l'Angleterre presse bien après perte, le match peut vite basculer vers une attaque-défense. Le collectif qui répète ses circuits finit par ouvrir les espaces. Parti pris : Plus de 2,5 buts.",
+        "Le marché associe clairement domination anglaise et volume offensif. Les chiffres donnent un angle simple : buts ou match ouvert, les deux se rejoignent. Parti pris : Les 2 équipes marquent ou +2,5 buts - Oui.",
+        "Le Panama va vivre ce match comme une chance immense, et ce genre d'énergie peut produire au moins une grosse occasion. Je sens qu'ils peuvent exister. Parti pris : Les 2 équipes marquent - Oui.",
+        "À 5,60, je préfère l'outsider qui peut marquer sur un contre ou un coup de pied arrêté. C'est exactement le genre de cote que je chasse. Parti pris : Cecilio Waterman buteur."
       ]
     },
     {
@@ -7741,7 +7941,11 @@
         "away": 30
       },
       "expertDiscussion": [
-        "Double chance : Colombia or draw"
+        "Quand le niveau monte, je veux le joueur qui ose en un contre un et qui peut casser une ligne tout seul. La Colombie a ce facteur X. Parti pris : Luis Díaz buteur.",
+        "Le Portugal sait gérer les temps faibles et la Colombie ne doit pas ouvrir trop d'espaces. Ce match peut être plus stratégique que spectaculaire. Parti pris : Moins de 2,5 buts.",
+        "Les deux attaques ont assez de variété pour trouver une faille, même si le match reste équilibré. La donnée la plus solide pointe vers un but de chaque côté. Parti pris : Les 2 équipes marquent - Oui.",
+        "Le Portugal a cette habitude des grands moments, cette froideur qui fait mal quand la pression monte. Je le vois frapper en premier. Parti pris : Portugal marque le 1er but.",
+        "À 4,30, je prends volontiers un buteur colombien dans un match où les espaces finiront par apparaître. La cote est trop haute pour l'ignorer. Parti pris : Luis Suárez buteur."
       ]
     },
     {
@@ -7751,7 +7955,7 @@
       "date": "2026-06-27T23:30:00+00:00",
       "venue": "Mercedes-Benz Stadium",
       "city": "Atlanta",
-      "home": "Congo DR",
+      "home": "RD Congo",
       "away": "Ouzbékistan",
       "homeCoach": "Sebastien Desabre",
       "awayCoach": "Fabio Cannavaro",
@@ -7852,7 +8056,11 @@
         "away": 10
       },
       "expertDiscussion": [
-        "Double chance : Congo DR or draw"
+        "Dans ce match, je fais confiance au joueur capable de convertir une seule vraie situation. La RD Congo a des attaquants qui peuvent punir vite. Parti pris : Yoane Wissa buteur.",
+        "La RD Congo peut imposer plus d'impact et mieux gagner les premiers duels. Si le bloc avance ensemble, le premier but peut arriver tôt. Parti pris : RD Congo marque le 1er but.",
+        "Les cotes sont très proches sur le total buts et le scénario des deux équipes qui marquent ressort bien. Les données ne tranchent pas un vainqueur, elles tracent un match ouvert. Parti pris : Les 2 équipes marquent - Oui.",
+        "Je sens une rencontre tendue où la motivation prend plus de place que la maîtrise. Dans ces soirs-là, une équipe portée par son énergie peut tenir un avantage mince. Parti pris : Score exact - 1 - 0.",
+        "Je ne vois pas une énorme erreur de marché, alors je vais chercher le meilleur rendement parmi les profils plausibles. À 2,80, c'est assez vivant. Parti pris : Simon Banza buteur."
       ]
     },
     {
@@ -7862,7 +8070,7 @@
       "date": "2026-06-28T02:00:00+00:00",
       "venue": "Arrowhead Stadium",
       "city": "Kansas City",
-      "home": "Algeria",
+      "home": "Algérie",
       "away": "Autriche",
       "homeCoach": "Vladimir Petkovic",
       "awayCoach": "Ralf Rangnick",
@@ -7963,7 +8171,11 @@
         "away": 45
       },
       "expertDiscussion": [
-        "Double chance : draw or Austria"
+        "Un talent de pied gauche peut changer un match en une seconde, surtout quand les espaces sont rares. Je fais confiance au geste décisif. Parti pris : Riyad Mahrez décisif.",
+        "L'Autriche est structurée, l'Algérie peut être compacte, et ce duel peut longtemps se jouer sur des détails. Le collectif le plus propre limitera les risques. Parti pris : Moins de 2,5 buts.",
+        "Les deux équipes ont des armes pour marquer sans forcément dominer tout le match. La value me paraît davantage sur un échange de buts que sur un vainqueur sec. Parti pris : Les 2 équipes marquent - Oui.",
+        "L'Algérie peut transformer ce match en affaire de cœur, avec une intensité qui pousse à ne jamais lâcher. Je sens un nul arraché. Parti pris : Score exact - 1 - 1.",
+        "À 4,05, je prends l'option qui paie le risque et qui colle à un match possiblement verrouillé. Une seule occasion suffit. Parti pris : Adil Boulbina buteur."
       ]
     },
     {
@@ -8074,7 +8286,11 @@
         "away": 50
       },
       "expertDiscussion": [
-        "Winner : Argentina"
+        "Dans ce genre d'affiche, le talent supérieur doit parler vite. L'Argentine a les joueurs pour calmer tout suspense dès l'entame. Parti pris : Argentine marque le 1er but.",
+        "La Jordanie risque de courir longtemps après le ballon, et quand un bloc recule autant, les vagues finissent par user. Je prends le volume offensif. Parti pris : Plus de 2,5 buts.",
+        "La cote du match ouvert est plus intéressante que le simple favori. Les chiffres donnent une domination attendue, mais avec assez de rythme pour dépasser la ligne. Parti pris : Les 2 équipes marquent ou +2,5 buts - Oui.",
+        "La Jordanie va jouer avec une fierté énorme, et parfois un match déséquilibré donne justement une histoire à raconter. Je sens un moment de bravoure. Parti pris : Les 2 équipes marquent - Oui.",
+        "À 8,00, je n'ai pas besoin d'y croire dix fois sur dix. Je cherche l'erreur possible, et un outsider buteur dans un match exposé peut suffire. Parti pris : Ali Azaizeh buteur."
       ]
     },
     {
@@ -8187,15 +8403,348 @@
       "expertDiscussion": [
         "Double chance : South Africa or draw"
       ]
+    },
+    {
+      "id": "1562344",
+      "stage": "16es",
+      "group": null,
+      "date": "2026-06-29T17:00:00+00:00",
+      "venue": null,
+      "city": null,
+      "home": "Brésil",
+      "away": "Japon",
+      "homeCoach": "Carlo Ancelotti",
+      "awayCoach": "H. Moriyasu",
+      "score": {
+        "home": null,
+        "away": null
+      },
+      "scorers": [],
+      "highlights": [],
+      "externalIds": {
+        "apiFootball": "1562344"
+      },
+      "status": "upcoming",
+      "minute": null,
+      "lineups": {
+        "home": {
+          "team": "Brésil",
+          "formation": null,
+          "players": []
+        },
+        "away": {
+          "team": "Japon",
+          "formation": null,
+          "players": []
+        }
+      },
+      "probableLineups": {
+        "home": {
+          "team": "Brésil",
+          "formation": "4-3-3",
+          "players": [
+            "1. Alisson (G)",
+            "13. Danilo (D)",
+            "4. Marquinhos (D)",
+            "3. Gabriel Magalhães (D)",
+            "16. Douglas Santos (D)",
+            "8. Bruno Guimarães (M)",
+            "5. Casemiro (M)",
+            "20. Lucas Paquetá (M)",
+            "26. Rayan (F)",
+            "9. Matheus Cunha (F)",
+            "7. Vinícius Júnior (F)"
+          ],
+          "source": "Dernière compo connue",
+          "sourceDate": "2026-06-24T22:00:00+00:00",
+          "sourceMatch": "Écosse 0-3 Brésil"
+        },
+        "away": {
+          "team": "Japon",
+          "formation": "3-4-3",
+          "players": [
+            "1. Z. Suzuki (G)",
+            "20. A. Seko (D)",
+            "4. K. Itakura (D)",
+            "21. H. Ito (D)",
+            "2. Y. Sugawara (D)",
+            "15. D. Kamada (M)",
+            "7. A. Tanaka (M)",
+            "13. Keito Nakamura (F)",
+            "10. R. Dōan (M)",
+            "18. A. Ueda (F)",
+            "11. D. Maeda (F)"
+          ],
+          "source": "Dernière compo connue",
+          "sourceDate": "2026-06-25T23:00:00+00:00",
+          "sourceMatch": "Japon 1-1 Suède"
+        }
+      },
+      "stats": {
+        "possession": {
+          "home": null,
+          "away": null
+        },
+        "shots": {
+          "home": null,
+          "away": null
+        },
+        "shotsOnTarget": {
+          "home": null,
+          "away": null
+        },
+        "corners": {
+          "home": null,
+          "away": null
+        },
+        "fouls": {
+          "home": null,
+          "away": null
+        }
+      },
+      "playerRatings": {
+        "home": [],
+        "away": []
+      },
+      "winProbability": {
+        "home": 45,
+        "draw": 45,
+        "away": 10
+      },
+      "expertDiscussion": [
+        "Double chance : Brazil or draw"
+      ]
+    },
+    {
+      "id": "1562345",
+      "stage": "16es",
+      "group": null,
+      "date": "2026-06-30T01:00:00+00:00",
+      "venue": null,
+      "city": null,
+      "home": "Pays-Bas",
+      "away": "Maroc",
+      "homeCoach": "R. Koeman",
+      "awayCoach": "Mohamed Ouahbi",
+      "score": {
+        "home": null,
+        "away": null
+      },
+      "scorers": [],
+      "highlights": [],
+      "externalIds": {
+        "apiFootball": "1562345"
+      },
+      "status": "upcoming",
+      "minute": null,
+      "lineups": {
+        "home": {
+          "team": "Pays-Bas",
+          "formation": null,
+          "players": []
+        },
+        "away": {
+          "team": "Maroc",
+          "formation": null,
+          "players": []
+        }
+      },
+      "probableLineups": {
+        "home": {
+          "team": "Pays-Bas",
+          "formation": "4-3-3",
+          "players": [
+            "1. B. Verbruggen (G)",
+            "22. D. Dumfries (D)",
+            "6. J. van Hecke (D)",
+            "4. V. van Dijk (D)",
+            "5. N. Aké (D)",
+            "8. R. Gravenberch (M)",
+            "21. F. de Jong (M)",
+            "14. T. Reijnders (M)",
+            "18. D. Malen (F)",
+            "19. B. Brobbey (F)",
+            "11. C. Gakpo (F)"
+          ],
+          "source": "Dernière compo connue",
+          "sourceDate": "2026-06-25T23:00:00+00:00",
+          "sourceMatch": "Tunisie 1-3 Pays-Bas"
+        },
+        "away": {
+          "team": "Maroc",
+          "formation": "4-2-3-1",
+          "players": [
+            "1. Yassine Bounou (G)",
+            "2. Achraf Hakimi (D)",
+            "25. Redouane Halhal (D)",
+            "18. Chadi Riad (D)",
+            "26. Anass Salah-Eddine (D)",
+            "24. Neil El Aynaoui (M)",
+            "4. Sofyan Amrabat (M)",
+            "10. Brahim Díaz (M)",
+            "11. Ismael Saibari (M)",
+            "23. Bilal El Khannouss (M)",
+            "20. Ayoub El Kaabi (F)"
+          ],
+          "source": "Dernière compo connue",
+          "sourceDate": "2026-06-24T22:00:00+00:00",
+          "sourceMatch": "Maroc 4-2 Haïti"
+        }
+      },
+      "stats": {
+        "possession": {
+          "home": null,
+          "away": null
+        },
+        "shots": {
+          "home": null,
+          "away": null
+        },
+        "shotsOnTarget": {
+          "home": null,
+          "away": null
+        },
+        "corners": {
+          "home": null,
+          "away": null
+        },
+        "fouls": {
+          "home": null,
+          "away": null
+        }
+      },
+      "playerRatings": {
+        "home": [],
+        "away": []
+      },
+      "winProbability": {
+        "home": 45,
+        "draw": 45,
+        "away": 10
+      },
+      "expertDiscussion": [
+        "Double chance : Netherlands or draw"
+      ]
+    },
+    {
+      "id": "1562586",
+      "stage": "16es",
+      "group": null,
+      "date": "2026-07-02T00:00:00+00:00",
+      "venue": null,
+      "city": null,
+      "home": "États-Unis",
+      "away": "Bosnie-et-Herzégovine",
+      "homeCoach": "M. Pochettino",
+      "awayCoach": "Sergej Barbarez",
+      "score": {
+        "home": null,
+        "away": null
+      },
+      "scorers": [],
+      "highlights": [],
+      "externalIds": {
+        "apiFootball": "1562586"
+      },
+      "status": "upcoming",
+      "minute": null,
+      "lineups": {
+        "home": {
+          "team": "États-Unis",
+          "formation": null,
+          "players": []
+        },
+        "away": {
+          "team": "Bosnie-et-Herzégovine",
+          "formation": null,
+          "players": []
+        }
+      },
+      "probableLineups": {
+        "home": {
+          "team": "États-Unis",
+          "formation": "4-1-2-3",
+          "players": [
+            "1. M. Turner (G)",
+            "23. J. Scally (D)",
+            "22. M. McKenzie (D)",
+            "12. M. Robinson (D)",
+            "6. A. Trusty (D)",
+            "8. W. McKennie (M)",
+            "14. S. Berhalter (M)",
+            "7. G. Reyna (M)",
+            "21. T. Weah (M)",
+            "9. R. Pepi (F)",
+            "11. B. Aaronson (M)"
+          ],
+          "source": "Dernière compo connue",
+          "sourceDate": "2026-06-26T02:00:00+00:00",
+          "sourceMatch": "Turquie 3-2 États-Unis"
+        },
+        "away": {
+          "team": "Bosnie-et-Herzégovine",
+          "formation": "4-4-2",
+          "players": [
+            "1. Nikola Vasilj (G)",
+            "24. Arjan Malić (D)",
+            "18. Nikola Katić (D)",
+            "21. Stjepan Radeljić (D)",
+            "5. Sead Kolašinac (D)",
+            "20. Esmir Bajraktarević (M)",
+            "13. Ivan Bašić (M)",
+            "14. Ivan Šunjić (M)",
+            "19. Kerim Alajbegović (M)",
+            "10. Ermedin Demirović (F)",
+            "11. Edin Džeko (F)"
+          ],
+          "source": "Dernière compo connue",
+          "sourceDate": "2026-06-24T19:00:00+00:00",
+          "sourceMatch": "Bosnie-et-Herzégovine 3-1 Qatar"
+        }
+      },
+      "stats": {
+        "possession": {
+          "home": null,
+          "away": null
+        },
+        "shots": {
+          "home": null,
+          "away": null
+        },
+        "shotsOnTarget": {
+          "home": null,
+          "away": null
+        },
+        "corners": {
+          "home": null,
+          "away": null
+        },
+        "fouls": {
+          "home": null,
+          "away": null
+        }
+      },
+      "playerRatings": {
+        "home": [],
+        "away": []
+      },
+      "winProbability": {
+        "home": 50,
+        "draw": 50,
+        "away": 0
+      },
+      "expertDiscussion": [
+        "Combo Winner : USA and +1.5 goals"
+      ]
     }
   ],
   "knockout": {},
   "scheduleSync": {
     "provider": "api-football",
-    "checkedAt": "2026-06-25T17:03:07.117443Z",
+    "checkedAt": "2026-06-26T07:21:38.620668Z",
     "league": 1,
     "season": 2026,
-    "updatedMatches": 0,
+    "updatedMatches": 9,
     "insertedMatches": 0,
     "lineupsChecked": 0,
     "lineupsUpdated": 0,
@@ -8203,7 +8752,7 @@
   },
   "predictionSync": {
     "provider": "api-football",
-    "checkedAt": "2026-06-25T07:23:08.508556Z",
-    "updatedMatches": 19
+    "checkedAt": "2026-06-26T07:17:55.096219Z",
+    "updatedMatches": 3
   }
 }

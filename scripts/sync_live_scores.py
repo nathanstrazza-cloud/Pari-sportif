@@ -35,6 +35,7 @@ TEAM_ALIASES = {
 }
 
 TEAM_NAME_FR = {
+    "Algeria": "Algérie",
     "Argentina": "Argentine",
     "Australia": "Australie",
     "Austria": "Autriche",
@@ -43,8 +44,11 @@ TEAM_NAME_FR = {
     "Bosnia and Herzegovina": "Bosnie-et-Herzégovine",
     "Bosnia & Herzegovina": "Bosnie-et-Herzégovine",
     "Cape Verde": "Cap-Vert",
+    "Cape Verde Islands": "Cap-Vert",
     "Colombia": "Colombie",
+    "Congo DR": "RD Congo",
     "Croatia": "Croatie",
+    "Curaçao": "Curaçao",
     "Czechia": "Tchéquie",
     "Ecuador": "Équateur",
     "Egypt": "Égypte",
@@ -62,6 +66,8 @@ TEAM_NAME_FR = {
     "Netherlands": "Pays-Bas",
     "New Zealand": "Nouvelle-Zélande",
     "Norway": "Norvège",
+    "Panama": "Panama",
+    "Paraguay": "Paraguay",
     "Portugal": "Portugal",
     "Qatar": "Qatar",
     "Scotland": "Écosse",
