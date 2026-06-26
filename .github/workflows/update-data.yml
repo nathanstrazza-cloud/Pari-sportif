@@ -2,7 +2,14 @@ name: Update data
 
 on:
   workflow_dispatch:
+    inputs:
+      target:
+        description: "Vers quel KV pousser les données"
+        type: choice
+        options: [prod, preprod, both]
+        default: prod
   schedule:
+    # Run planifié : prod uniquement. La preprod ne se rafraîchit que manuellement.
     - cron: "0 10 * * *"
 
 permissions:
@@ -26,6 +33,39 @@ jobs:
           API_FOOTBALL_KEY: ${{ secrets.API_FOOTBALL_KEY }}
         run: |
           python scripts/morning_world_cup_sync.py --force-today
+
+      - name: Pousser les donnees vers Cloudflare KV (preprod + prod)
+        env:
+          CF_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          CF_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          KV_PREPROD: a578656234d14cd4881434237132adf9
+          KV_PROD: 4c1f09b763aa43bc9270618be72d3d8f
+          EVENT: ${{ github.event_name }}
+          TARGET: ${{ github.event.inputs.target }}
+        run: |
+          set -e
+          put_kv () {
+            ns="$1"; key="$2"; file="$3"
+            curl -fsS -X PUT \
+              "https://api.cloudflare.com/client/v4/accounts/${CF_ACCOUNT_ID}/storage/kv/namespaces/${ns}/values/${key}" \
+              -H "Authorization: Bearer ${CF_API_TOKEN}" \
+              --data-binary @"${file}" > /dev/null
+            echo "  -> ${ns} ${key}"
+          }
+          # Run planifie -> prod uniquement. Manuel -> selon le choix (prod / preprod / both).
+          if [ "$EVENT" = "schedule" ]; then targets="$KV_PROD";
+          elif [ "$TARGET" = "preprod" ]; then targets="$KV_PREPROD";
+          elif [ "$TARGET" = "both" ]; then targets="$KV_PREPROD $KV_PROD";
+          else targets="$KV_PROD"; fi
+          for ns in $targets; do
+            case "$ns" in REMPLACER_*|"") echo "Namespace non configure ($ns), ignore"; continue;; esac
+            echo "Namespace ${ns}"
+            put_kv "$ns" "matches%3Abase" data/matches.json
+            put_kv "$ns" "standings"      data/standings.json
+            put_kv "$ns" "players"        data/players-ea.json
+            put_kv "$ns" "odds"           data/odds.json
+            put_kv "$ns" "cards"          data/Cartes.json
+          done
 
       - name: Sauvegarder les fichiers modifiés
         run: |
