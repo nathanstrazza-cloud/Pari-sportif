@@ -54,10 +54,18 @@ npx wrangler deploy --env production
 npx wrangler secret put API_FOOTBALL_KEY --env preprod
 ```
 
-## Données
+## Données — auto en prod, manuel en preprod
 
-Poussées par GitHub Actions ([`update-data.yml`](../.github/workflows/update-data.yml))
-vers le KV des deux environnements après la passe Python quotidienne. Clés KV :
+| Env | Live (cron Worker) | Push données (Python) |
+|---|---|---|
+| `production` | auto, 1 min | auto, run planifié quotidien |
+| `preprod` | **aucun** | **manuel uniquement** |
+
+- **Prod** se rafraîchit toute seule (cron 1 min + push quotidien).
+- **Preprod** ne bouge **que** sur demande : Actions → **Update data** → *Run workflow*
+  → `target = preprod` (ou `both`). Pratique pour tester l'app sur un jeu de données figé.
+
+Clés KV poussées par [`update-data.yml`](../.github/workflows/update-data.yml) :
 `matches:base`, `standings`, `players`, `odds`.
 
 ## Debug
