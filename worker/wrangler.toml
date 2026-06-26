@@ -1,0 +1,26 @@
+name = "pari-sportif-live"
+main = "src/index.ts"
+compatibility_date = "2024-09-23"
+
+# Cron : chaque minute. C'est le coeur de la mise a jour live.
+[triggers]
+crons = ["* * * * *"]
+
+# Store KV qui contient le dernier matches.json fusionne (calendrier + scores live).
+# Remplace l'id ci-dessous par celui renvoye par :
+#   wrangler kv namespace create MATCHES
+[[kv_namespaces]]
+binding = "MATCHES"
+id = "a578656234d14cd4881434237132adf9"
+
+[vars]
+WORLD_CUP_LEAGUE = "1"
+WORLD_CUP_SEASON = "2026"
+SCHEDULE_URL = "https://nathanstrazza-cloud.github.io/Pari-sportif/data/matches.json"
+ALLOWED_ORIGIN = "https://nathanstrazza-cloud.github.io"
+# Heure UTC du re-seed matinal. Doit etre APRES la passe Python du matin
+# (cron "0 10 * * *" dans update-data.yml) qui finalise les scores de la veille.
+RESEED_HOUR_UTC = "11"
+
+# La cle API n'est PAS ici : c'est un secret.
+#   wrangler secret put API_FOOTBALL_KEY

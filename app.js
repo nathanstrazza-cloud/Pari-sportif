@@ -1,3 +1,7 @@
+// URL du Worker Cloudflare qui sert les scores live (cron 1 min).
+// A remplir apres `wrangler deploy`. Laisser "" pour n'utiliser que data/matches.json.
+const LIVE_DATA_URL = "";
+
 const state = {
   matches: [],
   standings: [],
@@ -301,7 +305,7 @@ function cacheElements() {
 
 async function loadData() {
   const [matches, standings, players, odds] = await Promise.all([
-    fetchJson("data/matches.json"),
+    fetchMatches(),
     fetchJson("data/standings.json"),
     fetchJson("data/players-ea.json"),
     fetchJson("data/odds.json"),
@@ -724,6 +728,18 @@ async function fetchJson(path) {
     throw new Error(`Impossible de charger ${path}`);
   }
   return response.json();
+}
+
+// Donnees des matchs : d'abord le Worker live (scores temps reel), sinon le fichier statique.
+async function fetchMatches() {
+  if (LIVE_DATA_URL) {
+    try {
+      return await fetchJson(LIVE_DATA_URL);
+    } catch (error) {
+      console.warn("Worker live indisponible, repli sur data/matches.json", error);
+    }
+  }
+  return fetchJson("data/matches.json");
 }
 
 function bindNavigation() {
