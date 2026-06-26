@@ -39,7 +39,7 @@ jobs:
           CF_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           CF_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           KV_PREPROD: a578656234d14cd4881434237132adf9
-          KV_PROD: REMPLACER_PAR_ID_KV_PROD
+          KV_PROD: 4c1f09b763aa43bc9270618be72d3d8f
           EVENT: ${{ github.event_name }}
           TARGET: ${{ github.event.inputs.target }}
         run: |
