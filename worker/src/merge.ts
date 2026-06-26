@@ -75,6 +75,27 @@ function cleanId(value: unknown): string {
   return value === null || value === undefined ? "" : String(value);
 }
 
+// Id de fixture API-FOOTBALL d'un match local (pour les requetes ciblees apres-match).
+export function getApiFixtureId(match: Match): string {
+  const externalIds = match.externalIds && typeof match.externalIds === "object" ? match.externalIds : {};
+  return cleanId(match.apiFootballFixtureId) || cleanId(externalIds.apiFootball) || "";
+}
+
+// Matchs en fenetre "apres-match" : pas encore termines, entre date+after et date+until.
+// Sert a rattraper le score final (le flux live=all ne renvoie plus un match termine).
+export function findPostMatchCandidates(matches: Match[], nowMs: number, afterMs: number, untilMs: number): Match[] {
+  const candidates: Match[] = [];
+  for (const match of matches) {
+    if (match.status === "finished") continue;
+    const matchDate = parseDate(match.date);
+    if (matchDate === null) continue;
+    if (matchDate + afterMs <= nowMs && nowMs <= matchDate + untilMs) {
+      candidates.push(match);
+    }
+  }
+  return candidates;
+}
+
 // Matchs locaux susceptibles d'etre en cours, dans une fenetre [date-before, date+after].
 export function findLiveCandidates(matches: Match[], nowMs: number, beforeMs: number, afterMs: number): Match[] {
   const candidates: Match[] = [];

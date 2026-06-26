@@ -34,6 +34,13 @@ jobs:
         run: |
           python scripts/morning_world_cup_sync.py --force-today
 
+      - name: (Preprod a la demande) Capturer aussi les scores live
+        if: github.event_name == 'workflow_dispatch' && (inputs.target == 'preprod' || inputs.target == 'both')
+        env:
+          API_FOOTBALL_KEY: ${{ secrets.API_FOOTBALL_KEY }}
+        run: |
+          python scripts/sync_live_scores.py --force
+
       - name: Pousser les donnees vers Cloudflare KV (preprod + prod)
         env:
           CF_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
