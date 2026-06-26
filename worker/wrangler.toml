@@ -16,6 +16,11 @@ name = "coteadede-preprod"
 binding = "MATCHES"
 id = "a578656234d14cd4881434237132adf9"
 
+[[env.preprod.ratelimits]]
+binding = "RATE_LIMITER"
+namespace_id = "1001"
+simple = { limit = 120, period = 60 }
+
 [env.preprod.vars]
 WORLD_CUP_LEAGUE = "1"
 WORLD_CUP_SEASON = "2026"
@@ -32,6 +37,11 @@ crons = ["* * * * *"]
 [[env.production.kv_namespaces]]
 binding = "MATCHES"
 id = "4c1f09b763aa43bc9270618be72d3d8f"
+
+[[env.production.ratelimits]]
+binding = "RATE_LIMITER"
+namespace_id = "1002"
+simple = { limit = 120, period = 60 }
 
 [env.production.vars]
 WORLD_CUP_LEAGUE = "1"

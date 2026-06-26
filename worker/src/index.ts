@@ -15,6 +15,8 @@ export interface Env {
   ALLOWED_ORIGINS?: string;
   RESEED_HOUR_UTC?: string;
   SYNC_TOKEN?: string;
+  // Binding de rate limiting Cloudflare (optionnel). Voir [[ratelimits]] dans wrangler.toml.
+  RATE_LIMITER?: { limit(opts: { key: string }): Promise<{ success: boolean }> };
 }
 
 // Cles KV (par environnement) :
@@ -33,23 +35,38 @@ const POST_UNTIL_MS = 195 * 60 * 1000;
 const POST_MATCH_EVERY_MIN = 10;
 const DEFAULT_RESEED_HOUR = 11; // UTC, apres la passe Python du matin (cron 10h UTC)
 
-// Choisit l'origine a renvoyer : si l'origine de la requete est dans l'allowlist, on la renvoie.
-// Permet de servir plusieurs environnements (preprod + prod).
-function pickOrigin(request: Request, env: Env): string {
+// Une origine est-elle autorisee ? (allowlist .fr + localhost + *.pages.dev)
+function originAllowed(origin: string | null, env: Env): boolean {
+  if (!origin) return false;
   const allowed = (env.ALLOWED_ORIGINS || "")
     .split(",")
     .map((o) => o.trim())
     .filter(Boolean);
-  const requestOrigin = request.headers.get("Origin");
-  if (requestOrigin && allowed.includes(requestOrigin)) return requestOrigin;
-  // Dev local : autorise n'importe quel port sur localhost / 127.0.0.1.
-  if (requestOrigin && /^http:\/\/(localhost|127\.0\.0\.1)(:\d+)?$/.test(requestOrigin)) {
-    return requestOrigin;
+  if (allowed.includes(origin)) return true;
+  if (/^http:\/\/(localhost|127\.0\.0\.1)(:\d+)?$/.test(origin)) return true; // dev local
+  if (/^https:\/\/([a-z0-9-]+\.)*pages\.dev$/.test(origin)) return true; // Cloudflare Pages
+  return false;
+}
+
+// Origine effective de la requete : en-tete Origin, sinon l'origine du Referer.
+function requestOriginOf(request: Request): string | null {
+  const origin = request.headers.get("Origin");
+  if (origin) return origin;
+  const referer = request.headers.get("Referer");
+  if (referer) {
+    try {
+      return new URL(referer).origin;
+    } catch {
+      /* ignore */
+    }
   }
-  // Cloudflare Pages : autorise les sites *.pages.dev (projets + previews).
-  if (requestOrigin && /^https:\/\/([a-z0-9-]+\.)*pages\.dev$/.test(requestOrigin)) {
-    return requestOrigin;
-  }
+  return null;
+}
+
+function pickOrigin(request: Request, env: Env): string {
+  const origin = requestOriginOf(request);
+  if (originAllowed(origin, env)) return origin as string;
+  const allowed = (env.ALLOWED_ORIGINS || "").split(",").map((o) => o.trim()).filter(Boolean);
   return allowed[0] || "*";
 }
 
@@ -241,6 +258,27 @@ export default {
         status: 404,
         headers: { ...cors, "Content-Type": "application/json; charset=utf-8" },
       });
+    }
+
+    // A) Filtre d'origine : ne sert la donnee qu'aux origines autorisees (app .fr / preprod / dev).
+    //    Bloque la recuperation directe (curl sans origine) de la donnee API-Football.
+    if (!originAllowed(requestOriginOf(request), env)) {
+      return new Response(JSON.stringify({ error: "forbidden" }), {
+        status: 403,
+        headers: { ...cors, "Content-Type": "application/json; charset=utf-8" },
+      });
+    }
+
+    // B) Rate limiting par IP (actif si le binding RATE_LIMITER est configure).
+    if (env.RATE_LIMITER) {
+      const ip = request.headers.get("CF-Connecting-IP") || "anon";
+      const { success } = await env.RATE_LIMITER.limit({ key: ip });
+      if (!success) {
+        return new Response(JSON.stringify({ error: "rate limited" }), {
+          status: 429,
+          headers: { ...cors, "Content-Type": "application/json; charset=utf-8" },
+        });
+      }
     }
 
     let body = await env.MATCHES.get(key);
