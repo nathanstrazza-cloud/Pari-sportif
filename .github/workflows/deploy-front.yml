@@ -1,0 +1,43 @@
+name: Deploy front (prod)
+
+# Deploie le front sur Cloudflare Pages (projet coteadede-prod) a chaque push
+# sur la branche `prod`. La preprod n'est PAS concernee (GitHub Pages s'en charge).
+on:
+  push:
+    branches: [prod]
+    paths:
+      - "index.html"
+      - "app.js"
+      - "auth.js"
+      - "styles.css"
+      - "manifest.json"
+      - "service-worker.js"
+      - "*.PNG"
+      - "confidentialite.html"
+      - "mentions-legales.html"
+      - "data/**"
+      - ".github/workflows/deploy-front.yml"
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Telecharger le repo
+        uses: actions/checkout@v4
+
+      # Assemble un dossier front-only (pas de worker/, scripts/, node_modules...).
+      - name: Assembler le dossier de publication
+        run: |
+          mkdir -p dist
+          cp index.html app.js auth.js styles.css manifest.json service-worker.js dist/
+          cp logo.PNG Accueil.PNG Classements.PNG Tableau.PNG dist/
+          cp confidentialite.html mentions-legales.html dist/
+          cp -r data dist/
+
+      - name: Deployer sur Cloudflare Pages (production)
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          command: pages deploy dist --project-name=coteadede-prod --branch=prod
