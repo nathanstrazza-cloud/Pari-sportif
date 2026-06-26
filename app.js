@@ -158,7 +158,19 @@ const groupStatusLabels = {
 const bestThirdQualifyingCount = 8;
 
 const forcedCardStartersByTeam = {
-  france: ["kylian mbappe"],
+  france: [
+    "desire doue",
+    "kylian mbappe",
+    "ousmane dembele",
+    "adrien rabiot",
+    "michael olise",
+    "aurelien tchouameni",
+    "lucas digne",
+    "dayot upamecano",
+    "william saliba",
+    "jules kounde",
+    "mike maignan",
+  ],
 };
 
 const teamNameFr = {
@@ -2003,6 +2015,7 @@ function enrichLineupPlayer(player, team, index, totalPlayers) {
     club: cleanOptionalCardValue(card?.club),
     rating: card?.note,
     age: card?.age,
+    advance: card?.advance,
   };
 }
 
@@ -2100,9 +2113,13 @@ function renderLineupPlayerCard(player) {
   const age = cleanOptionalCardValue(player.age);
   const rating = cleanOptionalCardValue(player.rating);
   const club = cleanOptionalCardValue(player.club);
+  const advance = Number(player.advance ?? 0);
+  const advanceStyle = Number.isFinite(advance) && advance > 0
+    ? ` style="--lineup-advance:${Math.min(advance, 2)};"`
+    : "";
 
   return `
-    <article class="lineup-player-card">
+    <article class="lineup-player-card"${advanceStyle}>
       ${(position || age || rating) ? `
         <div class="lineup-card-top">
           ${(position || age) ? `

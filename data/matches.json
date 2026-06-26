@@ -6970,23 +6970,23 @@
         },
         "away": {
           "team": "France",
-          "formation": "4-2-3-1",
+          "formation": "4-3-3",
           "players": [
-            "16. M. Maignan (G)",
-            "5. J. Kounde (D)",
+            "20. D. Doué (F)",
+            "10. K. Mbappé (F)",
+            "7. O. Dembélé (F)",
+            "14. A. Rabiot (M)",
+            "11. M. Olise (MOC)",
+            "8. A. Tchouaméni (M)",
+            "3. L. Digne (D)",
             "4. D. Upamecano (D)",
             "17. W. Saliba (D)",
-            "3. L. Digne (D)",
-            "6. M. Kone (M)",
-            "14. A. Rabiot (M)",
-            "7. O. Dembele (M)",
-            "11. M. Olise (M)",
-            "12. B. Barcola (M)",
-            "10. K. Mbappe (F)"
+            "5. J. Koundé (D)",
+            "16. M. Maignan (G)"
           ],
-          "source": "Dernière compo connue",
-          "sourceDate": "2026-06-22T21:00:00+00:00",
-          "sourceMatch": "France 3-0 Irak"
+          "source": "Composition de base",
+          "sourceDate": "2026-06-26T00:00:00+02:00",
+          "tacticalNotes": "Mbappé et Olise légèrement avancés; Olise en milieu offensif axial."
         }
       },
       "stats": {
