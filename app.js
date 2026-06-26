@@ -1968,8 +1968,27 @@ function groupLineupPlayers(players, team, orderedRoles) {
   });
 
   return orderedRoles
-    .map((role) => ({ role, players: groups.get(role) ?? [] }))
+    .map((role) => ({ role, players: sortPlayersLaterally(groups.get(role) ?? []) }))
     .filter((row) => row.players.length);
+}
+
+// Ordonne une ligne de gauche a droite selon le poste : suffixe G (gauche) a
+// gauche, D (droite) a droite, le reste (C/O, central) au milieu. Tri stable
+// pour conserver l'ordre du tableau entre joueurs de meme cote.
+function sortPlayersLaterally(players) {
+  return players
+    .map((player, index) => ({ player, index, lateral: getLineupLateral(player.position) }))
+    .sort((a, b) => a.lateral - b.lateral || a.index - b.index)
+    .map((entry) => entry.player);
+}
+
+function getLineupLateral(position) {
+  const value = normalizePlayerName(position).replace(/\s+/g, "").toLocaleUpperCase("fr-FR");
+  if (value.length < 2) return 1;
+  const last = value[value.length - 1];
+  if (last === "G") return 0;
+  if (last === "D") return 2;
+  return 1;
 }
 
 function enrichLineupPlayer(player, team, index, totalPlayers) {
