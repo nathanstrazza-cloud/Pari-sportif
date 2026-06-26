@@ -41,9 +41,17 @@ Automatique via GitHub Actions ([`.github/workflows/deploy-worker.yml`](../.gith
 ### Réglages one-time par environnement
 
 1. **KV** : un namespace par env (ids dans `wrangler.toml`).
-2. **Secret API** : `API_FOOTBALL_KEY` à définir une fois par Worker
-   (dashboard → Worker → Settings → Variables and Secrets → type *Secret*).
-   Il survit aux redéploiements.
+2. **Secret `API_FOOTBALL_KEY`** : sur **chaque** Worker (preprod **et** prod), car les deux
+   font le merge live (prod via cron, preprod via `/sync`).
+3. **Secret `SYNC_TOKEN`** : sur chaque Worker (protège l'endpoint `/sync`), et le même
+   en secret GitHub (le workflow l'utilise pour déclencher le live).
+   (dashboard → Worker → Settings → Variables and Secrets → type *Secret*.)
+
+### Endpoint /sync
+
+`POST /sync?token=<SYNC_TOKEN>` relance le merge live à la demande (repart de `matches:base`,
+applique le live, écrit `matches:current`). C'est ce que le bouton GitHub appelle pour
+rafraîchir le **live** en preprod. Le merge live n'existe donc **qu'en TS** (pas de doublon Python).
 
 ### Déploiement manuel (optionnel)
 

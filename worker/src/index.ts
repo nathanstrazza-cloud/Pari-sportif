@@ -14,6 +14,7 @@ export interface Env {
   WORLD_CUP_SEASON: string;
   ALLOWED_ORIGINS?: string;
   RESEED_HOUR_UTC?: string;
+  SYNC_TOKEN?: string;
 }
 
 // Cles KV (par environnement) :
@@ -168,6 +169,27 @@ async function syncLive(env: Env): Promise<void> {
   }
 }
 
+// Sync a la demande (endpoint /sync) : repart de matches:base (statique pousse par Python),
+// applique le live courant, ecrit matches:current. Utilise pour rafraichir la preprod.
+async function onDemandSync(env: Env): Promise<Record<string, any>> {
+  const base = await readJson(env, MATCHES_BASE);
+  if (!base) return { ok: false, reason: "no base" };
+
+  const matches: Match[] = Array.isArray(base.matches) ? base.matches : [];
+  const now = Date.now();
+  const candidates = findLiveCandidates(matches, now, BEFORE_MS, AFTER_MS);
+  let updated = 0;
+  if (candidates.length > 0) {
+    const fixtures = await fetchLiveFixtures(env);
+    updated = mergeLiveFixtures(fixtures, candidates);
+  }
+  const checkedAt = new Date(now).toISOString();
+  base.lastUpdated = checkedAt;
+  base.liveSync = { provider: "api-football-cf", checkedAt, updatedMatches: updated, onDemand: true };
+  await env.MATCHES.put(MATCHES_CURRENT, JSON.stringify(base));
+  return { ok: true, updatedMatches: updated, liveCandidates: candidates.length };
+}
+
 export default {
   // Declenche par le cron "* * * * *".
   async scheduled(_event: ScheduledEvent, env: Env, ctx: ExecutionContext): Promise<void> {
@@ -184,6 +206,22 @@ export default {
     }
 
     const path = new URL(request.url).pathname.replace(/^\/+|\/+$/g, "");
+
+    // Sync a la demande (protege par token) : declenche le merge live et ecrit le KV.
+    if (path === "sync") {
+      const url = new URL(request.url);
+      const token = url.searchParams.get("token") || request.headers.get("x-sync-token") || "";
+      if (!env.SYNC_TOKEN || token !== env.SYNC_TOKEN) {
+        return new Response(JSON.stringify({ error: "unauthorized" }), {
+          status: 401,
+          headers: { ...cors, "Content-Type": "application/json; charset=utf-8" },
+        });
+      }
+      const result = await onDemandSync(env);
+      return new Response(JSON.stringify(result), {
+        headers: { ...cors, "Content-Type": "application/json; charset=utf-8" },
+      });
+    }
 
     let key: string;
     if (path === "" || path === "matches") {
