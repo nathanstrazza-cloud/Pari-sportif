@@ -6976,7 +6976,7 @@
             "10. K. Mbappé (F)",
             "7. O. Dembélé (F)",
             "14. A. Rabiot (M)",
-            "11. M. Olise (M)",
+            "11. M. Olise (MOC)",
             "8. A. Tchouaméni (M)",
             "3. L. Digne (D)",
             "4. D. Upamecano (D)",
@@ -6985,7 +6985,8 @@
             "16. M. Maignan (G)"
           ],
           "source": "Composition de base",
-          "sourceDate": "2026-06-26T00:00:00+02:00"
+          "sourceDate": "2026-06-26T00:00:00+02:00",
+          "tacticalNotes": "Mbappé et Olise légèrement avancés; Olise en milieu offensif axial."
         }
       },
       "stats": {

@@ -778,6 +778,7 @@ h3 {
   border-radius: 7px;
   background: #FFFFFF;
   color: var(--text);
+  transform: translateY(calc(var(--lineup-advance, 0) * -0.72rem));
   box-shadow: 0 6px 14px rgba(16, 32, 51, 0.16);
 }
 

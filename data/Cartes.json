@@ -123,7 +123,8 @@
           "poste": "BU",
           "club": "Real Madrid",
           "note": 91,
-          "age": 27
+          "age": 27,
+          "advance": 1
         },
         {
           "nom": "Ousmane Dembélé",
@@ -144,7 +145,8 @@
           "poste": "MOC",
           "club": "Bayern Munich",
           "note": 86,
-          "age": 24
+          "age": 24,
+          "advance": 1
         },
         {
           "nom": "Aurélien Tchouaméni",
