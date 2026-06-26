@@ -5,9 +5,9 @@ const DATA_WORKERS = {
   preprod: "https://coteadede-preprod.bstrazza.workers.dev",
 };
 const PROD_HOSTS = ["lacoteadede.fr", "www.lacoteadede.fr"];
-// Prod = le domaine .fr ou le projet Pages prod (y compris ses URLs de preview *.pari-sportif-prod.pages.dev).
+// Prod = le domaine .fr ou le projet Pages prod (y compris ses URLs de preview *.coteadede-prod.pages.dev).
 const IS_PROD =
-  PROD_HOSTS.includes(location.hostname) || location.hostname.endsWith("pari-sportif-prod.pages.dev");
+  PROD_HOSTS.includes(location.hostname) || location.hostname.endsWith("coteadede-prod.pages.dev");
 const DATA_BASE = IS_PROD ? DATA_WORKERS.prod : DATA_WORKERS.preprod;
 
 // Fichiers locaux de repli si le Worker est injoignable.
