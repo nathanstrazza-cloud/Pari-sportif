@@ -1489,7 +1489,7 @@ function getTeamFinalWin(team) {
 }
 
 function getTeamLineupProfile(team) {
-  const cardLineup = buildCardLineup(team, { source: "Cartes EA FC 26" });
+  const cardLineup = buildCardLineup(team, { source: "Notes estimées par de fins connaisseurs" });
   if (cardLineup?.players?.length) {
     return {
       match: null,
@@ -1744,7 +1744,7 @@ function getDisplayLineupForSide(match, side, fallbackLineups) {
   const team = fallback?.team ?? match?.[side];
   const cardLineup = buildCardLineup(team, {
     fallbackFormation: fallback?.formation,
-    source: "Cartes EA FC 26",
+    source: "Notes estimées par de fins connaisseurs",
   });
 
   return cardLineup?.players?.length ? cardLineup : fallback;
@@ -1761,7 +1761,7 @@ function buildCardLineup(team, options = {}) {
     team: displayTeamName(team),
     formation: options.fallbackFormation || inferFormationFromCardPlayers(selectedPlayers),
     players: selectedPlayers,
-    source: options.source ?? "Cartes EA FC 26",
+    source: options.source ?? "Notes estimées par de fins connaisseurs",
   };
 }
 
@@ -2098,7 +2098,7 @@ function renderBetSuggestions(match) {
   }
 
   return `
-    <p class="muted">${matchOdds.length || suggestions.length ? "Paris relevés sur les pages publiques des bookmakers. Les valeurs peuvent bouger." : "Les cotes ne sont pas encore disponibles, voici les probabilités synchronisées."}</p>
+    <p class="muted">${matchOdds.length || suggestions.length ? "Cotes indicatives, à titre informatif uniquement. Elles peuvent bouger." : "Les cotes ne sont pas encore disponibles, voici les probabilités synchronisées."}</p>
     ${matchOdds.length ? renderMatchWinnerOdds(matchOdds) : ""}
     ${!matchOdds.length && probabilities.length ? renderPredictionRows(probabilities) : ""}
     ${suggestions.length ? `
@@ -2108,7 +2108,7 @@ function renderBetSuggestions(match) {
             <span>${escapeHtml(bet.market ?? "Paris")}</span>
             <strong>${escapeHtml(bet.label)}</strong>
             <footer>
-              <small>${escapeHtml(bet.bookmaker)}</small>
+              <small>Cote indicative</small>
               <b>${Number(bet.odd).toFixed(2)}</b>
             </footer>
           </article>
