@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-26T10:24:12.988371Z",
+  "lastUpdated": "2026-06-26T21:52:42.778879Z",
   "matches": [
     {
       "id": "400021443",
@@ -6925,26 +6925,54 @@
       "homeCoach": "Stale Solbakken",
       "awayCoach": "Didier Deschamps",
       "score": {
-        "home": null,
-        "away": null
+        "home": 1,
+        "away": 4
       },
       "scorers": [],
       "highlights": [],
       "externalIds": {
         "apiFootball": "1489416"
       },
-      "status": "upcoming",
+      "status": "finished",
       "minute": null,
       "lineups": {
         "home": {
-          "team": "Norway",
-          "formation": null,
-          "players": []
+          "team": "Norvège",
+          "formation": "4-3-3",
+          "players": [
+            "13. Egil Selvik (G)",
+            "14. Fredrik Aursnes (D)",
+            "25. Henrik Sælebakke Falchener (D)",
+            "4. Leo Østigård (D)",
+            "15. Fredrik André Bjørkan (D)",
+            "18. Kristian Thorstvedt (M)",
+            "6. Patrick Berg (M)",
+            "19. Thelo Aasgaard (M)",
+            "22. Oscar Bobb (F)",
+            "11. Jørgen Strand Larsen (F)",
+            "21. Andreas Schjelderup (F)"
+          ],
+          "source": "Composition officielle",
+          "sourceDate": "2026-06-26T19:00:00+00:00"
         },
         "away": {
           "team": "France",
-          "formation": null,
-          "players": []
+          "formation": "4-2-3-1",
+          "players": [
+            "16. Mike Maignan (G)",
+            "5. Jules Koundé (D)",
+            "4. Dayot Upamecano (D)",
+            "26. Maxence Lacroix (D)",
+            "19. Theo Hernández (D)",
+            "8. Aurélien Tchouaméni (M)",
+            "6. Manu Koné (M)",
+            "7. Ousmane Dembélé (M)",
+            "11. Michael Olise (M)",
+            "20. Désiré Doué (M)",
+            "10. Kylian Mbappé (F)"
+          ],
+          "source": "Composition officielle",
+          "sourceDate": "2026-06-26T19:00:00+00:00"
         }
       },
       "probableLineups": {
@@ -7040,26 +7068,54 @@
       "homeCoach": "Bouna Thiaw Pape",
       "awayCoach": "Graham Arnold",
       "score": {
-        "home": null,
-        "away": null
+        "home": 5,
+        "away": 0
       },
       "scorers": [],
       "highlights": [],
       "externalIds": {
         "apiFootball": "1539074"
       },
-      "status": "upcoming",
+      "status": "finished",
       "minute": null,
       "lineups": {
         "home": {
-          "team": "Senegal",
-          "formation": null,
-          "players": []
+          "team": "Sénégal",
+          "formation": "4-3-3",
+          "players": [
+            "23. Mory Diaw (G)",
+            "15. Krépin Diatta (D)",
+            "4. Abdoulaye Seck (D)",
+            "19. Moussa Niakhaté (D)",
+            "14. Ismail Jakobs (D)",
+            "21. Habib Diarra (M)",
+            "5. Idrissa Gana Gueye (M)",
+            "8. Lamine Camara (M)",
+            "20. Ibrahim Mbaye (F)",
+            "18. Ismaïla Sarr (F)",
+            "10. Sadio Mané (F)"
+          ],
+          "source": "Composition officielle",
+          "sourceDate": "2026-06-26T19:00:00+00:00"
         },
         "away": {
-          "team": "Iraq",
-          "formation": null,
-          "players": []
+          "team": "Irak",
+          "formation": "4-2-3-1",
+          "players": [
+            "22. Ahmed Basil (G)",
+            "26. Frans Putros (D)",
+            "2. Rebin Sulaka (D)",
+            "5. Akam Hashem (D)",
+            "23. Merchas Doski (D)",
+            "14. Zidane Iqbal (M)",
+            "16. Amir Al-Ammari (M)",
+            "11. Ahmed Qasem (M)",
+            "17. Ali Jasim (M)",
+            "8. Ibrahim Bayesh (M)",
+            "9. Ali Al-Hamadi (F)"
+          ],
+          "source": "Composition officielle",
+          "sourceDate": "2026-06-26T19:00:00+00:00"
         }
       },
       "probableLineups": {
@@ -8741,13 +8797,13 @@
   "knockout": {},
   "scheduleSync": {
     "provider": "api-football",
-    "checkedAt": "2026-06-26T12:08:47.129136Z",
+    "checkedAt": "2026-06-26T21:52:42.778879Z",
     "league": 1,
     "season": 2026,
-    "updatedMatches": 0,
+    "updatedMatches": 2,
     "insertedMatches": 0,
-    "lineupsChecked": 0,
-    "lineupsUpdated": 0,
+    "lineupsChecked": 2,
+    "lineupsUpdated": 2,
     "fallbackLineups": 0
   },
   "predictionSync": {

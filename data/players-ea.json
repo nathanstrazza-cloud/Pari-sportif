@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-26T12:08:47.536819Z",
+  "lastUpdated": "2026-06-26T21:52:43.410180Z",
   "source": "api-football",
   "topScorers": [
     {
@@ -9,15 +9,21 @@
       "goals": 5.0
     },
     {
-      "name": "Vinícius Júnior",
-      "team": "Brésil",
-      "age": 25,
-      "goals": 4.0
-    },
-    {
       "name": "Kylian Mbappé",
       "team": "France",
       "age": 27,
+      "goals": 4.0
+    },
+    {
+      "name": "O. Dembélé",
+      "team": "France",
+      "age": 28,
+      "goals": 4.0
+    },
+    {
+      "name": "Vinícius Júnior",
+      "team": "Brésil",
+      "age": 25,
       "goals": 4.0
     },
     {
@@ -36,6 +42,12 @@
       "name": "J. Manzambi",
       "team": "Suisse",
       "age": 20,
+      "goals": 3.0
+    },
+    {
+      "name": "I. Sarr",
+      "team": "Sénégal",
+      "age": 27,
       "goals": 3.0
     },
     {
@@ -66,6 +78,12 @@
       "name": "C. Summerville",
       "team": "Pays-Bas",
       "age": 24,
+      "goals": 2.0
+    },
+    {
+      "name": "P. Gueye",
+      "team": "Sénégal",
+      "age": 26,
       "goals": 2.0
     },
     {
@@ -103,24 +121,6 @@
       "team": "Suède",
       "age": 23,
       "goals": 2.0
-    },
-    {
-      "name": "N. Pépé",
-      "team": "Côte d’Ivoire",
-      "age": 30,
-      "goals": 2.0
-    },
-    {
-      "name": "C. Larin",
-      "team": "Canada",
-      "age": 30,
-      "goals": 2.0
-    },
-    {
-      "name": "D. Kamada",
-      "team": "Japon",
-      "age": 29,
-      "goals": 2.0
     }
   ],
   "topAssists": [
@@ -131,16 +131,22 @@
       "assists": 3.0
     },
     {
+      "name": "M. Olise",
+      "team": "France",
+      "age": 24,
+      "assists": 3.0
+    },
+    {
       "name": "Bruno Guimarães",
       "team": "Brésil",
       "age": 28,
       "assists": 3.0
     },
     {
-      "name": "M. Olise",
+      "name": "Kylian Mbappé",
       "team": "France",
-      "age": 24,
-      "assists": 3.0
+      "age": 27,
+      "assists": 2.0
     },
     {
       "name": "D. Undav",
@@ -152,6 +158,12 @@
       "name": "V. Gyökeres",
       "team": "Suède",
       "age": 27,
+      "assists": 2.0
+    },
+    {
+      "name": "I. Ndiaye",
+      "team": "Sénégal",
+      "age": 25,
       "assists": 2.0
     },
     {
@@ -209,15 +221,15 @@
       "assists": 2.0
     },
     {
-      "name": "H. Mejbri",
-      "team": "Tunisie",
-      "age": 22,
-      "assists": 2.0
-    },
-    {
       "name": "D. Dumfries",
       "team": "Pays-Bas",
       "age": 29,
+      "assists": 2.0
+    },
+    {
+      "name": "H. Mejbri",
+      "team": "Tunisie",
+      "age": 22,
       "assists": 2.0
     },
     {
@@ -231,18 +243,6 @@
       "team": "Nouvelle-Zélande",
       "age": 34,
       "assists": 2.0
-    },
-    {
-      "name": "Vinícius Júnior",
-      "team": "Brésil",
-      "age": 25,
-      "assists": 1.0
-    },
-    {
-      "name": "J. Manzambi",
-      "team": "Suisse",
-      "age": 20,
-      "assists": 1.0
     }
   ],
   "topPlayers": [],

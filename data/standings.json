@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-26T12:08:47.536819Z",
+  "lastUpdated": "2026-06-26T21:52:43.410180Z",
   "source": "api-football",
   "groups": [
     {
@@ -304,34 +304,34 @@
         {
           "rank": 1,
           "name": "France",
-          "played": 2,
-          "points": 6,
-          "gd": 5,
+          "played": 3,
+          "points": 9,
+          "gd": 8,
           "status": "qualified"
         },
         {
           "rank": 2,
           "name": "Norvège",
-          "played": 2,
+          "played": 3,
           "points": 6,
-          "gd": 4,
+          "gd": 1,
           "status": "qualified"
         },
         {
           "rank": 3,
           "name": "Sénégal",
-          "played": 2,
-          "points": 0,
-          "gd": -3,
-          "status": ""
+          "played": 3,
+          "points": 3,
+          "gd": 2,
+          "status": "eliminated"
         },
         {
           "rank": 4,
           "name": "Irak",
-          "played": 2,
+          "played": 3,
           "points": 0,
-          "gd": -6,
-          "status": ""
+          "gd": -11,
+          "status": "eliminated"
         }
       ]
     },
