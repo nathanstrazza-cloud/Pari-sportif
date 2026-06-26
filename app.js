@@ -1597,22 +1597,22 @@ function getDetailTabs(match) {
   if (match.status === "live") {
     return [
       { key: "lineups", label: "Compo actuelle" },
-      { key: "odds", label: "Paris" },
+      { key: "odds", label: "Pronos" },
       { key: "watch", label: "M6+" },
-      { key: "experts", label: "Experts" },
+      { key: "experts", label: "Les Footix" },
     ];
   }
 
   if (match.status === "finished") {
     return [
       { key: "summary", label: "Résumé" },
-      { key: "experts", label: "Experts" },
+      { key: "experts", label: "Les Footix" },
     ];
   }
 
   return [
     { key: "lineups", label: "Compo probable" },
-    { key: "odds", label: "Paris" },
+    { key: "odds", label: "Pronos" },
     { key: "experts", label: "Experts" },
   ];
 }
@@ -1629,7 +1629,7 @@ function renderDetailTab(match, tab) {
   if (tab === "odds") {
     return `
       <section class="detail-section">
-        <h3>Notre sélection de paris</h3>
+        <h3>Notre sélection de pronos</h3>
         <div class="odds-table">${renderBetSuggestions(match)}</div>
       </section>
     `;
@@ -1673,19 +1673,33 @@ function isWinnerOrScorePick(message) {
   return /score exact|\b\d\s*[-–]\s*\d\b|winner|vainqueur|gagn|l['’]emport|s['’]impose|victoire|match nul|\bnul\b|\bdraw\b|double chance|combo/.test(pick);
 }
 
+// Prénoms des habitués de la machine à café (attribués selon l'ordre des messages).
+const COFFEE_FIRST_NAMES = [
+  "Dédé",
+  "Marcel",
+  "Josiane",
+  "Gégé",
+  "Nadine",
+  "Roger",
+  "Mireille",
+  "Patrick",
+  "Sylvie",
+  "Bernard",
+];
+
 function renderExpertPanel(match) {
   const messages = (Array.isArray(match.expertDiscussion) ? match.expertDiscussion : [])
     .filter(Boolean)
     .filter(isWinnerOrScorePick);
   return `
     <section class="detail-section">
-      <h3>Discussions de nos experts</h3>
+      <h3>Entendu à la machine à café</h3>
       <div class="expert-chat">
         ${
           messages.length
             ? messages.map((message, index) => `
               <div class="expert-message">
-                <strong>Expert ${index + 1}</strong>
+                <strong>${escapeHtml(COFFEE_FIRST_NAMES[index % COFFEE_FIRST_NAMES.length])}</strong>
                 <span>${escapeHtml(message)}</span>
               </div>
             `).join("")
@@ -2124,7 +2138,7 @@ function renderBetSuggestions(match) {
       <div class="bet-card-grid">
         ${suggestions.map((bet) => `
           <article class="bet-card">
-            <span>${escapeHtml(bet.market ?? "Paris")}</span>
+            <span>${escapeHtml(bet.market ?? "Prono")}</span>
             <strong>${escapeHtml(bet.label)}</strong>
             <footer>
               <small>Cote indicative</small>
@@ -2152,7 +2166,7 @@ function renderPredictionRows(probabilities) {
 
 function renderMatchWinnerOdds(matchOdds) {
   return `
-    <div class="match-winner-odds" aria-label="Paris résultat du match">
+    <div class="match-winner-odds" aria-label="Prono résultat du match">
       ${matchOdds.map((odd) => `
         <span>
           <small>${escapeHtml(odd.label)}</small>

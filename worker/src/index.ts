@@ -3,6 +3,7 @@ import {
   findPostMatchCandidates,
   getApiFixtureId,
   mergeLiveFixtures,
+  parseDate,
   type Match,
   type Fixture,
 } from "./merge";
@@ -17,6 +18,8 @@ export interface Env {
   SYNC_TOKEN?: string;
   // Binding de rate limiting Cloudflare (optionnel). Voir [[ratelimits]] dans wrangler.toml.
   RATE_LIMITER?: { limit(opts: { key: string }): Promise<{ success: boolean }> };
+  // Binding Workers AI (optionnel). Voir [ai] dans wrangler.toml.
+  AI?: { run(model: string, input: Record<string, any>): Promise<any> };
 }
 
 // Cles KV (par environnement) :
@@ -34,6 +37,80 @@ const POST_AFTER_MS = 135 * 60 * 1000;
 const POST_UNTIL_MS = 195 * 60 * 1000;
 const POST_MATCH_EVERY_MIN = 10;
 const DEFAULT_RESEED_HOUR = 11; // UTC, apres la passe Python du matin (cron 10h UTC)
+
+// --- Generation des "Discussions de nos experts" via Workers AI ---
+const EXPERT_MODEL = "@cf/meta/llama-3.1-8b-instruct";
+const EXPERT_HORIZON_MS = 5 * 24 * 60 * 60 * 1000; // ne genere que pour les matchs des ~5 prochains jours
+const EXPERT_BATCH = 4; // nb de matchs traites par passage du cron (limite la conso)
+const EXPERT_SYSTEM = [
+  "Tu es un panel de 5 consultants football francais pour un jeu de pronostics entre amis, sans argent.",
+  "Tu produis EXACTEMENT 5 avis courts (2 a 3 phrases), en francais, ton convivial de fin connaisseur.",
+  "Avis 1, 2 et 3 : sur le RESULTAT du match. Chacun finit par \"Parti pris : <equipe> gagne\" ou \"Parti pris : match nul\".",
+  "Avis 4 et 5 : sur le SCORE EXACT. Chacun finit par \"Parti pris : Score exact - X - Y\".",
+  "Varie les angles (talents, collectif, donnees, emotion, value). Interdit : paris d'argent, buteurs, nombre de buts, joueur decisif.",
+  "Reponds UNIQUEMENT par un tableau JSON de 5 chaines de caracteres, sans texte autour.",
+].join("\n");
+
+function parseStringArray(text: string): string[] | null {
+  const tryParse = (s: string) => {
+    try {
+      const j = JSON.parse(s);
+      if (Array.isArray(j)) return j.map((x) => String(x).trim()).filter(Boolean);
+    } catch {
+      /* ignore */
+    }
+    return null;
+  };
+  return tryParse(text) ?? tryParse((text.match(/\[[\s\S]*\]/) || [""])[0]);
+}
+
+// Genere les 5 avis (3 resultat + 2 score) pour un match via Workers AI.
+async function generateMatchExperts(env: Env, match: Match): Promise<string[] | null> {
+  if (!env.AI) return null;
+  const proba = match.winProbability;
+  const probaTxt =
+    proba && (proba.home != null || proba.draw != null || proba.away != null)
+      ? ` Probabilites: ${match.home} ${proba.home ?? "?"}%, nul ${proba.draw ?? "?"}%, ${match.away} ${proba.away ?? "?"}%.`
+      : "";
+  const userMsg = `Match : ${match.home} vs ${match.away}.${match.stage ? ` Phase : ${match.stage}.` : ""}${probaTxt} Donne les 5 avis.`;
+  try {
+    const res = await env.AI.run(EXPERT_MODEL, {
+      messages: [
+        { role: "system", content: EXPERT_SYSTEM },
+        { role: "user", content: userMsg },
+      ],
+      max_tokens: 700,
+    });
+    const text = typeof res === "string" ? res : res?.response ?? "";
+    const arr = parseStringArray(String(text));
+    return arr && arr.length >= 5 ? arr.slice(0, 5) : null;
+  } catch {
+    return null;
+  }
+}
+
+// Genere les experts pour quelques matchs a venir qui n'en ont pas encore (limite EXPERT_BATCH).
+async function maybeGenerateExperts(env: Env, data: Record<string, any>, nowMs: number, limit: number): Promise<number> {
+  if (!env.AI) return 0;
+  const matches: Match[] = Array.isArray(data.matches) ? data.matches : [];
+  const todo = matches
+    .filter((m) => {
+      if (m.status !== "upcoming" || m.expertsAI) return false;
+      const d = parseDate(m.date);
+      return d !== null && d > nowMs && d - nowMs < EXPERT_HORIZON_MS;
+    })
+    .slice(0, limit);
+  let generated = 0;
+  for (const m of todo) {
+    const experts = await generateMatchExperts(env, m);
+    if (experts) {
+      m.expertDiscussion = experts;
+      m.expertsAI = true;
+      generated += 1;
+    }
+  }
+  return generated;
+}
 
 // Une origine est-elle autorisee ? (allowlist .fr + localhost + *.pages.dev)
 function originAllowed(origin: string | null, env: Env): boolean {
@@ -146,6 +223,18 @@ async function syncLive(env: Env): Promise<void> {
   if (data.workerMorningReseed !== today && nowDate.getUTCHours() >= reseedHour) {
     const base = await readJson(env, MATCHES_BASE);
     if (base) {
+      // On preserve les experts generes par l'IA (sinon ils seraient ecrases par la base Python).
+      const prevExperts = new Map<string, any>();
+      for (const m of Array.isArray(data.matches) ? data.matches : []) {
+        if (m.expertsAI && Array.isArray(m.expertDiscussion)) prevExperts.set(String(m.id), m.expertDiscussion);
+      }
+      for (const m of Array.isArray(base.matches) ? base.matches : []) {
+        const ed = prevExperts.get(String(m.id));
+        if (ed && m.status !== "finished") {
+          m.expertDiscussion = ed;
+          m.expertsAI = true;
+        }
+      }
       base.workerMorningReseed = today;
       await env.MATCHES.put(MATCHES_CURRENT, JSON.stringify(base));
       return;
@@ -188,7 +277,13 @@ async function syncLive(env: Env): Promise<void> {
     }
   }
 
-  // 4) Sinon : rien a faire. On n'ecrit que si on vient d'amorcer le KV.
+  // 4) Discussions d'experts : genere (via Workers AI) les avis manquants pour les
+  //    prochains matchs, par petits lots, et persiste dans le KV.
+  if (await maybeGenerateExperts(env, data, now, EXPERT_BATCH)) {
+    mustWrite = true;
+  }
+
+  // 5) Sinon : rien a faire. On n'ecrit que si on a quelque chose a persister.
   if (mustWrite) {
     await env.MATCHES.put(MATCHES_CURRENT, JSON.stringify(data));
   }
@@ -202,17 +297,35 @@ async function onDemandSync(env: Env): Promise<Record<string, any>> {
 
   const matches: Match[] = Array.isArray(base.matches) ? base.matches : [];
   const now = Date.now();
+
+  // Preserve les experts deja generes (presents dans matches:current).
+  const prev = await readJson(env, MATCHES_CURRENT);
+  if (prev) {
+    const prevExperts = new Map<string, any>();
+    for (const m of Array.isArray(prev.matches) ? prev.matches : []) {
+      if (m.expertsAI && Array.isArray(m.expertDiscussion)) prevExperts.set(String(m.id), m.expertDiscussion);
+    }
+    for (const m of matches) {
+      const ed = prevExperts.get(String(m.id));
+      if (ed && m.status !== "finished") {
+        m.expertDiscussion = ed;
+        m.expertsAI = true;
+      }
+    }
+  }
+
   const candidates = findLiveCandidates(matches, now, BEFORE_MS, AFTER_MS);
   let updated = 0;
   if (candidates.length > 0) {
     const fixtures = await fetchLiveFixtures(env);
     updated = mergeLiveFixtures(fixtures, candidates);
   }
+  const generated = await maybeGenerateExperts(env, base, now, 8);
   const checkedAt = new Date(now).toISOString();
   base.lastUpdated = checkedAt;
-  base.liveSync = { provider: "api-football-cf", checkedAt, updatedMatches: updated, onDemand: true };
+  base.liveSync = { provider: "api-football-cf", checkedAt, updatedMatches: updated, expertsGenerated: generated, onDemand: true };
   await env.MATCHES.put(MATCHES_CURRENT, JSON.stringify(base));
-  return { ok: true, updatedMatches: updated, liveCandidates: candidates.length };
+  return { ok: true, updatedMatches: updated, expertsGenerated: generated, liveCandidates: candidates.length };
 }
 
 export default {

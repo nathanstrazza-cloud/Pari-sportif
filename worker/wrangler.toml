@@ -21,6 +21,9 @@ binding = "RATE_LIMITER"
 namespace_id = "1001"
 simple = { limit = 120, period = 60 }
 
+[env.preprod.ai]
+binding = "AI"
+
 [env.preprod.vars]
 WORLD_CUP_LEAGUE = "1"
 WORLD_CUP_SEASON = "2026"
@@ -42,6 +45,9 @@ id = "4c1f09b763aa43bc9270618be72d3d8f"
 binding = "RATE_LIMITER"
 namespace_id = "1002"
 simple = { limit = 120, period = 60 }
+
+[env.production.ai]
+binding = "AI"
 
 [env.production.vars]
 WORLD_CUP_LEAGUE = "1"
