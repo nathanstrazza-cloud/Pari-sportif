@@ -12,6 +12,7 @@ const LOCAL_DATA_FILES = {
   matches: "data/matches.json",
   standings: "data/standings.json",
   players: "data/players-ea.json",
+  cards: "data/Cartes.json",
   odds: "data/odds.json",
 };
 
@@ -19,6 +20,7 @@ const state = {
   matches: [],
   standings: [],
   players: {},
+  playerCards: {},
   odds: {},
   betSuggestions: {},
   matchOdds: {},
@@ -152,6 +154,10 @@ const groupStatusLabels = {
 
 const bestThirdQualifyingCount = 8;
 
+const forcedCardStartersByTeam = {
+  france: ["kylian mbappe"],
+};
+
 const teamNameFr = {
   Algeria: "Algérie",
   Argentina: "Argentine",
@@ -161,6 +167,7 @@ const teamNameFr = {
   Brazil: "Brésil",
   "Bosnia and Herzegovina": "Bosnie-et-Herzégovine",
   "Bosnia & Herzegovina": "Bosnie-et-Herzégovine",
+  "Bosnie-Herzégovine": "Bosnie-et-Herzégovine",
   "Cape Verde": "Cap-Vert",
   "Cape Verde Islands": "Cap-Vert",
   Canada: "Canada",
@@ -195,6 +202,7 @@ const teamNameFr = {
   "Saudi Arabia": "Arabie saoudite",
   "South Africa": "Afrique du Sud",
   "South Korea": "République de Corée",
+  "Corée du Sud": "République de Corée",
   Spain: "Espagne",
   Sweden: "Suède",
   Switzerland: "Suisse",
@@ -317,10 +325,11 @@ function cacheElements() {
 }
 
 async function loadData() {
-  const [matches, standings, players, odds] = await Promise.all([
+  const [matches, standings, players, cards, odds] = await Promise.all([
     fetchData("matches"),
     fetchData("standings"),
     fetchData("players"),
+    fetchData("cards"),
     fetchData("odds"),
   ]);
 
@@ -328,6 +337,7 @@ async function loadData() {
   state.standings = Array.isArray(standings.groups) ? standings.groups : [];
   state.knockout = buildKnockout(matches.knockout, state.matches, state.standings);
   state.players = players && typeof players === "object" ? players : {};
+  state.playerCards = cards && typeof cards === "object" ? cards : {};
   state.odds = odds.markets && typeof odds.markets === "object" ? odds.markets : {};
   state.betSuggestions = odds.betSuggestions && typeof odds.betSuggestions === "object" ? odds.betSuggestions : {};
   state.matchOdds = odds.matchOdds && typeof odds.matchOdds === "object" ? odds.matchOdds : {};
@@ -1255,6 +1265,7 @@ function openMatchDetails(match) {
   state.activeDetailTab = getDetailTabs(state.detailMatch)[0]?.key ?? "experts";
   renderMatchModal();
   els.matchModal.hidden = false;
+  resetModalScroll(els.matchModalBody);
   document.body.classList.add("has-modal");
 }
 
@@ -1274,6 +1285,7 @@ function openTeamDetails(team) {
   state.detailTeam = findCanonicalTeamName(team);
   renderTeamModal();
   els.teamModal.hidden = false;
+  resetModalScroll(els.teamModalBody);
   updateModalBodyLock();
 }
 
@@ -1290,6 +1302,14 @@ function closeTeamDetails(options = {}) {
 function updateModalBodyLock() {
   const hasOpenModal = Boolean((els.matchModal && !els.matchModal.hidden) || (els.teamModal && !els.teamModal.hidden));
   document.body.classList.toggle("has-modal", hasOpenModal);
+}
+
+function resetModalScroll(body) {
+  if (!body) return;
+  body.scrollTop = 0;
+  window.requestAnimationFrame(() => {
+    body.scrollTop = 0;
+  });
 }
 
 function renderTeamModal() {
@@ -1359,16 +1379,17 @@ function renderTeamLineupProfile(profile) {
     return `<p class="muted">Composition non disponible pour le moment.</p>`;
   }
 
+  const source = formatLineupSource(profile.lineup);
   return `
     <div class="team-lineup-card">
       <div class="team-lineup-meta">
         <span>${escapeHtml(profile.lineup.formation ?? "Formation à confirmer")}</span>
         ${profile.coach ? `<span>Entraîneur : ${escapeHtml(profile.coach)}</span>` : ""}
       </div>
-      ${formatLineupSource(profile.lineup) ? `<small class="lineup-source">${escapeHtml(formatLineupSource(profile.lineup))}</small>` : ""}
-      <ol class="team-lineup-list">
-        ${players.map((player) => `<li>${escapeHtml(player)}</li>`).join("")}
-      </ol>
+      ${source ? `<small class="lineup-source">${escapeHtml(source)}</small>` : ""}
+      <div class="lineup-field lineup-field-team">
+        ${renderLineupTeam(profile.lineup, "single", "team")}
+      </div>
     </div>
   `;
 }
@@ -1465,6 +1486,15 @@ function getTeamFinalWin(team) {
 }
 
 function getTeamLineupProfile(team) {
+  const cardLineup = buildCardLineup(team, { source: "Cartes EA FC 26" });
+  if (cardLineup?.players?.length) {
+    return {
+      match: null,
+      lineup: cardLineup,
+      coach: "",
+    };
+  }
+
   const matches = getTeamMatches(team).slice().sort((left, right) => new Date(right.date) - new Date(left.date));
   const withOfficialLineup = matches.find((match) => getTeamLineupFromMatch(match, team, "lineups")?.lineup?.players?.length);
   const withProbableLineup = matches.find((match) => getTeamLineupFromMatch(match, team, "probableLineups")?.lineup?.players?.length);
@@ -1590,7 +1620,7 @@ function renderDetailTab(match, tab) {
     const title = match.status === "live"
       ? "Compo actuelle"
       : lineupSectionTitle(lineups, "Compo probable");
-    return renderLineups(lineups, title);
+    return renderLineups(getDisplayLineupsForMatch(match, lineups), title);
   }
 
   if (tab === "odds") {
@@ -1695,32 +1725,345 @@ function escapeRegExp(value) {
   return String(value ?? "").replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
 }
 
-function renderLineups(lineups, title) {
-  const blocks = ["home", "away"].map((side) => {
-    const lineup = lineups?.[side];
-    const players = Array.isArray(lineup?.players) ? lineup.players.filter(Boolean) : [];
-    if (!lineup || !players.length) return "";
+function getDisplayLineupsForMatch(match, fallbackLineups) {
+  if (!match) return fallbackLineups;
 
-    const details = [lineup.formation, players.join(", ")].filter(Boolean).join(" • ");
-    const source = formatLineupSource(lineup);
-    return `
-      <div class="lineup-block">
-        ${lineup.team ? `<strong>${escapeHtml(displayTeamName(lineup.team))}</strong>` : ""}
-        ${source ? `<small class="lineup-source">${escapeHtml(source)}</small>` : ""}
-        ${details ? `<p>${escapeHtml(details)}</p>` : ""}
-      </div>
-    `;
-  }).filter(Boolean);
+  return {
+    home: getDisplayLineupForSide(match, "home", fallbackLineups),
+    away: getDisplayLineupForSide(match, "away", fallbackLineups),
+  };
+}
+
+function getDisplayLineupForSide(match, side, fallbackLineups) {
+  const fallback = fallbackLineups?.[side] ?? null;
+  if (match.status === "live") return fallback;
+
+  const team = fallback?.team ?? match?.[side];
+  const cardLineup = buildCardLineup(team, {
+    fallbackFormation: fallback?.formation,
+    source: "Cartes EA FC 26",
+  });
+
+  return cardLineup?.players?.length ? cardLineup : fallback;
+}
+
+function buildCardLineup(team, options = {}) {
+  const cardPlayers = getTeamCardPlayers(team);
+  if (!cardPlayers.length) return null;
+
+  const selectedPlayers = selectCardLineupPlayers(team, cardPlayers);
+  if (!selectedPlayers.length) return null;
+
+  return {
+    team: displayTeamName(team),
+    formation: options.fallbackFormation || inferFormationFromCardPlayers(selectedPlayers),
+    players: selectedPlayers,
+    source: options.source ?? "Cartes EA FC 26",
+  };
+}
+
+function getTeamCardPlayers(team) {
+  const entry = getTeamCardEntry(team);
+  if (!entry) return [];
+
+  const starters = Array.isArray(entry.joueurs) ? entry.joueurs : [];
+  const substitutes = Array.isArray(entry.remplacants) ? entry.remplacants : [];
+  const seen = new Set();
+
+  return [...starters, ...substitutes].reduce((players, player, index) => {
+    const name = player?.nom ?? player?.name;
+    const key = normalizePlayerName(name);
+    if (!key || seen.has(key)) return players;
+
+    seen.add(key);
+    players.push({
+      ...player,
+      sourceIndex: index,
+      starterIndex: index < starters.length ? index : null,
+    });
+    return players;
+  }, []);
+}
+
+function getTeamCardEntry(team) {
+  const teams = state.playerCards?.equipes;
+  if (!teams) return null;
+  const entry = Object.entries(teams).find(([teamName]) => sameTeam(teamName, team));
+  return entry?.[1] ?? null;
+}
+
+function selectCardLineupPlayers(team, players) {
+  if (players.length <= 11) return players.slice(0, 11);
+
+  const forcedPlayers = getForcedCardStarters(team, players);
+  const recentScores = getRecentCardPlayerScores(team);
+  const ranked = players
+    .map((player) => ({
+      player,
+      score: recentScores.get(normalizePlayerName(player.nom)) ?? 0,
+      starterBias: player.starterIndex === null ? 0 : 1,
+    }))
+    .sort((left, right) =>
+      right.score - left.score
+        || right.starterBias - left.starterBias
+        || (left.player.sourceIndex ?? 0) - (right.player.sourceIndex ?? 0)
+    );
+
+  const picked = [...forcedPlayers];
+  ranked.forEach((item) => {
+    if (picked.length >= 11) return;
+    if (picked.some((player) => normalizePlayerName(player.nom) === normalizePlayerName(item.player.nom))) return;
+    picked.push(item.player);
+  });
+
+  return picked.sort((left, right) => (left.sourceIndex ?? 0) - (right.sourceIndex ?? 0));
+}
+
+function getForcedCardStarters(team, players) {
+  const forcedNames = forcedCardStartersByTeam[normalizeTeamName(displayTeamName(team))] ?? [];
+  if (!forcedNames.length) return [];
+
+  return forcedNames
+    .map((forcedName) => players.find((player) => normalizePlayerName(player.nom) === normalizePlayerName(forcedName)))
+    .filter(Boolean);
+}
+
+function getRecentCardPlayerScores(team) {
+  const scores = new Map();
+  getTeamMatches(team)
+    .slice()
+    .sort((left, right) => new Date(right.date) - new Date(left.date))
+    .slice(0, 5)
+    .forEach((match, matchIndex) => {
+      ["lineups", "probableLineups"].forEach((lineupKey) => {
+        const fromMatch = getTeamLineupFromMatch(match, team, lineupKey);
+        const players = Array.isArray(fromMatch?.lineup?.players) ? fromMatch.lineup.players : [];
+        const sourceWeight = lineupKey === "lineups" ? 2 : 1;
+        players.forEach((player, playerIndex) => {
+          const parsed = parseLineupPlayer(player);
+          const card = findPlayerCard(team, parsed.name);
+          if (!card?.nom) return;
+
+          const key = normalizePlayerName(card.nom);
+          const recencyWeight = Math.max(1, 5 - matchIndex);
+          const orderWeight = Math.max(1, 11 - playerIndex);
+          scores.set(key, (scores.get(key) ?? 0) + sourceWeight * recencyWeight * orderWeight);
+        });
+      });
+    });
+
+  return scores;
+}
+
+function inferFormationFromCardPlayers(players) {
+  const counts = players.reduce((record, player) => {
+    const role = getPositionRole(player?.poste ?? player?.position);
+    if (role === "defender") record.defenders += 1;
+    if (role === "midfielder") record.midfielders += 1;
+    if (role === "forward") record.forwards += 1;
+    return record;
+  }, { defenders: 0, midfielders: 0, forwards: 0 });
+
+  if (!counts.defenders && !counts.midfielders && !counts.forwards) return null;
+  return [counts.defenders, counts.midfielders, counts.forwards].filter((value) => value > 0).join("-");
+}
+
+function renderLineups(lineups, title) {
+  const blocks = ["home", "away"].map((side) =>
+    renderLineupTeam(lineups?.[side], side, "match")
+  ).filter(Boolean);
 
   return `
     <section class="detail-section">
       <h3>${title}</h3>
       ${
         blocks.length
-          ? `<div class="lineups">${blocks.join("")}</div>`
+          ? `
+            <div class="lineup-field lineup-field-match">
+              ${blocks[0] ?? ""}
+              ${blocks.length > 1 ? `<div class="lineup-midline" aria-hidden="true"></div>` : ""}
+              ${blocks[1] ?? ""}
+            </div>
+          `
           : `<p class="muted">Compositions non disponibles pour le moment</p>`
       }
     </section>
+  `;
+}
+
+function renderLineupTeam(lineup, side, mode) {
+  const players = Array.isArray(lineup?.players) ? lineup.players.filter(Boolean) : [];
+  if (!lineup || !players.length) return "";
+
+  const orderedRoles = getLineupRoleOrder(side, mode);
+  const rows = groupLineupPlayers(players, lineup.team, orderedRoles);
+  const source = mode === "match" ? formatLineupSource(lineup) : "";
+
+  return `
+    <div class="lineup-team lineup-team-${escapeHtml(side)}">
+      <div class="lineup-team-header">
+        <strong>${lineup.team ? escapeHtml(displayTeamName(lineup.team)) : "Équipe"}</strong>
+        ${lineup.formation ? `<span>${escapeHtml(lineup.formation)}</span>` : ""}
+        ${source ? `<small class="lineup-source">${escapeHtml(source)}</small>` : ""}
+      </div>
+      <div class="lineup-lines">
+        ${rows.map((row) => `
+          <div class="lineup-role-row lineup-role-${escapeHtml(row.role)}">
+            ${row.players.map(renderLineupPlayerCard).join("")}
+          </div>
+        `).join("")}
+      </div>
+    </div>
+  `;
+}
+
+function getLineupRoleOrder(side, mode) {
+  if (mode === "team") return ["forward", "midfielder", "defender", "keeper", "unknown"];
+  if (side === "away") return ["forward", "midfielder", "defender", "keeper", "unknown"];
+  return ["keeper", "defender", "midfielder", "forward", "unknown"];
+}
+
+function groupLineupPlayers(players, team, orderedRoles) {
+  const groups = new Map(orderedRoles.map((role) => [role, []]));
+  players.forEach((player, index) => {
+    const enriched = enrichLineupPlayer(player, team, index, players.length);
+    const role = groups.has(enriched.role) ? enriched.role : "unknown";
+    groups.get(role).push(enriched);
+  });
+
+  return orderedRoles
+    .map((role) => ({ role, players: groups.get(role) ?? [] }))
+    .filter((row) => row.players.length);
+}
+
+function enrichLineupPlayer(player, team, index, totalPlayers) {
+  const parsed = parseLineupPlayer(player);
+  const card = getDirectPlayerCard(player) ?? findPlayerCard(team, parsed.name);
+  const position = card?.poste ?? parsed.position;
+
+  return {
+    name: card?.nom ?? parsed.name,
+    position,
+    role: getPositionRole(position) || inferLineupRole(index, totalPlayers),
+    club: cleanOptionalCardValue(card?.club),
+    rating: card?.note,
+    age: card?.age,
+  };
+}
+
+function getDirectPlayerCard(player) {
+  if (!player || typeof player !== "object") return null;
+  return player.nom && (player.poste || player.club || player.note || player.age) ? player : null;
+}
+
+function parseLineupPlayer(player) {
+  if (player && typeof player === "object") {
+    return {
+      name: String(player.name ?? player.nom ?? player.player?.name ?? "").trim(),
+      position: String(player.position ?? player.poste ?? player.pos ?? player.player?.pos ?? "").trim(),
+    };
+  }
+
+  const text = String(player ?? "").trim();
+  const withoutNumber = text.replace(/^\d+\.\s*/u, "").trim();
+  const positionMatch = withoutNumber.match(/\(([^()]*)\)\s*$/u);
+  return {
+    name: (positionMatch ? withoutNumber.slice(0, positionMatch.index) : withoutNumber).trim(),
+    position: positionMatch?.[1]?.trim() ?? "",
+  };
+}
+
+function findPlayerCard(team, playerName) {
+  if (!playerName) return null;
+  const entry = getTeamCardEntry(team);
+  if (!entry) return null;
+
+  const players = [
+    ...(Array.isArray(entry?.joueurs) ? entry.joueurs : []),
+    ...(Array.isArray(entry?.remplacants) ? entry.remplacants : []),
+  ];
+  return players.find((card) => playerNameMatches(playerName, card?.nom)) ?? null;
+}
+
+function playerNameMatches(lineupName, cardName) {
+  const lineup = normalizePlayerName(lineupName);
+  const card = normalizePlayerName(cardName);
+  if (!lineup || !card) return false;
+  if (lineup === card) return true;
+
+  const lineupParts = lineup.split(" ");
+  const cardParts = card.split(" ");
+  const lineupLast = lineupParts[lineupParts.length - 1];
+  const cardLast = cardParts[cardParts.length - 1];
+  if (!lineupLast || lineupLast !== cardLast) return false;
+
+  const lineupInitial = lineupParts[0]?.[0] ?? "";
+  const cardInitial = cardParts[0]?.[0] ?? "";
+  return Boolean(lineupInitial && lineupInitial === cardInitial);
+}
+
+function normalizePlayerName(name) {
+  return String(name ?? "")
+    .normalize("NFKD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .replace(/^\d+\.\s*/u, "")
+    .replace(/\([^()]*(?:\)|$)/gu, " ")
+    .replace(/[’'._-]/g, " ")
+    .replace(/\s+/g, " ")
+    .trim()
+    .toLocaleLowerCase("fr-FR");
+}
+
+function getPositionRole(position) {
+  const value = normalizePlayerName(position).replace(/\s+/g, "").toLocaleUpperCase("fr-FR");
+  if (!value) return "";
+  if (value === "G" || value === "GK" || value.includes("GARDIEN")) return "keeper";
+  if (value === "D" || value.startsWith("D") || value.includes("DEF")) return "defender";
+  if (value === "M" || value.startsWith("M")) return "midfielder";
+  if (value === "F" || value.startsWith("A") || ["BU", "ST", "CF"].includes(value)) return "forward";
+  return "";
+}
+
+function inferLineupRole(index, totalPlayers) {
+  if (totalPlayers >= 10) {
+    if (index === 0) return "keeper";
+    if (index <= 4) return "defender";
+    if (index <= 7) return "midfielder";
+    return "forward";
+  }
+  return "unknown";
+}
+
+function cleanOptionalCardValue(value) {
+  const text = String(value ?? "").trim();
+  if (!text || /^unknown$/iu.test(text)) return "";
+  return text;
+}
+
+function renderLineupPlayerCard(player) {
+  const position = cleanOptionalCardValue(player.position);
+  const age = cleanOptionalCardValue(player.age);
+  const rating = cleanOptionalCardValue(player.rating);
+  const club = cleanOptionalCardValue(player.club);
+
+  return `
+    <article class="lineup-player-card">
+      ${(position || age || rating) ? `
+        <div class="lineup-card-top">
+          ${(position || age) ? `
+            <span class="lineup-card-stack">
+              ${position ? `<b>${escapeHtml(position)}</b>` : ""}
+              ${age ? `<small>${escapeHtml(age)}</small>` : ""}
+            </span>
+          ` : ""}
+          ${rating ? `<span class="lineup-card-rating">${escapeHtml(rating)}</span>` : ""}
+        </div>
+      ` : ""}
+      <div class="lineup-card-body">
+        <strong>${escapeHtml(player.name)}</strong>
+        ${club ? `<small>${escapeHtml(club)}</small>` : ""}
+      </div>
+    </article>
   `;
 }
 
@@ -2607,7 +2950,15 @@ function setActiveTab(tab) {
 
   if (tab === "matches") {
     window.requestAnimationFrame(scrollMatchesToUpcoming);
+    return;
   }
+
+  window.requestAnimationFrame(scrollPageToTop);
+}
+
+function scrollPageToTop() {
+  window.scrollTo({ top: 0, left: 0, behavior: "auto" });
+  document.querySelector(`#panel-${state.activeTab}`)?.scrollIntoView({ block: "start" });
 }
 
 function scheduleRefresh() {

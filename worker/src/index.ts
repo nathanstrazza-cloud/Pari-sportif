@@ -15,7 +15,7 @@ export interface Env {
 //   standings / players / odds <- pousses par Python, servis tels quels
 const MATCHES_CURRENT = "matches:current";
 const MATCHES_BASE = "matches:base";
-const PASSTHROUGH_KEYS = new Set(["standings", "players", "odds"]);
+const PASSTHROUGH_KEYS = new Set(["standings", "players", "odds", "cards"]);
 
 const BEFORE_MS = 15 * 60 * 1000; // 15 min avant le coup d'envoi
 const AFTER_MS = 150 * 60 * 1000; // 150 min apres

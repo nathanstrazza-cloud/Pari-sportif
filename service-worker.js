@@ -1,4 +1,4 @@
-const CACHE_NAME = "pari-sportif-v23";
+const CACHE_NAME = "pari-sportif-v26";
 const APP_SHELL = [
   "./",
   "index.html",
@@ -12,6 +12,7 @@ const APP_SHELL = [
   "data/matches.json",
   "data/standings.json",
   "data/players-ea.json",
+  "data/Cartes.json",
   "data/odds.json",
 ];
 

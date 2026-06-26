@@ -64,6 +64,7 @@ jobs:
             put_kv "$ns" "standings"      data/standings.json
             put_kv "$ns" "players"        data/players-ea.json
             put_kv "$ns" "odds"           data/odds.json
+            put_kv "$ns" "cards"          data/Cartes.json
           done
 
       - name: Sauvegarder les fichiers modifiés
