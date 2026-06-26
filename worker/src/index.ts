@@ -1,4 +1,11 @@
-import { findLiveCandidates, mergeLiveFixtures, type Match, type Fixture } from "./merge";
+import {
+  findLiveCandidates,
+  findPostMatchCandidates,
+  getApiFixtureId,
+  mergeLiveFixtures,
+  type Match,
+  type Fixture,
+} from "./merge";
 
 export interface Env {
   MATCHES: KVNamespace;
@@ -18,7 +25,11 @@ const MATCHES_BASE = "matches:base";
 const PASSTHROUGH_KEYS = new Set(["standings", "players", "odds", "cards"]);
 
 const BEFORE_MS = 15 * 60 * 1000; // 15 min avant le coup d'envoi
-const AFTER_MS = 150 * 60 * 1000; // 150 min apres
+const AFTER_MS = 135 * 60 * 1000; // fenetre live : jusqu'a ~135 min apres le coup d'envoi
+// Apres-match : de +135 a +195 min (1h), on rattrape le score final toutes les 10 min.
+const POST_AFTER_MS = 135 * 60 * 1000;
+const POST_UNTIL_MS = 195 * 60 * 1000;
+const POST_MATCH_EVERY_MIN = 10;
 const DEFAULT_RESEED_HOUR = 11; // UTC, apres la passe Python du matin (cron 10h UTC)
 
 // Choisit l'origine a renvoyer : si l'origine de la requete est dans l'allowlist, on la renvoie.
@@ -70,7 +81,24 @@ async function fetchLiveFixtures(env: Env): Promise<Fixture[]> {
   return (payload?.response as Fixture[]) ?? [];
 }
 
-// Coeur du cron. Trois branches, dans cet ordre :
+// Recupere des fixtures precises par id (apres-match : le flux live=all ne renvoie plus un match termine).
+async function fetchFixturesByIds(env: Env, ids: string[]): Promise<Fixture[]> {
+  if (!ids.length) return [];
+  const url = `https://v3.football.api-sports.io/fixtures?ids=${encodeURIComponent(ids.slice(0, 20).join("-"))}`;
+  const response = await fetch(url, {
+    headers: { "x-apisports-key": env.API_FOOTBALL_KEY, Accept: "application/json" },
+  });
+  const payload = (await response.json()) as Record<string, any>;
+  if (!response.ok) {
+    throw new Error(`API-FOOTBALL ${response.status}: ${JSON.stringify(payload?.errors ?? payload)}`);
+  }
+  const errors = payload?.errors;
+  const hasErrors = Array.isArray(errors) ? errors.length > 0 : errors && Object.keys(errors).length > 0;
+  if (hasErrors) throw new Error(`API-FOOTBALL erreur: ${JSON.stringify(errors)}`);
+  return (payload?.response as Fixture[]) ?? [];
+}
+
+// Coeur du cron. Quatre branches, dans cet ordre :
 //   1. matin (1x/jour) : adopte matches:base (la passe Python a finalise scores + matchs a venir)
 //   2. match live       : recupere les infos live et les applique sur l'etat accumule
 //   3. rien en cours    : ne fait rien (aucun appel API, aucune ecriture)
@@ -117,7 +145,24 @@ async function syncLive(env: Env): Promise<void> {
     mustWrite = true;
   }
 
-  // 3) Sinon : rien a faire. On n'ecrit que si on vient d'amorcer le KV.
+  // 3) Apres-match : toutes les 10 min pendant 1h, on rattrape le score final
+  //    (un match termine ne ressort plus dans live=all -> requete ciblee par id).
+  const postCandidates = findPostMatchCandidates(matches, now, POST_AFTER_MS, POST_UNTIL_MS);
+  if (postCandidates.length > 0 && nowDate.getUTCMinutes() % POST_MATCH_EVERY_MIN === 0) {
+    const ids = postCandidates.map(getApiFixtureId).filter(Boolean);
+    if (ids.length > 0) {
+      const fixtures = await fetchFixturesByIds(env, ids);
+      const updated = mergeLiveFixtures(fixtures, postCandidates);
+      if (updated > 0) {
+        const checkedAt = nowDate.toISOString();
+        data.lastUpdated = checkedAt;
+        data.postMatchSync = { checkedAt, updatedMatches: updated };
+        mustWrite = true;
+      }
+    }
+  }
+
+  // 4) Sinon : rien a faire. On n'ecrit que si on vient d'amorcer le KV.
   if (mustWrite) {
     await env.MATCHES.put(MATCHES_CURRENT, JSON.stringify(data));
   }
