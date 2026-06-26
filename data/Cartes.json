@@ -112,18 +112,53 @@
       "prochaineMatch": "Norvege vs France - 26/06/2026",
       "joueurs": [
         {
-          "nom": "Mike Maignan",
-          "poste": "G",
-          "club": "AC Milan",
-          "note": 87,
-          "age": 30
+          "nom": "Désiré Doué",
+          "poste": "AG",
+          "club": "Paris Saint-Germain",
+          "note": 84,
+          "age": 21
         },
         {
-          "nom": "Jules Koundé",
-          "poste": "DD",
-          "club": "FC Barcelone",
-          "note": 87,
+          "nom": "Kylian Mbappé",
+          "poste": "BU",
+          "club": "Real Madrid",
+          "note": 91,
           "age": 27
+        },
+        {
+          "nom": "Ousmane Dembélé",
+          "poste": "AD",
+          "club": "Paris Saint-Germain",
+          "note": 90,
+          "age": 29
+        },
+        {
+          "nom": "Adrien Rabiot",
+          "poste": "MC",
+          "club": "AC Milan",
+          "note": 83,
+          "age": 31
+        },
+        {
+          "nom": "Michael Olise",
+          "poste": "MOC",
+          "club": "Bayern Munich",
+          "note": 86,
+          "age": 24
+        },
+        {
+          "nom": "Aurélien Tchouaméni",
+          "poste": "MDC",
+          "club": "Real Madrid",
+          "note": 85,
+          "age": 26
+        },
+        {
+          "nom": "Lucas Digne",
+          "poste": "DG",
+          "club": "Aston Villa",
+          "note": 79,
+          "age": 32
         },
         {
           "nom": "Dayot Upamecano",
@@ -140,53 +175,18 @@
           "age": 25
         },
         {
-          "nom": "Lucas Digne",
-          "poste": "DG",
-          "club": "Aston Villa",
-          "note": 79,
-          "age": 32
-        },
-        {
-          "nom": "Manu Koné",
-          "poste": "MDC",
-          "club": "Roma FC",
-          "note": 81,
-          "age": 25
-        },
-        {
-          "nom": "Adrien Rabiot",
-          "poste": "MOC",
-          "club": "AC Milan",
-          "note": 83,
-          "age": 31
-        },
-        {
-          "nom": "Ousmane Dembélé",
-          "poste": "AD",
-          "club": "Paris Saint-Germain",
-          "note": 90,
-          "age": 29
-        },
-        {
-          "nom": "Michael Olise",
-          "poste": "MD",
-          "club": "Bayern Munich",
-          "note": 86,
-          "age": 24
-        },
-        {
-          "nom": "Bradley Barcola",
-          "poste": "AG",
-          "club": "Paris Saint-Germain",
-          "note": 85,
-          "age": 23
-        },
-        {
-          "nom": "Kylian Mbappé",
-          "poste": "BU",
-          "club": "Real Madrid",
-          "note": 91,
+          "nom": "Jules Koundé",
+          "poste": "DD",
+          "club": "FC Barcelone",
+          "note": 87,
           "age": 27
+        },
+        {
+          "nom": "Mike Maignan",
+          "poste": "G",
+          "club": "AC Milan",
+          "note": 87,
+          "age": 30
         }
       ],
       "remplacants": [
@@ -247,11 +247,11 @@
           "age": 35
         },
         {
-          "nom": "Aurélien Tchouaméni",
+          "nom": "Manu Koné",
           "poste": "MDC",
-          "club": "Real Madrid",
-          "note": 85,
-          "age": 26
+          "club": "Roma FC",
+          "note": 81,
+          "age": 25
         },
         {
           "nom": "Warren Zaïre-Emery",
@@ -275,11 +275,11 @@
           "age": 22
         },
         {
-          "nom": "Désiré Doué",
+          "nom": "Bradley Barcola",
           "poste": "AG",
           "club": "Paris Saint-Germain",
-          "note": 84,
-          "age": 21
+          "note": 85,
+          "age": 23
         },
         {
           "nom": "Jean-Philippe Mateta",

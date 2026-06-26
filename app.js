@@ -158,7 +158,19 @@ const groupStatusLabels = {
 const bestThirdQualifyingCount = 8;
 
 const forcedCardStartersByTeam = {
-  france: ["kylian mbappe"],
+  france: [
+    "desire doue",
+    "kylian mbappe",
+    "ousmane dembele",
+    "adrien rabiot",
+    "michael olise",
+    "aurelien tchouameni",
+    "lucas digne",
+    "dayot upamecano",
+    "william saliba",
+    "jules kounde",
+    "mike maignan",
+  ],
 };
 
 const teamNameFr = {
