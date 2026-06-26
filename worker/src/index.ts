@@ -46,6 +46,10 @@ function pickOrigin(request: Request, env: Env): string {
   if (requestOrigin && /^http:\/\/(localhost|127\.0\.0\.1)(:\d+)?$/.test(requestOrigin)) {
     return requestOrigin;
   }
+  // Cloudflare Pages : autorise les sites *.pages.dev (projets + previews).
+  if (requestOrigin && /^https:\/\/([a-z0-9-]+\.)*pages\.dev$/.test(requestOrigin)) {
+    return requestOrigin;
+  }
   return allowed[0] || "*";
 }
 
