@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-26T07:21:38.759558Z",
+  "lastUpdated": "2026-06-26T10:24:13.276486Z",
   "source": "api-football",
   "topScorers": [
     {
@@ -117,9 +117,9 @@
       "goals": 2.0
     },
     {
-      "name": "J. Quiñones",
-      "team": "Mexique",
-      "age": 28,
+      "name": "D. Kamada",
+      "team": "Japon",
+      "age": 29,
       "goals": 2.0
     }
   ],
@@ -149,6 +149,12 @@
       "assists": 2.0
     },
     {
+      "name": "V. Gyökeres",
+      "team": "Suède",
+      "age": 27,
+      "assists": 2.0
+    },
+    {
       "name": "N. Saliba",
       "team": "Canada",
       "age": 21,
@@ -164,18 +170,6 @@
       "name": "B. Embolo",
       "team": "Suisse",
       "age": 28,
-      "assists": 2.0
-    },
-    {
-      "name": "R. Gravenberch",
-      "team": "Pays-Bas",
-      "age": 23,
-      "assists": 2.0
-    },
-    {
-      "name": "D. Dumfries",
-      "team": "Pays-Bas",
-      "age": 29,
       "assists": 2.0
     },
     {
@@ -203,15 +197,33 @@
       "assists": 2.0
     },
     {
-      "name": "M. Ødegaard",
-      "team": "Norvège",
-      "age": 27,
+      "name": "R. Gravenberch",
+      "team": "Pays-Bas",
+      "age": 23,
       "assists": 2.0
     },
     {
       "name": "J. Enciso",
       "team": "Paraguay",
       "age": 21,
+      "assists": 2.0
+    },
+    {
+      "name": "H. Mejbri",
+      "team": "Tunisie",
+      "age": 22,
+      "assists": 2.0
+    },
+    {
+      "name": "D. Dumfries",
+      "team": "Pays-Bas",
+      "age": 29,
+      "assists": 2.0
+    },
+    {
+      "name": "M. Ødegaard",
+      "team": "Norvège",
+      "age": 27,
       "assists": 2.0
     },
     {
@@ -230,18 +242,6 @@
       "name": "J. Manzambi",
       "team": "Suisse",
       "age": 20,
-      "assists": 1.0
-    },
-    {
-      "name": "A. Ueda",
-      "team": "Japon",
-      "age": 27,
-      "assists": 1.0
-    },
-    {
-      "name": "C. Gakpo",
-      "team": "Pays-Bas",
-      "age": 26,
       "assists": 1.0
     }
   ],

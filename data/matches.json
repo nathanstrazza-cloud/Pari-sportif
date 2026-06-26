@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-26T07:21:38.620668Z",
+  "lastUpdated": "2026-06-26T10:24:12.988371Z",
   "matches": [
     {
       "id": "400021443",
@@ -6502,7 +6502,7 @@
       "group": null,
       "date": "2026-06-25T23:00:00+00:00",
       "venue": "AT&T Stadium",
-      "city": "Dallas",
+      "city": "Arlington",
       "home": "Japon",
       "away": "Suède",
       "homeCoach": "H. Moriyasu",
@@ -6641,7 +6641,7 @@
       "group": null,
       "date": "2026-06-26T02:00:00+00:00",
       "venue": "Levi's Stadium",
-      "city": "San Francisco Bay Area",
+      "city": "Santa Clara",
       "home": "Paraguay",
       "away": "Australie",
       "homeCoach": "G. Alfaro",
@@ -6780,7 +6780,7 @@
       "group": null,
       "date": "2026-06-26T02:00:00+00:00",
       "venue": "SoFi Stadium",
-      "city": "Los Angeles",
+      "city": "Inglewood",
       "home": "Turquie",
       "away": "États-Unis",
       "homeCoach": "V. Montella",
@@ -8741,10 +8741,10 @@
   "knockout": {},
   "scheduleSync": {
     "provider": "api-football",
-    "checkedAt": "2026-06-26T07:21:38.620668Z",
+    "checkedAt": "2026-06-26T10:24:12.988371Z",
     "league": 1,
     "season": 2026,
-    "updatedMatches": 9,
+    "updatedMatches": 3,
     "insertedMatches": 0,
     "lineupsChecked": 0,
     "lineupsUpdated": 0,
