@@ -42,6 +42,10 @@ function pickOrigin(request: Request, env: Env): string {
     .filter(Boolean);
   const requestOrigin = request.headers.get("Origin");
   if (requestOrigin && allowed.includes(requestOrigin)) return requestOrigin;
+  // Dev local : autorise n'importe quel port sur localhost / 127.0.0.1.
+  if (requestOrigin && /^http:\/\/(localhost|127\.0\.0\.1)(:\d+)?$/.test(requestOrigin)) {
+    return requestOrigin;
+  }
   return allowed[0] || "*";
 }
 
