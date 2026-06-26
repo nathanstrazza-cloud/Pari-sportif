@@ -1,27 +1,41 @@
-name = "pari-sportif-live"
 main = "src/index.ts"
 compatibility_date = "2024-09-23"
 
-# Cron : chaque minute. C'est le coeur de la mise a jour live.
-[triggers]
+# Ce Worker tourne en DEUX environnements isoles (preprod / production), chacun
+# avec son propre Worker, son propre KV et ses propres origines CORS.
+# Deploiement : wrangler deploy --env preprod  |  wrangler deploy --env production
+# Secret par env :  wrangler secret put API_FOOTBALL_KEY --env preprod  (et --env production)
+
+# ─────────────────────────── PREPROD ───────────────────────────
+[env.preprod]
+name = "pari-sportif-live-preprod"
+
+[env.preprod.triggers]
 crons = ["* * * * *"]
 
-# Store KV qui contient le dernier matches.json fusionne (calendrier + scores live).
-# Remplace l'id ci-dessous par celui renvoye par :
-#   wrangler kv namespace create MATCHES
-[[kv_namespaces]]
+[[env.preprod.kv_namespaces]]
 binding = "MATCHES"
 id = "a578656234d14cd4881434237132adf9"
 
-[vars]
+[env.preprod.vars]
 WORLD_CUP_LEAGUE = "1"
 WORLD_CUP_SEASON = "2026"
-SCHEDULE_URL = "https://nathanstrazza-cloud.github.io/Pari-sportif/data/matches.json"
-# Origines autorisees (CORS), separees par des virgules : test github.io + prod .fr.
-ALLOWED_ORIGINS = "https://nathanstrazza-cloud.github.io,https://lacoteadede.fr,https://www.lacoteadede.fr"
-# Heure UTC du re-seed matinal. Doit etre APRES la passe Python du matin
-# (cron "0 10 * * *" dans update-data.yml) qui finalise les scores de la veille.
 RESEED_HOUR_UTC = "11"
+ALLOWED_ORIGINS = "https://nathanstrazza-cloud.github.io,https://preprod.lacoteadede.fr"
 
-# La cle API n'est PAS ici : c'est un secret.
-#   wrangler secret put API_FOOTBALL_KEY
+# ─────────────────────────── PRODUCTION ───────────────────────────
+[env.production]
+name = "pari-sportif-live-prod"
+
+[env.production.triggers]
+crons = ["* * * * *"]
+
+[[env.production.kv_namespaces]]
+binding = "MATCHES"
+id = "REMPLACER_PAR_ID_KV_PROD"
+
+[env.production.vars]
+WORLD_CUP_LEAGUE = "1"
+WORLD_CUP_SEASON = "2026"
+RESEED_HOUR_UTC = "11"
+ALLOWED_ORIGINS = "https://lacoteadede.fr,https://www.lacoteadede.fr"

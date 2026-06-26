@@ -1,6 +1,19 @@
-// URL du Worker Cloudflare qui sert les scores live (cron 1 min).
-// Laisser "" pour n'utiliser que data/matches.json.
-const LIVE_DATA_URL = "https://pari-sportif-live.bstrazza.workers.dev";
+// Workers Cloudflare qui servent TOUTES les donnees (matches live, classements, cotes, joueurs).
+// L'environnement est choisi selon le domaine : la prod (.fr) tape le Worker prod, sinon preprod.
+const DATA_WORKERS = {
+  prod: "https://pari-sportif-live-prod.bstrazza.workers.dev",
+  preprod: "https://pari-sportif-live-preprod.bstrazza.workers.dev",
+};
+const PROD_HOSTS = ["lacoteadede.fr", "www.lacoteadede.fr"];
+const DATA_BASE = PROD_HOSTS.includes(location.hostname) ? DATA_WORKERS.prod : DATA_WORKERS.preprod;
+
+// Fichiers locaux de repli si le Worker est injoignable.
+const LOCAL_DATA_FILES = {
+  matches: "data/matches.json",
+  standings: "data/standings.json",
+  players: "data/players-ea.json",
+  odds: "data/odds.json",
+};
 
 const state = {
   matches: [],
@@ -305,10 +318,10 @@ function cacheElements() {
 
 async function loadData() {
   const [matches, standings, players, odds] = await Promise.all([
-    fetchMatches(),
-    fetchJson("data/standings.json"),
-    fetchJson("data/players-ea.json"),
-    fetchJson("data/odds.json"),
+    fetchData("matches"),
+    fetchData("standings"),
+    fetchData("players"),
+    fetchData("odds"),
   ]);
 
   state.matches = Array.isArray(matches.matches) ? matches.matches : [];
@@ -730,16 +743,14 @@ async function fetchJson(path) {
   return response.json();
 }
 
-// Donnees des matchs : d'abord le Worker live (scores temps reel), sinon le fichier statique.
-async function fetchMatches() {
-  if (LIVE_DATA_URL) {
-    try {
-      return await fetchJson(LIVE_DATA_URL);
-    } catch (error) {
-      console.warn("Worker live indisponible, repli sur data/matches.json", error);
-    }
+// Charge un dataset depuis le Worker (donnees temps reel), avec repli sur le fichier local.
+async function fetchData(name) {
+  try {
+    return await fetchJson(`${DATA_BASE}/${name}`);
+  } catch (error) {
+    console.warn(`Worker indisponible pour "${name}", repli sur ${LOCAL_DATA_FILES[name]}`, error);
+    return fetchJson(LOCAL_DATA_FILES[name]);
   }
-  return fetchJson("data/matches.json");
 }
 
 function bindNavigation() {

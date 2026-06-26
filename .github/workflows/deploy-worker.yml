@@ -2,7 +2,7 @@ name: Deploy worker
 
 on:
   push:
-    branches: [main]
+    branches: [main, prod]
     paths:
       - "worker/**"
       - ".github/workflows/deploy-worker.yml"
@@ -20,15 +20,21 @@ jobs:
         with:
           node-version: "20"
 
+      - name: Choisir l'environnement (main -> preprod, prod -> production)
+        id: pick
+        run: |
+          if [ "${{ github.ref_name }}" = "prod" ]; then
+            echo "env=production" >> "$GITHUB_OUTPUT"
+          else
+            echo "env=preprod" >> "$GITHUB_OUTPUT"
+          fi
+
       - name: Déployer sur Cloudflare
         uses: cloudflare/wrangler-action@v3
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           workingDirectory: worker
-          command: deploy
-          # Synchronise la clé API (secret GitHub) vers le secret du Worker Cloudflare.
-          secrets: |
-            API_FOOTBALL_KEY
-        env:
-          API_FOOTBALL_KEY: ${{ secrets.API_FOOTBALL_KEY }}
+          command: deploy --env ${{ steps.pick.outputs.env }}
+        # La cle API_FOOTBALL_KEY est un secret du Worker, defini une fois par
+        # environnement (dashboard Cloudflare) ; elle survit aux redeploiements.
