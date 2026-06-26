@@ -72,8 +72,8 @@ jobs:
         env:
           SYNC_TOKEN: ${{ secrets.SYNC_TOKEN }}
           TARGET: ${{ github.event.inputs.target }}
-          PREPROD_URL: https://pari-sportif-live-preprod.bstrazza.workers.dev
-          PROD_URL: https://pari-sportif-live-prod.bstrazza.workers.dev
+          PREPROD_URL: https://coteadede-preprod.bstrazza.workers.dev
+          PROD_URL: https://coteadede-prod.bstrazza.workers.dev
         run: |
           set -e
           ping () { echo "sync -> $1"; curl -fsS -X POST "$1/sync?token=${SYNC_TOKEN}" && echo || echo "  (worker injoignable, ignore)"; }

@@ -27,8 +27,8 @@ Frontend (Cloudflare Pages)
 
 | Env | Worker | KV | Origines (CORS) | Domaine |
 |---|---|---|---|---|
-| `preprod` | `pari-sportif-live-preprod` | preprod | github.io + preprod.lacoteadede.fr | preprod.lacoteadede.fr |
-| `production` | `pari-sportif-live-prod` | prod | lacoteadede.fr (+ www) | lacoteadede.fr |
+| `preprod` | `coteadede-preprod` | preprod | github.io + preprod.lacoteadede.fr | preprod.lacoteadede.fr |
+| `production` | `coteadede-prod` | prod | lacoteadede.fr (+ www) | lacoteadede.fr |
 
 Les ids KV et origines sont dans [`wrangler.toml`](wrangler.toml).
 
@@ -80,6 +80,6 @@ Clés KV poussées par [`update-data.yml`](../.github/workflows/update-data.yml)
 
 ```sh
 npx wrangler tail --env preprod
-curl https://pari-sportif-live-preprod.<sous-domaine>.workers.dev/        # matches
-curl https://pari-sportif-live-preprod.<sous-domaine>.workers.dev/standings
+curl https://coteadede-preprod.<sous-domaine>.workers.dev/        # matches
+curl https://coteadede-preprod.<sous-domaine>.workers.dev/standings
 ```

@@ -80,7 +80,7 @@ Le `fetch` du Worker est un **simple lecteur de KV** — il ne calcule **rien** 
 (tout le calcul est fait côté écriture : cron, Python, `/sync`). Étapes d'une requête :
 
 ```
-GET https://pari-sportif-live-prod.<sous-domaine>.workers.dev/standings
+GET https://coteadede-prod.<sous-domaine>.workers.dev/standings
 ```
 
 1. **CORS** : `pickOrigin` compare l'`Origin` de la requête à l'allowlist `ALLOWED_ORIGINS`
@@ -106,7 +106,7 @@ de l'utilisateur via le réseau Cloudflare), et la fraîcheur des scores ne dép
 
 | | Prod (`lacoteadede.fr`) | Preprod / dev |
 |---|---|---|
-| Worker | `pari-sportif-live-prod` (cron 1 min) | `pari-sportif-live-preprod` (pas de cron) |
+| Worker | `coteadede-prod` (cron 1 min) | `coteadede-preprod` (pas de cron) |
 | Données | **automatiques** (cron live + push quotidien) | **manuelles** (bouton *Update data*) |
 | Live | cron du Worker | `/sync` du Worker, déclenché par le bouton |
 | KV / Pages | namespace + projet dédiés | namespace + projet dédiés |

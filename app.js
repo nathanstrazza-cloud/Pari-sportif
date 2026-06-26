@@ -1,8 +1,8 @@
 // Workers Cloudflare qui servent TOUTES les donnees (matches live, classements, cotes, joueurs).
 // L'environnement est choisi selon le domaine : la prod (.fr) tape le Worker prod, sinon preprod.
 const DATA_WORKERS = {
-  prod: "https://pari-sportif-live-prod.bstrazza.workers.dev",
-  preprod: "https://pari-sportif-live-preprod.bstrazza.workers.dev",
+  prod: "https://coteadede-prod.bstrazza.workers.dev",
+  preprod: "https://coteadede-preprod.bstrazza.workers.dev",
 };
 const PROD_HOSTS = ["lacoteadede.fr", "www.lacoteadede.fr"];
 // Prod = le domaine .fr ou le projet Pages prod (y compris ses URLs de preview *.pari-sportif-prod.pages.dev).

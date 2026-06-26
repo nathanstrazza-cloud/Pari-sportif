@@ -10,7 +10,7 @@ compatibility_date = "2024-09-23"
 # Pas de cron : la preprod ne se rafraichit PAS toute seule.
 # Les donnees y sont poussees a la demande (workflow "Update data" -> Run -> target=preprod).
 [env.preprod]
-name = "pari-sportif-live-preprod"
+name = "coteadede-preprod"
 
 [[env.preprod.kv_namespaces]]
 binding = "MATCHES"
@@ -24,7 +24,7 @@ ALLOWED_ORIGINS = "https://nathanstrazza-cloud.github.io,https://preprod.lacotea
 
 # ─────────────────────────── PRODUCTION ───────────────────────────
 [env.production]
-name = "pari-sportif-live-prod"
+name = "coteadede-prod"
 
 [env.production.triggers]
 crons = ["* * * * *"]
