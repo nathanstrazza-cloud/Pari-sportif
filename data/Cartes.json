@@ -114,30 +114,30 @@
         {
           "nom": "Mike Maignan",
           "poste": "G",
-          "club": "Milano FC",
+          "club": "AC Milan",
           "note": 87,
           "age": 30
         },
         {
-          "nom": "Jules Kounde",
+          "nom": "Jules Koundé",
           "poste": "DD",
-          "club": "FC Barcelona",
+          "club": "FC Barcelone",
           "note": 87,
-          "age": 26
+          "age": 27
         },
         {
           "nom": "Dayot Upamecano",
           "poste": "DC",
-          "club": "FC Bayern Munchen",
+          "club": "Bayern Munich",
           "note": 86,
-          "age": 26
+          "age": 27
         },
         {
           "nom": "William Saliba",
           "poste": "DC",
           "club": "Arsenal",
           "note": 87,
-          "age": 24
+          "age": 25
         },
         {
           "nom": "Lucas Digne",
@@ -147,42 +147,42 @@
           "age": 32
         },
         {
-          "nom": "Moussa Kone",
+          "nom": "Manu Koné",
           "poste": "MDC",
-          "club": "Unknown",
-          "note": 79,
-          "age": 22
+          "club": "Roma FC",
+          "note": 81,
+          "age": 25
         },
         {
           "nom": "Adrien Rabiot",
           "poste": "MOC",
-          "club": "Milano FC",
+          "club": "AC Milan",
           "note": 83,
           "age": 31
         },
         {
-          "nom": "Ousmane Dembele",
+          "nom": "Ousmane Dembélé",
           "poste": "AD",
-          "club": "Paris SG",
+          "club": "Paris Saint-Germain",
           "note": 90,
           "age": 29
         },
         {
           "nom": "Michael Olise",
           "poste": "MD",
-          "club": "FC Bayern Munchen",
+          "club": "Bayern Munich",
           "note": 86,
-          "age": 23
+          "age": 24
         },
         {
           "nom": "Bradley Barcola",
           "poste": "AG",
-          "club": "Paris SG",
+          "club": "Paris Saint-Germain",
           "note": 85,
-          "age": 22
+          "age": 23
         },
         {
-          "nom": "Kylian Mbappe",
+          "nom": "Kylian Mbappé",
           "poste": "BU",
           "club": "Real Madrid",
           "note": 91,
@@ -191,11 +191,60 @@
       ],
       "remplacants": [
         {
-          "nom": "Desire Doue",
-          "poste": "AG",
-          "club": "Paris SG",
-          "note": 84,
+          "nom": "Robin Risser",
+          "poste": "G",
+          "club": "RC Lens",
+          "note": 72,
           "age": 21
+        },
+        {
+          "nom": "Brice Samba",
+          "poste": "G",
+          "club": "Stade Rennais",
+          "note": 82,
+          "age": 32
+        },
+        {
+          "nom": "Malo Gusto",
+          "poste": "DD",
+          "club": "Chelsea",
+          "note": 79,
+          "age": 23
+        },
+        {
+          "nom": "Lucas Hernandez",
+          "poste": "DC",
+          "club": "Paris SG",
+          "note": 83,
+          "age": 30
+        },
+        {
+          "nom": "Théo Hernandez",
+          "poste": "DG",
+          "club": "Al Hilal",
+          "note": 86,
+          "age": 28
+        },
+        {
+          "nom": "Ibrahima Konaté",
+          "poste": "DC",
+          "club": "Real Madrid",
+          "note": 84,
+          "age": 27
+        },
+        {
+          "nom": "Maxence Lacroix",
+          "poste": "DC",
+          "club": "Crystal Palace",
+          "note": 80,
+          "age": 26
+        },
+        {
+          "nom": "N'Golo Kanté",
+          "poste": "MDC",
+          "club": "Fenerbahçe SK",
+          "note": 83,
+          "age": 35
         },
         {
           "nom": "Aurélien Tchouaméni",
@@ -205,11 +254,46 @@
           "age": 26
         },
         {
-          "nom": "Malo Gusto",
-          "poste": "DD",
-          "club": "Chelsea",
-          "note": 79,
-          "age": 23
+          "nom": "Warren Zaïre-Emery",
+          "poste": "MC",
+          "club": "Paris SG",
+          "note": 82,
+          "age": 20
+        },
+        {
+          "nom": "Maghnes Akliouche",
+          "poste": "MOC",
+          "club": "AS Monaco",
+          "note": 80,
+          "age": 24
+        },
+        {
+          "nom": "Rayan Cherki",
+          "poste": "MOC",
+          "club": "Manchester City",
+          "note": 83,
+          "age": 22
+        },
+        {
+          "nom": "Désiré Doué",
+          "poste": "AG",
+          "club": "Paris Saint-Germain",
+          "note": 84,
+          "age": 21
+        },
+        {
+          "nom": "Jean-Philippe Mateta",
+          "poste": "BU",
+          "club": "Crystal Palace",
+          "note": 82,
+          "age": 28
+        },
+        {
+          "nom": "Marcus Thuram",
+          "poste": "BU",
+          "club": "Inter",
+          "note": 84,
+          "age": 28
         }
       ]
     },

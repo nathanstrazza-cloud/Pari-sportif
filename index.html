@@ -17,7 +17,7 @@
     <title>La Cote à Dédé</title>
     <link rel="manifest" href="manifest.json" />
     <link rel="icon" href="logo.PNG" type="image/png" />
-    <link rel="stylesheet" href="styles.css?v=28" />
+    <link rel="stylesheet" href="styles.css?v=29" />
   </head>
   <body class="auth-pending">
     <div class="loading-screen" id="loadingScreen" aria-live="polite">
@@ -62,22 +62,6 @@
           <p style="margin:10px 0 0;opacity:.8;">L'icône apparaît ensuite sur ton écran d'accueil, comme une vraie appli (plein écran, sans la barre du navigateur).</p>
         </details>
       </section>
-    </div>
-
-    <div class="account-widget" id="accountWidget" hidden>
-      <button class="account-avatar-button" id="accountMenuButton" type="button" aria-label="Ouvrir le menu du compte" aria-expanded="false">
-        <img id="accountAvatar" src="logo.PNG" alt="" />
-      </button>
-      <div class="account-menu" id="accountMenu" hidden>
-        <div class="account-summary">
-          <img id="accountMenuAvatar" src="logo.PNG" alt="" />
-          <div>
-            <strong id="accountName">Compte Google</strong>
-            <span id="accountEmail"></span>
-          </div>
-        </div>
-        <button class="signout-button" id="signOutButton" type="button">Se déconnecter</button>
-      </div>
     </div>
 
     <main class="app-shell" id="app" aria-busy="true">
@@ -211,6 +195,21 @@
         <a href="mentions-legales.html">Mentions légales</a> ·
         <a href="confidentialite.html">Confidentialité</a>
       </p>
+      <div class="account-widget" id="accountWidget" hidden>
+        <button class="account-avatar-button" id="accountMenuButton" type="button" aria-label="Ouvrir le menu du compte" aria-expanded="false">
+          <img id="accountAvatar" src="logo.PNG" alt="" />
+        </button>
+        <div class="account-menu" id="accountMenu" hidden>
+          <div class="account-summary">
+            <img id="accountMenuAvatar" src="logo.PNG" alt="" />
+            <div>
+              <strong id="accountName">Compte Google</strong>
+              <span id="accountEmail"></span>
+            </div>
+          </div>
+          <button class="signout-button" id="signOutButton" type="button">Se déconnecter</button>
+        </div>
+      </div>
     </nav>
 
     <noscript>Activez JavaScript pour utiliser La Cote à Dédé.</noscript>
