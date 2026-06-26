@@ -10,7 +10,7 @@
           "nom": "Jordan Pickford",
           "poste": "G",
           "club": "Everton",
-          "note": 84,
+          "note": 83,
           "age": 32
         },
         {
@@ -24,7 +24,7 @@
           "nom": "Ezri Konsa",
           "poste": "DC",
           "club": "Aston Villa",
-          "note": 82,
+          "note": 83,
           "age": 27
         },
         {
@@ -38,7 +38,7 @@
           "nom": "Djed Spence",
           "poste": "DG",
           "club": "Spurs",
-          "note": 78,
+          "note": 79,
           "age": 24
         },
         {
@@ -73,14 +73,14 @@
           "nom": "Anthony Gordon",
           "poste": "AG",
           "club": "Newcastle Utd",
-          "note": 83,
+          "note": 82,
           "age": 24
         },
         {
           "nom": "Harry Kane",
           "poste": "BU",
           "club": "FC Bayern Munchen",
-          "note": 89,
+          "note": 90,
           "age": 32
         }
       ],
@@ -96,7 +96,7 @@
           "nom": "Cole Palmer",
           "poste": "MOC",
           "club": "Chelsea",
-          "note": 88,
+          "note": 87,
           "age": 24
         },
         {
@@ -129,7 +129,7 @@
           "nom": "Dayot Upamecano",
           "poste": "DC",
           "club": "FC Bayern Munchen",
-          "note": 85,
+          "note": 86,
           "age": 26
         },
         {
@@ -143,7 +143,7 @@
           "nom": "Lucas Digne",
           "poste": "DG",
           "club": "Aston Villa",
-          "note": 80,
+          "note": 79,
           "age": 32
         },
         {
@@ -178,7 +178,7 @@
           "nom": "Bradley Barcola",
           "poste": "AG",
           "club": "Paris SG",
-          "note": 84,
+          "note": 85,
           "age": 22
         },
         {
@@ -201,7 +201,7 @@
           "nom": "Aurélien Tchouaméni",
           "poste": "MDC",
           "club": "Real Madrid",
-          "note": 86,
+          "note": 85,
           "age": 26
         },
         {
@@ -234,7 +234,7 @@
           "nom": "Ruben Dias",
           "poste": "DC",
           "club": "Manchester City",
-          "note": 86,
+          "note": 85,
           "age": 27
         },
         {
@@ -248,14 +248,14 @@
           "nom": "Nuno Mendes",
           "poste": "DG",
           "club": "Paris SG",
-          "note": 86,
+          "note": 85,
           "age": 22
         },
         {
           "nom": "Joao Neves",
           "poste": "MC",
           "club": "Paris SG",
-          "note": 85,
+          "note": 84,
           "age": 20
         },
         {
@@ -269,28 +269,28 @@
           "nom": "Pedro Neto",
           "poste": "MD",
           "club": "Chelsea",
-          "note": 80,
+          "note": 79,
           "age": 24
         },
         {
           "nom": "Bruno Fernandes",
           "poste": "MOC",
           "club": "Man Utd",
-          "note": 87,
+          "note": 88,
           "age": 31
         },
         {
           "nom": "Joao Felix",
           "poste": "MOC",
           "club": "Al Nassr",
-          "note": 79,
+          "note": 78,
           "age": 26
         },
         {
           "nom": "Cristiano Ronaldo",
           "poste": "BU",
           "club": "Al Nassr",
-          "note": 85,
+          "note": 84,
           "age": 41
         }
       ],
@@ -325,7 +325,7 @@
           "nom": "Emiliano Martinez",
           "poste": "G",
           "club": "Aston Villa",
-          "note": 85,
+          "note": 86,
           "age": 33
         },
         {
@@ -353,7 +353,7 @@
           "nom": "Facundo Medina",
           "poste": "DG",
           "club": "OM",
-          "note": 79,
+          "note": 78,
           "age": 25
         },
         {
@@ -374,7 +374,7 @@
           "nom": "Enzo Fernandez",
           "poste": "MC",
           "club": "Chelsea",
-          "note": 84,
+          "note": 85,
           "age": 24
         },
         {
@@ -430,21 +430,21 @@
           "nom": "Manuel Neuer",
           "poste": "G",
           "club": "FC Bayern Munchen",
-          "note": 84,
+          "note": 83,
           "age": 40
         },
         {
           "nom": "Joshua Kimmich",
           "poste": "DD",
           "club": "FC Bayern Munchen",
-          "note": 89,
+          "note": 88,
           "age": 30
         },
         {
           "nom": "Jonathan Tah",
           "poste": "DC",
           "club": "FC Bayern Munchen",
-          "note": 87,
+          "note": 88,
           "age": 29
         },
         {
@@ -486,7 +486,7 @@
           "nom": "Jamal Musiala",
           "poste": "MOC",
           "club": "FC Bayern Munchen",
-          "note": 88,
+          "note": 87,
           "age": 22
         },
         {
@@ -516,7 +516,7 @@
           "nom": "Karim Adeyemi",
           "poste": "AG",
           "club": "Borussia Dortmund",
-          "note": 81,
+          "note": 80,
           "age": 24
         },
         {
@@ -542,7 +542,7 @@
           "nom": "Achraf Hakimi",
           "poste": "DD",
           "club": "Paris SG",
-          "note": 89,
+          "note": 88,
           "age": 27
         },
         {
@@ -598,7 +598,7 @@
           "nom": "Bilal El Khannouss",
           "poste": "MOC",
           "club": "VfB Stuttgart",
-          "note": 76,
+          "note": 75,
           "age": 22
         },
         {
@@ -614,7 +614,7 @@
           "nom": "Youssef En-Nesyri",
           "poste": "BU",
           "club": "Fenerbahce",
-          "note": 81,
+          "note": 80,
           "age": 29
         },
         {
@@ -628,7 +628,7 @@
           "nom": "Azzedine Ounahi",
           "poste": "MC",
           "club": "Panathinaikos",
-          "note": 78,
+          "note": 79,
           "age": 26
         }
       ]
@@ -654,21 +654,21 @@
           "nom": "Jan Paul van Hecke",
           "poste": "DC",
           "club": "Brighton",
-          "note": 80,
+          "note": 79,
           "age": 24
         },
         {
           "nom": "Virgil van Dijk",
           "poste": "DC",
           "club": "Liverpool",
-          "note": 90,
+          "note": 89,
           "age": 33
         },
         {
           "nom": "Micky van de Ven",
           "poste": "DG",
           "club": "Spurs",
-          "note": 82,
+          "note": 83,
           "age": 23
         },
         {
@@ -689,7 +689,7 @@
           "nom": "Tijjani Reijnders",
           "poste": "MC",
           "club": "Milano FC",
-          "note": 86,
+          "note": 85,
           "age": 26
         },
         {
@@ -703,7 +703,7 @@
           "nom": "Brian Brobbey",
           "poste": "BU",
           "club": "Ajax",
-          "note": 77,
+          "note": 78,
           "age": 23
         },
         {
@@ -726,7 +726,7 @@
           "nom": "Jeremie Frimpong",
           "poste": "DD",
           "club": "Liverpool",
-          "note": 86,
+          "note": 85,
           "age": 25
         },
         {
@@ -773,7 +773,7 @@
           "nom": "Marc Cucurella",
           "poste": "DG",
           "club": "Chelsea",
-          "note": 84,
+          "note": 83,
           "age": 26
         },
         {
@@ -801,14 +801,14 @@
           "nom": "Lamine Yamal",
           "poste": "AD",
           "club": "FC Barcelona",
-          "note": 89,
+          "note": 90,
           "age": 17
         },
         {
           "nom": "Mikel Oyarzabal",
           "poste": "BU",
           "club": "Real Sociedad",
-          "note": 82,
+          "note": 83,
           "age": 28
         },
         {
@@ -831,7 +831,7 @@
           "nom": "Fermin Lopez",
           "poste": "MC",
           "club": "FC Barcelona",
-          "note": 82,
+          "note": 81,
           "age": 23
         },
         {
@@ -878,35 +878,35 @@
           "nom": "Maxim De Cuyper",
           "poste": "DG",
           "club": "Brighton",
-          "note": 80,
+          "note": 81,
           "age": 23
         },
         {
           "nom": "Nicolas Raskin",
           "poste": "MDC",
           "club": "Rangers",
-          "note": 77,
+          "note": 78,
           "age": 23
         },
         {
           "nom": "Youri Tielemans",
           "poste": "MC",
           "club": "Aston Villa",
-          "note": 85,
+          "note": 84,
           "age": 28
         },
         {
           "nom": "Alexis Saelemaekers",
           "poste": "AD",
           "club": "Milano FC",
-          "note": 79,
+          "note": 80,
           "age": 25
         },
         {
           "nom": "Kevin De Bruyne",
           "poste": "MOC",
           "club": "SSC Napoli",
-          "note": 87,
+          "note": 88,
           "age": 34
         },
         {
@@ -920,7 +920,7 @@
           "nom": "Romelu Lukaku",
           "poste": "BU",
           "club": "SSC Napoli",
-          "note": 84,
+          "note": 83,
           "age": 31
         }
       ],
@@ -929,7 +929,7 @@
           "nom": "Jeremy Doku",
           "poste": "AG",
           "club": "Manchester City",
-          "note": 84,
+          "note": 83,
           "age": 24
         },
         {
@@ -943,7 +943,7 @@
           "nom": "Lois Openda",
           "poste": "BU",
           "club": "RB Leipzig",
-          "note": 83,
+          "note": 82,
           "age": 26
         }
       ]
@@ -955,7 +955,7 @@
           "nom": "Alisson",
           "poste": "G",
           "club": "Liverpool",
-          "note": 89,
+          "note": 88,
           "age": 33
         },
         {
@@ -969,14 +969,14 @@
           "nom": "Marquinhos",
           "poste": "DC",
           "club": "Paris SG",
-          "note": 87,
+          "note": 88,
           "age": 31
         },
         {
           "nom": "Gabriel Magalhaes",
           "poste": "DC",
           "club": "Arsenal",
-          "note": 88,
+          "note": 87,
           "age": 27
         },
         {
@@ -990,7 +990,7 @@
           "nom": "Bruno Guimaraes",
           "poste": "MC",
           "club": "Newcastle Utd",
-          "note": 86,
+          "note": 85,
           "age": 27
         },
         {
@@ -1041,7 +1041,7 @@
           "nom": "Estevao",
           "poste": "AD",
           "club": "Chelsea",
-          "note": 80,
+          "note": 81,
           "age": 19
         },
         {
@@ -1060,7 +1060,7 @@
           "nom": "Orjan Nyland",
           "poste": "G",
           "club": "Seville FC",
-          "note": 77,
+          "note": 76,
           "age": 35
         },
         {
@@ -1074,7 +1074,7 @@
           "nom": "Kristoffer Ajer",
           "poste": "DC",
           "club": "Brentford",
-          "note": 80,
+          "note": 79,
           "age": 28
         },
         {
@@ -1088,21 +1088,21 @@
           "nom": "David Moller Wolfe",
           "poste": "DG",
           "club": "AZ Alkmaar",
-          "note": 75,
+          "note": 76,
           "age": 24
         },
         {
           "nom": "Sander Berge",
           "poste": "MC",
           "club": "Fulham",
-          "note": 80,
+          "note": 79,
           "age": 28
         },
         {
           "nom": "Fredrik Aursnes",
           "poste": "MC",
           "club": "Benfica",
-          "note": 82,
+          "note": 81,
           "age": 30
         },
         {
@@ -1123,7 +1123,7 @@
           "nom": "Alexander Sorloth",
           "poste": "BU",
           "club": "Atletico Madrid",
-          "note": 84,
+          "note": 85,
           "age": 30
         },
         {
@@ -1142,28 +1142,28 @@
           "nom": "Edouard Mendy",
           "poste": "G",
           "club": "Al Ahli",
-          "note": 81,
+          "note": 82,
           "age": 34
         },
         {
           "nom": "Krepin Diatta",
           "poste": "DD",
           "club": "AS Monaco",
-          "note": 77,
+          "note": 78,
           "age": 27
         },
         {
           "nom": "Kalidou Koulibaly",
           "poste": "DC",
           "club": "Al Hilal",
-          "note": 83,
+          "note": 82,
           "age": 35
         },
         {
           "nom": "Moussa Niakhate",
           "poste": "DC",
           "club": "Olympique Lyonnais",
-          "note": 79,
+          "note": 78,
           "age": 30
         },
         {
@@ -1198,7 +1198,7 @@
           "nom": "Ismaila Sarr",
           "poste": "AD",
           "club": "Crystal Palace",
-          "note": 81,
+          "note": 80,
           "age": 28
         },
         {
@@ -1231,14 +1231,14 @@
           "nom": "Guillermo Varela",
           "poste": "DD",
           "club": "Flamengo",
-          "note": 77,
+          "note": 76,
           "age": 33
         },
         {
           "nom": "Ronald Araujo",
           "poste": "DC",
           "club": "FC Barcelona",
-          "note": 87,
+          "note": 88,
           "age": 27
         },
         {
@@ -1280,7 +1280,7 @@
           "nom": "Facundo Pellistri",
           "poste": "AD",
           "club": "Panathinaikos",
-          "note": 77,
+          "note": 78,
           "age": 24
         },
         {
@@ -1306,7 +1306,7 @@
           "nom": "Mohamed El Shenawy",
           "poste": "G",
           "club": "Al Ahly",
-          "note": 79,
+          "note": 78,
           "age": 37
         },
         {
@@ -1320,35 +1320,35 @@
           "nom": "Rami Rabia",
           "poste": "DC",
           "club": "Al Ahly",
-          "note": 74,
+          "note": 75,
           "age": 33
         },
         {
           "nom": "Mohamed Abdelmonem",
           "poste": "DC",
           "club": "OGC Nice",
-          "note": 79,
+          "note": 78,
           "age": 27
         },
         {
           "nom": "Ahmed Nabil Koka",
           "poste": "DG",
           "club": "Al Ahly",
-          "note": 73,
+          "note": 72,
           "age": 24
         },
         {
           "nom": "Marwan Attia",
           "poste": "MDC",
           "club": "Al Ahly",
-          "note": 75,
+          "note": 74,
           "age": 28
         },
         {
           "nom": "Hamdy Fathy",
           "poste": "MDC",
           "club": "Al Wakrah",
-          "note": 76,
+          "note": 77,
           "age": 31
         },
         {
@@ -1376,7 +1376,7 @@
           "nom": "Mostafa Mohamed",
           "poste": "BU",
           "club": "FC Nantes",
-          "note": 78,
+          "note": 79,
           "age": 28
         }
       ]
@@ -1416,7 +1416,7 @@
           "nom": "Liberato Cacace",
           "poste": "DG",
           "club": "Empoli",
-          "note": 76,
+          "note": 75,
           "age": 25
         },
         {
@@ -1430,7 +1430,7 @@
           "nom": "Joe Bell",
           "poste": "MC",
           "club": "Viking FK",
-          "note": 73,
+          "note": 72,
           "age": 27
         },
         {
@@ -1444,14 +1444,14 @@
           "nom": "Matthew Garbett",
           "poste": "AD",
           "club": "NAC Breda",
-          "note": 72,
+          "note": 71,
           "age": 24
         },
         {
           "nom": "Ben Waine",
           "poste": "AG",
           "club": "Mansfield Town",
-          "note": 69,
+          "note": 70,
           "age": 25
         },
         {
@@ -1477,7 +1477,7 @@
           "nom": "Josip Juranovic",
           "poste": "DD",
           "club": "Union Berlin",
-          "note": 78,
+          "note": 77,
           "age": 30
         },
         {
@@ -1512,7 +1512,7 @@
           "nom": "Mateo Kovacic",
           "poste": "MC",
           "club": "Manchester City",
-          "note": 84,
+          "note": 83,
           "age": 32
         },
         {
@@ -1526,14 +1526,14 @@
           "nom": "Martin Baturina",
           "poste": "MOC",
           "club": "Como",
-          "note": 80,
+          "note": 79,
           "age": 23
         },
         {
           "nom": "Andrej Kramaric",
           "poste": "BU",
           "club": "Hoffenheim",
-          "note": 82,
+          "note": 81,
           "age": 35
         },
         {
@@ -1559,7 +1559,7 @@
           "nom": "Kingsley Schindler",
           "poste": "DD",
           "club": "Samsunspor",
-          "note": 72,
+          "note": 71,
           "age": 33
         },
         {
@@ -1641,7 +1641,7 @@
           "nom": "Juan Caceres",
           "poste": "DD",
           "club": "Lanus",
-          "note": 74,
+          "note": 75,
           "age": 25
         },
         {
@@ -1683,7 +1683,7 @@
           "nom": "Diego Gomez",
           "poste": "MC",
           "club": "Brighton",
-          "note": 78,
+          "note": 77,
           "age": 23
         },
         {
@@ -1704,7 +1704,7 @@
           "nom": "Antonio Sanabria",
           "poste": "BU",
           "club": "Torino",
-          "note": 79,
+          "note": 80,
           "age": 30
         }
       ]
@@ -1723,7 +1723,7 @@
           "nom": "Emil Holm",
           "poste": "DD",
           "club": "Bologna",
-          "note": 77,
+          "note": 76,
           "age": 25
         },
         {
@@ -1765,14 +1765,14 @@
           "nom": "Dejan Kulusevski",
           "poste": "AD",
           "club": "Tottenham",
-          "note": 85,
+          "note": 86,
           "age": 26
         },
         {
           "nom": "Lucas Bergvall",
           "poste": "MOC",
           "club": "Tottenham",
-          "note": 80,
+          "note": 79,
           "age": 20
         },
         {
@@ -1826,14 +1826,14 @@
           "nom": "Alphonso Davies",
           "poste": "DG",
           "club": "Bayern Munich",
-          "note": 86,
+          "note": 85,
           "age": 25
         },
         {
           "nom": "Stephen Eustaquio",
           "poste": "MDC",
           "club": "FC Porto",
-          "note": 78,
+          "note": 79,
           "age": 29
         },
         {
@@ -1847,21 +1847,21 @@
           "nom": "Tajon Buchanan",
           "poste": "AD",
           "club": "Inter Milan",
-          "note": 78,
+          "note": 77,
           "age": 27
         },
         {
           "nom": "Jonathan David",
           "poste": "BU",
           "club": "Juventus",
-          "note": 84,
+          "note": 83,
           "age": 26
         },
         {
           "nom": "Jacob Shaffelburg",
           "poste": "AG",
           "club": "Nashville SC",
-          "note": 74,
+          "note": 75,
           "age": 27
         },
         {
@@ -1880,7 +1880,7 @@
           "nom": "Orlando Mosquera",
           "poste": "G",
           "club": "Al Fayha",
-          "note": 73,
+          "note": 72,
           "age": 31
         },
         {
@@ -1901,7 +1901,7 @@
           "nom": "Andres Andrade",
           "poste": "DC",
           "club": "LASK",
-          "note": 74,
+          "note": 73,
           "age": 27
         },
         {
@@ -1943,7 +1943,7 @@
           "nom": "Ismael Diaz",
           "poste": "AG",
           "club": "Universidad Catolica Ecuador",
-          "note": 75,
+          "note": 76,
           "age": 29
         },
         {
@@ -1962,7 +1962,7 @@
           "nom": "Camilo Vargas",
           "poste": "G",
           "club": "Atlas",
-          "note": 80,
+          "note": 81,
           "age": 37
         },
         {
@@ -1997,14 +1997,14 @@
           "nom": "Jefferson Lerma",
           "poste": "MDC",
           "club": "Crystal Palace",
-          "note": 80,
+          "note": 81,
           "age": 32
         },
         {
           "nom": "Richard Rios",
           "poste": "MC",
           "club": "Palmeiras",
-          "note": 79,
+          "note": 78,
           "age": 26
         },
         {
@@ -2025,7 +2025,7 @@
           "nom": "Luis Diaz",
           "poste": "AG",
           "club": "Liverpool",
-          "note": 86,
+          "note": 87,
           "age": 29
         },
         {
@@ -2051,7 +2051,7 @@
           "nom": "Stefan Posch",
           "poste": "DD",
           "club": "Bologna",
-          "note": 79,
+          "note": 78,
           "age": 29
         },
         {
@@ -2079,7 +2079,7 @@
           "nom": "Konrad Laimer",
           "poste": "MC",
           "club": "Bayern Munich",
-          "note": 83,
+          "note": 82,
           "age": 29
         },
         {
@@ -2154,7 +2154,7 @@
           "nom": "Rayan Ait-Nouri",
           "poste": "DG",
           "club": "Manchester City",
-          "note": 82,
+          "note": 83,
           "age": 25
         },
         {
@@ -2168,14 +2168,14 @@
           "nom": "Hicham Boudaoui",
           "poste": "MC",
           "club": "OGC Nice",
-          "note": 79,
+          "note": 80,
           "age": 27
         },
         {
           "nom": "Farid El Melali",
           "poste": "AD",
           "club": "Angers",
-          "note": 75,
+          "note": 74,
           "age": 29
         },
         {
@@ -2189,7 +2189,7 @@
           "nom": "Amine Gouiri",
           "poste": "BU",
           "club": "Marseille",
-          "note": 82,
+          "note": 81,
           "age": 26
         },
         {
@@ -2208,14 +2208,14 @@
           "nom": "Dimitry Bertaud",
           "poste": "G",
           "club": "Montpellier",
-          "note": 73,
+          "note": 72,
           "age": 28
         },
         {
           "nom": "Gedeon Kalulu",
           "poste": "DD",
           "club": "Lorient",
-          "note": 74,
+          "note": 73,
           "age": 29
         },
         {
@@ -2250,7 +2250,7 @@
           "nom": "Edo Kayembe",
           "poste": "MC",
           "club": "Watford",
-          "note": 75,
+          "note": 76,
           "age": 28
         },
         {
@@ -2264,7 +2264,7 @@
           "nom": "Yoane Wissa",
           "poste": "AD",
           "club": "Brentford",
-          "note": 81,
+          "note": 80,
           "age": 30
         },
         {
@@ -2278,7 +2278,7 @@
           "nom": "Cedric Bakambu",
           "poste": "BU",
           "club": "Real Betis",
-          "note": 78,
+          "note": 79,
           "age": 35
         }
       ]
@@ -2297,7 +2297,7 @@
           "nom": "Khuliso Mudau",
           "poste": "DD",
           "club": "Mamelodi Sundowns",
-          "note": 74,
+          "note": 75,
           "age": 30
         },
         {
@@ -2318,21 +2318,21 @@
           "nom": "Aubrey Modiba",
           "poste": "DG",
           "club": "Mamelodi Sundowns",
-          "note": 75,
+          "note": 74,
           "age": 30
         },
         {
           "nom": "Teboho Mokoena",
           "poste": "MDC",
           "club": "Mamelodi Sundowns",
-          "note": 78,
+          "note": 77,
           "age": 29
         },
         {
           "nom": "Sphephelo Sithole",
           "poste": "MC",
           "club": "Gil Vicente",
-          "note": 73,
+          "note": 74,
           "age": 26
         },
         {
@@ -2386,28 +2386,28 @@
           "nom": "Cesar Montes",
           "poste": "DC",
           "club": "Lokomotiv Moscou",
-          "note": 79,
+          "note": 80,
           "age": 29
         },
         {
           "nom": "Johan Vasquez",
           "poste": "DC",
           "club": "Genoa",
-          "note": 81,
+          "note": 80,
           "age": 27
         },
         {
           "nom": "Jesus Gallardo",
           "poste": "DG",
           "club": "Toluca",
-          "note": 77,
+          "note": 76,
           "age": 31
         },
         {
           "nom": "Edson Alvarez",
           "poste": "MDC",
           "club": "West Ham",
-          "note": 83,
+          "note": 84,
           "age": 28
         },
         {
@@ -2421,28 +2421,28 @@
           "nom": "Orbelin Pineda",
           "poste": "MOC",
           "club": "AEK Athènes",
-          "note": 79,
+          "note": 80,
           "age": 30
         },
         {
           "nom": "Roberto Alvarado",
           "poste": "AD",
           "club": "Chivas",
-          "note": 78,
+          "note": 79,
           "age": 27
         },
         {
           "nom": "Alexis Vega",
           "poste": "AG",
           "club": "Toluca",
-          "note": 79,
+          "note": 78,
           "age": 28
         },
         {
           "nom": "Santiago Gimenez",
           "poste": "BU",
           "club": "AC Milan",
-          "note": 83,
+          "note": 82,
           "age": 25
         }
       ]
@@ -2461,14 +2461,14 @@
           "nom": "Anthony Ralston",
           "poste": "DD",
           "club": "Celtic",
-          "note": 74,
+          "note": 73,
           "age": 27
         },
         {
           "nom": "John Souttar",
           "poste": "DC",
           "club": "Rangers",
-          "note": 76,
+          "note": 77,
           "age": 29
         },
         {
@@ -2489,14 +2489,14 @@
           "nom": "Billy Gilmour",
           "poste": "MC",
           "club": "Napoli",
-          "note": 79,
+          "note": 78,
           "age": 25
         },
         {
           "nom": "Scott McTominay",
           "poste": "MC",
           "club": "Napoli",
-          "note": 84,
+          "note": 83,
           "age": 29
         },
         {
@@ -2543,14 +2543,14 @@
           "nom": "Angelo Preciado",
           "poste": "DD",
           "club": "Sparta Prague",
-          "note": 77,
+          "note": 78,
           "age": 27
         },
         {
           "nom": "Piero Hincapie",
           "poste": "DC",
           "club": "Bayer Leverkusen",
-          "note": 84,
+          "note": 83,
           "age": 24
         },
         {
@@ -2564,14 +2564,14 @@
           "nom": "Pervis Estupinan",
           "poste": "DG",
           "club": "AC Milan",
-          "note": 82,
+          "note": 83,
           "age": 28
         },
         {
           "nom": "Moises Caicedo",
           "poste": "MDC",
           "club": "Chelsea",
-          "note": 87,
+          "note": 86,
           "age": 24
         },
         {
@@ -2599,7 +2599,7 @@
           "nom": "Kendry Paez",
           "poste": "AG",
           "club": "Chelsea",
-          "note": 80,
+          "note": 79,
           "age": 19
         },
         {
@@ -2639,7 +2639,7 @@
           "nom": "Takehiro Tomiyasu",
           "poste": "DC",
           "club": "Arsenal",
-          "note": 81,
+          "note": 82,
           "age": 27
         },
         {
@@ -2660,14 +2660,14 @@
           "nom": "Hidemasa Morita",
           "poste": "MC",
           "club": "Sporting CP",
-          "note": 79,
+          "note": 78,
           "age": 31
         },
         {
           "nom": "Daichi Kamada",
           "poste": "MOC",
           "club": "Crystal Palace",
-          "note": 80,
+          "note": 79,
           "age": 29
         },
         {
@@ -2700,7 +2700,7 @@
           "nom": "Yahia Fofana",
           "poste": "G",
           "club": "Angers",
-          "note": 77,
+          "note": 76,
           "age": 25
         },
         {
@@ -2714,7 +2714,7 @@
           "nom": "Ousmane Diomande",
           "poste": "DC",
           "club": "Sporting CP",
-          "note": 82,
+          "note": 83,
           "age": 22
         },
         {
@@ -2749,14 +2749,14 @@
           "nom": "Hamed Junior Traore",
           "poste": "MOC",
           "club": "Auxerre",
-          "note": 78,
+          "note": 79,
           "age": 26
         },
         {
           "nom": "Nicolas Pepe",
           "poste": "AD",
           "club": "Villarreal",
-          "note": 78,
+          "note": 79,
           "age": 31
         },
         {
@@ -2796,7 +2796,7 @@
           "nom": "Chris Richards",
           "poste": "DC",
           "club": "Crystal Palace",
-          "note": 79,
+          "note": 78,
           "age": 26
         },
         {
@@ -2817,7 +2817,7 @@
           "nom": "Tyler Adams",
           "poste": "MDC",
           "club": "Bournemouth",
-          "note": 79,
+          "note": 78,
           "age": 27
         },
         {
@@ -2845,7 +2845,7 @@
           "nom": "Christian Pulisic",
           "poste": "AG",
           "club": "AC Milan",
-          "note": 86,
+          "note": 85,
           "age": 28
         },
         {
@@ -2885,14 +2885,14 @@
           "nom": "Adrian Leon Barisic",
           "poste": "DC",
           "club": "Basel",
-          "note": 73,
+          "note": 72,
           "age": 25
         },
         {
           "nom": "Sead Kolasinac",
           "poste": "DG",
           "club": "Atalanta",
-          "note": 80,
+          "note": 81,
           "age": 33
         },
         {
@@ -2906,14 +2906,14 @@
           "nom": "Ivan Basic",
           "poste": "MC",
           "club": "Orenburg",
-          "note": 73,
+          "note": 74,
           "age": 24
         },
         {
           "nom": "Haris Hajradinovic",
           "poste": "MOC",
           "club": "Kasimpasa",
-          "note": 77,
+          "note": 78,
           "age": 31
         },
         {
@@ -2960,7 +2960,7 @@
           "nom": "Kim Min-jae",
           "poste": "DC",
           "club": "Bayern Munich",
-          "note": 85,
+          "note": 86,
           "age": 29
         },
         {
@@ -2988,7 +2988,7 @@
           "nom": "Park Yong-woo",
           "poste": "MDC",
           "club": "Al Ain",
-          "note": 76,
+          "note": 77,
           "age": 32
         },
         {
@@ -3002,14 +3002,14 @@
           "nom": "Hwang Hee-chan",
           "poste": "AD",
           "club": "Wolverhampton",
-          "note": 80,
+          "note": 79,
           "age": 30
         },
         {
           "nom": "Son Heung-min",
           "poste": "AG",
           "club": "Tottenham",
-          "note": 87,
+          "note": 86,
           "age": 34
         },
         {
@@ -3035,42 +3035,42 @@
           "nom": "Sadegh Moharrami",
           "poste": "DD",
           "club": "Dinamo Zagreb",
-          "note": 74,
+          "note": 75,
           "age": 30
         },
         {
           "nom": "Shoja Khalilzadeh",
           "poste": "DC",
           "club": "Tractor",
-          "note": 74,
+          "note": 73,
           "age": 37
         },
         {
           "nom": "Hossein Kanaani",
           "poste": "DC",
           "club": "Persepolis",
-          "note": 74,
+          "note": 73,
           "age": 32
         },
         {
           "nom": "Milad Mohammadi",
           "poste": "DG",
           "club": "Persepolis",
-          "note": 75,
+          "note": 76,
           "age": 33
         },
         {
           "nom": "Saeid Ezatolahi",
           "poste": "MDC",
           "club": "Shabab Al Ahli",
-          "note": 76,
+          "note": 75,
           "age": 29
         },
         {
           "nom": "Saman Ghoddos",
           "poste": "MC",
           "club": "Ittihad Kalba",
-          "note": 76,
+          "note": 77,
           "age": 33
         },
         {
@@ -3084,7 +3084,7 @@
           "nom": "Alireza Jahanbakhsh",
           "poste": "AD",
           "club": "Heerenveen",
-          "note": 77,
+          "note": 76,
           "age": 33
         },
         {
@@ -3117,7 +3117,7 @@
           "nom": "Silvan Widmer",
           "poste": "DD",
           "club": "Mainz 05",
-          "note": 77,
+          "note": 76,
           "age": 33
         },
         {
@@ -3173,14 +3173,14 @@
           "nom": "Ruben Vargas",
           "poste": "AG",
           "club": "Seville FC",
-          "note": 78,
+          "note": 79,
           "age": 27
         },
         {
           "nom": "Breel Embolo",
           "poste": "BU",
           "club": "AS Monaco",
-          "note": 79,
+          "note": 78,
           "age": 29
         }
       ]
@@ -3199,7 +3199,7 @@
           "nom": "Lewis Miller",
           "poste": "DD",
           "club": "Hibernian",
-          "note": 70,
+          "note": 69,
           "age": 25
         },
         {
@@ -3227,7 +3227,7 @@
           "nom": "Jackson Irvine",
           "poste": "MDC",
           "club": "FC St. Pauli",
-          "note": 76,
+          "note": 75,
           "age": 33
         },
         {
@@ -3248,7 +3248,7 @@
           "nom": "Nestory Irankunda",
           "poste": "AD",
           "club": "Bayern Munich",
-          "note": 72,
+          "note": 73,
           "age": 20
         },
         {
