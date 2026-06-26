@@ -17,7 +17,8 @@ id = "a578656234d14cd4881434237132adf9"
 WORLD_CUP_LEAGUE = "1"
 WORLD_CUP_SEASON = "2026"
 SCHEDULE_URL = "https://nathanstrazza-cloud.github.io/Pari-sportif/data/matches.json"
-ALLOWED_ORIGIN = "https://nathanstrazza-cloud.github.io"
+# Origines autorisees (CORS), separees par des virgules : test github.io + prod .fr.
+ALLOWED_ORIGINS = "https://nathanstrazza-cloud.github.io,https://lacoteadede.fr,https://www.lacoteadede.fr"
 # Heure UTC du re-seed matinal. Doit etre APRES la passe Python du matin
 # (cron "0 10 * * *" dans update-data.yml) qui finalise les scores de la veille.
 RESEED_HOUR_UTC = "11"

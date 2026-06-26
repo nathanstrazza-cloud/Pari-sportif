@@ -6,7 +6,7 @@ export interface Env {
   WORLD_CUP_LEAGUE: string;
   WORLD_CUP_SEASON: string;
   SCHEDULE_URL: string;
-  ALLOWED_ORIGIN?: string;
+  ALLOWED_ORIGINS?: string;
   RESEED_HOUR_UTC?: string;
 }
 
@@ -15,11 +15,24 @@ const BEFORE_MS = 15 * 60 * 1000; // 15 min avant le coup d'envoi
 const AFTER_MS = 150 * 60 * 1000; // 150 min apres
 const DEFAULT_RESEED_HOUR = 11; // UTC, apres la passe Python du matin (cron 10h UTC)
 
+// Choisit l'origine a renvoyer : si l'origine de la requete est dans l'allowlist, on la renvoie.
+// Permet de servir plusieurs environnements (test github.io + prod .fr).
+function pickOrigin(request: Request, env: Env): string {
+  const allowed = (env.ALLOWED_ORIGINS || "")
+    .split(",")
+    .map((o) => o.trim())
+    .filter(Boolean);
+  const requestOrigin = request.headers.get("Origin");
+  if (requestOrigin && allowed.includes(requestOrigin)) return requestOrigin;
+  return allowed[0] || "*";
+}
+
 function corsHeaders(origin: string): Record<string, string> {
   return {
     "Access-Control-Allow-Origin": origin,
     "Access-Control-Allow-Methods": "GET, OPTIONS",
     "Access-Control-Allow-Headers": "Content-Type",
+    Vary: "Origin",
   };
 }
 
@@ -117,8 +130,7 @@ export default {
 
   // Sert les donnees au frontend (lit le KV, fallback sur le calendrier de base).
   async fetch(request: Request, env: Env): Promise<Response> {
-    const origin = env.ALLOWED_ORIGIN || "*";
-    const cors = corsHeaders(origin);
+    const cors = corsHeaders(pickOrigin(request, env));
 
     if (request.method === "OPTIONS") {
       return new Response(null, { headers: cors });
