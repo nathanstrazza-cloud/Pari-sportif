@@ -1656,8 +1656,27 @@ function renderShortcutSection(title, label, url, description) {
   `;
 }
 
+// Conclusion d'un avis d'expert (ce qui suit "Parti pris :", sinon tout le message).
+function expertConclusion(message) {
+  const parts = String(message ?? "").split(/parti pris\s*:/i);
+  return (parts.length > 1 ? parts[parts.length - 1] : parts[0]).toLowerCase();
+}
+
+// On ne garde que les avis portant sur le VAINQUEUR ou le SCORE exact.
+function isWinnerOrScorePick(message) {
+  const pick = expertConclusion(message);
+  // Exclut buteur, passeur, joueur décisif, 1er but, BTTS, totaux de buts…
+  if (/buteur|d[ée]cisif|passeur|1er but|premier but|2\s*[ée]quipes\s*marquent|both teams|btts|plus de|moins de|over|under/.test(pick)) {
+    return false;
+  }
+  // Garde vainqueur (1N2 / double chance / combo winner) et score exact (ex. "0 - 1").
+  return /score exact|\b\d\s*[-–]\s*\d\b|winner|vainqueur|gagn|l['’]emport|s['’]impose|victoire|match nul|\bnul\b|\bdraw\b|double chance|combo/.test(pick);
+}
+
 function renderExpertPanel(match) {
-  const messages = Array.isArray(match.expertDiscussion) ? match.expertDiscussion.filter(Boolean) : [];
+  const messages = (Array.isArray(match.expertDiscussion) ? match.expertDiscussion : [])
+    .filter(Boolean)
+    .filter(isWinnerOrScorePick);
   return `
     <section class="detail-section">
       <h3>Discussions de nos experts</h3>
