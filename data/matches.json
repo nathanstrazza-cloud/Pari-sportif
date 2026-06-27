@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-27T06:06:43.894680Z",
+  "lastUpdated": "2026-06-27T21:49:34.525251Z",
   "matches": [
     {
       "id": "400021443",
@@ -7783,26 +7783,54 @@
       "homeCoach": "Zlatko Dalic",
       "awayCoach": "Carlos Queiroz",
       "score": {
-        "home": null,
-        "away": null
+        "home": 1,
+        "away": 0
       },
       "scorers": [],
       "highlights": [],
       "externalIds": {
         "apiFootball": "1489420"
       },
-      "status": "upcoming",
-      "minute": null,
+      "status": "live",
+      "minute": 45,
       "lineups": {
         "home": {
-          "team": "Croatia",
-          "formation": null,
-          "players": []
+          "team": "Croatie",
+          "formation": "4-2-3-1",
+          "players": [
+            "1. Dominik Livaković (G)",
+            "2. Josip Stanišić (D)",
+            "6. Josip Šutalo (D)",
+            "3. Marin Pongračić (D)",
+            "14. Ivan Perišić (D)",
+            "10. Luka Modrić (M)",
+            "8. Mateo Kovačić (M)",
+            "17. Petar Sučić (M)",
+            "13. Nikola Vlašić (M)",
+            "16. Martin Baturina (M)",
+            "11. Ante Budimir (F)"
+          ],
+          "source": "Composition officielle",
+          "sourceDate": "2026-06-27T21:00:00+00:00"
         },
         "away": {
           "team": "Ghana",
-          "formation": null,
-          "players": []
+          "formation": "4-1-4-1",
+          "players": [
+            "16. Benjamin Asare (G)",
+            "26. Marvin Senaya (D)",
+            "4. Jonas Adjei Adjetey (D)",
+            "23. Derrick Luckassen (D)",
+            "14. Gideon Mensah (D)",
+            "5. Thomas Partey (M)",
+            "11. Antoine Semenyo (M)",
+            "15. Elisha Owusu (M)",
+            "8. Kwasi Sibo (M)",
+            "22. Kamaldeen Sulemana (M)",
+            "9. Jordan Ayew (F)"
+          ],
+          "source": "Composition officielle",
+          "sourceDate": "2026-06-27T21:00:00+00:00"
         }
       },
       "probableLineups": {
@@ -7888,32 +7916,60 @@
       "group": null,
       "date": "2026-06-27T21:00:00+00:00",
       "venue": "MetLife Stadium",
-      "city": "New York New Jersey",
+      "city": "East Rutherford",
       "home": "Panama",
       "away": "Angleterre",
       "homeCoach": "Thomas Christiansen",
       "awayCoach": "Thomas Tuchel",
       "score": {
-        "home": null,
-        "away": null
+        "home": 0,
+        "away": 0
       },
       "scorers": [],
       "highlights": [],
       "externalIds": {
         "apiFootball": "1489422"
       },
-      "status": "upcoming",
-      "minute": null,
+      "status": "live",
+      "minute": 45,
       "lineups": {
         "home": {
           "team": "Panama",
-          "formation": null,
-          "players": []
+          "formation": "5-4-1",
+          "players": [
+            "22. Orlando Mosquera (G)",
+            "23. Amir Murillo (D)",
+            "4. Fidel Escobar (D)",
+            "3. José Córdoba (D)",
+            "16. Andrés Andrade (D)",
+            "26. Jorge Gutiérrez (D)",
+            "6. Cristian Martínez (M)",
+            "11. Yoel Bárcenas (M)",
+            "14. Carlos Harvey (M)",
+            "7. José Luis Rodríguez (M)",
+            "9. Tomás Rodríguez (F)"
+          ],
+          "source": "Composition officielle",
+          "sourceDate": "2026-06-27T21:00:00+00:00"
         },
         "away": {
-          "team": "England",
-          "formation": null,
-          "players": []
+          "team": "Angleterre",
+          "formation": "4-2-3-1",
+          "players": [
+            "1. Jordan Pickford (G)",
+            "26. Jarell Quansah (D)",
+            "2. Ezri Konsa (D)",
+            "6. Marc Guéhi (D)",
+            "3. Nico O'Reilly (D)",
+            "8. Elliot Anderson (M)",
+            "10. Jude Bellingham (M)",
+            "7. Bukayo Saka (M)",
+            "17. Morgan Rogers (M)",
+            "11. Marcus Rashford (M)",
+            "9. Harry Kane (F)"
+          ],
+          "source": "Composition officielle",
+          "sourceDate": "2026-06-27T21:00:00+00:00"
         }
       },
       "probableLineups": {
@@ -9440,13 +9496,13 @@
   "knockout": {},
   "scheduleSync": {
     "provider": "api-football",
-    "checkedAt": "2026-06-27T11:25:06.097838Z",
+    "checkedAt": "2026-06-27T21:49:34.525251Z",
     "league": 1,
     "season": 2026,
-    "updatedMatches": 0,
+    "updatedMatches": 2,
     "insertedMatches": 0,
-    "lineupsChecked": 0,
-    "lineupsUpdated": 0,
+    "lineupsChecked": 2,
+    "lineupsUpdated": 2,
     "fallbackLineups": 0
   },
   "predictionSync": {

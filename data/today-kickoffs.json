@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-27T11:25:11.288709Z",
+  "lastUpdated": "2026-06-27T21:49:39.780011Z",
   "timezone": "Europe/Paris",
   "windowStart": "2026-06-27T12:00:00+02:00",
   "windowEnd": "2026-06-28T12:00:00+02:00",
@@ -13,7 +13,7 @@
       "group": null,
       "home": "Croatie",
       "away": "Ghana",
-      "status": "upcoming"
+      "status": "live"
     },
     {
       "id": "1489422",
@@ -24,7 +24,7 @@
       "group": null,
       "home": "Panama",
       "away": "Angleterre",
-      "status": "upcoming"
+      "status": "live"
     },
     {
       "id": "1489419",
