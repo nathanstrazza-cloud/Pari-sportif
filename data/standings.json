@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-27T06:06:43.894680Z",
+  "lastUpdated": "2026-06-27T11:25:06.468836Z",
   "source": "api-football",
   "groups": [
     {
@@ -323,7 +323,7 @@
           "played": 3,
           "points": 3,
           "gd": 2,
-          "status": "eliminated"
+          "status": "best-third"
         },
         {
           "rank": 4,
