@@ -1,12 +1,12 @@
 {
-  "lastUpdated": "2026-06-28T05:34:39.192552Z",
+  "lastUpdated": "2026-06-28T11:45:13.236103Z",
   "source": "api-football",
   "topScorers": [
     {
       "name": "L. Messi",
       "team": "Argentine",
       "age": 38,
-      "goals": 5.0
+      "goals": 6.0
     },
     {
       "name": "Kylian Mbappé",
@@ -81,6 +81,18 @@
       "goals": 3.0
     },
     {
+      "name": "H. Kane",
+      "team": "Angleterre",
+      "age": 32,
+      "goals": 3.0
+    },
+    {
+      "name": "Y. Wissa",
+      "team": "RD Congo",
+      "age": 29,
+      "goals": 3.0
+    },
+    {
       "name": "C. Summerville",
       "team": "Pays-Bas",
       "age": 24,
@@ -99,27 +111,15 @@
       "goals": 2.0
     },
     {
+      "name": "R. Mahrez",
+      "team": "Algérie",
+      "age": 34,
+      "goals": 2.0
+    },
+    {
       "name": "Mikel Oyarzabal",
       "team": "Espagne",
       "age": 28,
-      "goals": 2.0
-    },
-    {
-      "name": "A. Ueda",
-      "team": "Japon",
-      "age": 27,
-      "goals": 2.0
-    },
-    {
-      "name": "M. Araújo",
-      "team": "Uruguay",
-      "age": 25,
-      "goals": 2.0
-    },
-    {
-      "name": "C. Gakpo",
-      "team": "Pays-Bas",
-      "age": 26,
       "goals": 2.0
     }
   ],
@@ -155,9 +155,9 @@
       "assists": 2.0
     },
     {
-      "name": "Mohamed Salah",
-      "team": "Égypte",
-      "age": 33,
+      "name": "N. Saliba",
+      "team": "Canada",
+      "age": 21,
       "assists": 2.0
     },
     {
@@ -182,6 +182,12 @@
       "name": "B. Embolo",
       "team": "Suisse",
       "age": 28,
+      "assists": 2.0
+    },
+    {
+      "name": "B. Saka",
+      "team": "Angleterre",
+      "age": 24,
       "assists": 2.0
     },
     {
@@ -236,12 +242,6 @@
       "name": "C. Wood",
       "team": "Nouvelle-Zélande",
       "age": 34,
-      "assists": 2.0
-    },
-    {
-      "name": "M. Ødegaard",
-      "team": "Norvège",
-      "age": 27,
       "assists": 2.0
     }
   ],

@@ -37,6 +37,7 @@ const state = {
   refreshTimer: null,
   touchStartX: 0,
   lastRefresh: null,
+  dataLastUpdated: null,
   activeDetailTab: null,
   detailMatch: null,
 };
@@ -357,6 +358,8 @@ async function loadData() {
   state.betSuggestions = odds.betSuggestions && typeof odds.betSuggestions === "object" ? odds.betSuggestions : {};
   state.matchOdds = odds.matchOdds && typeof odds.matchOdds === "object" ? odds.matchOdds : {};
   state.lastRefresh = new Date();
+  // Horodatage de la derniere synchro des donnees cote serveur (Worker / passe Python).
+  state.dataLastUpdated = matches.lastUpdated || matches.liveSync?.checkedAt || null;
 }
 
 function buildKnockout(rawKnockout, matches, standings) {
@@ -952,7 +955,7 @@ function renderMatches() {
     : `<div class="empty-state">Aucun match disponible.</div>`;
   els.matchesList.onclick = handleMatchesListClick;
   els.matchesList.onkeydown = handleMatchesListKeydown;
-  window.requestAnimationFrame(scrollMatchesToUpcoming);
+  window.requestAnimationFrame(scrollMatchesToFocus);
 }
 
 function buildMatchesView() {
@@ -969,9 +972,10 @@ function buildMatchesView() {
 }
 
 function renderMatchesView(view) {
+  // Ordre du flux : passés, puis live (au centre, mis en avant), puis à venir.
   return [
-    view.live.length ? renderMatchFeedSection("En direct", view.live, "live") : "",
     view.finished.length ? renderMatchFeedSection("Terminés", view.finished, "finished") : "",
+    view.live.length ? renderMatchFeedSection("En direct", view.live, "live") : "",
     view.upcoming.length ? renderMatchFeedSection("À venir", view.upcoming, "upcoming") : "",
   ].filter(Boolean).join("");
 }
@@ -990,10 +994,13 @@ function renderMatchFeedSection(title, matches, section) {
   `;
 }
 
-function scrollMatchesToUpcoming() {
-  const upcoming = els.matchesList?.querySelector('[data-match-section="upcoming"]');
-  if (!upcoming) return;
-  upcoming.scrollIntoView({ block: "start" });
+function scrollMatchesToFocus() {
+  // Met en avant les matchs en direct s'il y en a, sinon les prochains a venir.
+  const target =
+    els.matchesList?.querySelector('[data-match-section="live"]') ||
+    els.matchesList?.querySelector('[data-match-section="upcoming"]');
+  if (!target) return;
+  target.scrollIntoView({ block: "start" });
 }
 
 function renderMatchFeed(feed) {
@@ -1032,7 +1039,7 @@ function renderMatchCard(match, section = "") {
         <span class="compact-score">${scoreText(match)}</span>
         ${renderMatchTeam(match.away, "away", true)}
       </span>
-      ${match.status === "live" ? renderLiveCardScorers(match) : ""}
+      ${match.status === "live" || match.status === "finished" ? renderMatchCardEvents(match) : ""}
     </article>
   `;
 }
@@ -1046,20 +1053,6 @@ function renderMatchTeam(team, side = "", interactive = true) {
       ${renderTeamFlag(team, "flag-match")}
       <span class="team-name">${escapeHtml(displayTeamName(team))}</span>
     </span>
-  `;
-}
-
-function renderLiveCardScorers(match) {
-  const scorers = [
-    ...getTeamScorers(match, "home"),
-    ...getTeamScorers(match, "away"),
-  ];
-  if (!scorers.length) return "";
-
-  return `
-    <div class="match-card-scorers">
-      ${scorers.map((scorer) => `<span>${escapeHtml(scorer)}</span>`).join("")}
-    </div>
   `;
 }
 
@@ -1609,6 +1602,7 @@ function getDetailTabs(match) {
   if (match.status === "live") {
     return [
       { key: "lineups", label: "Compo actuelle" },
+      { key: "stats", label: "Stats" },
       { key: "odds", label: "Pronos" },
       { key: "watch", label: "M6+" },
       { key: "experts", label: "Les Footix" },
@@ -1617,6 +1611,7 @@ function getDetailTabs(match) {
 
   if (match.status === "finished") {
     return [
+      { key: "stats", label: "Stats" },
       { key: "summary", label: "Résumé" },
       { key: "experts", label: "Les Footix" },
     ];
@@ -1645,6 +1640,10 @@ function renderDetailTab(match, tab) {
         <div class="odds-table">${renderBetSuggestions(match)}</div>
       </section>
     `;
+  }
+
+  if (tab === "stats") {
+    return renderMatchStatsTab(match);
   }
 
   if (tab === "watch") {
@@ -1757,6 +1756,144 @@ function formatTeamScorer(scorer, team) {
     .replace(/^\s*(\d+(?:'\+\d+)?')\s+But de\s+/i, "$1 ")
     .replace(/\s*!\s*$/, "")
     .trim();
+}
+
+// Cartons d'une equipe (match.cards alimente par le Worker pendant le live).
+function getTeamCards(match, side) {
+  const teamKey = normalizeTeamName(match?.[side]);
+  if (!teamKey || !Array.isArray(match?.cards)) return [];
+  return match.cards.filter((card) => normalizeTeamName(card?.team) === teamKey);
+}
+
+function cardIcon(type) {
+  return type === "red" ? "🟥" : "🟨";
+}
+
+// Valeur de tri d'un fait de match a partir de sa minute ("45'+2'" -> 4502).
+function eventMinuteValue(text) {
+  const match = String(text ?? "").match(/(\d+)'(?:\s*\+\s*(\d+))?/);
+  if (!match) return Number.MAX_SAFE_INTEGER;
+  return Number(match[1]) * 100 + (match[2] ? Number(match[2]) : 0);
+}
+
+// Fusionne buts et cartons en une seule liste classee par minute.
+function mergeMatchEvents(scorers, cards) {
+  return [
+    ...scorers.map((scorer) => ({ sort: eventMinuteValue(scorer), text: `⚽ ${scorer}` })),
+    ...cards.map((card) => ({
+      sort: eventMinuteValue(card.minute),
+      text: `${cardIcon(card.type)} ${[card.minute, card.player].filter(Boolean).join(" ")}`,
+    })),
+  ].sort((a, b) => a.sort - b.sort);
+}
+
+// Bandeau buteurs + cartons affiche sur la carte du flux (live et termine), par minute.
+function renderMatchCardEvents(match) {
+  const events = mergeMatchEvents(
+    [...getTeamScorers(match, "home"), ...getTeamScorers(match, "away")],
+    [...getTeamCards(match, "home"), ...getTeamCards(match, "away")],
+  );
+  if (!events.length) return "";
+
+  return `
+    <div class="match-card-scorers">
+      ${events.map((event) => `<span>${escapeHtml(event.text)}</span>`).join("")}
+    </div>
+  `;
+}
+
+// Onglet "Stats" du detail : buteurs + cartons (par equipe) puis statistiques.
+function renderMatchStatsTab(match) {
+  return `
+    ${renderMatchEvents(match)}
+    <section class="detail-section">
+      <h3>Statistiques</h3>
+      ${renderMatchStats(match)}
+    </section>
+  `;
+}
+
+function renderMatchEvents(match) {
+  const homeScorers = getTeamScorers(match, "home");
+  const awayScorers = getTeamScorers(match, "away");
+  const homeCards = getTeamCards(match, "home");
+  const awayCards = getTeamCards(match, "away");
+  const hasEvents = homeScorers.length || awayScorers.length || homeCards.length || awayCards.length;
+
+  if (!hasEvents) {
+    return `
+      <section class="detail-section">
+        <h3>Faits du match</h3>
+        <p class="muted">Aucun but ni carton pour le moment.</p>
+      </section>
+    `;
+  }
+
+  return `
+    <section class="detail-section">
+      <h3>Faits du match</h3>
+      <div class="match-events">
+        ${renderMatchEventsSide(match.home, homeScorers, homeCards)}
+        ${renderMatchEventsSide(match.away, awayScorers, awayCards)}
+      </div>
+    </section>
+  `;
+}
+
+function renderMatchEventsSide(team, scorers, cards) {
+  const events = mergeMatchEvents(scorers, cards);
+  return `
+    <div class="match-events-side">
+      <h4>${renderTeamFlag(team, "flag-inline")} ${escapeHtml(displayTeamName(team))}</h4>
+      ${events.length ? `<ul>${events.map((event) => `<li>${escapeHtml(event.text)}</li>`).join("")}</ul>` : `<p class="muted">—</p>`}
+    </div>
+  `;
+}
+
+const MATCH_STAT_ROWS = [
+  { key: "possession", label: "Possession", suffix: "%" },
+  { key: "shots", label: "Tirs" },
+  { key: "shotsOnTarget", label: "Tirs cadrés" },
+  { key: "corners", label: "Corners" },
+  { key: "fouls", label: "Fautes" },
+];
+
+function renderMatchStats(match) {
+  const stats = match?.stats ?? {};
+  const rows = MATCH_STAT_ROWS.filter((row) => {
+    const entry = stats[row.key];
+    return isNumber(entry?.home) || isNumber(entry?.away);
+  });
+
+  if (!rows.length) {
+    return `<p class="muted">Statistiques non disponibles pour le moment.</p>`;
+  }
+
+  return `
+    <div class="match-stats">
+      ${rows.map((row) => renderMatchStatRow(stats[row.key], row)).join("")}
+    </div>
+  `;
+}
+
+function renderMatchStatRow(entry, row) {
+  const home = isNumber(entry?.home) ? entry.home : 0;
+  const away = isNumber(entry?.away) ? entry.away : 0;
+  const total = home + away;
+  const homePct = total > 0 ? Math.round((home / total) * 100) : 50;
+  const suffix = row.suffix ?? "";
+  const fmt = (value) => (isNumber(value) ? `${value}${suffix}` : "—");
+  return `
+    <div class="match-stat-row">
+      <span class="match-stat-value">${escapeHtml(fmt(entry?.home))}</span>
+      <span class="match-stat-label">${escapeHtml(row.label)}</span>
+      <span class="match-stat-value">${escapeHtml(fmt(entry?.away))}</span>
+      <div class="match-stat-bar">
+        <span class="match-stat-bar-home" style="width:${homePct}%"></span>
+        <span class="match-stat-bar-away" style="width:${100 - homePct}%"></span>
+      </div>
+    </div>
+  `;
 }
 
 function normalizeTeamName(team) {
@@ -3021,7 +3158,7 @@ function setActiveTab(tab) {
   });
 
   if (tab === "matches") {
-    window.requestAnimationFrame(scrollMatchesToUpcoming);
+    window.requestAnimationFrame(scrollMatchesToFocus);
     return;
   }
 
@@ -3058,11 +3195,19 @@ async function refreshData() {
 function updateRefreshPill() {
   if (!els.refreshPill) return;
   const hasLiveMatch = state.matches.some((match) => match.status === "live");
-  const cadence = hasLiveMatch ? "30 s en live" : "3 min";
-  const time = state.lastRefresh
-    ? state.lastRefresh.toLocaleTimeString("fr-FR", { hour: "2-digit", minute: "2-digit" })
-    : "--:--";
-  els.refreshPill.textContent = `Synchronisation locale • ${cadence} • ${time}`;
+  const cadence = hasLiveMatch ? "30 s" : "3 min";
+  const synced = state.dataLastUpdated ? formatSyncStamp(state.dataLastUpdated) : "—";
+  els.refreshPill.textContent = `Données à jour : ${synced} • actualisation ${cadence}`;
+}
+
+// Horodatage lisible : heure seule si c'est aujourd'hui, sinon jour/mois + heure.
+function formatSyncStamp(value) {
+  const date = new Date(value);
+  if (Number.isNaN(date.getTime())) return "—";
+  const time = date.toLocaleTimeString("fr-FR", { hour: "2-digit", minute: "2-digit" });
+  const isToday = date.toDateString() === new Date().toDateString();
+  if (isToday) return time;
+  return `${date.toLocaleDateString("fr-FR", { day: "2-digit", month: "2-digit" })} à ${time}`;
 }
 
 function getSelectedMatch() {

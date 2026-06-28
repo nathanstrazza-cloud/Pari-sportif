@@ -305,6 +305,49 @@ body.is-authenticated .auth-overlay {
   background: rgba(220, 38, 38, 0.13);
 }
 
+/* Notice d'installation reprise dans le menu du compte (apres connexion). */
+.install-help-menu {
+  font-size: 0.8rem;
+  line-height: 1.5;
+  text-align: left;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 0.6rem 0.7rem;
+  color: var(--text);
+}
+
+.install-help-menu summary {
+  cursor: pointer;
+  font-weight: 700;
+  list-style: none;
+}
+
+.install-help-menu summary::-webkit-details-marker {
+  display: none;
+}
+
+.install-help-menu ol {
+  margin: 0.3rem 0 0;
+  padding-left: 1.2em;
+}
+
+.install-help-menu p {
+  margin: 0.65rem 0 0.25rem;
+}
+
+.install-help-menu .install-help-foot {
+  margin-top: 0.65rem;
+  color: var(--muted);
+}
+
+/* Bandeau "donnees a jour" sous le titre Matchs. */
+.refresh-pill {
+  margin: 0 0 0.6rem;
+  color: var(--muted);
+  font-size: 0.76rem;
+  font-weight: 700;
+}
+
 @keyframes spin {
   to {
     transform: rotate(1turn);
@@ -1148,14 +1191,89 @@ h3 {
 }
 
 .match-card-scorers {
-  display: grid;
-  gap: 0.25rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem 0.7rem;
   margin-top: 0.7rem;
   padding-top: 0.65rem;
   border-top: 1px solid rgba(0, 92, 255, 0.12);
   color: var(--blue);
   font-size: 0.78rem;
   font-weight: 800;
+}
+
+/* Detail : faits du match (buteurs + cartons) */
+.match-events {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.9rem;
+}
+
+.match-events-side h4 {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  margin-bottom: 0.45rem;
+  font-size: 0.85rem;
+  color: var(--text);
+}
+
+.match-events-side ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0.3rem;
+  font-size: 0.82rem;
+  color: var(--text);
+}
+
+/* Detail : statistiques de match */
+.match-stats {
+  display: grid;
+  gap: 0.85rem;
+}
+
+.match-stat-row {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 0.35rem 0.6rem;
+}
+
+.match-stat-label {
+  text-align: center;
+  font-size: 0.78rem;
+  color: var(--muted);
+  font-weight: 700;
+}
+
+.match-stat-value {
+  font-weight: 800;
+  color: var(--text);
+  font-size: 0.9rem;
+  min-width: 2.6rem;
+}
+
+.match-stat-row .match-stat-value:last-of-type {
+  text-align: right;
+}
+
+.match-stat-bar {
+  grid-column: 1 / -1;
+  display: flex;
+  height: 6px;
+  border-radius: 999px;
+  overflow: hidden;
+  background: var(--line);
+}
+
+.match-stat-bar-home {
+  background: var(--blue);
+}
+
+.match-stat-bar-away {
+  background: var(--gold);
 }
 
 .team-link {

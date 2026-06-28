@@ -78,6 +78,7 @@
           </div>
           <span class="count-pill" id="matchesCount">0</span>
         </div>
+        <p class="refresh-pill" id="refreshPill" aria-live="polite"></p>
         <div id="matchesList" class="match-list" aria-label="Liste des matchs"></div>
       </section>
 
@@ -207,6 +208,22 @@
               <span id="accountEmail"></span>
             </div>
           </div>
+          <details class="install-help install-help-menu">
+            <summary>📲 Installer l'appli sur ton téléphone</summary>
+            <p><strong>iPhone (iOS) — avec Safari</strong></p>
+            <ol>
+              <li>Ouvre ce site dans <strong>Safari</strong>.</li>
+              <li>Touche le bouton <strong>Partager</strong> (le carré avec une flèche ↑, en bas).</li>
+              <li>Choisis <strong>« Sur l'écran d'accueil »</strong>, puis <strong>Ajouter</strong>.</li>
+            </ol>
+            <p><strong>Android — avec Chrome</strong></p>
+            <ol>
+              <li>Ouvre ce site dans <strong>Chrome</strong>.</li>
+              <li>Touche le menu <strong>⋮</strong> (en haut à droite).</li>
+              <li>Choisis <strong>« Installer l'application »</strong> (ou « Ajouter à l'écran d'accueil »).</li>
+            </ol>
+            <p class="install-help-foot">L'icône apparaît ensuite sur ton écran d'accueil, comme une vraie appli.</p>
+          </details>
           <button class="signout-button" id="signOutButton" type="button">Se déconnecter</button>
         </div>
       </div>
@@ -214,6 +231,6 @@
 
     <noscript>Activez JavaScript pour utiliser La Cote à Dédé.</noscript>
     <script src="auth.js?v=2" type="module"></script>
-    <script src="app.js?v=29" defer></script>
+    <script src="app.js?v=31" defer></script>
   </body>
 </html>
