@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-28T11:45:13.236103Z",
+  "lastUpdated": "2026-06-28T18:29:20.523649Z",
   "matches": [
     {
       "id": "400021443",
@@ -8611,7 +8611,7 @@
       "group": null,
       "date": "2026-06-28T19:00:00+00:00",
       "venue": "SoFi Stadium",
-      "city": null,
+      "city": "Inglewood",
       "home": "Afrique du Sud",
       "away": "Canada",
       "homeCoach": "Hugo Broos",
@@ -10385,18 +10385,19 @@
   "knockout": {},
   "scheduleSync": {
     "provider": "api-football",
-    "checkedAt": "2026-06-28T11:45:13.035255Z",
+    "checkedAt": "2026-06-28T18:29:20.523649Z",
     "league": 1,
     "season": 2026,
-    "updatedMatches": 10,
-    "insertedMatches": 2,
+    "updatedMatches": 1,
+    "insertedMatches": 0,
     "lineupsChecked": 0,
     "lineupsUpdated": 0,
-    "fallbackLineups": 16
+    "fallbackLineups": 0
   },
   "predictionSync": {
     "provider": "api-football",
     "checkedAt": "2026-06-28T11:45:13.236103Z",
     "updatedMatches": 2
-  }
+  },
+  "baseSyncedAt": "2026-06-28T18:29:25.607752Z"
 }
