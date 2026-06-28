@@ -1,7 +1,12 @@
 import {
+  applyEvents,
+  applyStatistics,
+  buildPlayers,
+  buildStandings,
   findLiveCandidates,
   findPostMatchCandidates,
   getApiFixtureId,
+  matchFixtures,
   mergeLiveFixtures,
   parseDate,
   type Match,
@@ -197,6 +202,65 @@ async function fetchLiveFixtures(env: Env): Promise<Fixture[]> {
   return (payload?.response as Fixture[]) ?? [];
 }
 
+// Appel GET generique a API-FOOTBALL (renvoie le tableau `response`).
+async function apiGet(env: Env, path: string): Promise<any[]> {
+  const response = await fetch(`https://v3.football.api-sports.io/${path}`, {
+    headers: { "x-apisports-key": env.API_FOOTBALL_KEY, Accept: "application/json" },
+  });
+  const payload = (await response.json()) as Record<string, any>;
+  if (!response.ok) {
+    throw new Error(`API-FOOTBALL ${response.status}: ${JSON.stringify(payload?.errors ?? payload)}`);
+  }
+  const errors = payload?.errors;
+  const hasErrors = Array.isArray(errors) ? errors.length > 0 : errors && Object.keys(errors).length > 0;
+  if (hasErrors) throw new Error(`API-FOOTBALL erreur: ${JSON.stringify(errors)}`);
+  return (payload?.response as any[]) ?? [];
+}
+
+// Enrichit un match avec ses buteurs/cartons (events) et ses stats (statistics).
+// Chaque appel est isole : si un endpoint echoue, on garde l'etat precedent du match.
+async function enrichMatch(env: Env, match: Match, fixture: Fixture): Promise<void> {
+  const fixtureId = fixture?.fixture?.id;
+  if (!fixtureId) return;
+  try {
+    const events = await apiGet(env, `fixtures/events?fixture=${encodeURIComponent(fixtureId)}`);
+    applyEvents(match, events);
+  } catch {
+    /* on conserve les buteurs/cartons deja connus */
+  }
+  try {
+    const stats = await apiGet(env, `fixtures/statistics?fixture=${encodeURIComponent(fixtureId)}`);
+    applyStatistics(match, stats, fixture?.teams?.home?.id, fixture?.teams?.away?.id);
+  } catch {
+    /* on conserve les stats deja connues */
+  }
+}
+
+// Rafraichit classement (cle KV "standings") et leaders (cle KV "players") cote Worker.
+// On n'ecrit pas si l'API renvoie du vide, pour ne pas ecraser la base Python.
+async function refreshCompetition(env: Env, checkedAt: string): Promise<void> {
+  const params = `league=${encodeURIComponent(env.WORLD_CUP_LEAGUE)}&season=${encodeURIComponent(env.WORLD_CUP_SEASON)}`;
+  try {
+    const standings = await apiGet(env, `standings?${params}`);
+    const built = buildStandings(standings, checkedAt);
+    if (built.groups.length) await env.MATCHES.put("standings", JSON.stringify(built));
+  } catch {
+    /* classement inchange */
+  }
+  try {
+    const [scorers, assists] = await Promise.all([
+      apiGet(env, `players/topscorers?${params}`),
+      apiGet(env, `players/topassists?${params}`),
+    ]);
+    const players = buildPlayers(scorers, assists, checkedAt);
+    if (players.topScorers.length || players.topAssists.length) {
+      await env.MATCHES.put("players", JSON.stringify(players));
+    }
+  } catch {
+    /* leaders inchanges */
+  }
+}
+
 // Recupere des fixtures precises par id (apres-match : le flux live=all ne renvoie plus un match termine).
 async function fetchFixturesByIds(env: Env, ids: string[]): Promise<Fixture[]> {
   if (!ids.length) return [];
@@ -260,6 +324,10 @@ async function syncLive(env: Env): Promise<void> {
   if (candidates.length > 0) {
     const fixtures = await fetchLiveFixtures(env);
     const updated = mergeLiveFixtures(fixtures, candidates);
+    // Buteurs / cartons / stats des matchs en cours.
+    for (const { match, fixture } of matchFixtures(fixtures, candidates)) {
+      await enrichMatch(env, match, fixture);
+    }
     const checkedAt = nowDate.toISOString();
     data.liveSync = {
       provider: "api-football-cf",
@@ -281,6 +349,10 @@ async function syncLive(env: Env): Promise<void> {
     if (ids.length > 0) {
       const fixtures = await fetchFixturesByIds(env, ids);
       const updated = mergeLiveFixtures(fixtures, postCandidates);
+      // Buteurs / cartons / stats finaux (le match ne ressort plus dans live=all).
+      for (const { match, fixture } of matchFixtures(fixtures, postCandidates)) {
+        await enrichMatch(env, match, fixture);
+      }
       if (updated > 0) {
         const checkedAt = nowDate.toISOString();
         data.lastUpdated = checkedAt;
@@ -288,6 +360,12 @@ async function syncLive(env: Env): Promise<void> {
         mustWrite = true;
       }
     }
+  }
+
+  // 3b) Classement + leaders : rafraichis toutes les 5 min tant qu'un match est en cours
+  //     ou vient de se terminer (un but change buteurs / diff de buts).
+  if ((candidates.length > 0 || postCandidates.length > 0) && nowDate.getUTCMinutes() % 5 === 0) {
+    await refreshCompetition(env, nowDate.toISOString());
   }
 
   // 4) Discussions d'experts : genere (via Workers AI) les avis manquants pour les
@@ -332,6 +410,10 @@ async function onDemandSync(env: Env): Promise<Record<string, any>> {
   if (candidates.length > 0) {
     const fixtures = await fetchLiveFixtures(env);
     updated = mergeLiveFixtures(fixtures, candidates);
+    for (const { match, fixture } of matchFixtures(fixtures, candidates)) {
+      await enrichMatch(env, match, fixture);
+    }
+    await refreshCompetition(env, new Date(now).toISOString());
   }
   const generated = await maybeGenerateExperts(env, base, now, 8);
   const checkedAt = new Date(now).toISOString();

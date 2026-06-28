@@ -1032,7 +1032,7 @@ function renderMatchCard(match, section = "") {
         <span class="compact-score">${scoreText(match)}</span>
         ${renderMatchTeam(match.away, "away", true)}
       </span>
-      ${match.status === "live" ? renderLiveCardScorers(match) : ""}
+      ${match.status === "live" || match.status === "finished" ? renderMatchCardEvents(match) : ""}
     </article>
   `;
 }
@@ -1046,20 +1046,6 @@ function renderMatchTeam(team, side = "", interactive = true) {
       ${renderTeamFlag(team, "flag-match")}
       <span class="team-name">${escapeHtml(displayTeamName(team))}</span>
     </span>
-  `;
-}
-
-function renderLiveCardScorers(match) {
-  const scorers = [
-    ...getTeamScorers(match, "home"),
-    ...getTeamScorers(match, "away"),
-  ];
-  if (!scorers.length) return "";
-
-  return `
-    <div class="match-card-scorers">
-      ${scorers.map((scorer) => `<span>${escapeHtml(scorer)}</span>`).join("")}
-    </div>
   `;
 }
 
@@ -1609,6 +1595,7 @@ function getDetailTabs(match) {
   if (match.status === "live") {
     return [
       { key: "lineups", label: "Compo actuelle" },
+      { key: "stats", label: "Stats" },
       { key: "odds", label: "Pronos" },
       { key: "watch", label: "M6+" },
       { key: "experts", label: "Les Footix" },
@@ -1617,6 +1604,7 @@ function getDetailTabs(match) {
 
   if (match.status === "finished") {
     return [
+      { key: "stats", label: "Stats" },
       { key: "summary", label: "Résumé" },
       { key: "experts", label: "Les Footix" },
     ];
@@ -1645,6 +1633,10 @@ function renderDetailTab(match, tab) {
         <div class="odds-table">${renderBetSuggestions(match)}</div>
       </section>
     `;
+  }
+
+  if (tab === "stats") {
+    return renderMatchStatsTab(match);
   }
 
   if (tab === "watch") {
@@ -1757,6 +1749,134 @@ function formatTeamScorer(scorer, team) {
     .replace(/^\s*(\d+(?:'\+\d+)?')\s+But de\s+/i, "$1 ")
     .replace(/\s*!\s*$/, "")
     .trim();
+}
+
+// Cartons d'une equipe (match.cards alimente par le Worker pendant le live).
+function getTeamCards(match, side) {
+  const teamKey = normalizeTeamName(match?.[side]);
+  if (!teamKey || !Array.isArray(match?.cards)) return [];
+  return match.cards.filter((card) => normalizeTeamName(card?.team) === teamKey);
+}
+
+function cardIcon(type) {
+  return type === "red" ? "🟥" : "🟨";
+}
+
+// Bandeau buteurs + cartons affiche sur la carte du flux (live et termine).
+function renderMatchCardEvents(match) {
+  const scorers = [...getTeamScorers(match, "home"), ...getTeamScorers(match, "away")];
+  const cards = [...getTeamCards(match, "home"), ...getTeamCards(match, "away")];
+  if (!scorers.length && !cards.length) return "";
+
+  const scorerTags = scorers.map((scorer) => `<span>⚽ ${escapeHtml(scorer)}</span>`);
+  const cardTags = cards.map(
+    (card) => `<span>${cardIcon(card.type)} ${escapeHtml([card.minute, card.player].filter(Boolean).join(" "))}</span>`,
+  );
+
+  return `
+    <div class="match-card-scorers">
+      ${[...scorerTags, ...cardTags].join("")}
+    </div>
+  `;
+}
+
+// Onglet "Stats" du detail : buteurs + cartons (par equipe) puis statistiques.
+function renderMatchStatsTab(match) {
+  return `
+    ${renderMatchEvents(match)}
+    <section class="detail-section">
+      <h3>Statistiques</h3>
+      ${renderMatchStats(match)}
+    </section>
+  `;
+}
+
+function renderMatchEvents(match) {
+  const homeScorers = getTeamScorers(match, "home");
+  const awayScorers = getTeamScorers(match, "away");
+  const homeCards = getTeamCards(match, "home");
+  const awayCards = getTeamCards(match, "away");
+  const hasEvents = homeScorers.length || awayScorers.length || homeCards.length || awayCards.length;
+
+  if (!hasEvents) {
+    return `
+      <section class="detail-section">
+        <h3>Faits du match</h3>
+        <p class="muted">Aucun but ni carton pour le moment.</p>
+      </section>
+    `;
+  }
+
+  return `
+    <section class="detail-section">
+      <h3>Faits du match</h3>
+      <div class="match-events">
+        ${renderMatchEventsSide(match.home, homeScorers, homeCards)}
+        ${renderMatchEventsSide(match.away, awayScorers, awayCards)}
+      </div>
+    </section>
+  `;
+}
+
+function renderMatchEventsSide(team, scorers, cards) {
+  const lines = [
+    ...scorers.map((scorer) => `<li>⚽ ${escapeHtml(scorer)}</li>`),
+    ...cards.map(
+      (card) => `<li>${cardIcon(card.type)} ${escapeHtml([card.minute, card.player].filter(Boolean).join(" "))}</li>`,
+    ),
+  ];
+  return `
+    <div class="match-events-side">
+      <h4>${renderTeamFlag(team, "flag-inline")} ${escapeHtml(displayTeamName(team))}</h4>
+      ${lines.length ? `<ul>${lines.join("")}</ul>` : `<p class="muted">—</p>`}
+    </div>
+  `;
+}
+
+const MATCH_STAT_ROWS = [
+  { key: "possession", label: "Possession", suffix: "%" },
+  { key: "shots", label: "Tirs" },
+  { key: "shotsOnTarget", label: "Tirs cadrés" },
+  { key: "corners", label: "Corners" },
+  { key: "fouls", label: "Fautes" },
+];
+
+function renderMatchStats(match) {
+  const stats = match?.stats ?? {};
+  const rows = MATCH_STAT_ROWS.filter((row) => {
+    const entry = stats[row.key];
+    return isNumber(entry?.home) || isNumber(entry?.away);
+  });
+
+  if (!rows.length) {
+    return `<p class="muted">Statistiques non disponibles pour le moment.</p>`;
+  }
+
+  return `
+    <div class="match-stats">
+      ${rows.map((row) => renderMatchStatRow(stats[row.key], row)).join("")}
+    </div>
+  `;
+}
+
+function renderMatchStatRow(entry, row) {
+  const home = isNumber(entry?.home) ? entry.home : 0;
+  const away = isNumber(entry?.away) ? entry.away : 0;
+  const total = home + away;
+  const homePct = total > 0 ? Math.round((home / total) * 100) : 50;
+  const suffix = row.suffix ?? "";
+  const fmt = (value) => (isNumber(value) ? `${value}${suffix}` : "—");
+  return `
+    <div class="match-stat-row">
+      <span class="match-stat-value">${escapeHtml(fmt(entry?.home))}</span>
+      <span class="match-stat-label">${escapeHtml(row.label)}</span>
+      <span class="match-stat-value">${escapeHtml(fmt(entry?.away))}</span>
+      <div class="match-stat-bar">
+        <span class="match-stat-bar-home" style="width:${homePct}%"></span>
+        <span class="match-stat-bar-away" style="width:${100 - homePct}%"></span>
+      </div>
+    </div>
+  `;
 }
 
 function normalizeTeamName(team) {
