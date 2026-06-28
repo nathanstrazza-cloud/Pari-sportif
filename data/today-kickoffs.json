@@ -1,73 +1,18 @@
 {
-  "lastUpdated": "2026-06-26T12:08:52.385700Z",
+  "lastUpdated": "2026-06-28T05:34:42.250718Z",
   "timezone": "Europe/Paris",
-  "windowStart": "2026-06-26T12:00:00+02:00",
-  "windowEnd": "2026-06-27T12:00:00+02:00",
+  "windowStart": "2026-06-28T12:00:00+02:00",
+  "windowEnd": "2026-06-29T12:00:00+02:00",
   "matches": [
     {
-      "id": "1489416",
-      "date": "2026-06-26T19:00:00+00:00",
-      "localDate": "2026-06-26",
+      "id": "1561329",
+      "date": "2026-06-28T19:00:00+00:00",
+      "localDate": "2026-06-28",
       "localTime": "21:00",
-      "stage": "groupes",
+      "stage": "16es",
       "group": null,
-      "home": "Norvège",
-      "away": "France",
-      "status": "upcoming"
-    },
-    {
-      "id": "1539074",
-      "date": "2026-06-26T19:00:00+00:00",
-      "localDate": "2026-06-26",
-      "localTime": "21:00",
-      "stage": "groupes",
-      "group": null,
-      "home": "Sénégal",
-      "away": "Irak",
-      "status": "upcoming"
-    },
-    {
-      "id": "1489413",
-      "date": "2026-06-27T00:00:00+00:00",
-      "localDate": "2026-06-27",
-      "localTime": "02:00",
-      "stage": "groupes",
-      "group": null,
-      "home": "Cap-Vert",
-      "away": "Arabie saoudite",
-      "status": "upcoming"
-    },
-    {
-      "id": "1489417",
-      "date": "2026-06-27T00:00:00+00:00",
-      "localDate": "2026-06-27",
-      "localTime": "02:00",
-      "stage": "groupes",
-      "group": null,
-      "home": "Uruguay",
-      "away": "Espagne",
-      "status": "upcoming"
-    },
-    {
-      "id": "1489414",
-      "date": "2026-06-27T03:00:00+00:00",
-      "localDate": "2026-06-27",
-      "localTime": "05:00",
-      "stage": "groupes",
-      "group": null,
-      "home": "Égypte",
-      "away": "Iran",
-      "status": "upcoming"
-    },
-    {
-      "id": "1489415",
-      "date": "2026-06-27T03:00:00+00:00",
-      "localDate": "2026-06-27",
-      "localTime": "05:00",
-      "stage": "groupes",
-      "group": null,
-      "home": "Nouvelle-Zélande",
-      "away": "Belgique",
+      "home": "Afrique du Sud",
+      "away": "Canada",
       "status": "upcoming"
     }
   ]

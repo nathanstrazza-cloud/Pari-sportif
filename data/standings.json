@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-26T12:08:47.536819Z",
+  "lastUpdated": "2026-06-28T05:34:39.192552Z",
   "source": "api-football",
   "groups": [
     {
@@ -138,7 +138,7 @@
           "played": 3,
           "points": 4,
           "gd": -2,
-          "status": "eliminated"
+          "status": "best-third"
         },
         {
           "rank": 4,
@@ -229,35 +229,35 @@
       "teams": [
         {
           "rank": 1,
-          "name": "Égypte",
-          "played": 2,
-          "points": 4,
-          "gd": 2,
+          "name": "Belgique",
+          "played": 3,
+          "points": 5,
+          "gd": 4,
           "status": "qualified"
         },
         {
           "rank": 2,
-          "name": "Iran",
-          "played": 2,
-          "points": 2,
-          "gd": 0,
+          "name": "Égypte",
+          "played": 3,
+          "points": 5,
+          "gd": 2,
           "status": "qualified"
         },
         {
           "rank": 3,
-          "name": "Belgique",
-          "played": 2,
-          "points": 2,
+          "name": "Iran",
+          "played": 3,
+          "points": 3,
           "gd": 0,
-          "status": ""
+          "status": "eliminated"
         },
         {
           "rank": 4,
           "name": "Nouvelle-Zélande",
-          "played": 2,
+          "played": 3,
           "points": 1,
-          "gd": -2,
-          "status": ""
+          "gd": -6,
+          "status": "eliminated"
         }
       ]
     },
@@ -267,34 +267,34 @@
         {
           "rank": 1,
           "name": "Espagne",
-          "played": 2,
-          "points": 4,
-          "gd": 4,
+          "played": 3,
+          "points": 7,
+          "gd": 5,
           "status": "qualified"
         },
         {
           "rank": 2,
-          "name": "Uruguay",
-          "played": 2,
-          "points": 2,
+          "name": "Cap-Vert",
+          "played": 3,
+          "points": 3,
           "gd": 0,
           "status": "qualified"
         },
         {
           "rank": 3,
-          "name": "Cap-Vert",
-          "played": 2,
+          "name": "Uruguay",
+          "played": 3,
           "points": 2,
-          "gd": 0,
-          "status": ""
+          "gd": -1,
+          "status": "eliminated"
         },
         {
           "rank": 4,
           "name": "Arabie saoudite",
-          "played": 2,
-          "points": 1,
+          "played": 3,
+          "points": 2,
           "gd": -4,
-          "status": ""
+          "status": "eliminated"
         }
       ]
     },
@@ -304,34 +304,34 @@
         {
           "rank": 1,
           "name": "France",
-          "played": 2,
-          "points": 6,
-          "gd": 5,
+          "played": 3,
+          "points": 9,
+          "gd": 8,
           "status": "qualified"
         },
         {
           "rank": 2,
           "name": "Norvège",
-          "played": 2,
+          "played": 3,
           "points": 6,
-          "gd": 4,
+          "gd": 1,
           "status": "qualified"
         },
         {
           "rank": 3,
           "name": "Sénégal",
-          "played": 2,
-          "points": 0,
-          "gd": -3,
-          "status": ""
+          "played": 3,
+          "points": 3,
+          "gd": 2,
+          "status": "best-third"
         },
         {
           "rank": 4,
           "name": "Irak",
-          "played": 2,
+          "played": 3,
           "points": 0,
-          "gd": -6,
-          "status": ""
+          "gd": -11,
+          "status": "eliminated"
         }
       ]
     },
@@ -341,34 +341,34 @@
         {
           "rank": 1,
           "name": "Argentine",
-          "played": 2,
-          "points": 6,
-          "gd": 5,
+          "played": 3,
+          "points": 9,
+          "gd": 7,
           "status": "qualified"
         },
         {
           "rank": 2,
           "name": "Autriche",
-          "played": 2,
-          "points": 3,
+          "played": 3,
+          "points": 4,
           "gd": 0,
           "status": "qualified"
         },
         {
           "rank": 3,
           "name": "Algérie",
-          "played": 2,
-          "points": 3,
+          "played": 3,
+          "points": 4,
           "gd": -2,
-          "status": ""
+          "status": "best-third"
         },
         {
           "rank": 4,
           "name": "Jordanie",
-          "played": 2,
+          "played": 3,
           "points": 0,
-          "gd": -3,
-          "status": ""
+          "gd": -5,
+          "status": "eliminated"
         }
       ]
     },
@@ -378,34 +378,34 @@
         {
           "rank": 1,
           "name": "Colombie",
-          "played": 2,
-          "points": 6,
+          "played": 3,
+          "points": 7,
           "gd": 3,
           "status": "qualified"
         },
         {
           "rank": 2,
           "name": "Portugal",
-          "played": 2,
-          "points": 4,
+          "played": 3,
+          "points": 5,
           "gd": 5,
           "status": "qualified"
         },
         {
           "rank": 3,
           "name": "RD Congo",
-          "played": 2,
-          "points": 1,
-          "gd": -1,
-          "status": ""
+          "played": 3,
+          "points": 4,
+          "gd": 1,
+          "status": "best-third"
         },
         {
           "rank": 4,
           "name": "Ouzbékistan",
-          "played": 2,
+          "played": 3,
           "points": 0,
-          "gd": -7,
-          "status": ""
+          "gd": -9,
+          "status": "eliminated"
         }
       ]
     },
@@ -415,34 +415,34 @@
         {
           "rank": 1,
           "name": "Angleterre",
-          "played": 2,
-          "points": 4,
-          "gd": 2,
+          "played": 3,
+          "points": 7,
+          "gd": 4,
           "status": "qualified"
         },
         {
           "rank": 2,
-          "name": "Ghana",
-          "played": 2,
-          "points": 4,
-          "gd": 1,
+          "name": "Croatie",
+          "played": 3,
+          "points": 6,
+          "gd": 0,
           "status": "qualified"
         },
         {
           "rank": 3,
-          "name": "Croatie",
-          "played": 2,
-          "points": 3,
-          "gd": -1,
-          "status": ""
+          "name": "Ghana",
+          "played": 3,
+          "points": 4,
+          "gd": 0,
+          "status": "best-third"
         },
         {
           "rank": 4,
           "name": "Panama",
-          "played": 2,
+          "played": 3,
           "points": 0,
-          "gd": -2,
-          "status": ""
+          "gd": -4,
+          "status": "eliminated"
         }
       ]
     }
