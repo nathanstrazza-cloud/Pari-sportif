@@ -1769,20 +1769,35 @@ function cardIcon(type) {
   return type === "red" ? "🟥" : "🟨";
 }
 
-// Bandeau buteurs + cartons affiche sur la carte du flux (live et termine).
-function renderMatchCardEvents(match) {
-  const scorers = [...getTeamScorers(match, "home"), ...getTeamScorers(match, "away")];
-  const cards = [...getTeamCards(match, "home"), ...getTeamCards(match, "away")];
-  if (!scorers.length && !cards.length) return "";
+// Valeur de tri d'un fait de match a partir de sa minute ("45'+2'" -> 4502).
+function eventMinuteValue(text) {
+  const match = String(text ?? "").match(/(\d+)'(?:\s*\+\s*(\d+))?/);
+  if (!match) return Number.MAX_SAFE_INTEGER;
+  return Number(match[1]) * 100 + (match[2] ? Number(match[2]) : 0);
+}
 
-  const scorerTags = scorers.map((scorer) => `<span>⚽ ${escapeHtml(scorer)}</span>`);
-  const cardTags = cards.map(
-    (card) => `<span>${cardIcon(card.type)} ${escapeHtml([card.minute, card.player].filter(Boolean).join(" "))}</span>`,
+// Fusionne buts et cartons en une seule liste classee par minute.
+function mergeMatchEvents(scorers, cards) {
+  return [
+    ...scorers.map((scorer) => ({ sort: eventMinuteValue(scorer), text: `⚽ ${scorer}` })),
+    ...cards.map((card) => ({
+      sort: eventMinuteValue(card.minute),
+      text: `${cardIcon(card.type)} ${[card.minute, card.player].filter(Boolean).join(" ")}`,
+    })),
+  ].sort((a, b) => a.sort - b.sort);
+}
+
+// Bandeau buteurs + cartons affiche sur la carte du flux (live et termine), par minute.
+function renderMatchCardEvents(match) {
+  const events = mergeMatchEvents(
+    [...getTeamScorers(match, "home"), ...getTeamScorers(match, "away")],
+    [...getTeamCards(match, "home"), ...getTeamCards(match, "away")],
   );
+  if (!events.length) return "";
 
   return `
     <div class="match-card-scorers">
-      ${[...scorerTags, ...cardTags].join("")}
+      ${events.map((event) => `<span>${escapeHtml(event.text)}</span>`).join("")}
     </div>
   `;
 }
@@ -1826,16 +1841,11 @@ function renderMatchEvents(match) {
 }
 
 function renderMatchEventsSide(team, scorers, cards) {
-  const lines = [
-    ...scorers.map((scorer) => `<li>⚽ ${escapeHtml(scorer)}</li>`),
-    ...cards.map(
-      (card) => `<li>${cardIcon(card.type)} ${escapeHtml([card.minute, card.player].filter(Boolean).join(" "))}</li>`,
-    ),
-  ];
+  const events = mergeMatchEvents(scorers, cards);
   return `
     <div class="match-events-side">
       <h4>${renderTeamFlag(team, "flag-inline")} ${escapeHtml(displayTeamName(team))}</h4>
-      ${lines.length ? `<ul>${lines.join("")}</ul>` : `<p class="muted">—</p>`}
+      ${events.length ? `<ul>${events.map((event) => `<li>${escapeHtml(event.text)}</li>`).join("")}</ul>` : `<p class="muted">—</p>`}
     </div>
   `;
 }
