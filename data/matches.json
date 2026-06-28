@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-28T05:22:26.549288Z",
+  "lastUpdated": "2026-06-28T11:45:13.236103Z",
   "matches": [
     {
       "id": "400021443",
@@ -8721,7 +8721,7 @@
       "stage": "16es",
       "group": null,
       "date": "2026-06-29T17:00:00+00:00",
-      "venue": null,
+      "venue": "NRG Stadium",
       "city": null,
       "home": "Brésil",
       "away": "Japon",
@@ -8832,7 +8832,7 @@
       "stage": "16es",
       "group": null,
       "date": "2026-06-29T20:30:00+00:00",
-      "venue": null,
+      "venue": "Gillette Stadium",
       "city": null,
       "home": "Allemagne",
       "away": "Paraguay",
@@ -8943,8 +8943,8 @@
       "stage": "16es",
       "group": null,
       "date": "2026-06-30T01:00:00+00:00",
-      "venue": null,
-      "city": null,
+      "venue": "Estadio BBVA",
+      "city": "Monterrey",
       "home": "Pays-Bas",
       "away": "Maroc",
       "homeCoach": "R. Koeman",
@@ -9165,7 +9165,7 @@
       "stage": "16es",
       "group": null,
       "date": "2026-06-30T21:00:00+00:00",
-      "venue": null,
+      "venue": "MetLife Stadium",
       "city": null,
       "home": "France",
       "away": "Suède",
@@ -9276,8 +9276,8 @@
       "stage": "16es",
       "group": null,
       "date": "2026-07-01T01:00:00+00:00",
-      "venue": null,
-      "city": null,
+      "venue": "Estadio Banorte",
+      "city": "Mexico City",
       "home": "Mexique",
       "away": "Équateur",
       "homeCoach": "Javier Aguirre",
@@ -9387,7 +9387,7 @@
       "stage": "16es",
       "group": null,
       "date": "2026-07-01T16:00:00+00:00",
-      "venue": null,
+      "venue": "Mercedes-Benz Stadium",
       "city": null,
       "home": "Angleterre",
       "away": "RD Congo",
@@ -9498,7 +9498,7 @@
       "stage": "16es",
       "group": null,
       "date": "2026-07-01T20:00:00+00:00",
-      "venue": null,
+      "venue": "Lumen Field",
       "city": null,
       "home": "Belgique",
       "away": "Sénégal",
@@ -9716,11 +9716,122 @@
       ]
     },
     {
+      "id": "1567311",
+      "stage": "16es",
+      "group": null,
+      "date": "2026-07-02T19:00:00+00:00",
+      "venue": "SoFi Stadium",
+      "city": null,
+      "home": "Espagne",
+      "away": "Autriche",
+      "homeCoach": "Luis de la Fuente",
+      "awayCoach": "Ralf Rangnick",
+      "score": {
+        "home": null,
+        "away": null
+      },
+      "scorers": [],
+      "highlights": [],
+      "externalIds": {
+        "apiFootball": "1567311"
+      },
+      "status": "upcoming",
+      "minute": null,
+      "lineups": {
+        "home": {
+          "team": "Espagne",
+          "formation": null,
+          "players": []
+        },
+        "away": {
+          "team": "Autriche",
+          "formation": null,
+          "players": []
+        }
+      },
+      "probableLineups": {
+        "home": {
+          "team": "Espagne",
+          "formation": "4-2-3-1",
+          "players": [
+            "23. Unai Simón (G)",
+            "5. Marcos Llorente (D)",
+            "22. Pau Cubarsí (D)",
+            "14. Aymeric Laporte (D)",
+            "24. Marc Cucurella (D)",
+            "20. Pedri (M)",
+            "16. Rodri (M)",
+            "19. Lamine Yamal (M)",
+            "6. Mikel Merino (M)",
+            "15. Alex Baena (M)",
+            "21. Mikel Oyarzabal (F)"
+          ],
+          "source": "Dernière compo connue",
+          "sourceDate": "2026-06-27T00:00:00+00:00",
+          "sourceMatch": "Uruguay 0-1 Espagne"
+        },
+        "away": {
+          "team": "Autriche",
+          "formation": "4-2-3-1",
+          "players": [
+            "1. Alexander Schlager (G)",
+            "5. Stefan Posch (D)",
+            "15. Philipp Lienhart (D)",
+            "8. David Alaba (D)",
+            "16. Phillipp Mwene (D)",
+            "6. Nicolas Seiwald (M)",
+            "4. Xaver Schlager (M)",
+            "20. Konrad Laimer (M)",
+            "18. Romano Schmid (M)",
+            "9. Marcel Sabitzer (M)",
+            "7. Marko Arnautović (F)"
+          ],
+          "source": "Dernière compo connue",
+          "sourceDate": "2026-06-28T02:00:00+00:00",
+          "sourceMatch": "Algérie 3-3 Autriche"
+        }
+      },
+      "stats": {
+        "possession": {
+          "home": null,
+          "away": null
+        },
+        "shots": {
+          "home": null,
+          "away": null
+        },
+        "shotsOnTarget": {
+          "home": null,
+          "away": null
+        },
+        "corners": {
+          "home": null,
+          "away": null
+        },
+        "fouls": {
+          "home": null,
+          "away": null
+        }
+      },
+      "playerRatings": {
+        "home": [],
+        "away": []
+      },
+      "winProbability": {
+        "home": 45,
+        "draw": 45,
+        "away": 10
+      },
+      "expertDiscussion": [
+        "Double chance : Spain or draw"
+      ]
+    },
+    {
       "id": "1567309",
       "stage": "16es",
       "group": null,
       "date": "2026-07-02T23:00:00+00:00",
-      "venue": null,
+      "venue": "BMO Field",
       "city": null,
       "home": "Portugal",
       "away": "Croatie",
@@ -9824,6 +9935,117 @@
       },
       "expertDiscussion": [
         "Double chance : Portugal or draw"
+      ]
+    },
+    {
+      "id": "1567312",
+      "stage": "16es",
+      "group": null,
+      "date": "2026-07-03T03:00:00+00:00",
+      "venue": "BC Place",
+      "city": null,
+      "home": "Suisse",
+      "away": "Algérie",
+      "homeCoach": "Murat Yakin",
+      "awayCoach": "Vladimir Petkovic",
+      "score": {
+        "home": null,
+        "away": null
+      },
+      "scorers": [],
+      "highlights": [],
+      "externalIds": {
+        "apiFootball": "1567312"
+      },
+      "status": "upcoming",
+      "minute": null,
+      "lineups": {
+        "home": {
+          "team": "Suisse",
+          "formation": null,
+          "players": []
+        },
+        "away": {
+          "team": "Algérie",
+          "formation": null,
+          "players": []
+        }
+      },
+      "probableLineups": {
+        "home": {
+          "team": "Suisse",
+          "formation": "4-2-3-1",
+          "players": [
+            "1. Gregor Kobel (G)",
+            "25. Luca Jaquez (D)",
+            "4. Nico Elvedi (D)",
+            "5. Manuel Akanji (D)",
+            "13. Ricardo Rodríguez (D)",
+            "8. Remo Freuler (M)",
+            "10. Granit Xhaka (M)",
+            "15. Djibril Sow (M)",
+            "9. Johan Manzambi (M)",
+            "17. Rubén Vargas (M)",
+            "7. Breel Embolo (F)"
+          ],
+          "source": "Dernière compo connue",
+          "sourceDate": "2026-06-24T19:00:00+00:00",
+          "sourceMatch": "Suisse 2-1 Canada"
+        },
+        "away": {
+          "team": "Algérie",
+          "formation": "4-2-3-1",
+          "players": [
+            "16. Oussama Benbot (G)",
+            "17. Rafik Belghali (D)",
+            "2. Aïssa Mandi (D)",
+            "21. Ramy Bensebaini (D)",
+            "13. Jaouen Hadjam (D)",
+            "10. Farès Chaïbi (M)",
+            "19. Nabil Bentaleb (M)",
+            "7. Riyad Mahrez (M)",
+            "22. Ibrahim Maza (M)",
+            "8. Houssem Aouar (M)",
+            "9. Amine Gouiri (F)"
+          ],
+          "source": "Dernière compo connue",
+          "sourceDate": "2026-06-28T02:00:00+00:00",
+          "sourceMatch": "Algérie 3-3 Autriche"
+        }
+      },
+      "stats": {
+        "possession": {
+          "home": null,
+          "away": null
+        },
+        "shots": {
+          "home": null,
+          "away": null
+        },
+        "shotsOnTarget": {
+          "home": null,
+          "away": null
+        },
+        "corners": {
+          "home": null,
+          "away": null
+        },
+        "fouls": {
+          "home": null,
+          "away": null
+        }
+      },
+      "playerRatings": {
+        "home": [],
+        "away": []
+      },
+      "winProbability": {
+        "home": 45,
+        "draw": 45,
+        "away": 10
+      },
+      "expertDiscussion": [
+        "Combo Double chance : Switzerland or draw and +1.5 goals"
       ]
     },
     {
@@ -9942,7 +10164,7 @@
       "stage": "16es",
       "group": null,
       "date": "2026-07-03T22:00:00+00:00",
-      "venue": null,
+      "venue": "Hard Rock Stadium",
       "city": null,
       "home": "Argentine",
       "away": "Cap-Vert",
@@ -10053,7 +10275,7 @@
       "stage": "16es",
       "group": null,
       "date": "2026-07-04T01:30:00+00:00",
-      "venue": null,
+      "venue": "Arrowhead Stadium",
       "city": null,
       "home": "Colombie",
       "away": "Ghana",
@@ -10163,18 +10385,18 @@
   "knockout": {},
   "scheduleSync": {
     "provider": "api-football",
-    "checkedAt": "2026-06-28T05:22:25.578546Z",
+    "checkedAt": "2026-06-28T11:45:13.035255Z",
     "league": 1,
     "season": 2026,
-    "updatedMatches": 6,
-    "insertedMatches": 5,
-    "lineupsChecked": 4,
-    "lineupsUpdated": 4,
-    "fallbackLineups": 14
+    "updatedMatches": 10,
+    "insertedMatches": 2,
+    "lineupsChecked": 0,
+    "lineupsUpdated": 0,
+    "fallbackLineups": 16
   },
   "predictionSync": {
     "provider": "api-football",
-    "checkedAt": "2026-06-28T05:22:26.549288Z",
-    "updatedMatches": 5
+    "checkedAt": "2026-06-28T11:45:13.236103Z",
+    "updatedMatches": 2
   }
 }
