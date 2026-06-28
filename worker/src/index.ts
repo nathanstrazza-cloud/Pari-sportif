@@ -7,6 +7,7 @@ import {
   findPostMatchCandidates,
   getApiFixtureId,
   matchFixtures,
+  mergeBaseIntoCurrent,
   mergeLiveFixtures,
   parseDate,
   type Match,
@@ -296,25 +297,24 @@ async function syncLive(env: Env): Promise<void> {
     mustWrite = true;
   }
 
-  // 1) Passe du matin : adopte le calendrier finalise par Python (matchs a venir + scores passes).
-  if (data.workerMorningReseed !== today && nowDate.getUTCHours() >= reseedHour) {
+  // 1) Adoption du calendrier prepare par Python (base) : a CHAQUE changement de base
+  //    (baseSyncedAt, donc apres chaque passe Python, desormais horaire) + en filet de
+  //    securite une fois par jour apres reseedHour. Fusion non destructive : les matchs
+  //    live/termines gardent l'etat enrichi par le Worker, seuls les matchs a venir
+  //    adoptent le calendrier frais (horaires, lieux, equipes du tableau final).
+  {
     const base = await readJson(env, MATCHES_BASE);
     if (base) {
-      // On preserve les experts generes par l'IA (sinon ils seraient ecrases par la base Python).
-      const prevExperts = new Map<string, any>();
-      for (const m of Array.isArray(data.matches) ? data.matches : []) {
-        if (m.expertsAI && Array.isArray(m.expertDiscussion)) prevExperts.set(String(m.id), m.expertDiscussion);
+      const baseStamp = base.baseSyncedAt ?? null;
+      const baseChanged = baseStamp !== null && data.workerAdoptedBaseStamp !== baseStamp;
+      const dailyFallback = data.workerMorningReseed !== today && nowDate.getUTCHours() >= reseedHour;
+      if (baseChanged || dailyFallback) {
+        const merged = mergeBaseIntoCurrent(base, data);
+        merged.workerAdoptedBaseStamp = baseStamp ?? data.workerAdoptedBaseStamp ?? null;
+        merged.workerMorningReseed = today;
+        await env.MATCHES.put(MATCHES_CURRENT, JSON.stringify(merged));
+        return;
       }
-      for (const m of Array.isArray(base.matches) ? base.matches : []) {
-        const ed = prevExperts.get(String(m.id));
-        if (ed && m.status !== "finished") {
-          m.expertDiscussion = ed;
-          m.expertsAI = true;
-        }
-      }
-      base.workerMorningReseed = today;
-      await env.MATCHES.put(MATCHES_CURRENT, JSON.stringify(base));
-      return;
     }
   }
 

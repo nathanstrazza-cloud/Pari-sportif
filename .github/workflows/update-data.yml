@@ -10,7 +10,9 @@ on:
         default: prod
   schedule:
     # Run planifié : prod uniquement. La preprod ne se rafraîchit que manuellement.
-    - cron: "0 10 * * *"
+    # Toutes les heures : garde le calendrier (lieux/dates/tableau) et les classements
+    # frais en cours de journée. Le Worker adopte la base à chaque changement (baseSyncedAt).
+    - cron: "0 * * * *"
 
 permissions:
   contents: write

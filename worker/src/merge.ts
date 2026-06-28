@@ -171,6 +171,30 @@ export function mergeLiveFixtures(fixtures: Fixture[], candidates: Match[]): num
   return updated;
 }
 
+// Fusionne le calendrier frais (base, pousse par Python) dans l'etat servi (current),
+// SANS ecraser ce que le Worker a enrichi : un match live ou termine garde son etat de
+// current (score, buteurs, cartons, stats) ; un match a venir adopte la base (horaires,
+// lieux, equipes resolues du tableau final) en conservant les experts IA deja generes.
+export function mergeBaseIntoCurrent(base: Record<string, any>, current: Record<string, any>): Record<string, any> {
+  const currentById = new Map<string, Match>();
+  for (const m of Array.isArray(current.matches) ? current.matches : []) currentById.set(String(m.id), m);
+
+  const matches = (Array.isArray(base.matches) ? base.matches : []).map((bm: Match) => {
+    const cm = currentById.get(String(bm.id));
+    if (!cm) return bm;
+    // Match en cours ou termine : on garde l'etat enrichi par le Worker.
+    if (cm.status === "live" || cm.status === "finished") return cm;
+    // Match a venir : on adopte la base fraiche, mais on preserve les experts IA.
+    if (cm.expertsAI && Array.isArray(cm.expertDiscussion)) {
+      bm.expertDiscussion = cm.expertDiscussion;
+      bm.expertsAI = true;
+    }
+    return bm;
+  });
+
+  return { ...base, matches };
+}
+
 // Appaire chaque fixture API a son match local (pour enrichir buteurs/cartons/stats).
 export function matchFixtures(fixtures: Fixture[], candidates: Match[]): Array<{ match: Match; fixture: Fixture }> {
   const pairs: Array<{ match: Match; fixture: Fixture }> = [];

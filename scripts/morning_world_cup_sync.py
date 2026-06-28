@@ -53,6 +53,7 @@ def main():
     try:
         run_upcoming_once(args)
         run_competition_data_once(args, os.environ.get("API_FOOTBALL_KEY") or os.environ.get("APISPORTS_KEY"))
+        stamp_base_synced(args)
         write_today_kickoffs(args)
     except Exception as error:
         print(f"Erreur synchro du matin: {error}", file=sys.stderr)
@@ -63,6 +64,17 @@ def main():
         write_json(state_path, state)
 
     return 0
+
+
+# Estampille matches.json a chaque run (meme sans changement de donnees) : sert de
+# declencheur au reseed cote Worker (qui adopte la base des qu'elle change).
+def stamp_base_synced(args):
+    if args.dry_run:
+        return
+    matches_path = Path(args.matches)
+    data = json.loads(matches_path.read_text(encoding="utf-8"))
+    data["baseSyncedAt"] = datetime.utcnow().isoformat() + "Z"
+    write_json(matches_path, data)
 
 
 def write_today_kickoffs(args):
