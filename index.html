@@ -17,7 +17,7 @@
     <title>La Cote à Dédé</title>
     <link rel="manifest" href="manifest.json" />
     <link rel="icon" href="logo.PNG" type="image/png" />
-    <link rel="stylesheet" href="styles.css?v=32" />
+    <link rel="stylesheet" href="styles.css?v=33" />
   </head>
   <body class="auth-pending">
     <div class="loading-screen" id="loadingScreen" aria-live="polite">
@@ -150,6 +150,15 @@
         <div class="stage-tabs" id="stageTabs" role="tablist" aria-label="Tours du tableau final"></div>
         <div class="bracket-stage" id="bracketStage" aria-live="polite"></div>
       </section>
+
+      <footer class="page-footer">
+        <p>Fait par Nathnoisette en 2026</p>
+        <p>Site fun entre amis, sans argent — ni pari, ni incitation aux jeux d'argent.</p>
+        <p>
+          <a href="mentions-legales.html">Mentions légales</a> ·
+          <a href="confidentialite.html">Confidentialité</a>
+        </p>
+      </footer>
     </main>
 
     <div class="match-modal" id="matchModal" hidden>
@@ -188,14 +197,6 @@
         <img src="Tableau.PNG" alt="" />
         <span>Tableau final</span>
       </button>
-      <p class="footer-credit">Fait par Nathnoisette en 2026</p>
-      <p class="footer-credit" style="opacity:.8;">
-        Site fun entre amis, sans argent — ni pari, ni incitation aux jeux d'argent.
-      </p>
-      <p class="footer-credit">
-        <a href="mentions-legales.html">Mentions légales</a> ·
-        <a href="confidentialite.html">Confidentialité</a>
-      </p>
       <div class="account-widget" id="accountWidget" hidden>
         <button class="account-avatar-button" id="accountMenuButton" type="button" aria-label="Ouvrir le menu du compte" aria-expanded="false">
           <img id="accountAvatar" src="logo.PNG" alt="" />
