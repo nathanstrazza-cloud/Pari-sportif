@@ -37,6 +37,7 @@ const state = {
   refreshTimer: null,
   touchStartX: 0,
   lastRefresh: null,
+  dataLastUpdated: null,
   activeDetailTab: null,
   detailMatch: null,
 };
@@ -357,6 +358,8 @@ async function loadData() {
   state.betSuggestions = odds.betSuggestions && typeof odds.betSuggestions === "object" ? odds.betSuggestions : {};
   state.matchOdds = odds.matchOdds && typeof odds.matchOdds === "object" ? odds.matchOdds : {};
   state.lastRefresh = new Date();
+  // Horodatage de la derniere synchro des donnees cote serveur (Worker / passe Python).
+  state.dataLastUpdated = matches.lastUpdated || matches.liveSync?.checkedAt || null;
 }
 
 function buildKnockout(rawKnockout, matches, standings) {
@@ -952,7 +955,7 @@ function renderMatches() {
     : `<div class="empty-state">Aucun match disponible.</div>`;
   els.matchesList.onclick = handleMatchesListClick;
   els.matchesList.onkeydown = handleMatchesListKeydown;
-  window.requestAnimationFrame(scrollMatchesToUpcoming);
+  window.requestAnimationFrame(scrollMatchesToFocus);
 }
 
 function buildMatchesView() {
@@ -969,9 +972,10 @@ function buildMatchesView() {
 }
 
 function renderMatchesView(view) {
+  // Ordre du flux : passés, puis live (au centre, mis en avant), puis à venir.
   return [
-    view.live.length ? renderMatchFeedSection("En direct", view.live, "live") : "",
     view.finished.length ? renderMatchFeedSection("Terminés", view.finished, "finished") : "",
+    view.live.length ? renderMatchFeedSection("En direct", view.live, "live") : "",
     view.upcoming.length ? renderMatchFeedSection("À venir", view.upcoming, "upcoming") : "",
   ].filter(Boolean).join("");
 }
@@ -990,10 +994,13 @@ function renderMatchFeedSection(title, matches, section) {
   `;
 }
 
-function scrollMatchesToUpcoming() {
-  const upcoming = els.matchesList?.querySelector('[data-match-section="upcoming"]');
-  if (!upcoming) return;
-  upcoming.scrollIntoView({ block: "start" });
+function scrollMatchesToFocus() {
+  // Met en avant les matchs en direct s'il y en a, sinon les prochains a venir.
+  const target =
+    els.matchesList?.querySelector('[data-match-section="live"]') ||
+    els.matchesList?.querySelector('[data-match-section="upcoming"]');
+  if (!target) return;
+  target.scrollIntoView({ block: "start" });
 }
 
 function renderMatchFeed(feed) {
@@ -3141,7 +3148,7 @@ function setActiveTab(tab) {
   });
 
   if (tab === "matches") {
-    window.requestAnimationFrame(scrollMatchesToUpcoming);
+    window.requestAnimationFrame(scrollMatchesToFocus);
     return;
   }
 
@@ -3178,11 +3185,19 @@ async function refreshData() {
 function updateRefreshPill() {
   if (!els.refreshPill) return;
   const hasLiveMatch = state.matches.some((match) => match.status === "live");
-  const cadence = hasLiveMatch ? "30 s en live" : "3 min";
-  const time = state.lastRefresh
-    ? state.lastRefresh.toLocaleTimeString("fr-FR", { hour: "2-digit", minute: "2-digit" })
-    : "--:--";
-  els.refreshPill.textContent = `Synchronisation locale • ${cadence} • ${time}`;
+  const cadence = hasLiveMatch ? "30 s" : "3 min";
+  const synced = state.dataLastUpdated ? formatSyncStamp(state.dataLastUpdated) : "—";
+  els.refreshPill.textContent = `Données à jour : ${synced} • actualisation ${cadence}`;
+}
+
+// Horodatage lisible : heure seule si c'est aujourd'hui, sinon jour/mois + heure.
+function formatSyncStamp(value) {
+  const date = new Date(value);
+  if (Number.isNaN(date.getTime())) return "—";
+  const time = date.toLocaleTimeString("fr-FR", { hour: "2-digit", minute: "2-digit" });
+  const isToday = date.toDateString() === new Date().toDateString();
+  if (isToday) return time;
+  return `${date.toLocaleDateString("fr-FR", { day: "2-digit", month: "2-digit" })} à ${time}`;
 }
 
 function getSelectedMatch() {

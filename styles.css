@@ -305,6 +305,49 @@ body.is-authenticated .auth-overlay {
   background: rgba(220, 38, 38, 0.13);
 }
 
+/* Notice d'installation reprise dans le menu du compte (apres connexion). */
+.install-help-menu {
+  font-size: 0.8rem;
+  line-height: 1.5;
+  text-align: left;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 0.6rem 0.7rem;
+  color: var(--text);
+}
+
+.install-help-menu summary {
+  cursor: pointer;
+  font-weight: 700;
+  list-style: none;
+}
+
+.install-help-menu summary::-webkit-details-marker {
+  display: none;
+}
+
+.install-help-menu ol {
+  margin: 0.3rem 0 0;
+  padding-left: 1.2em;
+}
+
+.install-help-menu p {
+  margin: 0.65rem 0 0.25rem;
+}
+
+.install-help-menu .install-help-foot {
+  margin-top: 0.65rem;
+  color: var(--muted);
+}
+
+/* Bandeau "donnees a jour" sous le titre Matchs. */
+.refresh-pill {
+  margin: 0 0 0.6rem;
+  color: var(--muted);
+  font-size: 0.76rem;
+  font-weight: 700;
+}
+
 @keyframes spin {
   to {
     transform: rotate(1turn);
