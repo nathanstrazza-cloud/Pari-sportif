@@ -1840,12 +1840,52 @@ function renderMatchEvents(match) {
   `;
 }
 
+// Extrait nom / minute / penalty / csc d'une chaine de buteur ("23' But de X (Equipe) !").
+function parseScorerLine(raw) {
+  const text = String(raw ?? "");
+  const minuteMatch = text.match(/\d+'(?:\s*\+\s*\d+')?/);
+  const minute = minuteMatch ? minuteMatch[0].replace(/\s+/g, "") : "";
+  const penalty = /penalty/i.test(text);
+  const ownGoal = /contre son camp/i.test(text);
+  const player = text
+    .replace(/\d+'(?:\s*\+\s*\d+')?/, "")
+    .replace(/\bBut de\b/i, "")
+    .replace(/\([^()]*\)/g, "")
+    .replace(/transforme le penalty/i, "")
+    .replace(/marque contre son camp/i, "")
+    .replace(/[!.]/g, "")
+    .replace(/\s+/g, " ")
+    .trim();
+  return { minute, player, penalty, ownGoal };
+}
+
+// Une ligne d'evenement : icone + nom + minute + tag eventuel (S.P. / csc).
+function renderEventLine(icon, player, minute, tags) {
+  const tag = (tags || []).filter(Boolean).join(" ");
+  return `<li>${icon} <span class="event-player">${escapeHtml(player || "—")}</span>` +
+    `${minute ? ` <span class="event-minute">${escapeHtml(minute)}</span>` : ""}` +
+    `${tag ? ` <span class="event-tag">${escapeHtml(tag)}</span>` : ""}</li>`;
+}
+
+// Buts et cartons d'une equipe, classes par minute, sous le nom de l'equipe.
 function renderMatchEventsSide(team, scorers, cards) {
-  const events = mergeMatchEvents(scorers, cards);
+  const goals = scorers.map((scorer) => {
+    const info = parseScorerLine(scorer);
+    return {
+      sort: eventMinuteValue(info.minute),
+      html: renderEventLine("⚽", info.player, info.minute, [info.penalty ? "S.P." : "", info.ownGoal ? "csc" : ""]),
+    };
+  });
+  const cardLines = cards.map((card) => ({
+    sort: eventMinuteValue(card.minute),
+    html: renderEventLine(cardIcon(card.type), card.player, card.minute, []),
+  }));
+  const items = [...goals, ...cardLines].sort((a, b) => a.sort - b.sort);
+
   return `
     <div class="match-events-side">
       <h4>${renderTeamFlag(team, "flag-inline")} ${escapeHtml(displayTeamName(team))}</h4>
-      ${events.length ? `<ul>${events.map((event) => `<li>${escapeHtml(event.text)}</li>`).join("")}</ul>` : `<p class="muted">—</p>`}
+      ${items.length ? `<ul>${items.map((item) => item.html).join("")}</ul>` : `<p class="muted">—</p>`}
     </div>
   `;
 }

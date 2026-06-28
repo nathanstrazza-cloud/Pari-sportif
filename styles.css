@@ -1230,6 +1230,21 @@ h3 {
   color: var(--text);
 }
 
+.match-events-side .event-player {
+  font-weight: 700;
+}
+
+.match-events-side .event-minute {
+  color: var(--muted);
+  font-variant-numeric: tabular-nums;
+}
+
+.match-events-side .event-tag {
+  font-size: 0.7rem;
+  font-weight: 800;
+  color: var(--gold-light);
+}
+
 /* Detail : statistiques de match */
 .match-stats {
   display: grid;
