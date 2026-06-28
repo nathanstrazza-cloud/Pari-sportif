@@ -1,73 +1,18 @@
 {
-  "lastUpdated": "2026-06-27T21:49:39.780011Z",
+  "lastUpdated": "2026-06-28T05:22:30.200763Z",
   "timezone": "Europe/Paris",
-  "windowStart": "2026-06-27T12:00:00+02:00",
-  "windowEnd": "2026-06-28T12:00:00+02:00",
+  "windowStart": "2026-06-28T12:00:00+02:00",
+  "windowEnd": "2026-06-29T12:00:00+02:00",
   "matches": [
     {
-      "id": "1489420",
-      "date": "2026-06-27T21:00:00+00:00",
-      "localDate": "2026-06-27",
-      "localTime": "23:00",
-      "stage": "groupes",
-      "group": null,
-      "home": "Croatie",
-      "away": "Ghana",
-      "status": "live"
-    },
-    {
-      "id": "1489422",
-      "date": "2026-06-27T21:00:00+00:00",
-      "localDate": "2026-06-27",
-      "localTime": "23:00",
-      "stage": "groupes",
-      "group": null,
-      "home": "Panama",
-      "away": "Angleterre",
-      "status": "live"
-    },
-    {
-      "id": "1489419",
-      "date": "2026-06-27T23:30:00+00:00",
+      "id": "1561329",
+      "date": "2026-06-28T19:00:00+00:00",
       "localDate": "2026-06-28",
-      "localTime": "01:30",
-      "stage": "groupes",
+      "localTime": "21:00",
+      "stage": "16es",
       "group": null,
-      "home": "Colombie",
-      "away": "Portugal",
-      "status": "upcoming"
-    },
-    {
-      "id": "1539013",
-      "date": "2026-06-27T23:30:00+00:00",
-      "localDate": "2026-06-28",
-      "localTime": "01:30",
-      "stage": "groupes",
-      "group": null,
-      "home": "RD Congo",
-      "away": "Ouzbékistan",
-      "status": "upcoming"
-    },
-    {
-      "id": "1489418",
-      "date": "2026-06-28T02:00:00+00:00",
-      "localDate": "2026-06-28",
-      "localTime": "04:00",
-      "stage": "groupes",
-      "group": null,
-      "home": "Algérie",
-      "away": "Autriche",
-      "status": "upcoming"
-    },
-    {
-      "id": "1489421",
-      "date": "2026-06-28T02:00:00+00:00",
-      "localDate": "2026-06-28",
-      "localTime": "04:00",
-      "stage": "groupes",
-      "group": null,
-      "home": "Jordanie",
-      "away": "Argentine",
+      "home": "Afrique du Sud",
+      "away": "Canada",
       "status": "upcoming"
     }
   ]
