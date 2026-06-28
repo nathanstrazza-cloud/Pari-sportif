@@ -294,6 +294,7 @@ async function boot() {
   bindMatchModal();
   bindTeamModal();
   bindInstallPrompt();
+  bindForegroundRefresh();
 
   try {
     await loadData();
@@ -3219,6 +3220,18 @@ function scheduleRefresh() {
     await refreshData();
     scheduleRefresh();
   }, interval);
+}
+
+// Sur mobile, les timers se figent en arriere-plan. Au retour au premier plan
+// (ou retour en ligne), on rafraichit immediatement au lieu d'attendre le timer.
+function bindForegroundRefresh() {
+  const refreshNow = () => {
+    if (document.visibilityState !== "visible") return;
+    refreshData().finally(scheduleRefresh);
+  };
+  document.addEventListener("visibilitychange", refreshNow);
+  window.addEventListener("focus", refreshNow);
+  window.addEventListener("online", refreshNow);
 }
 
 async function refreshData() {

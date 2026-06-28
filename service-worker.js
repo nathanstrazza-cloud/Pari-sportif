@@ -1,4 +1,4 @@
-const CACHE_NAME = "pari-sportif-v28";
+const CACHE_NAME = "pari-sportif-v32";
 const APP_SHELL = [
   "./",
   "index.html",
@@ -35,6 +35,19 @@ self.addEventListener("activate", (event) => {
 
 self.addEventListener("fetch", (event) => {
   if (event.request.method !== "GET") return;
+
+  // Donnees live servies par les Workers Cloudflare : toujours le reseau, jamais le
+  // cache du service worker (sinon le live se fige meme avec networkFirst).
+  let url;
+  try {
+    url = new URL(event.request.url);
+  } catch (error) {
+    return;
+  }
+  if (url.hostname.endsWith(".workers.dev")) {
+    event.respondWith(fetch(event.request));
+    return;
+  }
 
   event.respondWith(networkFirst(event.request));
 });
