@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-28T20:03:50.022405Z",
+  "lastUpdated": "2026-06-28T21:45:50.949834Z",
   "matches": [
     {
       "id": "400021443",
@@ -8618,25 +8618,53 @@
       "awayCoach": "Jesse Marsch",
       "score": {
         "home": 0,
-        "away": 0
+        "away": 1
       },
       "scorers": [],
       "highlights": [],
       "externalIds": {
         "apiFootball": "1561329"
       },
-      "status": "live",
-      "minute": 45,
+      "status": "finished",
+      "minute": null,
       "lineups": {
         "home": {
           "team": "Afrique du Sud",
-          "formation": null,
-          "players": []
+          "formation": "4-2-3-1",
+          "players": [
+            "1. Ronwen Williams (G)",
+            "20. Khuliso Mudau (D)",
+            "21. Ime Okon (D)",
+            "14. Mbekezeli Mbokazi (D)",
+            "6. Aubrey Modiba (D)",
+            "4. Teboho Mokoena (M)",
+            "13. Sphephelo Sithole (M)",
+            "12. Thapelo Maseko (M)",
+            "10. Relebohile Mofokeng (M)",
+            "7. Oswin Appollis (M)",
+            "17. Evidence Makgopa (F)"
+          ],
+          "source": "Composition officielle",
+          "sourceDate": "2026-06-28T19:00:00+00:00"
         },
         "away": {
           "team": "Canada",
-          "formation": null,
-          "players": []
+          "formation": "4-4-2",
+          "players": [
+            "16. Maxime Crépeau (G)",
+            "2. Alistair Johnston (D)",
+            "15. Moise Bombito (D)",
+            "13. Derek Cornelius (D)",
+            "22. Richie Laryea (D)",
+            "17. Tajon Buchanan (M)",
+            "25. Nathan-Dylan Saliba (M)",
+            "7. Stephen Eustaquio (M)",
+            "11. Liam Millar (M)",
+            "10. Jonathan David (F)",
+            "12. Tani Oluwaseyi (F)"
+          ],
+          "source": "Composition officielle",
+          "sourceDate": "2026-06-28T19:00:00+00:00"
         }
       },
       "probableLineups": {
@@ -10385,13 +10413,13 @@
   "knockout": {},
   "scheduleSync": {
     "provider": "api-football",
-    "checkedAt": "2026-06-28T20:03:50.022405Z",
+    "checkedAt": "2026-06-28T21:45:50.949834Z",
     "league": 1,
     "season": 2026,
     "updatedMatches": 1,
     "insertedMatches": 0,
-    "lineupsChecked": 0,
-    "lineupsUpdated": 0,
+    "lineupsChecked": 1,
+    "lineupsUpdated": 1,
     "fallbackLineups": 0
   },
   "predictionSync": {
@@ -10399,5 +10427,5 @@
     "checkedAt": "2026-06-28T11:45:13.236103Z",
     "updatedMatches": 2
   },
-  "baseSyncedAt": "2026-06-28T20:03:54.543429Z"
+  "baseSyncedAt": "2026-06-28T21:45:54.245599Z"
 }

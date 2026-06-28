@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-28T20:03:50.366032Z",
+  "lastUpdated": "2026-06-28T21:45:51.244498Z",
   "source": "api-football",
   "topScorers": [
     {
@@ -51,6 +51,12 @@
       "goals": 3.0
     },
     {
+      "name": "J. David",
+      "team": "Canada",
+      "age": 25,
+      "goals": 3.0
+    },
+    {
       "name": "B. Brobbey",
       "team": "Pays-Bas",
       "age": 23,
@@ -60,12 +66,6 @@
       "name": "Matheus Cunha",
       "team": "Brésil",
       "age": 26,
-      "goals": 3.0
-    },
-    {
-      "name": "J. David",
-      "team": "Canada",
-      "age": 25,
       "goals": 3.0
     },
     {
@@ -155,6 +155,12 @@
       "assists": 2.0
     },
     {
+      "name": "N. Saliba",
+      "team": "Canada",
+      "age": 21,
+      "assists": 2.0
+    },
+    {
       "name": "Mohamed Salah",
       "team": "Égypte",
       "age": 33,
@@ -170,12 +176,6 @@
       "name": "I. Ndiaye",
       "team": "Sénégal",
       "age": 25,
-      "assists": 2.0
-    },
-    {
-      "name": "N. Saliba",
-      "team": "Canada",
-      "age": 21,
       "assists": 2.0
     },
     {
@@ -227,15 +227,15 @@
       "assists": 2.0
     },
     {
-      "name": "D. Dumfries",
-      "team": "Pays-Bas",
-      "age": 29,
-      "assists": 2.0
-    },
-    {
       "name": "H. Mejbri",
       "team": "Tunisie",
       "age": 22,
+      "assists": 2.0
+    },
+    {
+      "name": "D. Dumfries",
+      "team": "Pays-Bas",
+      "age": 29,
       "assists": 2.0
     },
     {
