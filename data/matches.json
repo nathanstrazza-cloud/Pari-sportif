@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-28T18:29:20.523649Z",
+  "lastUpdated": "2026-06-28T20:03:50.022405Z",
   "matches": [
     {
       "id": "400021443",
@@ -8617,16 +8617,16 @@
       "homeCoach": "Hugo Broos",
       "awayCoach": "Jesse Marsch",
       "score": {
-        "home": null,
-        "away": null
+        "home": 0,
+        "away": 0
       },
       "scorers": [],
       "highlights": [],
       "externalIds": {
         "apiFootball": "1561329"
       },
-      "status": "upcoming",
-      "minute": null,
+      "status": "live",
+      "minute": 45,
       "lineups": {
         "home": {
           "team": "Afrique du Sud",
@@ -10385,7 +10385,7 @@
   "knockout": {},
   "scheduleSync": {
     "provider": "api-football",
-    "checkedAt": "2026-06-28T18:29:20.523649Z",
+    "checkedAt": "2026-06-28T20:03:50.022405Z",
     "league": 1,
     "season": 2026,
     "updatedMatches": 1,
@@ -10399,5 +10399,5 @@
     "checkedAt": "2026-06-28T11:45:13.236103Z",
     "updatedMatches": 2
   },
-  "baseSyncedAt": "2026-06-28T18:29:25.607752Z"
+  "baseSyncedAt": "2026-06-28T20:03:54.543429Z"
 }
