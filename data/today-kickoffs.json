@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-29T18:55:53.359103Z",
+  "lastUpdated": "2026-06-29T20:46:07.256520Z",
   "timezone": "Europe/Paris",
   "windowStart": "2026-06-29T12:00:00+02:00",
   "windowEnd": "2026-06-30T12:00:00+02:00",
@@ -13,7 +13,7 @@
       "group": null,
       "home": "Brésil",
       "away": "Japon",
-      "status": "live"
+      "status": "finished"
     },
     {
       "id": "1565176",
@@ -24,7 +24,7 @@
       "group": null,
       "home": "Allemagne",
       "away": "Paraguay",
-      "status": "upcoming"
+      "status": "live"
     },
     {
       "id": "1562345",

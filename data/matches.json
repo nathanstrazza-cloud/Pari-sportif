@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-29T18:55:50.331176Z",
+  "lastUpdated": "2026-06-29T20:46:01.857859Z",
   "matches": [
     {
       "id": "400021443",
@@ -8754,9 +8754,9 @@
       "home": "Brésil",
       "away": "Japon",
       "homeCoach": "Carlo Ancelotti",
-      "awayCoach": "H. Moriyasu",
+      "awayCoach": "Hajime Moriyasu",
       "score": {
-        "home": 1,
+        "home": 2,
         "away": 1
       },
       "scorers": [],
@@ -8764,18 +8764,46 @@
       "externalIds": {
         "apiFootball": "1562344"
       },
-      "status": "live",
-      "minute": 90,
+      "status": "finished",
+      "minute": null,
       "lineups": {
         "home": {
           "team": "Brésil",
-          "formation": null,
-          "players": []
+          "formation": "4-3-3",
+          "players": [
+            "1. Alisson (G)",
+            "13. Danilo (D)",
+            "4. Marquinhos (D)",
+            "3. Gabriel Magalhães (D)",
+            "16. Douglas Santos (D)",
+            "8. Bruno Guimarães (M)",
+            "5. Casemiro (M)",
+            "20. Lucas Paquetá (M)",
+            "26. Rayan (F)",
+            "9. Matheus Cunha (F)",
+            "7. Vinícius Júnior (F)"
+          ],
+          "source": "Composition officielle",
+          "sourceDate": "2026-06-29T17:00:00+00:00"
         },
         "away": {
           "team": "Japon",
-          "formation": null,
-          "players": []
+          "formation": "3-4-2-1",
+          "players": [
+            "1. Zion Suzuki (G)",
+            "22. Takehiro Tomiyasu (D)",
+            "3. Shogo Taniguchi (D)",
+            "21. Hiroki Itō (D)",
+            "10. Ritsu Doan (M)",
+            "24. Kaishu Sano (M)",
+            "15. Daichi Kamada (M)",
+            "13. Keito Nakamura (M)",
+            "14. Junya Ito (F)",
+            "11. Daizen Maeda (F)",
+            "18. Ayase Ueda (F)"
+          ],
+          "source": "Composition officielle",
+          "sourceDate": "2026-06-29T17:00:00+00:00"
         }
       },
       "probableLineups": {
@@ -8864,29 +8892,57 @@
       "city": "Boston",
       "home": "Allemagne",
       "away": "Paraguay",
-      "homeCoach": "J. Nagelsmann",
-      "awayCoach": "G. Alfaro",
+      "homeCoach": "Julian Nagelsmann",
+      "awayCoach": "Gustavo Alfaro",
       "score": {
-        "home": null,
-        "away": null
+        "home": 0,
+        "away": 0
       },
       "scorers": [],
       "highlights": [],
       "externalIds": {
         "apiFootball": "1565176"
       },
-      "status": "upcoming",
-      "minute": null,
+      "status": "live",
+      "minute": 16,
       "lineups": {
         "home": {
           "team": "Allemagne",
-          "formation": null,
-          "players": []
+          "formation": "4-2-3-1",
+          "players": [
+            "1. Manuel Neuer (G)",
+            "6. Joshua Kimmich (D)",
+            "2. Antonio Rüdiger (D)",
+            "4. Jonathan Tah (D)",
+            "18. Nathaniel Brown (D)",
+            "23. Felix Nmecha (M)",
+            "5. Aleksandar Pavlović (M)",
+            "19. Leroy Sané (M)",
+            "26. Deniz Undav (M)",
+            "17. Florian Wirtz (M)",
+            "7. Kai Havertz (F)"
+          ],
+          "source": "Composition officielle",
+          "sourceDate": "2026-06-29T20:30:00+00:00"
         },
         "away": {
           "team": "Paraguay",
-          "formation": null,
-          "players": []
+          "formation": "4-1-4-1",
+          "players": [
+            "12. Orlando Gill (G)",
+            "4. Juan Cáceres (D)",
+            "15. Gustavo Gómez (D)",
+            "13. José Canale (D)",
+            "6. Junior Alonso (D)",
+            "14. Andrés Cubas (M)",
+            "10. Miguel Almirón (M)",
+            "16. Damián Bobadilla (M)",
+            "23. Matías Galarza (M)",
+            "19. Julio Enciso (M)",
+            "21. Gabriel Ávalos (F)"
+          ],
+          "source": "Composition officielle",
+          "sourceDate": "2026-06-29T20:30:00+00:00"
         }
       },
       "probableLineups": {
@@ -10413,13 +10469,13 @@
   "knockout": {},
   "scheduleSync": {
     "provider": "api-football",
-    "checkedAt": "2026-06-29T18:55:50.331176Z",
+    "checkedAt": "2026-06-29T20:46:01.857859Z",
     "league": 1,
     "season": 2026,
-    "updatedMatches": 1,
+    "updatedMatches": 2,
     "insertedMatches": 0,
-    "lineupsChecked": 0,
-    "lineupsUpdated": 0,
+    "lineupsChecked": 2,
+    "lineupsUpdated": 2,
     "fallbackLineups": 0
   },
   "predictionSync": {
@@ -10427,5 +10483,5 @@
     "checkedAt": "2026-06-28T11:45:13.236103Z",
     "updatedMatches": 2
   },
-  "baseSyncedAt": "2026-06-29T18:55:53.348510Z"
+  "baseSyncedAt": "2026-06-29T20:46:07.246236Z"
 }

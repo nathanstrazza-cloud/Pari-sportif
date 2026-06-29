@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-29T18:55:50.539585Z",
+  "lastUpdated": "2026-06-29T20:46:02.911330Z",
   "source": "api-football",
   "topScorers": [
     {
@@ -15,15 +15,15 @@
       "goals": 4.0
     },
     {
-      "name": "O. Dembélé",
-      "team": "France",
-      "age": 28,
-      "goals": 4.0
-    },
-    {
       "name": "Vinícius Júnior",
       "team": "Brésil",
       "age": 25,
+      "goals": 4.0
+    },
+    {
+      "name": "O. Dembélé",
+      "team": "France",
+      "age": 28,
       "goals": 4.0
     },
     {
@@ -51,6 +51,12 @@
       "goals": 3.0
     },
     {
+      "name": "Matheus Cunha",
+      "team": "Brésil",
+      "age": 26,
+      "goals": 3.0
+    },
+    {
       "name": "J. David",
       "team": "Canada",
       "age": 25,
@@ -60,12 +66,6 @@
       "name": "B. Brobbey",
       "team": "Pays-Bas",
       "age": 23,
-      "goals": 3.0
-    },
-    {
-      "name": "Matheus Cunha",
-      "team": "Brésil",
-      "age": 26,
       "goals": 3.0
     },
     {
@@ -93,6 +93,12 @@
       "goals": 3.0
     },
     {
+      "name": "A. Ueda",
+      "team": "Japon",
+      "age": 27,
+      "goals": 2.0
+    },
+    {
       "name": "C. Summerville",
       "team": "Pays-Bas",
       "age": 24,
@@ -115,15 +121,15 @@
       "team": "Algérie",
       "age": 34,
       "goals": 2.0
-    },
-    {
-      "name": "Mikel Oyarzabal",
-      "team": "Espagne",
-      "age": 28,
-      "goals": 2.0
     }
   ],
   "topAssists": [
+    {
+      "name": "Bruno Guimarães",
+      "team": "Brésil",
+      "age": 28,
+      "assists": 4.0
+    },
     {
       "name": "A. Isak",
       "team": "Suède",
@@ -134,12 +140,6 @@
       "name": "M. Olise",
       "team": "France",
       "age": 24,
-      "assists": 3.0
-    },
-    {
-      "name": "Bruno Guimarães",
-      "team": "Brésil",
-      "age": 28,
       "assists": 3.0
     },
     {
