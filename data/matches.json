@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-29T20:46:01.857859Z",
+  "lastUpdated": "2026-06-29T22:01:44.107128Z",
   "matches": [
     {
       "id": "400021443",
@@ -8895,8 +8895,8 @@
       "homeCoach": "Julian Nagelsmann",
       "awayCoach": "Gustavo Alfaro",
       "score": {
-        "home": 0,
-        "away": 0
+        "home": 1,
+        "away": 1
       },
       "scorers": [],
       "highlights": [],
@@ -8904,7 +8904,7 @@
         "apiFootball": "1565176"
       },
       "status": "live",
-      "minute": 16,
+      "minute": 69,
       "lineups": {
         "home": {
           "team": "Allemagne",
@@ -10469,13 +10469,13 @@
   "knockout": {},
   "scheduleSync": {
     "provider": "api-football",
-    "checkedAt": "2026-06-29T20:46:01.857859Z",
+    "checkedAt": "2026-06-29T22:01:44.107128Z",
     "league": 1,
     "season": 2026,
-    "updatedMatches": 2,
+    "updatedMatches": 1,
     "insertedMatches": 0,
-    "lineupsChecked": 2,
-    "lineupsUpdated": 2,
+    "lineupsChecked": 0,
+    "lineupsUpdated": 0,
     "fallbackLineups": 0
   },
   "predictionSync": {
@@ -10483,5 +10483,5 @@
     "checkedAt": "2026-06-28T11:45:13.236103Z",
     "updatedMatches": 2
   },
-  "baseSyncedAt": "2026-06-29T20:46:07.246236Z"
+  "baseSyncedAt": "2026-06-29T22:01:46.907306Z"
 }

@@ -1,40 +1,40 @@
 {
-  "lastUpdated": "2026-06-29T20:46:07.256520Z",
+  "lastUpdated": "2026-06-29T22:01:46.918103Z",
   "timezone": "Europe/Paris",
-  "windowStart": "2026-06-29T12:00:00+02:00",
-  "windowEnd": "2026-06-30T12:00:00+02:00",
+  "windowStart": "2026-06-30T12:00:00+02:00",
+  "windowEnd": "2026-07-01T12:00:00+02:00",
   "matches": [
     {
-      "id": "1562344",
-      "date": "2026-06-29T17:00:00+00:00",
-      "localDate": "2026-06-29",
+      "id": "1564789",
+      "date": "2026-06-30T17:00:00+00:00",
+      "localDate": "2026-06-30",
       "localTime": "19:00",
       "stage": "16es",
       "group": null,
-      "home": "Brésil",
-      "away": "Japon",
-      "status": "finished"
+      "home": "Côte d’Ivoire",
+      "away": "Norvège",
+      "status": "upcoming"
     },
     {
-      "id": "1565176",
-      "date": "2026-06-29T20:30:00+00:00",
-      "localDate": "2026-06-29",
-      "localTime": "22:30",
+      "id": "1565177",
+      "date": "2026-06-30T21:00:00+00:00",
+      "localDate": "2026-06-30",
+      "localTime": "23:00",
       "stage": "16es",
       "group": null,
-      "home": "Allemagne",
-      "away": "Paraguay",
-      "status": "live"
+      "home": "France",
+      "away": "Suède",
+      "status": "upcoming"
     },
     {
-      "id": "1562345",
-      "date": "2026-06-30T01:00:00+00:00",
-      "localDate": "2026-06-30",
+      "id": "1567306",
+      "date": "2026-07-01T01:00:00+00:00",
+      "localDate": "2026-07-01",
       "localTime": "03:00",
       "stage": "16es",
       "group": null,
-      "home": "Pays-Bas",
-      "away": "Maroc",
+      "home": "Mexique",
+      "away": "Équateur",
       "status": "upcoming"
     }
   ]
