@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-29T22:01:44.301840Z",
+  "lastUpdated": "2026-06-29T23:50:09.992078Z",
   "source": "api-football",
   "topScorers": [
     {
@@ -81,6 +81,12 @@
       "goals": 3.0
     },
     {
+      "name": "K. Havertz",
+      "team": "Allemagne",
+      "age": 26,
+      "goals": 3.0
+    },
+    {
       "name": "H. Kane",
       "team": "Angleterre",
       "age": 32,
@@ -115,12 +121,6 @@
       "team": "Suisse",
       "age": 27,
       "goals": 2.0
-    },
-    {
-      "name": "R. Mahrez",
-      "team": "Algérie",
-      "age": 34,
-      "goals": 2.0
     }
   ],
   "topAssists": [
@@ -134,6 +134,12 @@
       "name": "A. Isak",
       "team": "Suède",
       "age": 26,
+      "assists": 3.0
+    },
+    {
+      "name": "F. Wirtz",
+      "team": "Allemagne",
+      "age": 22,
       "assists": 3.0
     },
     {
@@ -152,6 +158,12 @@
       "name": "D. Undav",
       "team": "Allemagne",
       "age": 29,
+      "assists": 2.0
+    },
+    {
+      "name": "J. Enciso",
+      "team": "Paraguay",
+      "age": 21,
       "assists": 2.0
     },
     {
@@ -185,6 +197,12 @@
       "assists": 2.0
     },
     {
+      "name": "J. Kimmich",
+      "team": "Allemagne",
+      "age": 30,
+      "assists": 2.0
+    },
+    {
       "name": "B. Saka",
       "team": "Angleterre",
       "age": 24,
@@ -194,18 +212,6 @@
       "name": "Brahim Díaz",
       "team": "Maroc",
       "age": 26,
-      "assists": 2.0
-    },
-    {
-      "name": "J. Kimmich",
-      "team": "Allemagne",
-      "age": 30,
-      "assists": 2.0
-    },
-    {
-      "name": "F. Wirtz",
-      "team": "Allemagne",
-      "age": 22,
       "assists": 2.0
     },
     {
@@ -221,21 +227,15 @@
       "assists": 2.0
     },
     {
-      "name": "J. Enciso",
-      "team": "Paraguay",
-      "age": 21,
+      "name": "D. Dumfries",
+      "team": "Pays-Bas",
+      "age": 29,
       "assists": 2.0
     },
     {
       "name": "H. Mejbri",
       "team": "Tunisie",
       "age": 22,
-      "assists": 2.0
-    },
-    {
-      "name": "D. Dumfries",
-      "team": "Pays-Bas",
-      "age": 29,
       "assists": 2.0
     },
     {

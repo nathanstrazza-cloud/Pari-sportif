@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-29T22:01:44.107128Z",
+  "lastUpdated": "2026-06-29T23:50:09.741008Z",
   "matches": [
     {
       "id": "400021443",
@@ -8903,8 +8903,8 @@
       "externalIds": {
         "apiFootball": "1565176"
       },
-      "status": "live",
-      "minute": 69,
+      "status": "finished",
+      "minute": null,
       "lineups": {
         "home": {
           "team": "Allemagne",
@@ -10469,7 +10469,7 @@
   "knockout": {},
   "scheduleSync": {
     "provider": "api-football",
-    "checkedAt": "2026-06-29T22:01:44.107128Z",
+    "checkedAt": "2026-06-29T23:50:09.741008Z",
     "league": 1,
     "season": 2026,
     "updatedMatches": 1,
@@ -10483,5 +10483,5 @@
     "checkedAt": "2026-06-28T11:45:13.236103Z",
     "updatedMatches": 2
   },
-  "baseSyncedAt": "2026-06-29T22:01:46.907306Z"
+  "baseSyncedAt": "2026-06-29T23:50:12.661234Z"
 }
