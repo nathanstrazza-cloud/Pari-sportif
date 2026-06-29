@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-28T23:56:54.015701Z",
+  "lastUpdated": "2026-06-29T02:43:11.469478Z",
   "source": "api-football",
   "markets": {
     "1489394": [
@@ -34,38 +34,6 @@
         "away": 1.45
       }
     ],
-    "1489397": [
-      {
-        "bookmaker": "10Bet",
-        "home": 1.1,
-        "draw": 9.8,
-        "away": 17.5
-      },
-      {
-        "bookmaker": "William Hill",
-        "home": 1.08,
-        "draw": 10.0,
-        "away": 29.0
-      },
-      {
-        "bookmaker": "Bet365",
-        "home": 1.1,
-        "draw": 10.0,
-        "away": 21.0
-      },
-      {
-        "bookmaker": "Marathonbet",
-        "home": 1.1,
-        "draw": 11.25,
-        "away": 38.0
-      },
-      {
-        "bookmaker": "Unibet",
-        "home": 1.08,
-        "draw": 11.5,
-        "away": 26.0
-      }
-    ],
     "1489395": [
       {
         "bookmaker": "10Bet",
@@ -96,38 +64,6 @@
         "home": 1.4,
         "draw": 4.6,
         "away": 8.5
-      }
-    ],
-    "1489398": [
-      {
-        "bookmaker": "10Bet",
-        "home": 1.39,
-        "draw": 4.2,
-        "away": 8.8
-      },
-      {
-        "bookmaker": "William Hill",
-        "home": 1.4,
-        "draw": 4.0,
-        "away": 8.5
-      },
-      {
-        "bookmaker": "Bet365",
-        "home": 1.4,
-        "draw": 4.33,
-        "away": 9.0
-      },
-      {
-        "bookmaker": "Marathonbet",
-        "home": 1.43,
-        "draw": 4.5,
-        "away": 9.6
-      },
-      {
-        "bookmaker": "Unibet",
-        "home": 1.4,
-        "draw": 4.3,
-        "away": 9.5
       }
     ],
     "1489396": [
@@ -162,6 +98,70 @@
         "away": 1.58
       }
     ],
+    "1489397": [
+      {
+        "bookmaker": "10Bet",
+        "home": 1.1,
+        "draw": 9.8,
+        "away": 17.5
+      },
+      {
+        "bookmaker": "William Hill",
+        "home": 1.08,
+        "draw": 10.0,
+        "away": 29.0
+      },
+      {
+        "bookmaker": "Bet365",
+        "home": 1.1,
+        "draw": 10.0,
+        "away": 21.0
+      },
+      {
+        "bookmaker": "Marathonbet",
+        "home": 1.1,
+        "draw": 11.25,
+        "away": 38.0
+      },
+      {
+        "bookmaker": "Unibet",
+        "home": 1.08,
+        "draw": 11.5,
+        "away": 26.0
+      }
+    ],
+    "1489398": [
+      {
+        "bookmaker": "10Bet",
+        "home": 1.39,
+        "draw": 4.2,
+        "away": 8.8
+      },
+      {
+        "bookmaker": "William Hill",
+        "home": 1.4,
+        "draw": 4.0,
+        "away": 8.5
+      },
+      {
+        "bookmaker": "Bet365",
+        "home": 1.4,
+        "draw": 4.33,
+        "away": 9.0
+      },
+      {
+        "bookmaker": "Marathonbet",
+        "home": 1.43,
+        "draw": 4.5,
+        "away": 9.6
+      },
+      {
+        "bookmaker": "Unibet",
+        "home": 1.4,
+        "draw": 4.3,
+        "away": 9.5
+      }
+    ],
     "1489399": [
       {
         "bookmaker": "10Bet",
@@ -194,38 +194,6 @@
         "away": 7.5
       }
     ],
-    "1489401": [
-      {
-        "bookmaker": "10Bet",
-        "home": 2.2,
-        "draw": 3.35,
-        "away": 3.2
-      },
-      {
-        "bookmaker": "William Hill",
-        "home": 2.25,
-        "draw": 3.25,
-        "away": 3.1
-      },
-      {
-        "bookmaker": "Bet365",
-        "home": 2.25,
-        "draw": 3.5,
-        "away": 3.1
-      },
-      {
-        "bookmaker": "Marathonbet",
-        "home": 2.31,
-        "draw": 3.44,
-        "away": 3.3
-      },
-      {
-        "bookmaker": "Unibet",
-        "home": 2.23,
-        "draw": 3.3,
-        "away": 3.3
-      }
-    ],
     "1489400": [
       {
         "bookmaker": "10Bet",
@@ -256,6 +224,38 @@
         "home": 6.5,
         "draw": 4.25,
         "away": 1.5
+      }
+    ],
+    "1489401": [
+      {
+        "bookmaker": "10Bet",
+        "home": 2.2,
+        "draw": 3.35,
+        "away": 3.2
+      },
+      {
+        "bookmaker": "William Hill",
+        "home": 2.25,
+        "draw": 3.25,
+        "away": 3.1
+      },
+      {
+        "bookmaker": "Bet365",
+        "home": 2.25,
+        "draw": 3.5,
+        "away": 3.1
+      },
+      {
+        "bookmaker": "Marathonbet",
+        "home": 2.31,
+        "draw": 3.44,
+        "away": 3.3
+      },
+      {
+        "bookmaker": "Unibet",
+        "home": 2.23,
+        "draw": 3.3,
+        "away": 3.3
       }
     ],
     "1489402": [
