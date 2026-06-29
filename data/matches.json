@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-29T12:20:46.417566Z",
+  "lastUpdated": "2026-06-29T18:55:50.331176Z",
   "matches": [
     {
       "id": "400021443",
@@ -8756,16 +8756,16 @@
       "homeCoach": "Carlo Ancelotti",
       "awayCoach": "H. Moriyasu",
       "score": {
-        "home": null,
-        "away": null
+        "home": 1,
+        "away": 1
       },
       "scorers": [],
       "highlights": [],
       "externalIds": {
         "apiFootball": "1562344"
       },
-      "status": "upcoming",
-      "minute": null,
+      "status": "live",
+      "minute": 90,
       "lineups": {
         "home": {
           "team": "Brésil",
@@ -10413,10 +10413,10 @@
   "knockout": {},
   "scheduleSync": {
     "provider": "api-football",
-    "checkedAt": "2026-06-29T16:30:55.716220Z",
+    "checkedAt": "2026-06-29T18:55:50.331176Z",
     "league": 1,
     "season": 2026,
-    "updatedMatches": 0,
+    "updatedMatches": 1,
     "insertedMatches": 0,
     "lineupsChecked": 0,
     "lineupsUpdated": 0,
@@ -10427,5 +10427,5 @@
     "checkedAt": "2026-06-28T11:45:13.236103Z",
     "updatedMatches": 2
   },
-  "baseSyncedAt": "2026-06-29T16:30:59.101357Z"
+  "baseSyncedAt": "2026-06-29T18:55:53.348510Z"
 }
