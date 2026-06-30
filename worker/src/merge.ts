@@ -152,6 +152,14 @@ function applyFixture(match: Match, fixture: Fixture): void {
   match.score.home = goals.home ?? null;
   match.score.away = goals.away ?? null;
 
+  // Tirs au but (matchs a elimination directe a egalite apres prolongation) :
+  // sert a designer le vainqueur quand le score reglementaire est nul.
+  const penalty = fixture?.score?.penalty ?? {};
+  match.penalties =
+    penalty.home !== null && penalty.home !== undefined && penalty.away !== null && penalty.away !== undefined
+      ? { home: penalty.home, away: penalty.away }
+      : null;
+
   const fixtureId = fixture?.fixture?.id;
   if (fixtureId) {
     if (!match.externalIds || typeof match.externalIds !== "object") match.externalIds = {};
@@ -182,6 +190,19 @@ export function mergeBaseIntoCurrent(base: Record<string, any>, current: Record<
   const matches = (Array.isArray(base.matches) ? base.matches : []).map((bm: Match) => {
     const cm = currentById.get(String(bm.id));
     if (!cm) return bm;
+    // Match termine cote base mais reste "live" cote current : le rattrapage
+    // apres-match a ete manque (prolongation/t.a.b. au-dela de la fenetre, hoquet
+    // API...). On adopte le statut + score final de la base pour debloquer le match,
+    // tout en gardant l'enrichissement deja accumule (buteurs, cartons, stats).
+    if (bm.status === "finished" && cm.status === "live") {
+      return {
+        ...cm,
+        status: "finished",
+        minute: null,
+        score: bm.score ?? cm.score,
+        penalties: bm.penalties ?? cm.penalties ?? null,
+      };
+    }
     // Match en cours ou termine : on garde l'etat enrichi par le Worker.
     if (cm.status === "live" || cm.status === "finished") return cm;
     // Match a venir : on adopte la base fraiche, mais on preserve les experts IA.

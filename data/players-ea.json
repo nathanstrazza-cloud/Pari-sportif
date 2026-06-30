@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-28T18:29:20.927603Z",
+  "lastUpdated": "2026-06-30T13:01:17.001206Z",
   "source": "api-football",
   "topScorers": [
     {
@@ -15,15 +15,15 @@
       "goals": 4.0
     },
     {
-      "name": "O. Dembélé",
-      "team": "France",
-      "age": 28,
-      "goals": 4.0
-    },
-    {
       "name": "Vinícius Júnior",
       "team": "Brésil",
       "age": 25,
+      "goals": 4.0
+    },
+    {
+      "name": "O. Dembélé",
+      "team": "France",
+      "age": 28,
       "goals": 4.0
     },
     {
@@ -36,6 +36,12 @@
       "name": "D. Undav",
       "team": "Allemagne",
       "age": 29,
+      "goals": 3.0
+    },
+    {
+      "name": "C. Gakpo",
+      "team": "Pays-Bas",
+      "age": 26,
       "goals": 3.0
     },
     {
@@ -81,6 +87,12 @@
       "goals": 3.0
     },
     {
+      "name": "K. Havertz",
+      "team": "Allemagne",
+      "age": 26,
+      "goals": 3.0
+    },
+    {
       "name": "H. Kane",
       "team": "Angleterre",
       "age": 32,
@@ -99,31 +111,25 @@
       "goals": 2.0
     },
     {
-      "name": "P. Gueye",
-      "team": "Sénégal",
-      "age": 26,
-      "goals": 2.0
-    },
-    {
-      "name": "R. Vargas",
-      "team": "Suisse",
+      "name": "A. Ueda",
+      "team": "Japon",
       "age": 27,
       "goals": 2.0
     },
     {
-      "name": "R. Mahrez",
-      "team": "Algérie",
-      "age": 34,
-      "goals": 2.0
-    },
-    {
-      "name": "Mikel Oyarzabal",
-      "team": "Espagne",
-      "age": 28,
+      "name": "P. Gueye",
+      "team": "Sénégal",
+      "age": 26,
       "goals": 2.0
     }
   ],
   "topAssists": [
+    {
+      "name": "Bruno Guimarães",
+      "team": "Brésil",
+      "age": 28,
+      "assists": 4.0
+    },
     {
       "name": "A. Isak",
       "team": "Suède",
@@ -131,15 +137,15 @@
       "assists": 3.0
     },
     {
-      "name": "M. Olise",
-      "team": "France",
-      "age": 24,
+      "name": "F. Wirtz",
+      "team": "Allemagne",
+      "age": 22,
       "assists": 3.0
     },
     {
-      "name": "Bruno Guimarães",
-      "team": "Brésil",
-      "age": 28,
+      "name": "M. Olise",
+      "team": "France",
+      "age": 24,
       "assists": 3.0
     },
     {
@@ -155,9 +161,27 @@
       "assists": 2.0
     },
     {
+      "name": "C. Summerville",
+      "team": "Pays-Bas",
+      "age": 24,
+      "assists": 2.0
+    },
+    {
+      "name": "J. Enciso",
+      "team": "Paraguay",
+      "age": 21,
+      "assists": 2.0
+    },
+    {
       "name": "N. Saliba",
       "team": "Canada",
       "age": 21,
+      "assists": 2.0
+    },
+    {
+      "name": "Mohamed Salah",
+      "team": "Égypte",
+      "age": 33,
       "assists": 2.0
     },
     {
@@ -173,21 +197,9 @@
       "assists": 2.0
     },
     {
-      "name": "N. Saliba",
-      "team": "Canada",
-      "age": 21,
-      "assists": 2.0
-    },
-    {
       "name": "B. Embolo",
       "team": "Suisse",
       "age": 28,
-      "assists": 2.0
-    },
-    {
-      "name": "B. Saka",
-      "team": "Angleterre",
-      "age": 24,
       "assists": 2.0
     },
     {
@@ -197,33 +209,15 @@
       "assists": 2.0
     },
     {
-      "name": "J. Kimmich",
-      "team": "Allemagne",
-      "age": 30,
-      "assists": 2.0
-    },
-    {
-      "name": "F. Wirtz",
-      "team": "Allemagne",
-      "age": 22,
-      "assists": 2.0
-    },
-    {
-      "name": "R. Alvarado",
-      "team": "Mexique",
-      "age": 27,
-      "assists": 2.0
-    },
-    {
       "name": "R. Gravenberch",
       "team": "Pays-Bas",
       "age": 23,
       "assists": 2.0
     },
     {
-      "name": "J. Enciso",
-      "team": "Paraguay",
-      "age": 21,
+      "name": "J. Kimmich",
+      "team": "Allemagne",
+      "age": 30,
       "assists": 2.0
     },
     {
@@ -233,9 +227,15 @@
       "assists": 2.0
     },
     {
-      "name": "H. Mejbri",
-      "team": "Tunisie",
-      "age": 22,
+      "name": "B. Saka",
+      "team": "Angleterre",
+      "age": 24,
+      "assists": 2.0
+    },
+    {
+      "name": "R. Alvarado",
+      "team": "Mexique",
+      "age": 27,
       "assists": 2.0
     },
     {

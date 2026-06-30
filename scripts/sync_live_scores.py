@@ -526,6 +526,14 @@ def apply_fixture(match, fixture):
     match["score"]["home"] = goals.get("home")
     match["score"]["away"] = goals.get("away")
 
+    # Tirs au but (elimination directe a egalite apres prolongation) : sert a
+    # designer le vainqueur cote front quand le score reglementaire est nul.
+    penalty = (fixture.get("score") or {}).get("penalty") or {}
+    if penalty.get("home") is not None and penalty.get("away") is not None:
+        match["penalties"] = {"home": penalty.get("home"), "away": penalty.get("away")}
+    else:
+        match["penalties"] = None
+
     fixture_id = fixture.get("fixture", {}).get("id")
     if fixture_id:
         match.setdefault("externalIds", {})
