@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-30T20:48:38.386716Z",
+  "lastUpdated": "2026-06-30T22:06:01.152279Z",
   "matches": [
     {
       "id": "400021443",
@@ -9395,16 +9395,16 @@
       "homeCoach": "Didier Deschamps",
       "awayCoach": "G. Potter",
       "score": {
-        "home": null,
-        "away": null
+        "home": 1,
+        "away": 0
       },
       "scorers": [],
       "highlights": [],
       "externalIds": {
         "apiFootball": "1565177"
       },
-      "status": "upcoming",
-      "minute": null,
+      "status": "live",
+      "minute": 47,
       "lineups": {
         "home": {
           "team": "France",
@@ -10843,19 +10843,19 @@
   "knockout": {},
   "scheduleSync": {
     "provider": "api-football",
-    "checkedAt": "2026-06-30T20:48:37.872356Z",
+    "checkedAt": "2026-06-30T22:06:01.152279Z",
     "league": 1,
     "season": 2026,
     "updatedMatches": 1,
-    "insertedMatches": 1,
-    "lineupsChecked": 1,
-    "lineupsUpdated": 1,
-    "fallbackLineups": 13
+    "insertedMatches": 0,
+    "lineupsChecked": 0,
+    "lineupsUpdated": 0,
+    "fallbackLineups": 0
   },
   "predictionSync": {
     "provider": "api-football",
     "checkedAt": "2026-06-30T20:48:38.386716Z",
     "updatedMatches": 1
   },
-  "baseSyncedAt": "2026-06-30T20:48:41.753640Z"
+  "baseSyncedAt": "2026-06-30T22:06:06.066618Z"
 }
