@@ -717,6 +717,7 @@ function mapMatchToBracketMatch(match, standings = []) {
     away: match.away,
     homeScore: match.homeScore ?? match.score?.home ?? null,
     awayScore: match.awayScore ?? match.score?.away ?? null,
+    penalties: match.penalties ?? null,
   };
 }
 
@@ -3070,7 +3071,11 @@ function renderBracketMatch(item) {
 function renderBracketTeamRow(match, side, winner) {
   const team = match[side];
   const options = match[`${side}Options`];
-  const score = formatBracketScore(match[`${side}Score`]);
+  let score = formatBracketScore(match[`${side}Score`]);
+  const pen = match?.penalties;
+  if (score && pen && isNumber(pen[side])) {
+    score += ` (${pen[side]})`;
+  }
   const isWinner = winner && sameTeam(winner, team);
   const isLockedSlot = isTeamLockedInBracketSlot(match, side);
   return `
@@ -3276,7 +3281,12 @@ function renderStatus(match) {
 
 function scoreText(match) {
   if (!hasMatchScore(match)) return "À venir";
-  return `${match.score.home}-${match.score.away}`;
+  const base = `${match.score.home}-${match.score.away}`;
+  const pen = match?.penalties;
+  if (pen && isNumber(pen.home) && isNumber(pen.away)) {
+    return `${base} (${pen.home}-${pen.away} t.a.b.)`;
+  }
+  return base;
 }
 
 function hasMatchScore(match) {
@@ -3327,8 +3337,14 @@ function formatBracketScore(value) {
 function getMatchWinnerTeam(match) {
   const homeScore = match?.homeScore ?? match?.score?.home;
   const awayScore = match?.awayScore ?? match?.score?.away;
-  if (!isNumber(homeScore) || !isNumber(awayScore) || homeScore === awayScore) return null;
-  return homeScore > awayScore ? match.home : match.away;
+  if (!isNumber(homeScore) || !isNumber(awayScore)) return null;
+  if (homeScore !== awayScore) return homeScore > awayScore ? match.home : match.away;
+  // Egalite au temps reglementaire/prolongation : depart aux tirs au but.
+  const pen = match?.penalties;
+  if (pen && isNumber(pen.home) && isNumber(pen.away) && pen.home !== pen.away) {
+    return pen.home > pen.away ? match.home : match.away;
+  }
+  return null;
 }
 
 function displayTeamName(team) {
