@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-30T14:58:52.555097Z",
+  "lastUpdated": "2026-06-30T18:26:33.279871Z",
   "matches": [
     {
       "id": "400021443",
@@ -9255,16 +9255,16 @@
       "homeCoach": "E. Faé",
       "awayCoach": "Stale Solbakken",
       "score": {
-        "home": null,
-        "away": null
+        "home": 0,
+        "away": 1
       },
       "scorers": [],
       "highlights": [],
       "externalIds": {
         "apiFootball": "1564789"
       },
-      "status": "upcoming",
-      "minute": null,
+      "status": "live",
+      "minute": 67,
       "lineups": {
         "home": {
           "team": "Côte d’Ivoire",
@@ -10703,10 +10703,10 @@
   "knockout": {},
   "scheduleSync": {
     "provider": "api-football",
-    "checkedAt": "2026-06-30T16:13:41.178329Z",
+    "checkedAt": "2026-06-30T18:26:33.279871Z",
     "league": 1,
     "season": 2026,
-    "updatedMatches": 0,
+    "updatedMatches": 1,
     "insertedMatches": 0,
     "lineupsChecked": 0,
     "lineupsUpdated": 0,
@@ -10717,5 +10717,5 @@
     "checkedAt": "2026-06-30T06:11:02.542293Z",
     "updatedMatches": 1
   },
-  "baseSyncedAt": "2026-06-30T16:13:43.981000Z"
+  "baseSyncedAt": "2026-06-30T18:26:36.774581Z"
 }
