@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-30T18:26:33.279871Z",
+  "lastUpdated": "2026-06-30T20:48:38.386716Z",
   "matches": [
     {
       "id": "400021443",
@@ -9252,29 +9252,57 @@
       "city": "Dallas",
       "home": "Côte d’Ivoire",
       "away": "Norvège",
-      "homeCoach": "E. Faé",
+      "homeCoach": "Emerse Fae",
       "awayCoach": "Stale Solbakken",
       "score": {
-        "home": 0,
-        "away": 1
+        "home": 1,
+        "away": 2
       },
       "scorers": [],
       "highlights": [],
       "externalIds": {
         "apiFootball": "1564789"
       },
-      "status": "live",
-      "minute": 67,
+      "status": "finished",
+      "minute": null,
       "lineups": {
         "home": {
           "team": "Côte d’Ivoire",
-          "formation": null,
-          "players": []
+          "formation": "4-1-4-1",
+          "players": [
+            "1. Yahia Fofana (G)",
+            "17. Guéla Doué (D)",
+            "7. Odilon Kossounou (D)",
+            "20. Emmanuel Agbadou (D)",
+            "3. Ghislain Konan (D)",
+            "18. Ibrahim Sangaré (M)",
+            "19. Nicolas Pépé (M)",
+            "8. Franck Kessié (M)",
+            "26. Christ Inao Oulaï (M)",
+            "11. Yan Diomande (M)",
+            "9. Ange-Yoan Bonny (F)"
+          ],
+          "source": "Composition officielle",
+          "sourceDate": "2026-06-30T17:00:00+00:00"
         },
         "away": {
           "team": "Norvège",
-          "formation": null,
-          "players": []
+          "formation": "4-3-3",
+          "players": [
+            "1. Ørjan Nyland (G)",
+            "16. Marcus Pedersen (D)",
+            "3. Kristoffer Ajer (D)",
+            "17. Torbjørn Heggem (D)",
+            "5. David Møller Wolfe (D)",
+            "10. Martin Ødegaard (M)",
+            "8. Sander Berge (M)",
+            "6. Patrick Berg (M)",
+            "7. Alexander Sørloth (F)",
+            "9. Erling Haaland (F)",
+            "20. Antonio Nusa (F)"
+          ],
+          "source": "Composition officielle",
+          "sourceDate": "2026-06-30T17:00:00+00:00"
         }
       },
       "probableLineups": {
@@ -10698,24 +10726,136 @@
         "Double chance : draw or Morocco"
       ],
       "penalties": null
+    },
+    {
+      "id": "1568100",
+      "stage": "8es",
+      "group": null,
+      "date": "2026-07-05T20:00:00+00:00",
+      "venue": null,
+      "city": null,
+      "home": "Brésil",
+      "away": "Norvège",
+      "homeCoach": "Carlo Ancelotti",
+      "awayCoach": "Stale Solbakken",
+      "score": {
+        "home": null,
+        "away": null
+      },
+      "scorers": [],
+      "highlights": [],
+      "externalIds": {
+        "apiFootball": "1568100"
+      },
+      "status": "upcoming",
+      "minute": null,
+      "penalties": null,
+      "lineups": {
+        "home": {
+          "team": "Brésil",
+          "formation": null,
+          "players": []
+        },
+        "away": {
+          "team": "Norvège",
+          "formation": null,
+          "players": []
+        }
+      },
+      "probableLineups": {
+        "home": {
+          "team": "Brésil",
+          "formation": "4-3-3",
+          "players": [
+            "1. Alisson (G)",
+            "13. Danilo (D)",
+            "4. Marquinhos (D)",
+            "3. Gabriel Magalhães (D)",
+            "16. Douglas Santos (D)",
+            "8. Bruno Guimarães (M)",
+            "5. Casemiro (M)",
+            "20. Lucas Paquetá (M)",
+            "26. Rayan (F)",
+            "9. Matheus Cunha (F)",
+            "7. Vinícius Júnior (F)"
+          ],
+          "source": "Dernière compo connue",
+          "sourceDate": "2026-06-29T17:00:00+00:00",
+          "sourceMatch": "Brésil 2-1 Japon"
+        },
+        "away": {
+          "team": "Norvège",
+          "formation": "4-3-3",
+          "players": [
+            "1. Ørjan Nyland (G)",
+            "16. Marcus Pedersen (D)",
+            "3. Kristoffer Ajer (D)",
+            "17. Torbjørn Heggem (D)",
+            "5. David Møller Wolfe (D)",
+            "10. Martin Ødegaard (M)",
+            "8. Sander Berge (M)",
+            "6. Patrick Berg (M)",
+            "7. Alexander Sørloth (F)",
+            "9. Erling Haaland (F)",
+            "20. Antonio Nusa (F)"
+          ],
+          "source": "Dernière compo connue",
+          "sourceDate": "2026-06-30T17:00:00+00:00",
+          "sourceMatch": "Côte d’Ivoire 1-2 Norvège"
+        }
+      },
+      "stats": {
+        "possession": {
+          "home": null,
+          "away": null
+        },
+        "shots": {
+          "home": null,
+          "away": null
+        },
+        "shotsOnTarget": {
+          "home": null,
+          "away": null
+        },
+        "corners": {
+          "home": null,
+          "away": null
+        },
+        "fouls": {
+          "home": null,
+          "away": null
+        }
+      },
+      "playerRatings": {
+        "home": [],
+        "away": []
+      },
+      "winProbability": {
+        "home": 35,
+        "draw": 35,
+        "away": 30
+      },
+      "expertDiscussion": [
+        "Double chance : Brazil or draw"
+      ]
     }
   ],
   "knockout": {},
   "scheduleSync": {
     "provider": "api-football",
-    "checkedAt": "2026-06-30T18:26:33.279871Z",
+    "checkedAt": "2026-06-30T20:48:37.872356Z",
     "league": 1,
     "season": 2026,
     "updatedMatches": 1,
-    "insertedMatches": 0,
-    "lineupsChecked": 0,
-    "lineupsUpdated": 0,
-    "fallbackLineups": 0
+    "insertedMatches": 1,
+    "lineupsChecked": 1,
+    "lineupsUpdated": 1,
+    "fallbackLineups": 13
   },
   "predictionSync": {
     "provider": "api-football",
-    "checkedAt": "2026-06-30T06:11:02.542293Z",
+    "checkedAt": "2026-06-30T20:48:38.386716Z",
     "updatedMatches": 1
   },
-  "baseSyncedAt": "2026-06-30T18:26:36.774581Z"
+  "baseSyncedAt": "2026-06-30T20:48:41.753640Z"
 }
