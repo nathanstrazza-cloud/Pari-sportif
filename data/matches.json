@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-30T06:11:02.542293Z",
+  "lastUpdated": "2026-06-30T14:58:52.555097Z",
   "matches": [
     {
       "id": "400021443",
@@ -138,7 +138,8 @@
       "expertDiscussion": [],
       "externalIds": {
         "apiFootball": "1489369"
-      }
+      },
+      "penalties": null
     },
     {
       "id": "400021441",
@@ -266,7 +267,8 @@
       "expertDiscussion": [],
       "externalIds": {
         "apiFootball": "1538999"
-      }
+      },
+      "penalties": null
     },
     {
       "id": "400021449",
@@ -389,7 +391,8 @@
       "expertDiscussion": [],
       "externalIds": {
         "apiFootball": "1539000"
-      }
+      },
+      "penalties": null
     },
     {
       "id": "400021458",
@@ -531,7 +534,8 @@
       "expertDiscussion": [],
       "externalIds": {
         "apiFootball": "1489370"
-      }
+      },
+      "penalties": null
     },
     {
       "id": "400021447",
@@ -654,7 +658,8 @@
       "expertDiscussion": [],
       "externalIds": {
         "apiFootball": "1489373"
-      }
+      },
+      "penalties": null
     },
     {
       "id": "1489371",
@@ -761,7 +766,8 @@
         "draw": null,
         "away": null
       },
-      "expertDiscussion": []
+      "expertDiscussion": [],
+      "penalties": null
     },
     {
       "id": "1489372",
@@ -868,7 +874,8 @@
         "draw": null,
         "away": null
       },
-      "expertDiscussion": []
+      "expertDiscussion": [],
+      "penalties": null
     },
     {
       "id": "1539001",
@@ -975,7 +982,8 @@
         "draw": null,
         "away": null
       },
-      "expertDiscussion": []
+      "expertDiscussion": [],
+      "penalties": null
     },
     {
       "id": "1489374",
@@ -1082,7 +1090,8 @@
         "draw": null,
         "away": null
       },
-      "expertDiscussion": []
+      "expertDiscussion": [],
+      "penalties": null
     },
     {
       "id": "1489376",
@@ -1189,7 +1198,8 @@
         "draw": null,
         "away": null
       },
-      "expertDiscussion": []
+      "expertDiscussion": [],
+      "penalties": null
     },
     {
       "id": "1489375",
@@ -1296,7 +1306,8 @@
         "draw": null,
         "away": null
       },
-      "expertDiscussion": []
+      "expertDiscussion": [],
+      "penalties": null
     },
     {
       "id": "1539002",
@@ -1403,7 +1414,8 @@
         "draw": null,
         "away": null
       },
-      "expertDiscussion": []
+      "expertDiscussion": [],
+      "penalties": null
     },
     {
       "id": "1489380",
@@ -1510,7 +1522,8 @@
         "draw": null,
         "away": null
       },
-      "expertDiscussion": []
+      "expertDiscussion": [],
+      "penalties": null
     },
     {
       "id": "1489377",
@@ -1617,7 +1630,8 @@
         "draw": null,
         "away": null
       },
-      "expertDiscussion": []
+      "expertDiscussion": [],
+      "penalties": null
     },
     {
       "id": "1489379",
@@ -1724,7 +1738,8 @@
         "draw": null,
         "away": null
       },
-      "expertDiscussion": []
+      "expertDiscussion": [],
+      "penalties": null
     },
     {
       "id": "1489378",
@@ -1831,7 +1846,8 @@
         "draw": null,
         "away": null
       },
-      "expertDiscussion": []
+      "expertDiscussion": [],
+      "penalties": null
     },
     {
       "id": "1489383",
@@ -1938,7 +1954,8 @@
         "draw": null,
         "away": null
       },
-      "expertDiscussion": []
+      "expertDiscussion": [],
+      "penalties": null
     },
     {
       "id": "1539016",
@@ -2045,7 +2062,8 @@
         "draw": null,
         "away": null
       },
-      "expertDiscussion": []
+      "expertDiscussion": [],
+      "penalties": null
     },
     {
       "id": "1489381",
@@ -2152,7 +2170,8 @@
         "draw": null,
         "away": null
       },
-      "expertDiscussion": []
+      "expertDiscussion": [],
+      "penalties": null
     },
     {
       "id": "1489382",
@@ -2259,7 +2278,8 @@
         "draw": null,
         "away": null
       },
-      "expertDiscussion": []
+      "expertDiscussion": [],
+      "penalties": null
     },
     {
       "id": "1539003",
@@ -2366,7 +2386,8 @@
         "draw": null,
         "away": null
       },
-      "expertDiscussion": []
+      "expertDiscussion": [],
+      "penalties": null
     },
     {
       "id": "1489384",
@@ -2473,7 +2494,8 @@
         "draw": null,
         "away": null
       },
-      "expertDiscussion": []
+      "expertDiscussion": [],
+      "penalties": null
     },
     {
       "id": "1489385",
@@ -2580,7 +2602,8 @@
         "draw": null,
         "away": null
       },
-      "expertDiscussion": []
+      "expertDiscussion": [],
+      "penalties": null
     },
     {
       "id": "1489386",
@@ -2687,7 +2710,8 @@
         "draw": null,
         "away": null
       },
-      "expertDiscussion": []
+      "expertDiscussion": [],
+      "penalties": null
     },
     {
       "id": "1539004",
@@ -2794,7 +2818,8 @@
         "draw": null,
         "away": null
       },
-      "expertDiscussion": []
+      "expertDiscussion": [],
+      "penalties": null
     },
     {
       "id": "1539005",
@@ -2901,7 +2926,8 @@
         "draw": null,
         "away": null
       },
-      "expertDiscussion": []
+      "expertDiscussion": [],
+      "penalties": null
     },
     {
       "id": "1489387",
@@ -3008,7 +3034,8 @@
         "draw": null,
         "away": null
       },
-      "expertDiscussion": []
+      "expertDiscussion": [],
+      "penalties": null
     },
     {
       "id": "1489388",
@@ -3115,7 +3142,8 @@
         "draw": null,
         "away": null
       },
-      "expertDiscussion": []
+      "expertDiscussion": [],
+      "penalties": null
     },
     {
       "id": "1489391",
@@ -3222,7 +3250,8 @@
         "draw": null,
         "away": null
       },
-      "expertDiscussion": []
+      "expertDiscussion": [],
+      "penalties": null
     },
     {
       "id": "1489390",
@@ -3329,7 +3358,8 @@
         "draw": null,
         "away": null
       },
-      "expertDiscussion": []
+      "expertDiscussion": [],
+      "penalties": null
     },
     {
       "id": "1489389",
@@ -3436,7 +3466,8 @@
         "draw": null,
         "away": null
       },
-      "expertDiscussion": []
+      "expertDiscussion": [],
+      "penalties": null
     },
     {
       "id": "1539006",
@@ -3543,7 +3574,8 @@
         "draw": null,
         "away": null
       },
-      "expertDiscussion": []
+      "expertDiscussion": [],
+      "penalties": null
     },
     {
       "id": "1539007",
@@ -3650,7 +3682,8 @@
         "draw": null,
         "away": null
       },
-      "expertDiscussion": []
+      "expertDiscussion": [],
+      "penalties": null
     },
     {
       "id": "1489393",
@@ -3757,7 +3790,8 @@
         "draw": null,
         "away": null
       },
-      "expertDiscussion": []
+      "expertDiscussion": [],
+      "penalties": null
     },
     {
       "id": "1489392",
@@ -3864,7 +3898,8 @@
         "draw": null,
         "away": null
       },
-      "expertDiscussion": []
+      "expertDiscussion": [],
+      "penalties": null
     },
     {
       "id": "1489394",
@@ -3971,7 +4006,8 @@
         "draw": null,
         "away": null
       },
-      "expertDiscussion": []
+      "expertDiscussion": [],
+      "penalties": null
     },
     {
       "id": "1489397",
@@ -4078,7 +4114,8 @@
         "draw": null,
         "away": null
       },
-      "expertDiscussion": []
+      "expertDiscussion": [],
+      "penalties": null
     },
     {
       "id": "1489395",
@@ -4185,7 +4222,8 @@
         "draw": null,
         "away": null
       },
-      "expertDiscussion": []
+      "expertDiscussion": [],
+      "penalties": null
     },
     {
       "id": "1489398",
@@ -4292,7 +4330,8 @@
         "draw": null,
         "away": null
       },
-      "expertDiscussion": []
+      "expertDiscussion": [],
+      "penalties": null
     },
     {
       "id": "1489396",
@@ -4399,7 +4438,8 @@
         "draw": null,
         "away": null
       },
-      "expertDiscussion": []
+      "expertDiscussion": [],
+      "penalties": null
     },
     {
       "id": "1489399",
@@ -4506,7 +4546,8 @@
         "draw": null,
         "away": null
       },
-      "expertDiscussion": []
+      "expertDiscussion": [],
+      "penalties": null
     },
     {
       "id": "1539017",
@@ -4613,7 +4654,8 @@
         "draw": null,
         "away": null
       },
-      "expertDiscussion": []
+      "expertDiscussion": [],
+      "penalties": null
     },
     {
       "id": "1489401",
@@ -4720,7 +4762,8 @@
         "draw": null,
         "away": null
       },
-      "expertDiscussion": []
+      "expertDiscussion": [],
+      "penalties": null
     },
     {
       "id": "1489400",
@@ -4827,7 +4870,8 @@
         "draw": null,
         "away": null
       },
-      "expertDiscussion": []
+      "expertDiscussion": [],
+      "penalties": null
     },
     {
       "id": "1489404",
@@ -4934,7 +4978,8 @@
         "draw": null,
         "away": null
       },
-      "expertDiscussion": []
+      "expertDiscussion": [],
+      "penalties": null
     },
     {
       "id": "1489402",
@@ -5041,7 +5086,8 @@
         "draw": null,
         "away": null
       },
-      "expertDiscussion": []
+      "expertDiscussion": [],
+      "penalties": null
     },
     {
       "id": "1489403",
@@ -5148,7 +5194,8 @@
         "draw": null,
         "away": null
       },
-      "expertDiscussion": []
+      "expertDiscussion": [],
+      "penalties": null
     },
     {
       "id": "1539008",
@@ -5255,7 +5302,8 @@
         "draw": null,
         "away": null
       },
-      "expertDiscussion": []
+      "expertDiscussion": [],
+      "penalties": null
     },
     {
       "id": "1489408",
@@ -5392,7 +5440,8 @@
         "draw": null,
         "away": null
       },
-      "expertDiscussion": []
+      "expertDiscussion": [],
+      "penalties": null
     },
     {
       "id": "1539009",
@@ -5529,7 +5578,8 @@
         "draw": null,
         "away": null
       },
-      "expertDiscussion": []
+      "expertDiscussion": [],
+      "penalties": null
     },
     {
       "id": "1489405",
@@ -5666,7 +5716,8 @@
         "draw": null,
         "away": null
       },
-      "expertDiscussion": []
+      "expertDiscussion": [],
+      "penalties": null
     },
     {
       "id": "1489406",
@@ -5803,7 +5854,8 @@
         "draw": null,
         "away": null
       },
-      "expertDiscussion": []
+      "expertDiscussion": [],
+      "penalties": null
     },
     {
       "id": "1489407",
@@ -5940,7 +5992,8 @@
         "draw": null,
         "away": null
       },
-      "expertDiscussion": []
+      "expertDiscussion": [],
+      "penalties": null
     },
     {
       "id": "1539010",
@@ -6077,7 +6130,8 @@
         "draw": null,
         "away": null
       },
-      "expertDiscussion": []
+      "expertDiscussion": [],
+      "penalties": null
     },
     {
       "id": "1489409",
@@ -6216,7 +6270,8 @@
       },
       "expertDiscussion": [
         "Double chance : draw or Ivory Coast"
-      ]
+      ],
+      "penalties": null
     },
     {
       "id": "1489410",
@@ -6355,7 +6410,8 @@
       },
       "expertDiscussion": [
         "Winner : Germany"
-      ]
+      ],
+      "penalties": null
     },
     {
       "id": "1489412",
@@ -6494,7 +6550,8 @@
       },
       "expertDiscussion": [
         "Combo Winner : Netherlands and +2.5 goals"
-      ]
+      ],
+      "penalties": null
     },
     {
       "id": "1539011",
@@ -6633,7 +6690,8 @@
       },
       "expertDiscussion": [
         "Combo Double chance : Japan or draw and +2.5 goals"
-      ]
+      ],
+      "penalties": null
     },
     {
       "id": "1489411",
@@ -6772,7 +6830,8 @@
       },
       "expertDiscussion": [
         "Double chance : draw or Australia"
-      ]
+      ],
+      "penalties": null
     },
     {
       "id": "1539012",
@@ -6911,7 +6970,8 @@
       },
       "expertDiscussion": [
         "Winner : USA"
-      ]
+      ],
+      "penalties": null
     },
     {
       "id": "1489416",
@@ -7054,7 +7114,8 @@
         "Les profils offensifs des deux côtés poussent vers un match avec des occasions franches. Les données ne mentent jamais : quand deux attaques ont autant de points d'appui, je prends le scénario où les deux trouvent la faille. Parti pris : Les 2 équipes marquent - Oui.",
         "Il y a une énergie particulière dans ce rendez-vous pour la Norvège, comme si elle avait quelque chose à prouver face à une grande nation. Je sens un match où elle ne reste pas muette. Parti pris : Norvège plus de 1,5 buts.",
         "Je ne cherche pas le favori, je cherche la cote qui respire. À 4,55, un attaquant norvégien dans un match ouvert mérite d'être tenté. Parti pris : Jorgen Strand Larsen buteur."
-      ]
+      ],
+      "penalties": null
     },
     {
       "id": "1539074",
@@ -7197,7 +7258,8 @@
         "La dynamique des cotes indique un match qui peut vite s'ouvrir si le premier but arrive tôt. Les émotions ne m'intéressent pas, le total buts a le meilleur angle. Parti pris : Plus de 2,5 buts.",
         "L'Irak n'a rien à perdre et c'est exactement le genre de contexte qui peut libérer une équipe. Ils vont se jeter dans le match, même si le Sénégal garde l'avantage. Parti pris : Les 2 équipes marquent - Oui.",
         "Je ne paie pas une évidence trop basse si je peux prendre un profil offensif mieux rémunéré. La cote reste correcte pour un attaquant qui peut profiter d'un match dominé. Parti pris : Nicolas Jackson buteur."
-      ]
+      ],
+      "penalties": null
     },
     {
       "id": "1489413",
@@ -7340,7 +7402,8 @@
         "Les deux blocs ont des arguments pour marquer, mais aucun ne donne assez de garanties pour contrôler complètement. La value est du côté du scénario partagé. Parti pris : Les 2 équipes marquent - Oui.",
         "Ce match sent la bataille nerveuse, le moment où chaque équipe refuse de lâcher. Je sens un partage avec beaucoup d'intensité et peu de marge. Parti pris : Score exact - 1 - 1.",
         "À 4,00, je préfère viser un profil de buteur plutôt que de courir après une cote courte. Cette cote a assez de jus pour valoir le risque. Parti pris : Dailon Livramento buteur."
-      ]
+      ],
+      "penalties": null
     },
     {
       "id": "1489417",
@@ -7483,7 +7546,8 @@
         "Les deux équipes génèrent assez de situations pour exister dans la surface adverse. Les données me poussent vers un but de chaque côté. Parti pris : Les 2 équipes marquent - Oui.",
         "L'Uruguay vit pour ce genre de défi, avec une intensité qui change l'ambiance d'un match. Je sens une réaction d'orgueil portée par son avant-centre. Parti pris : Darwin Núñez décisif.",
         "À 5,25, je ne demande pas une certitude, je demande une cote mal évaluée. Un buteur uruguayen dans un match de duels, ça se tente. Parti pris : Federico Vinas buteur."
-      ]
+      ],
+      "penalties": null
     },
     {
       "id": "1489414",
@@ -7626,7 +7690,8 @@
         "Les probabilités racontent un match équilibré, avec peu d'écart entre les deux scénarios principaux. Le score de compromis a du sens. Parti pris : Score exact - 1 - 1.",
         "L'Égypte a une charge émotionnelle forte dans ce genre de rencontre, et certains joueurs se nourrissent de ça. Je sens une action qui sort du cadre habituel. Parti pris : Omar Marmoush buteur.",
         "À 2,60, le marché sous-estime peut-être le déclic offensif. Quand tout le monde attend un match fermé, je regarde l'autre côté. Parti pris : Plus de 2,5 buts."
-      ]
+      ],
+      "penalties": null
     },
     {
       "id": "1489415",
@@ -7769,7 +7834,8 @@
         "Le total buts est soutenu par la différence de potentiel offensif et par la cote proposée. Les chiffres pointent vers un match avec plusieurs occasions nettes. Parti pris : Plus de 2,5 buts.",
         "Même dominée, la Nouvelle-Zélande a ce côté combat qui peut réveiller un stade. Je sens un moment de fierté, une vraie présence dans la surface. Parti pris : Chris Wood buteur.",
         "Les cotes courtes ne me racontent pas grand-chose ici. À 7,75, je préfère un outsider de surface qui peut tout changer sur un ballon. Parti pris : Logan Rogerson buteur."
-      ]
+      ],
+      "penalties": null
     },
     {
       "id": "1489420",
@@ -7908,7 +7974,8 @@
       },
       "expertDiscussion": [
         "Combo Double chance : Croatia or draw and -3.5 goals"
-      ]
+      ],
+      "penalties": null
     },
     {
       "id": "1489422",
@@ -8047,7 +8114,8 @@
       },
       "expertDiscussion": [
         "Combo Winner : England and -3.5 goals"
-      ]
+      ],
+      "penalties": null
     },
     {
       "id": "1489419",
@@ -8186,7 +8254,8 @@
       },
       "expertDiscussion": [
         "Double chance : Colombia or draw"
-      ]
+      ],
+      "penalties": null
     },
     {
       "id": "1539013",
@@ -8325,7 +8394,8 @@
       },
       "expertDiscussion": [
         "Double chance : Congo DR or draw"
-      ]
+      ],
+      "penalties": null
     },
     {
       "id": "1489418",
@@ -8464,7 +8534,8 @@
       },
       "expertDiscussion": [
         "Double chance : draw or Austria"
-      ]
+      ],
+      "penalties": null
     },
     {
       "id": "1489421",
@@ -8603,7 +8674,8 @@
       },
       "expertDiscussion": [
         "Winner : Argentina"
-      ]
+      ],
+      "penalties": null
     },
     {
       "id": "1561329",
@@ -8742,7 +8814,8 @@
       },
       "expertDiscussion": [
         "Double chance : South Africa or draw"
-      ]
+      ],
+      "penalties": null
     },
     {
       "id": "1562344",
@@ -8881,7 +8954,8 @@
       },
       "expertDiscussion": [
         "Double chance : Brazil or draw"
-      ]
+      ],
+      "penalties": null
     },
     {
       "id": "1565176",
@@ -9020,7 +9094,11 @@
       },
       "expertDiscussion": [
         "Combo Winner : Germany and +1.5 goals"
-      ]
+      ],
+      "penalties": {
+        "home": 3,
+        "away": 4
+      }
     },
     {
       "id": "1562345",
@@ -9159,7 +9237,11 @@
       },
       "expertDiscussion": [
         "Double chance : Netherlands or draw"
-      ]
+      ],
+      "penalties": {
+        "home": 2,
+        "away": 3
+      }
     },
     {
       "id": "1564789",
@@ -9270,7 +9352,8 @@
       },
       "expertDiscussion": [
         "Double chance : Ivory Coast or draw"
-      ]
+      ],
+      "penalties": null
     },
     {
       "id": "1565177",
@@ -9381,7 +9464,8 @@
       },
       "expertDiscussion": [
         "Combo Winner : France and +1.5 goals"
-      ]
+      ],
+      "penalties": null
     },
     {
       "id": "1567306",
@@ -9492,7 +9576,8 @@
       },
       "expertDiscussion": [
         "Combo Double chance : Mexico or draw and -3.5 goals"
-      ]
+      ],
+      "penalties": null
     },
     {
       "id": "1567307",
@@ -9603,7 +9688,8 @@
       },
       "expertDiscussion": [
         "Double chance : England or draw"
-      ]
+      ],
+      "penalties": null
     },
     {
       "id": "1567308",
@@ -9714,7 +9800,8 @@
       },
       "expertDiscussion": [
         "Double chance : Belgium or draw"
-      ]
+      ],
+      "penalties": null
     },
     {
       "id": "1562586",
@@ -9825,7 +9912,8 @@
       },
       "expertDiscussion": [
         "Combo Winner : USA and +1.5 goals"
-      ]
+      ],
+      "penalties": null
     },
     {
       "id": "1567311",
@@ -9936,7 +10024,8 @@
       },
       "expertDiscussion": [
         "Double chance : Spain or draw"
-      ]
+      ],
+      "penalties": null
     },
     {
       "id": "1567309",
@@ -10047,7 +10136,8 @@
       },
       "expertDiscussion": [
         "Double chance : Portugal or draw"
-      ]
+      ],
+      "penalties": null
     },
     {
       "id": "1567312",
@@ -10158,7 +10248,8 @@
       },
       "expertDiscussion": [
         "Combo Double chance : Switzerland or draw and +1.5 goals"
-      ]
+      ],
+      "penalties": null
     },
     {
       "id": "1565178",
@@ -10269,7 +10360,8 @@
       },
       "expertDiscussion": [
         "Combo Double chance : Australia or draw and -3.5 goals"
-      ]
+      ],
+      "penalties": null
     },
     {
       "id": "1565179",
@@ -10380,7 +10472,8 @@
       },
       "expertDiscussion": [
         "Combo Winner : Argentina and -3.5 goals"
-      ]
+      ],
+      "penalties": null
     },
     {
       "id": "1567310",
@@ -10491,7 +10584,8 @@
       },
       "expertDiscussion": [
         "Combo Double chance : Colombia or draw and -3.5 goals"
-      ]
+      ],
+      "penalties": null
     },
     {
       "id": "1567824",
@@ -10602,16 +10696,17 @@
       },
       "expertDiscussion": [
         "Double chance : draw or Morocco"
-      ]
+      ],
+      "penalties": null
     }
   ],
   "knockout": {},
   "scheduleSync": {
     "provider": "api-football",
-    "checkedAt": "2026-06-30T13:01:16.667374Z",
+    "checkedAt": "2026-06-30T14:58:52.555097Z",
     "league": 1,
     "season": 2026,
-    "updatedMatches": 0,
+    "updatedMatches": 89,
     "insertedMatches": 0,
     "lineupsChecked": 0,
     "lineupsUpdated": 0,
@@ -10622,5 +10717,5 @@
     "checkedAt": "2026-06-30T06:11:02.542293Z",
     "updatedMatches": 1
   },
-  "baseSyncedAt": "2026-06-30T13:01:19.680800Z"
+  "baseSyncedAt": "2026-06-30T14:58:56.637773Z"
 }
