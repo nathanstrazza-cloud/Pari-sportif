@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-30T06:11:02.542293Z",
+  "lastUpdated": "2026-06-30T10:20:35.089344Z",
   "source": "api-football",
   "topScorers": [
     {
@@ -39,6 +39,12 @@
       "goals": 3.0
     },
     {
+      "name": "C. Gakpo",
+      "team": "Pays-Bas",
+      "age": 26,
+      "goals": 3.0
+    },
+    {
       "name": "J. Manzambi",
       "team": "Suisse",
       "age": 20,
@@ -51,6 +57,12 @@
       "goals": 3.0
     },
     {
+      "name": "B. Brobbey",
+      "team": "Pays-Bas",
+      "age": 23,
+      "goals": 3.0
+    },
+    {
       "name": "Matheus Cunha",
       "team": "Brésil",
       "age": 26,
@@ -60,12 +72,6 @@
       "name": "J. David",
       "team": "Canada",
       "age": 25,
-      "goals": 3.0
-    },
-    {
-      "name": "B. Brobbey",
-      "team": "Pays-Bas",
-      "age": 23,
       "goals": 3.0
     },
     {
@@ -99,27 +105,21 @@
       "goals": 3.0
     },
     {
-      "name": "A. Ueda",
-      "team": "Japon",
-      "age": 27,
-      "goals": 2.0
-    },
-    {
       "name": "C. Summerville",
       "team": "Pays-Bas",
       "age": 24,
       "goals": 2.0
     },
     {
-      "name": "P. Gueye",
-      "team": "Sénégal",
-      "age": 26,
+      "name": "A. Ueda",
+      "team": "Japon",
+      "age": 27,
       "goals": 2.0
     },
     {
-      "name": "R. Vargas",
-      "team": "Suisse",
-      "age": 27,
+      "name": "P. Gueye",
+      "team": "Sénégal",
+      "age": 26,
       "goals": 2.0
     }
   ],
@@ -161,6 +161,12 @@
       "assists": 2.0
     },
     {
+      "name": "C. Summerville",
+      "team": "Pays-Bas",
+      "age": 24,
+      "assists": 2.0
+    },
+    {
       "name": "J. Enciso",
       "team": "Paraguay",
       "age": 21,
@@ -197,27 +203,9 @@
       "assists": 2.0
     },
     {
-      "name": "J. Kimmich",
-      "team": "Allemagne",
-      "age": 30,
-      "assists": 2.0
-    },
-    {
-      "name": "B. Saka",
-      "team": "Angleterre",
-      "age": 24,
-      "assists": 2.0
-    },
-    {
       "name": "Brahim Díaz",
       "team": "Maroc",
       "age": 26,
-      "assists": 2.0
-    },
-    {
-      "name": "R. Alvarado",
-      "team": "Mexique",
-      "age": 27,
       "assists": 2.0
     },
     {
@@ -227,15 +215,27 @@
       "assists": 2.0
     },
     {
+      "name": "J. Kimmich",
+      "team": "Allemagne",
+      "age": 30,
+      "assists": 2.0
+    },
+    {
       "name": "D. Dumfries",
       "team": "Pays-Bas",
       "age": 29,
       "assists": 2.0
     },
     {
-      "name": "H. Mejbri",
-      "team": "Tunisie",
-      "age": 22,
+      "name": "B. Saka",
+      "team": "Angleterre",
+      "age": 24,
+      "assists": 2.0
+    },
+    {
+      "name": "R. Alvarado",
+      "team": "Mexique",
+      "age": 27,
       "assists": 2.0
     },
     {

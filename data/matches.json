@@ -10608,19 +10608,19 @@
   "knockout": {},
   "scheduleSync": {
     "provider": "api-football",
-    "checkedAt": "2026-06-30T06:11:02.371174Z",
+    "checkedAt": "2026-06-30T10:20:34.907333Z",
     "league": 1,
     "season": 2026,
-    "updatedMatches": 2,
-    "insertedMatches": 1,
+    "updatedMatches": 0,
+    "insertedMatches": 0,
     "lineupsChecked": 0,
     "lineupsUpdated": 0,
-    "fallbackLineups": 13
+    "fallbackLineups": 0
   },
   "predictionSync": {
     "provider": "api-football",
     "checkedAt": "2026-06-30T06:11:02.542293Z",
     "updatedMatches": 1
   },
-  "baseSyncedAt": "2026-06-30T06:11:05.158267Z"
+  "baseSyncedAt": "2026-06-30T10:20:37.664065Z"
 }
