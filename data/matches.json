@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-30T22:06:01.152279Z",
+  "lastUpdated": "2026-06-30T23:55:35.664676Z",
   "matches": [
     {
       "id": "400021443",
@@ -9393,9 +9393,9 @@
       "home": "France",
       "away": "Suède",
       "homeCoach": "Didier Deschamps",
-      "awayCoach": "G. Potter",
+      "awayCoach": "Graham Potter",
       "score": {
-        "home": 1,
+        "home": 3,
         "away": 0
       },
       "scorers": [],
@@ -9403,18 +9403,46 @@
       "externalIds": {
         "apiFootball": "1565177"
       },
-      "status": "live",
-      "minute": 47,
+      "status": "finished",
+      "minute": null,
       "lineups": {
         "home": {
           "team": "France",
-          "formation": null,
-          "players": []
+          "formation": "4-2-3-1",
+          "players": [
+            "16. Mike Maignan (G)",
+            "5. Jules Koundé (D)",
+            "4. Dayot Upamecano (D)",
+            "17. William Saliba (D)",
+            "3. Lucas Digne (D)",
+            "8. Aurélien Tchouaméni (M)",
+            "14. Adrien Rabiot (M)",
+            "7. Ousmane Dembélé (M)",
+            "11. Michael Olise (M)",
+            "12. Bradley Barcola (M)",
+            "10. Kylian Mbappé (F)"
+          ],
+          "source": "Composition officielle",
+          "sourceDate": "2026-06-30T21:00:00+00:00"
         },
         "away": {
           "team": "Suède",
-          "formation": null,
-          "players": []
+          "formation": "4-4-2",
+          "players": [
+            "1. Jacob Widell Zetterström (G)",
+            "8. Daniel Svensson (D)",
+            "2. Gustaf Lagerbielke (D)",
+            "3. Victor Lindelöf (D)",
+            "5. Gabriel Gudmundsson (D)",
+            "11. Anthony Elanga (M)",
+            "7. Lucas Bergvall (M)",
+            "18. Yasin Ayari (M)",
+            "24. Elliot Stroud (M)",
+            "17. Viktor Gyökeres (F)",
+            "9. Alexander Isak (F)"
+          ],
+          "source": "Composition officielle",
+          "sourceDate": "2026-06-30T21:00:00+00:00"
         }
       },
       "probableLineups": {
@@ -10843,13 +10871,13 @@
   "knockout": {},
   "scheduleSync": {
     "provider": "api-football",
-    "checkedAt": "2026-06-30T22:06:01.152279Z",
+    "checkedAt": "2026-06-30T23:55:35.664676Z",
     "league": 1,
     "season": 2026,
     "updatedMatches": 1,
     "insertedMatches": 0,
-    "lineupsChecked": 0,
-    "lineupsUpdated": 0,
+    "lineupsChecked": 1,
+    "lineupsUpdated": 1,
     "fallbackLineups": 0
   },
   "predictionSync": {
@@ -10857,5 +10885,5 @@
     "checkedAt": "2026-06-30T20:48:38.386716Z",
     "updatedMatches": 1
   },
-  "baseSyncedAt": "2026-06-30T22:06:06.066618Z"
+  "baseSyncedAt": "2026-06-30T23:55:39.587450Z"
 }
