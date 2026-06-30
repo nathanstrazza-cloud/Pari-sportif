@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-29T23:50:09.741008Z",
+  "lastUpdated": "2026-06-30T01:59:12.356333Z",
   "matches": [
     {
       "id": "400021443",
@@ -9031,29 +9031,57 @@
       "city": "Monterrey",
       "home": "Pays-Bas",
       "away": "Maroc",
-      "homeCoach": "R. Koeman",
+      "homeCoach": "Ronald Koeman",
       "awayCoach": "Mohamed Ouahbi",
       "score": {
-        "home": null,
-        "away": null
+        "home": 0,
+        "away": 0
       },
       "scorers": [],
       "highlights": [],
       "externalIds": {
         "apiFootball": "1562345"
       },
-      "status": "upcoming",
-      "minute": null,
+      "status": "live",
+      "minute": 45,
       "lineups": {
         "home": {
           "team": "Pays-Bas",
-          "formation": null,
-          "players": []
+          "formation": "3-4-2-1",
+          "players": [
+            "1. Bart Verbruggen (G)",
+            "6. Jan Paul van Hecke (D)",
+            "4. Virgil van Dijk (D)",
+            "5. Nathan Aké (D)",
+            "22. Denzel Dumfries (M)",
+            "8. Ryan Gravenberch (M)",
+            "21. Frenkie de Jong (M)",
+            "15. Micky van de Ven (M)",
+            "24. Crysencio Summerville (F)",
+            "11. Cody Gakpo (F)",
+            "19. Brian Brobbey (F)"
+          ],
+          "source": "Composition officielle",
+          "sourceDate": "2026-06-30T01:00:00+00:00"
         },
         "away": {
           "team": "Maroc",
-          "formation": null,
-          "players": []
+          "formation": "4-2-3-1",
+          "players": [
+            "1. Yassine Bounou (G)",
+            "2. Achraf Hakimi (D)",
+            "14. Issa Diop (D)",
+            "18. Chadi Riad (D)",
+            "3. Noussair Mazraoui (D)",
+            "6. Ayyoub Bouaddi (M)",
+            "24. Neil El Aynaoui (M)",
+            "10. Brahim Díaz (M)",
+            "8. Azzedine Ounahi (M)",
+            "23. Bilal El Khannouss (M)",
+            "11. Ismael Saibari (F)"
+          ],
+          "source": "Composition officielle",
+          "sourceDate": "2026-06-30T01:00:00+00:00"
         }
       },
       "probableLineups": {
@@ -10469,13 +10497,13 @@
   "knockout": {},
   "scheduleSync": {
     "provider": "api-football",
-    "checkedAt": "2026-06-29T23:50:09.741008Z",
+    "checkedAt": "2026-06-30T01:59:12.356333Z",
     "league": 1,
     "season": 2026,
     "updatedMatches": 1,
     "insertedMatches": 0,
-    "lineupsChecked": 0,
-    "lineupsUpdated": 0,
+    "lineupsChecked": 1,
+    "lineupsUpdated": 1,
     "fallbackLineups": 0
   },
   "predictionSync": {
@@ -10483,5 +10511,5 @@
     "checkedAt": "2026-06-28T11:45:13.236103Z",
     "updatedMatches": 2
   },
-  "baseSyncedAt": "2026-06-29T23:50:12.661234Z"
+  "baseSyncedAt": "2026-06-30T01:59:15.431622Z"
 }
