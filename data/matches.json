@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-01T02:11:40.086792Z",
+  "lastUpdated": "2026-07-01T06:24:31.746359Z",
   "matches": [
     {
       "id": "400021443",
@@ -9533,9 +9533,9 @@
       "home": "Mexique",
       "away": "Équateur",
       "homeCoach": "Javier Aguirre",
-      "awayCoach": "S. Beccacece",
+      "awayCoach": "Sebastian Beccacece",
       "score": {
-        "home": 0,
+        "home": 2,
         "away": 0
       },
       "scorers": [],
@@ -9543,18 +9543,46 @@
       "externalIds": {
         "apiFootball": "1567306"
       },
-      "status": "live",
-      "minute": 11,
+      "status": "finished",
+      "minute": null,
       "lineups": {
         "home": {
           "team": "Mexique",
-          "formation": null,
-          "players": []
+          "formation": "4-3-3",
+          "players": [
+            "1. Raúl Rangel (G)",
+            "2. Jorge Sánchez (D)",
+            "3. César Montes (D)",
+            "5. Johan Vásquez (D)",
+            "23. Jesús Gallardo (D)",
+            "19. Gilberto Mora (M)",
+            "6. Erik Lira (M)",
+            "7. Luis Romo (M)",
+            "25. Roberto Alvarado (F)",
+            "9. Raúl Jiménez (F)",
+            "16. Julián Quiñones (F)"
+          ],
+          "source": "Composition officielle",
+          "sourceDate": "2026-07-01T01:00:00+00:00"
         },
         "away": {
           "team": "Équateur",
-          "formation": null,
-          "players": []
+          "formation": "4-4-2",
+          "players": [
+            "1. Hernán Galíndez (G)",
+            "21. Alan Franco (D)",
+            "4. Joel Ordóñez (D)",
+            "6. Willian Pacho (D)",
+            "3. Piero Hincapié (D)",
+            "9. John Yeboah (M)",
+            "23. Moisés Caicedo (M)",
+            "15. Pedro Vite (M)",
+            "20. Nilson Angulo (M)",
+            "19. Gonzalo Plata (F)",
+            "13. Enner Valencia (F)"
+          ],
+          "source": "Composition officielle",
+          "sourceDate": "2026-07-01T01:00:00+00:00"
         }
       },
       "probableLineups": {
@@ -10756,6 +10784,118 @@
       "penalties": null
     },
     {
+      "id": "1569870",
+      "stage": "8es",
+      "group": null,
+      "date": "2026-07-04T21:00:00+00:00",
+      "venue": "Lincoln Financial Field",
+      "city": "Philadelphia",
+      "home": "Paraguay",
+      "away": "France",
+      "homeCoach": "Gustavo Alfaro",
+      "awayCoach": "Didier Deschamps",
+      "score": {
+        "home": null,
+        "away": null
+      },
+      "scorers": [],
+      "highlights": [],
+      "externalIds": {
+        "apiFootball": "1569870"
+      },
+      "status": "upcoming",
+      "minute": null,
+      "penalties": null,
+      "lineups": {
+        "home": {
+          "team": "Paraguay",
+          "formation": null,
+          "players": []
+        },
+        "away": {
+          "team": "France",
+          "formation": null,
+          "players": []
+        }
+      },
+      "probableLineups": {
+        "home": {
+          "team": "Paraguay",
+          "formation": "4-1-4-1",
+          "players": [
+            "12. Orlando Gill (G)",
+            "4. Juan Cáceres (D)",
+            "15. Gustavo Gómez (D)",
+            "13. José Canale (D)",
+            "6. Junior Alonso (D)",
+            "14. Andrés Cubas (M)",
+            "10. Miguel Almirón (M)",
+            "16. Damián Bobadilla (M)",
+            "23. Matías Galarza (M)",
+            "19. Julio Enciso (M)",
+            "21. Gabriel Ávalos (F)"
+          ],
+          "source": "Dernière compo connue",
+          "sourceDate": "2026-06-29T20:30:00+00:00",
+          "sourceMatch": "Allemagne 1-1 Paraguay"
+        },
+        "away": {
+          "team": "France",
+          "formation": "4-2-3-1",
+          "players": [
+            "16. Mike Maignan (G)",
+            "5. Jules Koundé (D)",
+            "4. Dayot Upamecano (D)",
+            "17. William Saliba (D)",
+            "3. Lucas Digne (D)",
+            "8. Aurélien Tchouaméni (M)",
+            "14. Adrien Rabiot (M)",
+            "7. Ousmane Dembélé (M)",
+            "11. Michael Olise (M)",
+            "12. Bradley Barcola (M)",
+            "10. Kylian Mbappé (F)"
+          ],
+          "source": "Dernière compo connue",
+          "sourceDate": "2026-06-30T21:00:00+00:00",
+          "sourceMatch": "France 3-0 Suède"
+        }
+      },
+      "stats": {
+        "possession": {
+          "home": null,
+          "away": null
+        },
+        "shots": {
+          "home": null,
+          "away": null
+        },
+        "shotsOnTarget": {
+          "home": null,
+          "away": null
+        },
+        "corners": {
+          "home": null,
+          "away": null
+        },
+        "fouls": {
+          "home": null,
+          "away": null
+        }
+      },
+      "playerRatings": {
+        "home": [],
+        "away": []
+      },
+      "winProbability": {
+        "home": 0,
+        "draw": 50,
+        "away": 50
+      },
+      "expertDiscussion": [
+        "Winner : France"
+      ]
+    },
+    {
       "id": "1568100",
       "stage": "8es",
       "group": null,
@@ -10871,19 +11011,19 @@
   "knockout": {},
   "scheduleSync": {
     "provider": "api-football",
-    "checkedAt": "2026-07-01T02:11:40.086792Z",
+    "checkedAt": "2026-07-01T06:24:31.403783Z",
     "league": 1,
     "season": 2026,
     "updatedMatches": 1,
-    "insertedMatches": 0,
-    "lineupsChecked": 0,
-    "lineupsUpdated": 0,
-    "fallbackLineups": 0
+    "insertedMatches": 1,
+    "lineupsChecked": 1,
+    "lineupsUpdated": 1,
+    "fallbackLineups": 12
   },
   "predictionSync": {
     "provider": "api-football",
-    "checkedAt": "2026-06-30T20:48:38.386716Z",
+    "checkedAt": "2026-07-01T06:24:31.746359Z",
     "updatedMatches": 1
   },
-  "baseSyncedAt": "2026-07-01T02:11:42.903125Z"
+  "baseSyncedAt": "2026-07-01T06:24:34.432822Z"
 }
