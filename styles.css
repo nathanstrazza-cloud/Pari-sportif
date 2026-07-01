@@ -394,6 +394,76 @@ body.is-authenticated .auth-overlay {
   letter-spacing: 0;
 }
 
+.tagline {
+  margin: 0.35rem 0 0;
+  color: var(--gold-light);
+  font-size: 0.9rem;
+  font-weight: 600;
+  font-style: italic;
+  opacity: 0.95;
+}
+
+/* Étoile "favori IA" affichée à côté d'une équipe (tableau + cartes de match). */
+.fav-star {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.15em;
+  height: 1.15em;
+  margin-left: 0.3em;
+  padding: 0;
+  border: 0;
+  background: none;
+  cursor: pointer;
+  vertical-align: middle;
+  flex: none;
+  line-height: 0;
+}
+
+.fav-star svg {
+  width: 100%;
+  height: 100%;
+  fill: var(--gold);
+  filter: drop-shadow(0 1px 1px rgba(16, 32, 51, 0.35));
+}
+
+.fav-star-mark {
+  position: absolute;
+  top: 47%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 0.58em;
+  font-weight: 900;
+  color: var(--text);
+  pointer-events: none;
+}
+
+.fav-tooltip {
+  position: absolute;
+  z-index: 60;
+  max-width: 240px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 8px 11px;
+  border-radius: 10px;
+  background: var(--text);
+  color: #fff;
+  box-shadow: 0 8px 24px rgba(16, 32, 51, 0.28);
+  font-size: 0.8rem;
+  line-height: 1.35;
+}
+
+.fav-tooltip strong {
+  color: var(--gold);
+}
+
+.fav-tooltip em {
+  font-style: italic;
+  opacity: 0.92;
+}
+
 h1,
 h2,
 h3,

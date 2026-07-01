@@ -17,7 +17,7 @@
     <title>La Cote à Dédé</title>
     <link rel="manifest" href="manifest.json" />
     <link rel="icon" href="logo.PNG" type="image/png" />
-    <link rel="stylesheet" href="styles.css?v=33" />
+    <link rel="stylesheet" href="styles.css?v=34" />
   </head>
   <body class="auth-pending">
     <div class="loading-screen" id="loadingScreen" aria-live="polite">
@@ -25,6 +25,7 @@
       <div>
         <p class="eyebrow">Coupe du Monde FIFA 2026</p>
         <h1>La Cote à Dédé</h1>
+        <p class="tagline">Pour que vos pronos ronronnent</p>
       </div>
       <span class="loader" aria-hidden="true"></span>
     </div>
@@ -34,6 +35,7 @@
         <img src="logo.PNG" alt="" class="auth-logo" />
         <p class="eyebrow">Accès sécurisé</p>
         <h1 id="authTitle">La Cote à Dédé</h1>
+        <p class="tagline">Pour que vos pronos ronronnent</p>
         <p class="auth-copy">Connectez-vous avec votre compte Google pour accéder à l’application.</p>
         <p class="fun-disclaimer" style="font-size:.8rem;line-height:1.5;opacity:.85;border:1px solid currentColor;border-radius:10px;padding:10px 12px;margin:4px 0 0;">
           🎲 Site 100&nbsp;% fun, entre amis : pour départager vos pronostics et éclater vos potes,
@@ -95,20 +97,20 @@
           </div>
         </div>
         <div class="standings-subtabs" id="standingsSubtabs" role="tablist" aria-label="Vues des classements">
-          <button class="standing-view-tab is-active" type="button" data-standings-view="groups" role="tab" aria-selected="true">
+          <button class="standing-view-tab" type="button" data-standings-view="groups" role="tab" aria-selected="false">
             Groupes
           </button>
           <button class="standing-view-tab" type="button" data-standings-view="thirds" role="tab" aria-selected="false">
             Meilleurs 3e
           </button>
-          <button class="standing-view-tab" type="button" data-standings-view="scorers" role="tab" aria-selected="false">
+          <button class="standing-view-tab is-active" type="button" data-standings-view="scorers" role="tab" aria-selected="true">
             Buteurs
           </button>
           <button class="standing-view-tab" type="button" data-standings-view="assists" role="tab" aria-selected="false">
             Passeurs
           </button>
         </div>
-        <div class="standing-view is-active" id="standingViewGroups" data-standing-view="groups">
+        <div class="standing-view" id="standingViewGroups" data-standing-view="groups">
           <div class="legend" id="standingsLegend">
             <span><i class="dot qualified"></i>Qualifié</span>
             <span><i class="dot best-third"></i>Meilleur 3e</span>
@@ -119,7 +121,7 @@
         <div class="standing-view" id="standingViewThirds" data-standing-view="thirds">
           <div id="bestThirdBoard"></div>
         </div>
-        <div class="standing-view" id="standingViewScorers" data-standing-view="scorers">
+        <div class="standing-view is-active" id="standingViewScorers" data-standing-view="scorers">
           <div id="topScorersBoard" class="players-boards players-boards-single"></div>
         </div>
         <div class="standing-view" id="standingViewAssists" data-standing-view="assists">
@@ -232,6 +234,6 @@
 
     <noscript>Activez JavaScript pour utiliser La Cote à Dédé.</noscript>
     <script src="auth.js?v=2" type="module"></script>
-    <script src="app.js?v=33" defer></script>
+    <script src="app.js?v=34" defer></script>
   </body>
 </html>
