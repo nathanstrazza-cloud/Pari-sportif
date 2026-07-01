@@ -28,11 +28,12 @@ const state = {
   betSuggestions: {},
   matchOdds: {},
   knockout: {},
+  favorites: [],
   selectedMatchId: null,
   selectedTeam: null,
   detailTeam: null,
   activeTab: "matches",
-  activeStandingView: "groups",
+  activeStandingView: "scorers",
   activeStage: "round32",
   refreshTimer: null,
   touchStartX: 0,
@@ -295,6 +296,7 @@ async function boot() {
   bindTeamModal();
   bindInstallPrompt();
   bindForegroundRefresh();
+  bindFavoriteStars();
 
   try {
     await loadData();
@@ -351,6 +353,7 @@ async function loadData() {
   ]);
 
   state.matches = Array.isArray(matches.matches) ? matches.matches : [];
+  state.favorites = Array.isArray(matches.favorites) ? matches.favorites : [];
   state.standings = Array.isArray(standings.groups) ? standings.groups : [];
   state.knockout = buildKnockout(matches.knockout, state.matches, state.standings);
   state.players = players && typeof players === "object" ? players : {};
@@ -1094,8 +1097,78 @@ function renderMatchTeam(team, side = "", interactive = true) {
     <span class="match-team match-team-${escapeHtml(side)}${interactive ? " team-link" : ""}" ${attrs}>
       ${renderTeamFlag(team, "flag-match")}
       <span class="team-name">${escapeHtml(displayTeamName(team))}</span>
+      ${renderFavoriteStar(team)}
     </span>
   `;
+}
+
+// ─────────────────────────── Favoris IA (etoile "?") ───────────────────────────
+// Les 3 equipes favorites pour le titre, calculees par l'IA du Worker apres chaque
+// match. Affichees par une etoile "?" a cote de l'equipe (tableau + cartes de match).
+function getTeamFavorite(team) {
+  if (!team || !Array.isArray(state.favorites) || !state.favorites.length) return null;
+  const key = normalizeTeamName(displayTeamName(team));
+  if (!key) return null;
+  return state.favorites.find((fav) => normalizeTeamName(displayTeamName(fav.team)) === key) ?? null;
+}
+
+function renderFavoriteStar(team) {
+  const fav = getTeamFavorite(team);
+  if (!fav) return "";
+  const label = `Favori IA n°${fav.rank} pour la victoire finale${fav.reason ? " — " + fav.reason : ""}`;
+  return `
+    <button type="button" class="fav-star" data-fav-star data-fav-rank="${escapeHtml(fav.rank)}" data-fav-reason="${escapeHtml(fav.reason ?? "")}" title="${escapeHtml(label)}" aria-label="${escapeHtml(label)}">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 1.6l3.09 6.26 6.91 1.01-5 4.87 1.18 6.86L12 17.27l-6.18 3.25 1.18-6.86-5-4.87 6.91-1.01z"/></svg>
+      <span class="fav-star-mark" aria-hidden="true">?</span>
+    </button>
+  `;
+}
+
+let favTooltipEl = null;
+
+function hideFavoriteTooltip() {
+  if (favTooltipEl) {
+    favTooltipEl.remove();
+    favTooltipEl = null;
+  }
+}
+
+function showFavoriteTooltip(star) {
+  hideFavoriteTooltip();
+  const rank = star.getAttribute("data-fav-rank");
+  const reason = star.getAttribute("data-fav-reason");
+  const el = document.createElement("div");
+  el.className = "fav-tooltip";
+  el.innerHTML = `
+    <strong>⭐ Favori IA n°${escapeHtml(rank)}</strong>
+    <span>pour la victoire finale</span>
+    ${reason ? `<em>${escapeHtml(reason)}</em>` : ""}
+  `;
+  document.body.appendChild(el);
+  const rect = star.getBoundingClientRect();
+  const maxLeft = window.scrollX + window.innerWidth - el.offsetWidth - 12;
+  el.style.top = `${window.scrollY + rect.bottom + 8}px`;
+  el.style.left = `${Math.max(window.scrollX + 8, Math.min(window.scrollX + rect.left, maxLeft))}px`;
+  favTooltipEl = el;
+}
+
+// Capture : intercepte le clic sur l'etoile avant les gestionnaires de carte/tableau
+// (ouverture match/equipe), et referme la bulle sur tout autre clic.
+function handleFavoriteStarClick(event) {
+  const star = event.target.closest("[data-fav-star]");
+  if (star) {
+    event.preventDefault();
+    event.stopPropagation();
+    showFavoriteTooltip(star);
+    return;
+  }
+  if (favTooltipEl) hideFavoriteTooltip();
+}
+
+function bindFavoriteStars() {
+  // Capture : passe avant les gestionnaires de carte de match / tableau.
+  document.addEventListener("click", handleFavoriteStarClick, true);
+  window.addEventListener("scroll", hideFavoriteTooltip, { passive: true });
 }
 
 function renderDaySeparator(date) {
@@ -3167,6 +3240,7 @@ function renderBracketTeam(team, options, isLockedSlot = false) {
     >
       ${renderTeamFlag(team, "flag-bracket")}
       <span>${escapeHtml(displayTeamName(team))}</span>
+      ${renderFavoriteStar(team)}
     </span>
   `;
 }

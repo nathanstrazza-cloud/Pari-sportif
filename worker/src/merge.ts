@@ -216,6 +216,54 @@ export function mergeBaseIntoCurrent(base: Record<string, any>, current: Record<
   return { ...base, matches };
 }
 
+// ─────────────────────────── Favoris (equipes encore en lice) ───────────────────────────
+const KNOCKOUT_STAGES = new Set(["16es", "8es", "quarts", "demies", "finale", "3e place"]);
+
+export function isKnockoutMatch(match: Match): boolean {
+  return KNOCKOUT_STAGES.has(normalize(match?.stage));
+}
+
+// Perdant d'un match a elimination directe termine (t.a.b. inclus), sinon null.
+export function knockoutLoser(match: Match): string | null {
+  const h = match?.score?.home;
+  const a = match?.score?.away;
+  if (typeof h !== "number" || typeof a !== "number") return null;
+  if (h !== a) return h > a ? match.away : match.home;
+  const p = match?.penalties;
+  if (p && typeof p.home === "number" && typeof p.away === "number" && p.home !== p.away) {
+    return p.home > p.away ? match.away : match.home;
+  }
+  return null;
+}
+
+function isConcreteTeamName(name: unknown): boolean {
+  const value = String(name ?? "").trim();
+  if (!value) return false;
+  return !/^vainqueur\b/i.test(value) && !/^groupe\s+[a-l]/i.test(value) && normalize(value) !== "equipe a confirmer";
+}
+
+// Equipes encore en course pour le titre : participants au tableau final non elimines.
+export function aliveKnockoutTeams(matches: Match[]): string[] {
+  const participants: string[] = [];
+  const seen = new Set<string>();
+  const eliminated = new Set<string>();
+  for (const m of Array.isArray(matches) ? matches : []) {
+    if (!isKnockoutMatch(m)) continue;
+    for (const team of [m.home, m.away]) {
+      const key = normalize(team);
+      if (isConcreteTeamName(team) && key && !seen.has(key)) {
+        seen.add(key);
+        participants.push(team);
+      }
+    }
+    if (m.status === "finished") {
+      const loser = knockoutLoser(m);
+      if (loser) eliminated.add(normalize(loser));
+    }
+  }
+  return participants.filter((team) => !eliminated.has(normalize(team)));
+}
+
 // Appaire chaque fixture API a son match local (pour enrichir buteurs/cartons/stats).
 export function matchFixtures(fixtures: Fixture[], candidates: Match[]): Array<{ match: Match; fixture: Fixture }> {
   const pairs: Array<{ match: Match; fixture: Fixture }> = [];

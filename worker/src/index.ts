@@ -1,4 +1,5 @@
 import {
+  aliveKnockoutTeams,
   applyEvents,
   applyStatistics,
   buildPlayers,
@@ -9,6 +10,7 @@ import {
   matchFixtures,
   mergeBaseIntoCurrent,
   mergeLiveFixtures,
+  normalize,
   parseDate,
   type Match,
   type Fixture,
@@ -129,6 +131,83 @@ async function maybeGenerateExperts(env: Env, data: Record<string, any>, nowMs: 
     }
   }
   return generated;
+}
+
+// --- Favoris IA : les 3 equipes les plus susceptibles de gagner la Coupe du Monde ---
+const FAVORITES_MODEL = EXPERT_MODEL;
+const FAVORITES_SYSTEM = [
+  "Tu es un analyste football pour un jeu de pronostics entre amis, sans argent.",
+  "On te donne la liste des equipes ENCORE EN LICE pour la Coupe du Monde.",
+  "Classe les 3 favorites pour REMPORTER le tournoi, de la plus probable a la moins probable.",
+  "Tiens compte de la forme, du niveau et du parcours restant.",
+  'Reponds UNIQUEMENT en JSON : un tableau de 3 objets {"team": <nom EXACT issu de la liste>, "reason": <une phrase courte en francais>}.',
+  "N'invente aucune equipe hors de la liste. Aucun texte hors du JSON.",
+].join("\n");
+
+type Favorite = { rank: number; team: string; reason: string };
+
+function parseFavorites(text: string, alive: string[]): Favorite[] | null {
+  const raw = String(text ?? "").trim();
+  const tryJson = (s: string): any[] | null => {
+    try {
+      const j = JSON.parse(s);
+      return Array.isArray(j) ? j : Array.isArray(j?.favoris) ? j.favoris : Array.isArray(j?.favorites) ? j.favorites : null;
+    } catch {
+      return null;
+    }
+  };
+  const arr = tryJson(raw) ?? tryJson((raw.match(/\[[\s\S]*\]/) || [""])[0]);
+  if (!arr) return null;
+  const byNorm = new Map(alive.map((t) => [normalize(t), t]));
+  const out: Favorite[] = [];
+  const used = new Set<string>();
+  for (const item of arr) {
+    const key = normalize(item?.team ?? item?.equipe ?? item);
+    const canonical = byNorm.get(key);
+    if (!canonical || used.has(key)) continue;
+    used.add(key);
+    out.push({ rank: out.length + 1, team: canonical, reason: String(item?.reason ?? item?.raison ?? "").trim() });
+    if (out.length === 3) break;
+  }
+  return out.length ? out : null;
+}
+
+async function computeFavorites(env: Env, matches: Match[]): Promise<Favorite[] | null> {
+  if (!env.AI) return null;
+  const alive = aliveKnockoutTeams(matches);
+  if (alive.length < 2) return null;
+  const user = `Equipes encore en lice : ${alive.join(", ")}. Donne les 3 favorites pour gagner la Coupe du Monde.`;
+  try {
+    const res = await env.AI.run(FAVORITES_MODEL, {
+      messages: [
+        { role: "system", content: FAVORITES_SYSTEM },
+        { role: "user", content: user },
+      ],
+      max_tokens: 500,
+    });
+    const text = typeof res === "string" ? res : res?.response ?? "";
+    return parseFavorites(String(text), alive);
+  } catch {
+    return null;
+  }
+}
+
+// Declenche quand un match vient d'etre finalise (ou au 1er passage) : rafraichit le
+// classement + les buteurs/passeurs (le cron GitHub etant peu fiable entre les matchs)
+// et recalcule les 3 favoris IA. Garde par signature (nb de matchs termines) pour ne
+// pas rappeler l'IA/l'API a chaque tick.
+async function onMatchesFinalized(env: Env, data: Record<string, any>, nowIso: string): Promise<boolean> {
+  const matches: Match[] = Array.isArray(data.matches) ? data.matches : [];
+  const signature = String(matches.filter((m) => m.status === "finished").length);
+  if (data.finalizedSignature === signature && Array.isArray(data.favorites)) return false;
+  await refreshCompetition(env, nowIso);
+  const favorites = await computeFavorites(env, matches);
+  if (favorites) {
+    data.favorites = favorites;
+    data.favoritesComputedAt = nowIso;
+  }
+  data.finalizedSignature = signature;
+  return true;
 }
 
 // Une origine est-elle autorisee ? (allowlist .fr + localhost + *.pages.dev)
@@ -312,6 +391,11 @@ async function syncLive(env: Env): Promise<void> {
         const merged = mergeBaseIntoCurrent(base, data);
         merged.workerAdoptedBaseStamp = baseStamp ?? data.workerAdoptedBaseStamp ?? null;
         merged.workerMorningReseed = today;
+        // La base Python ne porte pas les favoris : on conserve ceux deja calcules.
+        merged.favorites = data.favorites ?? merged.favorites;
+        merged.favoritesComputedAt = data.favoritesComputedAt ?? merged.favoritesComputedAt;
+        merged.finalizedSignature = data.finalizedSignature ?? merged.finalizedSignature;
+        await onMatchesFinalized(env, merged, nowDate.toISOString());
         await env.MATCHES.put(MATCHES_CURRENT, JSON.stringify(merged));
         return;
       }
@@ -374,6 +458,11 @@ async function syncLive(env: Env): Promise<void> {
     mustWrite = true;
   }
 
+  // 4b) Favoris IA + rafraichissement classement/buteurs des qu'un match est finalise.
+  if (await onMatchesFinalized(env, data, nowDate.toISOString())) {
+    mustWrite = true;
+  }
+
   // 5) Sinon : rien a faire. On n'ecrit que si on a quelque chose a persister.
   if (mustWrite) {
     await env.MATCHES.put(MATCHES_CURRENT, JSON.stringify(data));
@@ -403,6 +492,10 @@ async function onDemandSync(env: Env): Promise<Record<string, any>> {
         m.expertsAI = true;
       }
     }
+    // Conserve les favoris deja calcules (la base Python ne les porte pas).
+    base.favorites = prev.favorites ?? base.favorites;
+    base.favoritesComputedAt = prev.favoritesComputedAt ?? base.favoritesComputedAt;
+    base.finalizedSignature = prev.finalizedSignature ?? base.finalizedSignature;
   }
 
   const candidates = findLiveCandidates(matches, now, BEFORE_MS, AFTER_MS);
@@ -417,6 +510,7 @@ async function onDemandSync(env: Env): Promise<Record<string, any>> {
   }
   const generated = await maybeGenerateExperts(env, base, now, 8);
   const checkedAt = new Date(now).toISOString();
+  await onMatchesFinalized(env, base, checkedAt);
   base.lastUpdated = checkedAt;
   base.liveSync = { provider: "api-football-cf", checkedAt, updatedMatches: updated, expertsGenerated: generated, onDemand: true };
   await env.MATCHES.put(MATCHES_CURRENT, JSON.stringify(base));
