@@ -437,19 +437,35 @@ function buildProjectedRound32(standings, existingRound32Matches = []) {
   });
 }
 
+// Vainqueur reel d'un match nourricier deja termine (sinon null : encore a jouer,
+// ou simple projection sans score). Sert a resoudre les cases du tableau au fil de
+// l'eau : une fois un match joue, le tour suivant affiche l'equipe qualifiee.
+function resolveBracketWinner(sourceMatch) {
+  if (!sourceMatch || sourceMatch.projected) return null;
+  if (sourceMatch.status && sourceMatch.status !== "finished") return null;
+  return getMatchWinnerTeam(sourceMatch);
+}
+
 function buildProjectedRound16(round32Matches) {
   return round16Fixtures.map((fixture) => {
     const homeSource = findBracketMatchByNumber(round32Matches, fixture.homeMatch);
     const awaySource = findBracketMatchByNumber(round32Matches, fixture.awayMatch);
+    const homeTeams = getBracketMatchTeams(homeSource);
+    const awayTeams = getBracketMatchTeams(awaySource);
+    const homeWinner = resolveBracketWinner(homeSource);
+    const awayWinner = resolveBracketWinner(awaySource);
     return {
       id: `projected-round16-${fixture.match}`,
       matchNumber: fixture.match,
       stage: stageLabels.round16,
       slot: formatStageSlot("round16", getStageOrderIndex("round16", fixture.match)),
-      home: formatWinnerSeed("round32", fixture.homeMatch),
-      away: formatWinnerSeed("round32", fixture.awayMatch),
-      homeOptions: getBracketMatchTeams(homeSource),
-      awayOptions: getBracketMatchTeams(awaySource),
+      home: homeWinner ?? formatWinnerSeed("round32", fixture.homeMatch),
+      away: awayWinner ?? formatWinnerSeed("round32", fixture.awayMatch),
+      homeOptions: homeWinner ? [] : homeTeams,
+      awayOptions: awayWinner ? [] : awayTeams,
+      // Equipes possibles de la case (les 2 matchs nourriciers) : sert a rattacher
+      // un vrai match du tableau (equipes deja connues) a sa case, meme partiellement resolu.
+      slotTeams: [...homeTeams, ...awayTeams],
       homeScore: null,
       awayScore: null,
       projected: true,
@@ -462,19 +478,23 @@ function buildProjectedStage(fixtures, stage, sourceStage, sourceMatches) {
   return fixtures.map((fixture) => {
     const homeSource = findBracketMatchByNumber(sourceMatches, fixture.homeMatch);
     const awaySource = findBracketMatchByNumber(sourceMatches, fixture.awayMatch);
+    const homeWinner = resolveBracketWinner(homeSource);
+    const awayWinner = resolveBracketWinner(awaySource);
+    const sourceTeams = [
+      ...getBracketMatchTeams(homeSource),
+      ...getBracketMatchTeams(awaySource),
+    ];
     return {
       id: `projected-${stage}-${fixture.match}`,
       matchNumber: fixture.match,
       stage: stageLabels[stage],
       slot: formatStageSlot(stage, getStageOrderIndex(stage, fixture.match)),
-      home: formatWinnerSeed(sourceStage, fixture.homeMatch),
-      away: formatWinnerSeed(sourceStage, fixture.awayMatch),
+      home: homeWinner ?? formatWinnerSeed(sourceStage, fixture.homeMatch),
+      away: awayWinner ?? formatWinnerSeed(sourceStage, fixture.awayMatch),
       homeOptions: [],
       awayOptions: [],
-      sourceTeams: [
-        ...getBracketMatchTeams(homeSource),
-        ...getBracketMatchTeams(awaySource),
-      ],
+      sourceTeams,
+      slotTeams: sourceTeams,
       homeScore: null,
       awayScore: null,
       projected: true,
@@ -485,10 +505,18 @@ function buildProjectedStage(fixtures, stage, sourceStage, sourceMatches) {
 
 function mergeProjectedMatches(matches, projections) {
   const merged = [...matches];
+  const bound = new Set();
 
   projections.forEach((projection) => {
-    const existing = merged.find((match) => isSameBracketProjection(match, projection));
+    // 1) Match reel deja rattache par numero ou par equipes resolues.
+    let existing = merged.find((match) => !bound.has(match) && isSameBracketProjection(match, projection));
+    // 2) Sinon, vrai match du tableau dont les deux equipes appartiennent aux
+    //    nourriciers de la case (equipes qualifiees connues avant la projection).
+    if (!existing) {
+      existing = merged.find((match) => !bound.has(match) && realMatchFitsProjectionSlot(match, projection));
+    }
     if (existing) {
+      bound.add(existing);
       existing.matchNumber = existing.matchNumber ?? projection.matchNumber;
       existing.sortOrder = existing.sortOrder ?? projection.sortOrder;
       if (!hasSpecificSlot(existing.slot)) {
@@ -501,6 +529,18 @@ function mergeProjectedMatches(matches, projections) {
   });
 
   return merged;
+}
+
+// Un vrai match (equipes concretes) occupe-t-il la case de cette projection ?
+// Vrai si ses deux equipes figurent parmi les nourriciers de la case. Les
+// nourriciers de deux cases d'un meme tour sont disjoints -> rattachement unique.
+function realMatchFitsProjectionSlot(match, projection) {
+  if (match?.projected) return false;
+  if (!isConcreteTeam(match?.home) || !isConcreteTeam(match?.away)) return false;
+  const pool = projection?.slotTeams;
+  if (!Array.isArray(pool) || pool.length < 2) return false;
+  const inPool = (team) => pool.some((candidate) => sameTeam(candidate, team));
+  return inPool(match.home) && inPool(match.away);
 }
 
 function resolveRound32Seed(seed, standings, thirdAssignments, matchNumber) {
