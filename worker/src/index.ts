@@ -172,10 +172,10 @@ function parseFavorites(text: string, alive: string[]): Favorite[] | null {
   return out.length ? out : null;
 }
 
-async function computeFavorites(env: Env, matches: Match[]): Promise<Favorite[] | null> {
-  if (!env.AI) return null;
+async function computeFavorites(env: Env, matches: Match[]): Promise<{ favorites: Favorite[] | null; debug: Record<string, any> }> {
+  if (!env.AI) return { favorites: null, debug: { reason: "no-ai" } };
   const alive = aliveKnockoutTeams(matches);
-  if (alive.length < 2) return null;
+  if (alive.length < 2) return { favorites: null, debug: { reason: "too-few-alive", alive: alive.length } };
   const user = `Equipes encore en lice : ${alive.join(", ")}. Donne les 3 favorites pour gagner la Coupe du Monde.`;
   try {
     const res = await env.AI.run(FAVORITES_MODEL, {
@@ -186,9 +186,10 @@ async function computeFavorites(env: Env, matches: Match[]): Promise<Favorite[] 
       max_tokens: 500,
     });
     const text = typeof res === "string" ? res : res?.response ?? "";
-    return parseFavorites(String(text), alive);
-  } catch {
-    return null;
+    const favorites = parseFavorites(String(text), alive);
+    return { favorites, debug: { reason: favorites ? "ok" : "parse-null", alive: alive.length, raw: String(text).slice(0, 400) } };
+  } catch (error) {
+    return { favorites: null, debug: { reason: "ai-error", error: String(error).slice(0, 200) } };
   }
 }
 
@@ -201,7 +202,8 @@ async function onMatchesFinalized(env: Env, data: Record<string, any>, nowIso: s
   const signature = String(matches.filter((m) => m.status === "finished").length);
   if (data.finalizedSignature === signature && Array.isArray(data.favorites)) return false;
   await refreshCompetition(env, nowIso);
-  const favorites = await computeFavorites(env, matches);
+  const { favorites, debug } = await computeFavorites(env, matches);
+  data.favoritesDebug = { ...debug, at: nowIso };
   if (favorites) {
     data.favorites = favorites;
     data.favoritesComputedAt = nowIso;
