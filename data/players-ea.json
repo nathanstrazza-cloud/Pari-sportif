@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-01T20:44:01.747620Z",
+  "lastUpdated": "2026-07-01T22:10:40.891264Z",
   "source": "api-football",
   "topScorers": [
     {
@@ -21,9 +21,21 @@
       "goals": 5.0
     },
     {
+      "name": "H. Kane",
+      "team": "Angleterre",
+      "age": 32,
+      "goals": 5.0
+    },
+    {
       "name": "O. Dembélé",
       "team": "France",
       "age": 28,
+      "goals": 4.0
+    },
+    {
+      "name": "I. Sarr",
+      "team": "Sénégal",
+      "age": 27,
       "goals": 4.0
     },
     {
@@ -54,12 +66,6 @@
       "name": "J. Manzambi",
       "team": "Suisse",
       "age": 20,
-      "goals": 3.0
-    },
-    {
-      "name": "I. Sarr",
-      "team": "Sénégal",
-      "age": 27,
       "goals": 3.0
     },
     {
@@ -96,12 +102,6 @@
       "name": "K. Havertz",
       "team": "Allemagne",
       "age": 26,
-      "goals": 3.0
-    },
-    {
-      "name": "H. Kane",
-      "team": "Angleterre",
-      "age": 32,
       "goals": 3.0
     },
     {
@@ -197,6 +197,12 @@
       "assists": 2.0
     },
     {
+      "name": "I. Ndiaye",
+      "team": "Sénégal",
+      "age": 25,
+      "assists": 2.0
+    },
+    {
       "name": "N. Saliba",
       "team": "Canada",
       "age": 21,
@@ -209,15 +215,15 @@
       "assists": 2.0
     },
     {
-      "name": "I. Ndiaye",
-      "team": "Sénégal",
-      "age": 25,
-      "assists": 2.0
-    },
-    {
       "name": "B. Embolo",
       "team": "Suisse",
       "age": 28,
+      "assists": 2.0
+    },
+    {
+      "name": "B. Saka",
+      "team": "Angleterre",
+      "age": 24,
       "assists": 2.0
     },
     {
@@ -236,12 +242,6 @@
       "name": "R. Gravenberch",
       "team": "Pays-Bas",
       "age": 23,
-      "assists": 2.0
-    },
-    {
-      "name": "J. Kimmich",
-      "team": "Allemagne",
-      "age": 30,
       "assists": 2.0
     }
   ],

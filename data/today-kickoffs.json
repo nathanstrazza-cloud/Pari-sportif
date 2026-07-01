@@ -1,40 +1,40 @@
 {
-  "lastUpdated": "2026-07-01T20:44:05.552495Z",
+  "lastUpdated": "2026-07-01T22:10:43.427199Z",
   "timezone": "Europe/Paris",
-  "windowStart": "2026-07-01T12:00:00+02:00",
-  "windowEnd": "2026-07-02T12:00:00+02:00",
+  "windowStart": "2026-07-02T12:00:00+02:00",
+  "windowEnd": "2026-07-03T12:00:00+02:00",
   "matches": [
     {
-      "id": "1567307",
-      "date": "2026-07-01T16:00:00+00:00",
-      "localDate": "2026-07-01",
-      "localTime": "18:00",
-      "stage": "16es",
-      "group": null,
-      "home": "Angleterre",
-      "away": "RD Congo",
-      "status": "finished"
-    },
-    {
-      "id": "1567308",
-      "date": "2026-07-01T20:00:00+00:00",
-      "localDate": "2026-07-01",
-      "localTime": "22:00",
-      "stage": "16es",
-      "group": null,
-      "home": "Belgique",
-      "away": "Sénégal",
-      "status": "live"
-    },
-    {
-      "id": "1562586",
-      "date": "2026-07-02T00:00:00+00:00",
+      "id": "1567311",
+      "date": "2026-07-02T19:00:00+00:00",
       "localDate": "2026-07-02",
-      "localTime": "02:00",
+      "localTime": "21:00",
       "stage": "16es",
       "group": null,
-      "home": "États-Unis",
-      "away": "Bosnie-et-Herzégovine",
+      "home": "Espagne",
+      "away": "Autriche",
+      "status": "upcoming"
+    },
+    {
+      "id": "1567309",
+      "date": "2026-07-02T23:00:00+00:00",
+      "localDate": "2026-07-03",
+      "localTime": "01:00",
+      "stage": "16es",
+      "group": null,
+      "home": "Portugal",
+      "away": "Croatie",
+      "status": "upcoming"
+    },
+    {
+      "id": "1567312",
+      "date": "2026-07-03T03:00:00+00:00",
+      "localDate": "2026-07-03",
+      "localTime": "05:00",
+      "stage": "16es",
+      "group": null,
+      "home": "Suisse",
+      "away": "Algérie",
       "status": "upcoming"
     }
   ]
