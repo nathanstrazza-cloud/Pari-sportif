@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-01T16:13:21.314236Z",
+  "lastUpdated": "2026-07-01T18:52:55.306500Z",
   "matches": [
     {
       "id": "400021443",
@@ -9675,7 +9675,7 @@
       "homeCoach": "Thomas Tuchel",
       "awayCoach": "Sebastien Desabre",
       "score": {
-        "home": 0,
+        "home": 2,
         "away": 1
       },
       "scorers": [],
@@ -9683,8 +9683,8 @@
       "externalIds": {
         "apiFootball": "1567307"
       },
-      "status": "live",
-      "minute": 13,
+      "status": "finished",
+      "minute": null,
       "lineups": {
         "home": {
           "team": "Angleterre",
@@ -11039,13 +11039,13 @@
   "knockout": {},
   "scheduleSync": {
     "provider": "api-football",
-    "checkedAt": "2026-07-01T16:13:21.314236Z",
+    "checkedAt": "2026-07-01T18:52:55.306500Z",
     "league": 1,
     "season": 2026,
     "updatedMatches": 1,
     "insertedMatches": 0,
-    "lineupsChecked": 1,
-    "lineupsUpdated": 1,
+    "lineupsChecked": 0,
+    "lineupsUpdated": 0,
     "fallbackLineups": 0
   },
   "predictionSync": {
@@ -11053,5 +11053,5 @@
     "checkedAt": "2026-07-01T06:24:31.746359Z",
     "updatedMatches": 1
   },
-  "baseSyncedAt": "2026-07-01T16:13:25.351767Z"
+  "baseSyncedAt": "2026-07-01T18:52:58.029293Z"
 }
