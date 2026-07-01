@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-01T18:52:58.040190Z",
+  "lastUpdated": "2026-07-01T20:44:05.552495Z",
   "timezone": "Europe/Paris",
   "windowStart": "2026-07-01T12:00:00+02:00",
   "windowEnd": "2026-07-02T12:00:00+02:00",
@@ -24,7 +24,7 @@
       "group": null,
       "home": "Belgique",
       "away": "Sénégal",
-      "status": "upcoming"
+      "status": "live"
     },
     {
       "id": "1562586",
