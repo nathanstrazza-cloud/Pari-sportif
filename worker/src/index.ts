@@ -146,17 +146,24 @@ const FAVORITES_SYSTEM = [
 
 type Favorite = { rank: number; team: string; reason: string };
 
-function parseFavorites(text: string, alive: string[]): Favorite[] | null {
-  const raw = String(text ?? "").trim();
-  const tryJson = (s: string): any[] | null => {
-    try {
-      const j = JSON.parse(s);
-      return Array.isArray(j) ? j : Array.isArray(j?.favoris) ? j.favoris : Array.isArray(j?.favorites) ? j.favorites : null;
-    } catch {
-      return null;
-    }
-  };
-  const arr = tryJson(raw) ?? tryJson((raw.match(/\[[\s\S]*\]/) || [""])[0]);
+// Workers AI peut renvoyer soit une chaine JSON, soit deja un tableau/objet parse.
+function parseFavorites(payload: unknown, alive: string[]): Favorite[] | null {
+  const fromObject = (j: any): any[] | null =>
+    Array.isArray(j) ? j : Array.isArray(j?.favoris) ? j.favoris : Array.isArray(j?.favorites) ? j.favorites : null;
+  let arr: any[] | null = null;
+  if (Array.isArray(payload) || (payload && typeof payload === "object")) {
+    arr = fromObject(payload);
+  } else if (typeof payload === "string") {
+    const raw = payload.trim();
+    const tryJson = (s: string): any[] | null => {
+      try {
+        return fromObject(JSON.parse(s));
+      } catch {
+        return null;
+      }
+    };
+    arr = tryJson(raw) ?? tryJson((raw.match(/\[[\s\S]*\]/) || [""])[0]);
+  }
   if (!arr) return null;
   const byNorm = new Map(alive.map((t) => [normalize(t), t]));
   const out: Favorite[] = [];
@@ -185,9 +192,9 @@ async function computeFavorites(env: Env, matches: Match[]): Promise<{ favorites
       ],
       max_tokens: 500,
     });
-    const text = typeof res === "string" ? res : res?.response ?? "";
-    const favorites = parseFavorites(String(text), alive);
-    return { favorites, debug: { reason: favorites ? "ok" : "parse-null", alive: alive.length, raw: String(text).slice(0, 400) } };
+    const payload = typeof res === "string" ? res : res?.response ?? res;
+    const favorites = parseFavorites(payload, alive);
+    return { favorites, debug: { reason: favorites ? "ok" : "parse-null", alive: alive.length, raw: JSON.stringify(payload).slice(0, 400) } };
   } catch (error) {
     return { favorites: null, debug: { reason: "ai-error", error: String(error).slice(0, 200) } };
   }
