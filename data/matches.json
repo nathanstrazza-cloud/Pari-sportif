@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-30T23:55:35.664676Z",
+  "lastUpdated": "2026-07-01T02:11:40.086792Z",
   "matches": [
     {
       "id": "400021443",
@@ -9535,16 +9535,16 @@
       "homeCoach": "Javier Aguirre",
       "awayCoach": "S. Beccacece",
       "score": {
-        "home": null,
-        "away": null
+        "home": 0,
+        "away": 0
       },
       "scorers": [],
       "highlights": [],
       "externalIds": {
         "apiFootball": "1567306"
       },
-      "status": "upcoming",
-      "minute": null,
+      "status": "live",
+      "minute": 11,
       "lineups": {
         "home": {
           "team": "Mexique",
@@ -10871,13 +10871,13 @@
   "knockout": {},
   "scheduleSync": {
     "provider": "api-football",
-    "checkedAt": "2026-06-30T23:55:35.664676Z",
+    "checkedAt": "2026-07-01T02:11:40.086792Z",
     "league": 1,
     "season": 2026,
     "updatedMatches": 1,
     "insertedMatches": 0,
-    "lineupsChecked": 1,
-    "lineupsUpdated": 1,
+    "lineupsChecked": 0,
+    "lineupsUpdated": 0,
     "fallbackLineups": 0
   },
   "predictionSync": {
@@ -10885,5 +10885,5 @@
     "checkedAt": "2026-06-30T20:48:38.386716Z",
     "updatedMatches": 1
   },
-  "baseSyncedAt": "2026-06-30T23:55:39.587450Z"
+  "baseSyncedAt": "2026-07-01T02:11:42.903125Z"
 }
