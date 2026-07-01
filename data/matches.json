@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-01T22:10:40.724631Z",
+  "lastUpdated": "2026-07-01T23:59:28.316453Z",
   "matches": [
     {
       "id": "400021443",
@@ -9815,7 +9815,7 @@
       "homeCoach": "Rudi Garcia",
       "awayCoach": "Bouna Thiaw Pape",
       "score": {
-        "home": 2,
+        "home": 3,
         "away": 2
       },
       "scorers": [],
@@ -9823,8 +9823,8 @@
       "externalIds": {
         "apiFootball": "1567308"
       },
-      "status": "live",
-      "minute": 96,
+      "status": "finished",
+      "minute": null,
       "lineups": {
         "home": {
           "team": "Belgique",
@@ -11067,7 +11067,7 @@
   "knockout": {},
   "scheduleSync": {
     "provider": "api-football",
-    "checkedAt": "2026-07-01T22:10:40.724631Z",
+    "checkedAt": "2026-07-01T23:59:28.316453Z",
     "league": 1,
     "season": 2026,
     "updatedMatches": 1,
@@ -11081,5 +11081,5 @@
     "checkedAt": "2026-07-01T06:24:31.746359Z",
     "updatedMatches": 1
   },
-  "baseSyncedAt": "2026-07-01T22:10:43.418419Z"
+  "baseSyncedAt": "2026-07-01T23:59:32.644965Z"
 }
