@@ -11319,7 +11319,7 @@
   "knockout": {},
   "scheduleSync": {
     "provider": "api-football",
-    "checkedAt": "2026-07-02T12:05:51.510588Z",
+    "checkedAt": "2026-07-02T15:02:29.238240Z",
     "league": 1,
     "season": 2026,
     "updatedMatches": 0,
@@ -11333,5 +11333,5 @@
     "checkedAt": "2026-07-02T06:57:54.273008Z",
     "updatedMatches": 2
   },
-  "baseSyncedAt": "2026-07-02T12:05:55.191631Z"
+  "baseSyncedAt": "2026-07-02T15:02:32.822544Z"
 }
