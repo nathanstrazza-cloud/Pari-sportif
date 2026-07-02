@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-02T06:57:54.273008Z",
+  "lastUpdated": "2026-07-02T19:04:46.501674Z",
   "matches": [
     {
       "id": "400021443",
@@ -10089,32 +10089,60 @@
       "group": null,
       "date": "2026-07-02T19:00:00+00:00",
       "venue": "SoFi Stadium",
-      "city": "Los Angeles",
+      "city": "Inglewood",
       "home": "Espagne",
       "away": "Autriche",
       "homeCoach": "Luis de la Fuente",
-      "awayCoach": "Ralf Rangnick",
+      "awayCoach": "R. Rangnick",
       "score": {
-        "home": null,
-        "away": null
+        "home": 0,
+        "away": 0
       },
       "scorers": [],
       "highlights": [],
       "externalIds": {
         "apiFootball": "1567311"
       },
-      "status": "upcoming",
-      "minute": null,
+      "status": "live",
+      "minute": 5,
       "lineups": {
         "home": {
           "team": "Espagne",
-          "formation": null,
-          "players": []
+          "formation": "4-1-2-3",
+          "players": [
+            "23. Unai Simón (G)",
+            "12. Pedro Porro (D)",
+            "22. Pau Cubarsí Paredes (D)",
+            "14. Aymeric Laporte (D)",
+            "24. Marc Cucurella (D)",
+            "16. Rodri (M)",
+            "10. Dani Olmo (M)",
+            "20. Pedri (M)",
+            "19. Lamine Yamal (F)",
+            "21. Mikel Oyarzabal (F)",
+            "15. Álex Baena (M)"
+          ],
+          "source": "Composition officielle",
+          "sourceDate": "2026-07-02T19:00:00+00:00"
         },
         "away": {
           "team": "Autriche",
-          "formation": null,
-          "players": []
+          "formation": "4-2-3-1",
+          "players": [
+            "1. A. Schlager (G)",
+            "5. S. Posch (D)",
+            "3. K. Danso (D)",
+            "8. D. Alaba (D)",
+            "20. K. Laimer (M)",
+            "6. N. Seiwald (M)",
+            "4. X. Schlager (M)",
+            "18. R. Schmid (M)",
+            "24. P. Wanner (M)",
+            "9. M. Sabitzer (M)",
+            "11. M. Gregoritsch (F)"
+          ],
+          "source": "Composition officielle",
+          "sourceDate": "2026-07-02T19:00:00+00:00"
         }
       },
       "probableLineups": {
@@ -11319,13 +11347,13 @@
   "knockout": {},
   "scheduleSync": {
     "provider": "api-football",
-    "checkedAt": "2026-07-02T17:23:02.645815Z",
+    "checkedAt": "2026-07-02T19:04:46.501674Z",
     "league": 1,
     "season": 2026,
-    "updatedMatches": 0,
+    "updatedMatches": 1,
     "insertedMatches": 0,
-    "lineupsChecked": 0,
-    "lineupsUpdated": 0,
+    "lineupsChecked": 1,
+    "lineupsUpdated": 1,
     "fallbackLineups": 0
   },
   "predictionSync": {
@@ -11333,5 +11361,5 @@
     "checkedAt": "2026-07-02T06:57:54.273008Z",
     "updatedMatches": 2
   },
-  "baseSyncedAt": "2026-07-02T17:23:07.018439Z"
+  "baseSyncedAt": "2026-07-02T19:04:50.334722Z"
 }
