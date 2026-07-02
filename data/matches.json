@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-01T23:59:28.316453Z",
+  "lastUpdated": "2026-07-02T03:31:28.664357Z",
   "matches": [
     {
       "id": "400021443",
@@ -9952,29 +9952,57 @@
       "city": "San-Francisco",
       "home": "États-Unis",
       "away": "Bosnie-et-Herzégovine",
-      "homeCoach": "M. Pochettino",
+      "homeCoach": "Mauricio Pochettino",
       "awayCoach": "Sergej Barbarez",
       "score": {
-        "home": null,
-        "away": null
+        "home": 2,
+        "away": 0
       },
       "scorers": [],
       "highlights": [],
       "externalIds": {
         "apiFootball": "1562586"
       },
-      "status": "upcoming",
+      "status": "finished",
       "minute": null,
       "lineups": {
         "home": {
           "team": "États-Unis",
-          "formation": null,
-          "players": []
+          "formation": "4-3-3",
+          "players": [
+            "24. Matthew Freese (G)",
+            "16. Alexander Freeman (D)",
+            "3. Chris Richards (D)",
+            "13. Tim Ream (D)",
+            "5. Antonee Robinson (D)",
+            "8. Weston McKennie (M)",
+            "4. Tyler Adams (M)",
+            "17. Malik Tillman (M)",
+            "2. Sergiño Dest (F)",
+            "20. Folarin Balogun (F)",
+            "10. Christian Pulišić (F)"
+          ],
+          "source": "Composition officielle",
+          "sourceDate": "2026-07-02T00:00:00+00:00"
         },
         "away": {
           "team": "Bosnie-et-Herzégovine",
-          "formation": null,
-          "players": []
+          "formation": "5-3-2",
+          "players": [
+            "1. Nikola Vasilj (G)",
+            "7. Amar Dedić (D)",
+            "18. Nikola Katić (D)",
+            "4. Tarik Muharemović (D)",
+            "21. Stjepan Radeljić (D)",
+            "5. Sead Kolašinac (D)",
+            "8. Armin Gigović (M)",
+            "14. Ivan Šunjić (M)",
+            "19. Kerim Alajbegović (M)",
+            "11. Edin Džeko (F)",
+            "10. Ermedin Demirović (F)"
+          ],
+          "source": "Composition officielle",
+          "sourceDate": "2026-07-02T00:00:00+00:00"
         }
       },
       "probableLineups": {
@@ -11067,13 +11095,13 @@
   "knockout": {},
   "scheduleSync": {
     "provider": "api-football",
-    "checkedAt": "2026-07-01T23:59:28.316453Z",
+    "checkedAt": "2026-07-02T03:31:28.664357Z",
     "league": 1,
     "season": 2026,
     "updatedMatches": 1,
     "insertedMatches": 0,
-    "lineupsChecked": 0,
-    "lineupsUpdated": 0,
+    "lineupsChecked": 1,
+    "lineupsUpdated": 1,
     "fallbackLineups": 0
   },
   "predictionSync": {
@@ -11081,5 +11109,5 @@
     "checkedAt": "2026-07-01T06:24:31.746359Z",
     "updatedMatches": 1
   },
-  "baseSyncedAt": "2026-07-01T23:59:32.644965Z"
+  "baseSyncedAt": "2026-07-02T03:31:31.365192Z"
 }
